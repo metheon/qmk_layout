@@ -1,0 +1,1 @@
+#define TAPPING_FORCE_HOLD
