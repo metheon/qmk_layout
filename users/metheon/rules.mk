@@ -6,5 +6,6 @@ AUDIO_ENABLE					=	no	# Enables any onboard speakers
 MOUSEKEY_ENABLE					=	yes # Enables usage of keyboard as mouse
 ENCODER_ENABLE					=	no  # Enables usage of rotary encoders
 DYNAMIC_MACRO_ENABLE			=	yes # Enables dynamic macros
-RGBLIGHT_ENABLE					=	no  # Enables underglow / backlight
 EXTRAKEY_ENABLE					=	yes # Enables audio control and System control
+LEADER_ENABLE					=	no  # Enables the Leader Key feature
+TAP_DANCE_ENABLE				=	yes # Enables the tap dance feature

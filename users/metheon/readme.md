@@ -3,22 +3,17 @@
 ## Used in the following keyboards
 
 * Planck EZ
-* (Mass)Drop Preonic
+* Ergodox EZ
+* Kyria
 
-## Notable features
-
-* Switch between MacOS and Windows by pressing the OS button in adjust layer. Is stored to eeprom. Enables the following features:
-  * Alt and GUI switch place.
-  * The Undo, Cut, Copy, Paste and Redo commands work seamless across OS.
-  * The three danish letters, Æ, Ø and Å work seamless across OS.
-      * Note that on Windows this requires EurKey and on MacOS it requires US ANSI layout.
-  * E with accent, É, as well as £ and €, also work seamless across OS with the same caveats as the danish letters.
+Note that actual keymaps are simply just an adapter accepting a Planck layout, fitted for the specific keyboard.
 
 ## Base layer
 
 The layout is based off a Planck.
 
-* SpaceFn: Space on tap, Move layer on hold.
+* SpaceFn: Space on tap, Extend layer on hold.
+* 
 * Npad: Tap-toggle to Numpad layer.
 
 ```
@@ -29,7 +24,7 @@ The layout is based off a Planck.
 |------+------+------+------+------+------+------+------+------+------+------+------|
 | Shft | Z    | X    | C    | V    | B    | K    | M    | ,    | .    | /    | Shft |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-| Npad | Ctrl | Alt  | Gui  | Lwr  |   SpaceFn   | Rse  | Gui  | Alt  | Ctrl | Meh  |
+|      |      | Alt  | Ctrl | Lwr  | Space|Enter | Rse  | Ctrl | Gui  | Dyn1 | Dyn2 |
 '-----------------------------------------------------------------------------------'
 ```
 
