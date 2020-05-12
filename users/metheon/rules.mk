@@ -9,3 +9,7 @@ DYNAMIC_MACRO_ENABLE			=	yes # Enables dynamic macros
 EXTRAKEY_ENABLE					=	yes # Enables audio control and System control
 LEADER_ENABLE					=	no  # Enables the Leader Key feature
 TAP_DANCE_ENABLE				=	yes # Enables the tap dance feature
+
+ifdef ENCODER_ENABLE
+	SRC += metheon_encoders.c
+endif
