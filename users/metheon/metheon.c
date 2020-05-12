@@ -80,14 +80,10 @@ enum keycodes {
 
 enum tap_dances {
     TD_CONTROL_CTRLSHIFT = 0,                       // Ctrl on single tap, ctrl+shift on double tap
-    TD_WIN_ALT,                                     // Win on single tap, alt on double tap
-    TD_ALT_WIN,                                     // Alt on single tap, win on double tap
 };
 // clang-format on
 
 #define TD_C_CS TD(TD_CONTROL_CTRLSHIFT)
-#define TD_W_A TD(TD_WIN_ALT)
-#define TD_A_W TD(TD_ALT_WIN)
 
 void ctrl_ctrlshift_finished(qk_tap_dance_state_t *state, void *user_data) {
     if (state->count == 1) {
@@ -110,9 +106,7 @@ void ctrl_ctrlshift_reset(qk_tap_dance_state_t *state, void *user_data) {
 // Tap Dance Definitions
 // clang-format off
 qk_tap_dance_action_t tap_dance_actions[] = {
-    [TD_CONTROL_CTRLSHIFT]      =   ACTION_TAP_DANCE_FN_ADVANCED    (NULL, ctrl_ctrlshift_finished, ctrl_ctrlshift_reset),
-    [TD_WIN_ALT]                =   ACTION_TAP_DANCE_DOUBLE         (KC_LWIN, KC_LALT),
-    [TD_ALT_WIN]                =   ACTION_TAP_DANCE_DOUBLE         (KC_LWIN, KC_LWIN)
+    [TD_CONTROL_CTRLSHIFT]      =   ACTION_TAP_DANCE_FN_ADVANCED    (NULL, ctrl_ctrlshift_finished, ctrl_ctrlshift_reset)
 };
 // clang-format on
 
@@ -140,7 +134,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_G    ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_SCLN ,KC_BSPC ,
         ESC_MEH ,KC_A    ,KC_R    ,KC_S    ,KC_T    ,KC_D    ,KC_H    ,KC_N    ,KC_E    ,KC_I    ,KC_O    ,KC_QUOT ,
         KC_LSFT ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_K    ,KC_M    ,KC_COMMA,KC_DOT  ,KC_SLSH ,KC_RSFT ,
-        KC_NO   ,KC_NO   ,TD_A_W  ,TD_C_CS ,LOWER   ,SPACE_FN,ENTER_FN,RAISE   ,TD_C_CS ,TD_W_A  ,DM_PLY1 ,DM_PLY2 ,
+        KC_NO   ,KC_NO   ,KC_LALT ,TD_C_CS ,LOWER   ,SPACE_FN,ENTER_FN,RAISE   ,TD_C_CS ,KC_LWIN ,DM_PLY1 ,DM_PLY2 ,
         BSE_E01 ,BSE_E02
     ),
     [_LOWER] = LAYOUT_metheon(
