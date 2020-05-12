@@ -1,18 +1,11 @@
 #include QMK_KEYBOARD_H
+#include "eurkey_danish.h"
 
 // For the alt tab macro (rotary encoder)
 bool     is_alt_tab_active = false;
 uint16_t alt_tab_timer     = 0;
 
 // clang-format off
-// EurKey key combinations used on Windows for the Danish language
-#define DK_EE               RALT(KC_G)
-#define DK_AA               RALT(KC_W)
-#define DK_AE               RALT(KC_Q)
-#define DK_OE               RALT(KC_L)
-#define DK_PND              RALT(KC_4)
-#define DK_EUR              RALT(KC_5)
-
 // OSM Mods
 #define OSM_SFT             OSM(MOD_LSFT)
 #define OSM_ALT             OSM(MOD_LALT)
