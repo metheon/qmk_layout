@@ -3,6 +3,8 @@ enum layers {
     _LOWER,                 // Shifted characters, mostly
     _RAISE,                 // Unshifted characters, mostly
     _ADJUST,                // Mainly RGB, activated when lower and raise is pressed at the same time
+    _FUNPAD,                // F1 - F12
+    _NUMPAD,                // A numpad
     _EXTEND,                // Home row mods, navigation cluster, window management
 };
 
@@ -40,7 +42,7 @@ enum keycodes {
 #define LOCK_PC             LGUI(KC_L)              // Lock the PC
 #define DEL_WRD             LCTL(KC_BSPC)           // Backwards delete a whole word
 #define FILES               LGUI(KC_E)              // Open File Explorer
-#define ESC_MEH             MEH_T(KC_ESC)           // Escape on tap, meh on hold (I use that for virtual box)
+#define ESC_MEH             MEH_T(KC_ESC)           // Esc on tap, meh on hold (I use that for virtual box)
 
 // EurKey key combinations used on Windows for the Danish language
 #define DK_EE               RALT(KC_G)

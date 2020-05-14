@@ -6,15 +6,20 @@
 * Ergodox EZ
 * Kyria
 
-Note that actual keymaps are simply just an adapter accepting a Planck layout, fitted for the specific keyboard.
+## Description
+
+My layout is a simple one, with five layers; base, lower, raise, adjust and extend. Despite using different keyboards my layout is based around a Planck 48 key layout with two additional encoders. I create everything here, in the users folder and simply parse the layout to the specific keymap using a keyboard adapter (which is simply a define, with some keys set and others not, depending on the actual keyboard).
+
+Order matters when making a layout such as this. The two `rules.mk` files are the first to be loaded, first that in the keymap folder, if it exists, then that in the user folder. After that the keyboard specific keymap is loaded. The first part of this file is the define which defines the layout adapter. After that the user file `metheon.c` is loaded which then utilizes this layout adapter. This makes it very easy to adapt to new keyboards as long as they support 48 keys or more. Actually, 47 keys as I have written my layout such that in case of a 2U spacebar on a Planck (like on the Planck EZ) the lower function of space is simply enter which would have been two separate keys on a 48 key Planck.
 
 ## Base layer
 
 The layout is based off a Planck.
 
-* SpaceFn: Space on tap, Extend layer on hold.
-* 
-* Npad: Tap-toggle to Numpad layer.
+* Space: Space on tap, Extend layer on hold.
+* Enter: Enter on tap, Extend layout on hold.
+* Ctrl is ctrl on tap, ctrl+shift on double tap.
+* Currently the two left bottom row keys are not in use.
 
 ```
 .-----------------------------------------------------------------------------------.
@@ -24,11 +29,13 @@ The layout is based off a Planck.
 |------+------+------+------+------+------+------+------+------+------+------+------|
 | Shft | Z    | X    | C    | V    | B    | K    | M    | ,    | .    | /    | Shft |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      | Alt  | Ctrl | Lwr  | Space|Enter | Rse  | Ctrl | Gui  | Dyn1 | Dyn2 |
+|      |      | Alt  | Ctrl | Lwr  |Space |Enter | Rse  | Ctrl | Gui  | Dyn1 | Dyn2 |
 '-----------------------------------------------------------------------------------'
 ```
 
 ## Lower
+
+* Enter: Just regular old enter. The presence on lower means that the only difference between split space/enter and 2U space is having to press lower with your left thumb. Right thumb is always enter.
 
 ```
 .-----------------------------------------------------------------------------------.
@@ -38,11 +45,13 @@ The layout is based off a Planck.
 |------+------+------+------+------+------+------+------+------+------+------+------|
 |      | F7   | F8   | F9   | F10  | F11  | F12  |      |      |      |      |      |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      |      |      | Lwr  |    Enter    | Rse  |      |      |      |      |
+|      |      |      |      | Lwr  |Enter |Enter | Rse  |      |      |      |      |
 '-----------------------------------------------------------------------------------'
 ```
 
 ## Raise
+
+* Space: Regular space. Not actually useful but kept here to match the location of enter.
 
 ```
 .-----------------------------------------------------------------------------------.
@@ -52,7 +61,7 @@ The layout is based off a Planck.
 |------+------+------+------+------+------+------+------+------+------+------+------|
 |      | Undo | Cut  | Copy | Pste | Redo |      |      |      |      |      |      |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      |      |      | Lwr  |    Enter    | Rse  |      |      |      |      |
+|      |      |      |      | Lwr  |Space |Space | Rse  |      |      |      |      |
 '-----------------------------------------------------------------------------------'
 ```
 
@@ -64,11 +73,11 @@ Rather empty right now, but there is some media keys, reset and OS toggle.
 .-----------------------------------------------------------------------------------.
 |      |      |      |      |      |      |      |      |      |      |      |      |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      | Prev | Play | Next |      |      |      |      |      |      |      |
+|Hibrnt|RgbVai|RgbSai|RgbHui|RgbMod|RgbTog|      |      |      |      |      |      |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      | Mute | VlDn | VlUp |      |      |      |      |      |      |      |
+|Sleep |RgbVad|RgbSad|RgbHud|RgbRmd|      |      |      |      |      |      |      |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      |      |      | Lwr  |    Reset    | Rse  |      |      |      | TgOS |
+|      |      |      |      | Lwr  |Reset |Reset | Rse  |      |      |      | TgOS |
 '-----------------------------------------------------------------------------------'
 ```
 
