@@ -19,6 +19,8 @@ The layout is based off a Planck.
 * Space: Space on tap, Extend layer on hold.
 * Enter: Enter on tap, Extend layout on hold.
 * Ctrl is ctrl on tap, ctrl+shift on double tap.
+* Alt is alt on tap, Numpad on double tap (toggle).
+* Gui is gui on tap, Funpad on double tap (toggle).
 * Currently the two left bottom row keys are not in use.
 
 ```
@@ -81,17 +83,28 @@ Rather empty right now, but there is some media keys, reset and OS toggle.
 '-----------------------------------------------------------------------------------'
 ```
 
-## Move
+## Extend
+
+* SPACES: Show Windows Desktops
+* L_MON/R_MON: Move window to left/right monitor
+* L_SPC/R_SPC: Move window to left/right space/desktop
+* DELWRD: Delete last word (ctrl+backspace)
+* W_MENU: Show the windows menu
+* DSKTOP: Show the windows desktop
+* L_ALGN/R_ALGN: Align window to the left/right of the desktop (half of screen)
+* MAXIM: Maximize the window
+* VIDOFF/MICOFF: Shortcuts for turning video and microphone on and off in MS Teams
+* LOCK: Lock the PC
 
 ```
 .-----------------------------------------------------------------------------------.
-|      |      |      |      |      |      | PgUp | Home | Up   | End  |      |      |
+|SPACES|L_MON |R_MON |L_SPC |R_SPC |      | PGUP | HOME | UP   | END  |      |DELWRD|
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      | Shft | Ctrl | Gui  | Alt  | PgDn | Left | Down | Rght |      |      |
+|W_MENU| LGUI | LALT | LSFT | LCTL |DSKTOP| PGDN | LEFT | DOWN | RGHT |      |      |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      |      |      |      |      |      |      |      |      |      |      |
+I LSFT |L_ALGN|R_ALGN|MAXIM |VIDOFF|      |FILES |MICOFF|      |      |      | RSFT |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      |      |      |      |   SpaceFn   |      |      |      |      |      |
+| LOCK |DM_STP| MPRV | MPLY | MNXT |      |      | VOLU | VOLD | MUTE |DMREC1|DMREC2|
 '-----------------------------------------------------------------------------------'
 ```
 
