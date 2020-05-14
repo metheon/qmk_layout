@@ -1,10 +1,5 @@
-// Define all tap dance functions here
-enum tap_dances {
-    TD_CONTROL_CTRLSHIFT = 0,                       // Ctrl on single tap, ctrl+shift on double tap
-};
-
-// Create keyboard layout friendly call of the tap dance functions
-#define TD_C_CS TD(TD_CONTROL_CTRLSHIFT)
+#include "quantum.h"
+#include "metheon_tap_dance.h"
 
 // Advanced tap dance functions
 void ctrl_ctrlshift_finished(qk_tap_dance_state_t *state, void *user_data) {
