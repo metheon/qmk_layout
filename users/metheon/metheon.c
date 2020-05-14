@@ -1,8 +1,6 @@
 #include QMK_KEYBOARD_H
 #include "metheon.h"
 #include "metheon_encoders.h"
-#include "eurkey_danish.h"
-#include "shortcuts.h"
 #include "tap_dances.c"
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
