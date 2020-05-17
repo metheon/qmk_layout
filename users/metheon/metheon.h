@@ -6,6 +6,8 @@ enum layers {
     _FUNPAD,                // F1 - F12
     _NUMPAD,                // A numpad
     _EXTEND,                // Home row mods, navigation cluster, window management
+    _BL3_BSE,               // Base layer for Borderlands 3
+    _BL3_UPR,               // Upper layer for Borderlands 3
 };
 
 enum keycodes {
@@ -51,3 +53,9 @@ enum keycodes {
 #define DK_OE               RALT(KC_L)
 #define DK_PND              RALT(KC_4)
 #define DK_EUR              RALT(KC_5)
+
+// All keys related to Borderlands 3
+#define TO_BL3              TO(_BL3_BSE)
+#define TO_BASE             TO(_BASE)
+#define BL3_SPC             LT(_BL3_UPR, KC_SPACE)
+#define BL3_W               LSFT(KC_W)              // BL3: Hold shift while pressing W to run instead of walking
