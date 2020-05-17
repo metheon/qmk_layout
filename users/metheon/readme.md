@@ -8,9 +8,16 @@
 
 ## Description
 
-My layout is a simple one, with five layers; base, lower, raise, adjust and extend. Despite using different keyboards my layout is based around a Planck 48 key layout with two additional encoders. I create everything here, in the users folder and simply parse the layout to the specific keymap using a keyboard adapter (which is simply a define, with some keys set and others not, depending on the actual keyboard).
+Despite using different keyboards my layout is based around a Planck 48 key layout with two additional encoders. I create everything here, in the users folder and simply parse the layout to the specific keymap using a keyboard adapter (which is simply a define, with some keys set and others not, depending on the actual keyboard).
 
 Order matters when making a layout such as this. The two `rules.mk` files are the first to be loaded, first that in the keymap folder, if it exists, then that in the user folder. After that the keyboard specific keymap is loaded. The first part of this file is the define which defines the layout adapter. After that the user file `metheon.c` is loaded which then utilizes this layout adapter. This makes it very easy to adapt to new keyboards as long as they support 48 keys or more. Actually, 47 keys as I have written my layout such that in case of a 2U spacebar on a Planck (like on the Planck EZ) the lower function of space is simply enter which would have been two separate keys on a 48 key Planck.
+
+For all layers it goes that:
+
+* `xxxx`: KC_NO
+* `____`: KC_TRNS
+
+TODO: Improve description.
 
 ## Base layer
 
@@ -32,7 +39,7 @@ The layout is based off a Planck plus two encoders.
 |------+------+------+------+------+------+------+------+------+------+------+------|
 | Shft | Z    | X    | C    | V    | B    | K    | M    | ,    | .    | /    | Shft |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      | Alt  | Ctrl | Lwr  |Space |Enter | Rse  | Ctrl | Gui  | Dyn1 | Dyn2 |
+| xxxx | xxxx | Alt  | Ctrl | Lwr  |Space |Enter | Rse  | Ctrl | Gui  | Dyn1 | Dyn2 |
 '-----------------------------------------------------------------------------------'
 ```
 
@@ -44,28 +51,28 @@ The layout is based off a Planck plus two encoders.
 .-----------------------------------------------------------------------------------.
 | ~    | !    | @    | #    | $    | %    | ^    | &    | *    | (    | )    | Del  |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      | F1   | F2   | F3   | F4   | F5   | F6   | _    | +    | {    | }    |      |
+| xxxx | F1   | F2   | F3   | F4   | F5   | F6   | _    | +    | {    | }    | xxxx |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      | F7   | F8   | F9   | F10  | F11  | F12  |      |      |      | |    |      |
+| xxxx | F7   | F8   | F9   | F10  | F11  | F12  | xxxx | xxxx | xxxx | |    | xxxx |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      |      |      | Lwr  |Enter |Enter | Rse  |      |      |      |      |
+| xxxx | xxxx | ____ | ____ | Lwr  |Enter |Enter | Rse  | ____ | ____ | xxxx | xxxx |
 '-----------------------------------------------------------------------------------'
 ```
 
 ## Raise
 
-* Space: Regular space. Not actually useful but kept here to match the location of enter.
-* É, Æ, Ø, Å, £, €: These all require [EurKey](https://eurkey.steffen.bruentjen.eu/)installed and set as current language.
+* Space: Regular space. Not actually useful but kept here completeness sake.
+* É, Æ, Ø, Å, £, €: These all require [EurKey](https://eurkey.steffen.bruentjen.eu/) installed and set as current language.
 
 ```
 .-----------------------------------------------------------------------------------.
 | `    | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    | 9    | 0    | Del  |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-| Caps | É    | Æ    | Ø    | Å    | £    | €    | -    | =    | [    | ]    |      |
+| Caps | É    | Æ    | Ø    | Å    | £    | €    | -    | =    | [    | ]    | xxxx |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      | Undo | Cut  | Copy | Pste | Redo |      |      |      |      | \    |      |
+| xxxx | Undo | Cut  | Copy | Pste | Redo | xxxx | xxxx | xxxx | xxxx | \    | xxxx |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      |      |      | Lwr  |Space |Space | Rse  |      |      |      |      |
+| xxxx | xxxx | ____ | ____ | ____ |Space |Space | ____ | ____ | ____ | xxxx | xxxx |
 '-----------------------------------------------------------------------------------'
 ```
 
@@ -78,13 +85,45 @@ The layout is based off a Planck plus two encoders.
 
 ```
 .-----------------------------------------------------------------------------------.
-|      |      |      |      |      |      |      |      |      |      |      |Reset |
+| xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx |Reset |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|Hibrnt|RgbVai|RgbSai|RgbHui|RgbMod|RgbTog|      | BL3  |      |      |      |      |
+|Hibrnt|RgbVai|RgbSai|RgbHui|RgbMod|RgbTog| xxxx | BL3  | xxxx | xxxx | xxxx | xxxx |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|Sleep |RgbVad|RgbSad|RgbHud|RgbRmd|      |      |      |      |      |      |      |
+|Sleep |RgbVad|RgbSad|RgbHud|RgbRmd| xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      |      |      | Lwr  |Reset |Reset | Rse  |      |      |      |      |
+| xxxx | xxxx | xxxx | xxxx | Lwr  |Reset |Reset | Rse  | xxxx | xxxx | xxxx | xxxx |
+'-----------------------------------------------------------------------------------'
+```
+
+## Funpad
+
+* Gui: Double tap to get back to `Base`.
+
+```
+.-----------------------------------------------------------------------------------.
+| xxxx | F9   | F10  | F11  | F12  | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+| xxxx | F5   | F6   | F7   | F8   | xxxx | xxxx | LCtl | LSft | LAlt | LGui | xxxx |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+| xxxx | F1   | F2   | F3   | F4   | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+| xxxx | xxxx | ____ | ____ | xxxx | xxxx | xxxx | xxxx | ____ | ____ | xxxx | xxxx |
+'-----------------------------------------------------------------------------------'
+```
+
+## Numpad
+
+* Alt: Double tap to get back to `Base`.
+
+```
+.-----------------------------------------------------------------------------------.
+| Tab  | xxxx |KC_F2 | (    | )    | xxxx | xxxx | 7    | 8    | 9    | xxxx | Bspc |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+| ____ | /    | *    | -    | +    | xxxx | xxxx | 4    | 5    | 6    | xxxx | xxxx |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+| ____ | xxxx | xxxx | xxxx | =    | xxxx | xxxx | 1    | 2    | 3    | xxxx | xxxx |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+| xxxx | xxxx | ____ | ____ | xxxx | Entr | Entr | 0    | ,    | .    | xxxx | xxxx |
 '-----------------------------------------------------------------------------------'
 ```
 
@@ -103,47 +142,31 @@ The layout is based off a Planck plus two encoders.
 
 ```
 .-----------------------------------------------------------------------------------.
-|Spaces|L_Mon |R_Mon |L_Spc |R_Spc |      | PgUp | Home | Up   | End  |      |DelWrd|
+|Spaces|L_Mon |R_Mon |L_Spc |R_Spc | xxxx | PgUp | Home | Up   | End  | xxxx |DelWrd|
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|W_Menu| LGui | LAlt | LSft | LCtl |Dsktop| PgDn | Left | DOWN | Rght |      |      |
+|W_Menu| LGui | LAlt | LSft | LCtl |Dsktop| PgDn | Left | DOWN | Rght | xxxx | xxxx |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-I LSft |L_Algn|R_Algn|Maxim |VidOff|      |Files |MicOff|      |      |      | RSft |
+I ____ |L_Algn|R_Algn|Maxim |VidOff| xxxx |Files |MicOff| xxxx | xxxx | xxxx | ____ |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-| Lock |Dm_Stp| Mprv | Mply | Mnxt |      |      | Volu | Vold | Mute |Dm_Rc1|Dm_Rc2|
-'-----------------------------------------------------------------------------------'
-```
-
-## Numpad
-
-* Base: Toggles back to base layer
-
-```
-.-----------------------------------------------------------------------------------.
-|      |      | #    | (    | )    |      |      | 7    | 8    | 9    |      |      |
-|------+------+------+------+------+------+------+------+------+------+------+------|
-|      | /    | *    | -    | +    |      |      | 4    | 5    | 6    |      |      |
-|------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      |      |      |      |      |      | 1    | 2    | 3    |      |      |
-|------+------+------+------+------+------+------+------+------+------+------+------|
-| Base |      |      |      | =    |    Enter    | 0    | ,    | .    |      |      |
+| Lock |Dm_Stp| Mprv | Mply | Mnxt | ____ | ____ | Volu | Vold | Mute |Dm_Rc1|Dm_Rc2|
 '-----------------------------------------------------------------------------------'
 ```
 
 ## Borderlands 3 - Base
 
 * Base: Toggles back to `Base`.
-* W: Shifted W for running
+* S_W: Shifted W for running.
 * Space: Hold to activate `Borderlands 3 - Upper`.
 
 ```
 .-----------------------------------------------------------------------------------.
-|      | Tab  | Q    | W    | E    | R    |      |      |      |      |      |      |
+| xxxx | Tab  | Q    | S_W  | E    | R    | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      | Esc  | A    | S    | D    | F    |      | Base |      |      |      |      |
+| xxxx | Esc  | A    | S    | D    | F    | xxxx | Base | xxxx | xxxx | xxxx | xxxx |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      | LSft | Z    | X    | C    |      |      |      |      |      |      |      |
+| xxxx | LSft | Z    | X    | C    | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      |      | G    | V    | Spc  | Spc  |      |      |      |      |      |
+| xxxx | xxxx | xxxx | G    | V    | Spc  | Spc  | xxxx | xxxx | xxxx | xxxx | xxxx |
 '-----------------------------------------------------------------------------------'
 ```
 
@@ -154,12 +177,20 @@ I LSft |L_Algn|R_Algn|Maxim |VidOff|      |Files |MicOff|      |      |      | R
 
 ```
 .-----------------------------------------------------------------------------------.
-|      | Tab  | 1    | W    | 2    | 3    |      |      |      |      |      |      |
+| xxxx | Tab  | 1    | W    | 2    | 3    | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      | Esc  | A    | S    | D    | 4    |      |      |      |      |      |      |
+| xxxx | Esc  | A    | S    | D    | 4    | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      | LSft | M    | I    | L    | K    |      |      |      |      |      |      |
+| xxxx | LSft | M    | I    | L    | K    | xxxx | xxxx | xxxx | xxxx | xxxx | xxxx |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      |      | [    | ]    | Spc  | Spc  |      |      |      |      |      |
+| xxxx | xxxx | xxxx | [    | ]    | Spc  | Spc  | xxxx | xxxx | xxxx | xxxx | xxxx |
 '-----------------------------------------------------------------------------------'
+```
+
+## Rotary encoder functions
+
+```
+.-------------.
+|      |      |
+'-------------'
 ```
