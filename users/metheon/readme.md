@@ -14,13 +14,14 @@ Order matters when making a layout such as this. The two `rules.mk` files are th
 
 ## Base layer
 
-The layout is based off a Planck.
+The layout is based off a Planck plus two encoders.
 
-* Space: Space on tap, Extend layer on hold.
-* Enter: Enter on tap, Extend layout on hold.
+* Space: Space on tap, `Extend` layer on hold.
+* Enter: Enter on tap, `Extend` layout on hold.
 * Ctrl is ctrl on tap, ctrl+shift on double tap.
-* Alt is alt on tap, Numpad on double tap (toggle).
-* Gui is gui on tap, Funpad on double tap (toggle).
+* Alt is alt on tap, `Numpad` on double tap (toggle).
+* Gui is gui on tap, `Funpad` on double tap (toggle).
+* Dyn1/2: Dynamic macro play 1/2.
 * Currently the two left bottom row keys are not in use.
 
 ```
@@ -37,15 +38,15 @@ The layout is based off a Planck.
 
 ## Lower
 
-* Enter: Just regular old enter. The presence on lower means that the only difference between split space/enter and 2U space is having to press lower with your left thumb. Right thumb is always enter.
+* Enter: Just regular old enter. The presence on `Lower` means that the only difference between split space/enter and 2U space is having to press `Lower` with your left thumb. Right thumb is always enter.
 
 ```
 .-----------------------------------------------------------------------------------.
 | ~    | !    | @    | #    | $    | %    | ^    | &    | *    | (    | )    | Del  |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      | F1   | F2   | F3   | F4   | F5   | F6   | _    | +    | {    | }    | |    |
+|      | F1   | F2   | F3   | F4   | F5   | F6   | _    | +    | {    | }    |      |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      | F7   | F8   | F9   | F10  | F11  | F12  |      |      |      |      |      |
+|      | F7   | F8   | F9   | F10  | F11  | F12  |      |      |      | |    |      |
 |------+------+------+------+------+------+------+------+------+------+------+------|
 |      |      |      |      | Lwr  |Enter |Enter | Rse  |      |      |      |      |
 '-----------------------------------------------------------------------------------'
@@ -54,14 +55,15 @@ The layout is based off a Planck.
 ## Raise
 
 * Space: Regular space. Not actually useful but kept here to match the location of enter.
+* É, Æ, Ø, Å, £, €: These all require [EurKey](https://eurkey.steffen.bruentjen.eu/)installed and set as current language.
 
 ```
 .-----------------------------------------------------------------------------------.
 | `    | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    | 9    | 0    | Del  |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-| Caps | É    | Æ    | Ø    | Å    | £    | €    | -    | =    | [    | ]    | \    |
+| Caps | É    | Æ    | Ø    | Å    | £    | €    | -    | =    | [    | ]    |      |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      | Undo | Cut  | Copy | Pste | Redo |      |      |      |      |      |      |
+|      | Undo | Cut  | Copy | Pste | Redo |      |      |      |      | \    |      |
 |------+------+------+------+------+------+------+------+------+------+------+------|
 |      |      |      |      | Lwr  |Space |Space | Rse  |      |      |      |      |
 '-----------------------------------------------------------------------------------'
@@ -69,42 +71,45 @@ The layout is based off a Planck.
 
 ## Adjust
 
-Rather empty right now, but there is some media keys, reset and OS toggle.
+* Lots of standard RGB functions
+* Hibrnt: Hibernates the computer
+* Sleep: Sleeps the computer
+* BL3: Toggles on the `Borderlands 3 - Base` layer
 
 ```
 .-----------------------------------------------------------------------------------.
-|      |      |      |      |      |      |      |      |      |      |      |      |
+|      |      |      |      |      |      |      |      |      |      |      |Reset |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|Hibrnt|RgbVai|RgbSai|RgbHui|RgbMod|RgbTog|      |      |      |      |      |      |
+|Hibrnt|RgbVai|RgbSai|RgbHui|RgbMod|RgbTog|      | BL3  |      |      |      |      |
 |------+------+------+------+------+------+------+------+------+------+------+------|
 |Sleep |RgbVad|RgbSad|RgbHud|RgbRmd|      |      |      |      |      |      |      |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      |      |      | Lwr  |Reset |Reset | Rse  |      |      |      | TgOS |
+|      |      |      |      | Lwr  |Reset |Reset | Rse  |      |      |      |      |
 '-----------------------------------------------------------------------------------'
 ```
 
 ## Extend
 
-* SPACES: Show Windows Desktops
-* L_MON/R_MON: Move window to left/right monitor
-* L_SPC/R_SPC: Move window to left/right space/desktop
-* DELWRD: Delete last word (ctrl+backspace)
-* W_MENU: Show the windows menu
-* DSKTOP: Show the windows desktop
-* L_ALGN/R_ALGN: Align window to the left/right of the desktop (half of screen)
-* MAXIM: Maximize the window
-* VIDOFF/MICOFF: Shortcuts for turning video and microphone on and off in MS Teams
-* LOCK: Lock the PC
+* Spaces: Show Windows Desktops
+* L_Mon/R_Mon: Move window to left/right monitor
+* L_Spc/R_Spc: Move window to left/right space/desktop
+* DelWrd: Delete last word (ctrl+backspace)
+* W_Menu: Show the windows menu
+* Dsktop: Show the windows desktop
+* L_Algn/R_Algn: Align window to the left/right of the desktop (half of screen)
+* Maxim: Maximize the window
+* VidOff/MicOff: Shortcuts for turning video and microphone on and off in MS Teams
+* Lock: Lock the PC
 
 ```
 .-----------------------------------------------------------------------------------.
-|SPACES|L_MON |R_MON |L_SPC |R_SPC |      | PGUP | HOME | UP   | END  |      |DELWRD|
+|Spaces|L_Mon |R_Mon |L_Spc |R_Spc |      | PgUp | Home | Up   | End  |      |DelWrd|
 |------+------+------+------+------+------+------+------+------+------+------+------|
-|W_MENU| LGUI | LALT | LSFT | LCTL |DSKTOP| PGDN | LEFT | DOWN | RGHT |      |      |
+|W_Menu| LGui | LAlt | LSft | LCtl |Dsktop| PgDn | Left | DOWN | Rght |      |      |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-I LSFT |L_ALGN|R_ALGN|MAXIM |VIDOFF|      |FILES |MICOFF|      |      |      | RSFT |
+I LSft |L_Algn|R_Algn|Maxim |VidOff|      |Files |MicOff|      |      |      | RSft |
 |------+------+------+------+------+------+------+------+------+------+------+------|
-| LOCK |DM_STP| MPRV | MPLY | MNXT |      |      | VOLU | VOLD | MUTE |DMREC1|DMREC2|
+| Lock |Dm_Stp| Mprv | Mply | Mnxt |      |      | Volu | Vold | Mute |Dm_Rc1|Dm_Rc2|
 '-----------------------------------------------------------------------------------'
 ```
 
@@ -126,9 +131,9 @@ I LSFT |L_ALGN|R_ALGN|MAXIM |VIDOFF|      |FILES |MICOFF|      |      |      | R
 
 ## Borderlands 3 - Base
 
-* Base: Toggles back to base layer
+* Base: Toggles back to `Base`.
 * W: Shifted W for running
-* Space: Hold to activate Borderlands 3 - Upper
+* Space: Hold to activate `Borderlands 3 - Upper`.
 
 ```
 .-----------------------------------------------------------------------------------.
@@ -144,7 +149,7 @@ I LSFT |L_ALGN|R_ALGN|MAXIM |VIDOFF|      |FILES |MICOFF|      |      |      | R
 
 ## Borderlands 3 - Upper
 
-* Base: Toggles back to base layer
+* Base: Toggles back to `Base` layer
 * W: Shifted W for running
 
 ```
@@ -158,10 +163,3 @@ I LSFT |L_ALGN|R_ALGN|MAXIM |VIDOFF|      |FILES |MICOFF|      |      |      | R
 |      |      |      | [    | ]    | Spc  | Spc  |      |      |      |      |      |
 '-----------------------------------------------------------------------------------'
 ```
-
-
-## Todo
-
-* Consider removing support for MacOS, not a primary OS anymore.
-* Consider moving the arrow cluster into base layer, lower right corner.
-* 
