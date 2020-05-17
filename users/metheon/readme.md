@@ -3,7 +3,6 @@
 ## Used in the following keyboards
 
 * Planck EZ
-* Ergodox EZ
 * Kyria
 
 ## Description
