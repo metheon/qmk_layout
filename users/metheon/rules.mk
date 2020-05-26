@@ -4,7 +4,11 @@ LINK_TIME_OPTIMIZATION_ENABLE	=	no	# Reduces compiled size of firmware
 COMMAND_ENABLE					=	no 	# Commands for debug and configuration
 AUDIO_ENABLE					=	no	# Enables any onboard speakers
 MOUSEKEY_ENABLE					=	yes # Enables usage of keyboard as mouse
-ENCODER_ENABLE					=	no  # Enables usage of rotary encoders
+
+ifndef ENCODER_ENABLE
+	ENCODER_ENABLE					=	no  # Enables usage of rotary encoders
+endif
+
 DYNAMIC_MACRO_ENABLE			=	yes # Enables dynamic macros
 EXTRAKEY_ENABLE					=	yes # Enables audio control and System control
 LEADER_ENABLE					=	no  # Enables the Leader Key feature
