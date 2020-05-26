@@ -48,12 +48,12 @@ void zoom(bool clockwise) {
 }
 
 void alt_tab(bool clockwise) {
+    if (!is_alt_tab_active) {
+        is_alt_tab_active = true;
+        register_code(KC_LALT);
+    }
+    alt_tab_timer = timer_read();
     if (clockwise) {
-        if (!is_alt_tab_active) {
-            is_alt_tab_active = true;
-            register_code(KC_LALT);
-        }
-        alt_tab_timer = timer_read();
         tap_code16(KC_TAB);
     } else {
         tap_code16(S(KC_TAB));
@@ -72,18 +72,18 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {  // Left encoder
         switch (biton32(layer_state)) {
             case _BASE:
-                alt_tab(clockwise);
+                alt_tab(!clockwise);
                 break;
             case _LOWER:
                 // unused as lower is activated on the left
                 break;
             case _RAISE:
-                zoom(clockwise);
+                zoom(!clockwise);
                 break;
             case _ADJUST:
-                ctrl_tab(clockwise);
                 break;
             case _EXTEND:
+                ctrl_tab(!clockwise);
                 break;
             default:
                 // Do nothing
