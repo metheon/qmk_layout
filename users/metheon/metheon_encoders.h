@@ -1,7 +1,7 @@
 #pragma once
 
 // Encoder tap functions
-#define BSE_E01             MO(_ADJUST)
+#define BSE_E01             KC_ENTER
 #define BSE_E02             KC_NO
 #define LWR_E01             KC_MUTE
 #define LWR_E02             KC_NO

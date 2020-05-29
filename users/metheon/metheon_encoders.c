@@ -78,12 +78,12 @@ void encoder_update_user(uint8_t index, bool clockwise) {
                 // unused as lower is activated on the left
                 break;
             case _RAISE:
-                zoom(!clockwise);
+                ctrl_tab(!clockwise);
                 break;
             case _ADJUST:
                 break;
             case _EXTEND:
-                ctrl_tab(!clockwise);
+                volume_control(clockwise);
                 break;
             default:
                 // Do nothing
@@ -95,7 +95,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
                 page_turning(clockwise);
                 break;
             case _LOWER:
-                volume_control(clockwise);
+                zoom(!clockwise);
                 break;
             case _RAISE:
                 // unused as raise is activated on the right
