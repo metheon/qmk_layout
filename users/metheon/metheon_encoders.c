@@ -8,7 +8,7 @@ uint16_t alt_tab_timer     = 0;
 
 void matrix_scan_fn(void) {
     if (is_alt_tab_active) {
-        if (timer_elapsed(alt_tab_timer) > 1250) {
+        if (timer_elapsed(alt_tab_timer) > 750) {
             unregister_code(KC_LALT);
             is_alt_tab_active = false;
         }
