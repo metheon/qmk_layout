@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_RAISE] = LAYOUT_metheon(
         KC_GRV  ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,KC_DEL  ,
         KC_CAPS ,DK_EE   ,DK_AE   ,DK_OE   ,DK_AA   ,DK_PND  ,DK_EUR  ,KC_MINS ,KC_EQL  ,KC_LBRC ,KC_RBRC ,XXXXXXX ,
-        XXXXXXX ,UNDO    ,CUT     ,COPY    ,PASTE   ,REDO    ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,KC_BSLS ,XXXXXXX ,
+        XXXXXXX ,UNDO    ,CUT     ,COPY    ,PASTE   ,REDO    ,XXXXXXX ,XXXXXXX ,_______ ,_______ ,KC_BSLS ,XXXXXXX ,
         XXXXXXX ,XXXXXXX ,_______ ,_______ ,_______ ,KC_SPACE,KC_SPACE,_______ ,_______ ,_______ ,XXXXXXX ,XXXXXXX ,
         RSE_E01 ,RSE_E02
     ),
