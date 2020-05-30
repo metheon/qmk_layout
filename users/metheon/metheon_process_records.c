@@ -17,6 +17,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
         case MAKE:
             if (!record->event.pressed) {
+                SEND_STRING("make " QMK_KEYBOARD ":" QMK_KEYMAP SS_TAP(X_ENTER));
+            }
+            break;
+        case FLASH:
+            if (!record->event.pressed) {
                 SEND_STRING("make " QMK_KEYBOARD ":" QMK_KEYMAP
 #if (defined(BOOTLOADER_DFU) || defined(BOOTLOADER_LUFA_DFU) || defined(BOOTLOADER_QMK_DFU))
                             ":dfu"
@@ -26,14 +31,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                             ":avrdude"
 #endif
                             SS_TAP(X_ENTER));
+                            reset_keyboard();
             }
-            return false;
             break;
         case VRSN:
             if (record->event.pressed) {
                 SEND_STRING(QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
             }
-            return false;
             break;
     }
     return true;
