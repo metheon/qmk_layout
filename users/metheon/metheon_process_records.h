@@ -3,7 +3,7 @@
 enum keycodes {
     HIBRNT = SAFE_RANGE,    // Hibernate the computer
     SLEEP,                  // Sleep the computer
-    MAKE,                   // make keyboard:user
-    FLASH,                  // make keyboard:user:bootloader
-    VRSN,                   // prints the version
+    KC_MAKE,                // make keyboard:user
+    KC_FLASH,               // make keyboard:user:bootloader
+    KC_VRSN,                // prints the version
 };
