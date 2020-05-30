@@ -69,16 +69,18 @@ void ctrl_tab(bool clockwise) {
 }
 
 void encoder_update_user(uint8_t index, bool clockwise) {
+    // Clockwise seems inverted for some reason
+    clockwise = !clockwise;
     if (index == 0) {  // Left encoder
         switch (biton32(layer_state)) {
             case _BASE:
-                alt_tab(!clockwise);
+                alt_tab(clockwise);
                 break;
             case _LOWER:
                 // unused as lower is activated on the left
                 break;
             case _RAISE:
-                ctrl_tab(!clockwise);
+                ctrl_tab(clockwise);
                 break;
             case _ADJUST:
                 break;
@@ -95,7 +97,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
                 page_turning(clockwise);
                 break;
             case _LOWER:
-                zoom(!clockwise);
+                zoom(clockwise);
                 break;
             case _RAISE:
                 // unused as raise is activated on the right
