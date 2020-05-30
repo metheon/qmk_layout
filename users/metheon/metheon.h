@@ -15,6 +15,8 @@ enum layers {
 #define ENTER_FN            LT(_EXTEND, KC_ENTER)
 #define LOWER               MO(_LOWER)
 #define RAISE               MO(_RAISE)
+#define NUM_Z               LT(_NUMPAD, KC_Z)
+#define FUN_SLSH            LT(_FUNPAD, KC_SLSH)
 
 #define UNDO                LCTL(KC_Z)
 #define REDO                LSFT(LCTL(KC_Z))
