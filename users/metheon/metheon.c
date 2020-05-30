@@ -2,22 +2,7 @@
 #include "metheon.h"
 #include "metheon_encoders.h"
 #include "metheon_tap_dance.h"
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case HIBRNT:
-            if (record->event.pressed) {
-                SEND_STRING_DELAY(SS_LGUI(SS_TAP(X_X)) SS_TAP(X_U) SS_TAP(X_D), 200);
-            }
-            break;
-        case SLEEP:
-            if (record->event.pressed) {
-                SEND_STRING_DELAY(SS_LGUI(SS_TAP(X_X)) SS_TAP(X_U) SS_TAP(X_U), 200);
-            }
-            break;
-    }
-    return true;
-};
+#include "metheon_process_records.h"
 
 // clang-format off
 layer_state_t layer_state_set_user(layer_state_t state) {
@@ -49,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RSE_E01 ,RSE_E02
     ),
     [_ADJUST] = LAYOUT_metheon(
-        XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,RESET   ,
+        XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,VRSN    ,MAKE    ,
         HIBRNT  ,XXXXXXX ,KC_MPRV ,KC_MPLY ,KC_MNXT ,TO_BL3  ,RGB_TOG ,RGB_MOD ,RGB_HUI ,RGB_SAI ,RGB_VAI ,XXXXXXX ,
         SLEEP   ,XXXXXXX ,KC_MUTE ,KC_VOLD ,KC_VOLU ,XXXXXXX ,XXXXXXX ,RGB_RMOD,RGB_HUD ,RGB_SAD ,RGB_VAD ,XXXXXXX ,
         XXXXXXX ,XXXXXXX ,_______ ,_______ ,_______ ,XXXXXXX ,XXXXXXX ,_______ ,_______ ,_______ ,XXXXXXX ,XXXXXXX ,

@@ -16,3 +16,4 @@ TAP_DANCE_ENABLE				=	yes # Enables the tap dance feature
 
 SRC += metheon_encoders.c
 SRC += metheon_tap_dance.c
+SRC += metheon_process_records.c

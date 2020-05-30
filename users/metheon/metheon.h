@@ -10,11 +10,6 @@ enum layers {
     _BL3_UPR,               // Upper layer for Borderlands 3
 };
 
-enum keycodes {
-    HIBRNT = SAFE_RANGE,    // Hibernate the computer
-    SLEEP,                  // Sleep the computer
-};
-
 // Layer keys
 #define SPACE_FN            LT(_EXTEND, KC_SPACE)
 #define ENTER_FN            LT(_EXTEND, KC_ENTER)
