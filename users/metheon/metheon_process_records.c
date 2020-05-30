@@ -26,7 +26,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                             ":avrdude"
 #endif
                             SS_TAP(X_ENTER));
-                            reset_keyboard();
             }
             return false;
             break;
