@@ -14,6 +14,6 @@ EXTRAKEY_ENABLE					=	yes # Enables audio control and System control
 LEADER_ENABLE					=	no  # Enables the Leader Key feature
 TAP_DANCE_ENABLE				=	yes # Enables the tap dance feature
 
-SRC += metheon_encoders.c
-SRC += metheon_tap_dance.c
-SRC += metheon_process_records.c
+SRC += encoders.c
+SRC += tap_dance.c
+SRC += process_records.c

@@ -1,8 +1,8 @@
 #include QMK_KEYBOARD_H
 #include "metheon.h"
-#include "metheon_encoders.h"
-#include "metheon_tap_dance.h"
-#include "metheon_process_records.h"
+#include "encoders.h"
+#include "tap_dance.h"
+#include "process_records.h"
 
 // clang-format off
 layer_state_t layer_state_set_user(layer_state_t state) {

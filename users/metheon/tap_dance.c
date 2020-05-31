@@ -1,6 +1,6 @@
 #include "quantum.h"
 #include "metheon.h"
-#include "metheon_tap_dance.h"
+#include "tap_dance.h"
 
 // Advanced tap dance functions
 void ctrl_ctrlshift_finished(qk_tap_dance_state_t *state, void *user_data) {
