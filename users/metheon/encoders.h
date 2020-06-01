@@ -21,4 +21,4 @@
 #define BL3_UPR_E02         KC_NO
 
 // Required for alt-tab function
-void matrix_scan_fn(void);
+void matrix_scan_encoders(void);

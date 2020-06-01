@@ -3,9 +3,9 @@ enum layers {
     _LOWER,                 // Shifted characters, mostly
     _RAISE,                 // Unshifted characters, mostly
     _ADJUST,                // Mainly RGB, activated when lower and raise is pressed at the same time
+    _EXTEND,                // Home row mods, navigation cluster, window management
     _FUNPAD,                // F1 - F12
     _NUMPAD,                // A numpad
-    _EXTEND,                // Home row mods, navigation cluster, window management
     _BL3_BSE,               // Base layer for Borderlands 3
     _BL3_UPR,               // Upper layer for Borderlands 3
 };

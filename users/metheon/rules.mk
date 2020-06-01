@@ -11,9 +11,10 @@ endif
 
 DYNAMIC_MACRO_ENABLE			=	yes # Enables dynamic macros
 EXTRAKEY_ENABLE					=	yes # Enables audio control and System control
-LEADER_ENABLE					=	no  # Enables the Leader Key feature
+LEADER_ENABLE					=	yes # Enables the Leader Key feature
 TAP_DANCE_ENABLE				=	yes # Enables the tap dance feature
 
 SRC += encoders.c
 SRC += tap_dance.c
 SRC += process_records.c
+SRC += leader.c

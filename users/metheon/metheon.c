@@ -3,6 +3,7 @@
 #include "encoders.h"
 #include "tap_dance.h"
 #include "process_records.h"
+#include "leader.h"
 
 // clang-format off
 layer_state_t layer_state_set_user(layer_state_t state) {
@@ -16,7 +17,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_G    ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_SCLN ,KC_BSPC ,
         ESC_MEH ,KC_A    ,KC_R    ,KC_S    ,KC_T    ,KC_D    ,KC_H    ,KC_N    ,KC_E    ,KC_I    ,KC_O    ,KC_QUOT ,
         KC_LSFT ,NUM_Z   ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_K    ,KC_M    ,KC_COMMA,KC_DOT  ,FUN_SLSH,KC_RSFT ,
-        KC_NO   ,KC_NO   ,ALT_GUI ,TD_CTRL ,LOWER   ,SPACE_FN,ENTER_FN,RAISE   ,TD_CTRL ,GUI_ALT ,DM_PLY1 ,DM_PLY2 ,
+        KC_LEAD ,LOCK_PC ,ALT_GUI ,TD_CTRL ,LOWER   ,SPACE_FN,ENTER_FN,RAISE   ,TD_CTRL ,GUI_ALT ,DM_PLY1 ,DM_PLY2 ,
         BSE_E01 ,BSE_E02
     ),
     [_LOWER] = LAYOUT_metheon(
@@ -34,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RSE_E01 ,RSE_E02
     ),
     [_ADJUST] = LAYOUT_metheon(
-        XXXXXXX ,KC_SEC_1,KC_SEC_2,KC_SEC_3,KC_SEC_4,KC_SEC_5,XXXXXXX ,XXXXXXX ,XXXXXXX ,KC_VRSN ,KC_MAKE ,KC_FLASH,
+        XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,KC_VRSN ,KC_MAKE ,KC_FLASH,
         HIBRNT  ,XXXXXXX ,KC_MPRV ,KC_MPLY ,KC_MNXT ,TO_BL3  ,RGB_TOG ,RGB_MOD ,RGB_HUI ,RGB_SAI ,RGB_VAI ,XXXXXXX ,
         SLEEP   ,XXXXXXX ,KC_MUTE ,KC_VOLD ,KC_VOLU ,XXXXXXX ,XXXXXXX ,RGB_RMOD,RGB_HUD ,RGB_SAD ,RGB_VAD ,XXXXXXX ,
         XXXXXXX ,XXXXXXX ,_______ ,_______ ,_______ ,XXXXXXX ,XXXXXXX ,_______ ,_______ ,_______ ,XXXXXXX ,XXXXXXX ,
@@ -44,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         SPACES  ,LEFT_MON,RGHT_MON,LEFT_SPC,RGHT_SPC,XXXXXXX ,KC_PGUP ,KC_HOME ,KC_UP   ,KC_END  ,XXXXXXX ,DEL_WRD ,
         WIN_MENU,KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,DESKTOP ,KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RGHT ,XXXXXXX ,XXXXXXX ,
         _______ ,LFT_ALGN,RGT_ALGN,MAXIMIZE,VID_OFF ,XXXXXXX ,FILES   ,MIC_OFF ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,
-        LOCK_PC ,DM_RSTP ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,_______ ,XXXXXXX ,XXXXXXX ,XXXXXXX ,DM_REC1 ,DM_REC2 ,
+        XXXXXXX ,DM_RSTP ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,_______ ,XXXXXXX ,XXXXXXX ,XXXXXXX ,DM_REC1 ,DM_REC2 ,
         EXT_E01 ,EXT_E02
     ),
     [_FUNPAD] = LAYOUT_metheon(
@@ -79,5 +80,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // clang-format on
 
 void matrix_scan_user(void) {
-    matrix_scan_fn();
+    matrix_scan_encoders();
+    matrix_scan_leader();
 }
