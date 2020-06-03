@@ -1,9 +1,57 @@
 # Metheon's layout
 
-## Used in the following keyboards
+## Introduction
 
-* Planck EZ
-* Kyria
+I am standing on the shoulders of giants with this keymap. My main inspiration is [*Drashna*](https://github.com/qmk/qmk_firmware/tree/master/users/drashna) and [*manna-harbour_miryoku*](https://github.com/qmk/qmk_firmware/tree/master/users/manna-harbour_miryoku).
+
+My approach to keyboards and keymaps is to mentally settle on a form factor which simple, effective and intuitive. For me that is the basic Planck keyboard with its four rows by twelve columns. I then select keyboards which are physically able to map to this mental model. Right now I use these two; the [*Kyria*](https://splitkb.com/kyria) and the [*Planck EZ*](https://ergodox-ez.com/pages/planck). A Kyria is really just a reshuffled Planck with two additional encoders, and the Planck EZ is just a Planck with a 2U spacebar. I accomodate for the 2U spacebar by having the alternative functions mapped on my Lower and Raise layers.
+
+For the actual keymap, I recommend reading through [`metheon.c`](metheon.c). For how that keymap is mapped to each read through [`keymap.c` of the Kyria](../../keyboards/kyria/keymaps/metheon/keymap.c) and [`keymap.c` of the Planck EZ](../../keyboards/planck/keymaps/metheon/keymap.c).
+This approach ensures that it is quite easy to add support for a new keyboard aslong as it fits the mental model of a 48 key Planck. All you have to do is write an adapter. Note that the order of the `#define` and the `#include` in the keymaps matter. The layout to use must be defined as it is called from within the `metheon.c` file.
+
+In the following I will dive into different aspects of my keymap.
+
+## Tap Dance
+
+I try to minimize same finger bigrams, as such I only have a few tap dances defined:
+
+* Ctrl > Ctrl+Shift
+* Alt > Win
+* Win > Alt
+
+Files:
+
+* [`tap_dance.c`](tap_dance.c)
+* [`tap_dance.h`](tap_dance.h)
+
+## Leader
+
+I use my leader key mainly to input relevant data that I otherwise find too cumbersome to input, this is stuff such as usernames and emails. To avoid having those details pushed to [GitHub](https://github.com/) I have a file called `secrets.h` which is never pushed to GitHub. To avoid having that file being pushed by accident I do two things:
+
+* Add the file to `.gitignore`
+* Add the file to `.git/info/exclude`
+
+The `secrets.h` file simply contains the following content:
+
+```c
+static const char * const secrets[] = {
+  "no secrets to be found",
+  "no secrets to be found",
+  // Add all your secrets here
+};
+```
+
+This array is duplicated as a dummy array within the `leader.c` file, such that the keymap would still compile on another machine even without `secrets.h` present. The feature can also be turned off by compiling with: `make keyboard:name NO_SECRETS=yes`, which can be handy if I take my keyboard outside of my home.
+
+## Encoders
+
+TODO
+
+## Process Records
+
+TODO
+
+# OLD README, will be removed
 
 ## Description
 
