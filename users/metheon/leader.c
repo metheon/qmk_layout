@@ -3,15 +3,19 @@
 #if (__has_include("secrets.h") && !defined(NO_SECRETS))
 #include "secrets.h"
 #else
-// `PROGMEM const char secret[][x]` may work better, but it takes up more space in the firmware
-// And I'm not familiar enough to know which is better or why...
 // If the secret.h file is ever lost, simply create it again with this array being the only content
 static const char * const secrets[] = {
   "no secrets to be found",
   "no secrets to be found",
   "no secrets to be found",
   "no secrets to be found",
-  "no secrets to be found"
+  "no secrets to be found",
+  "no secrets to be found",
+  "no secrets to be found",
+  "no secrets to be found",
+  "no secrets to be found",
+  "no secrets to be found",
+  "no secrets to be found",
 };
 #endif
 
@@ -41,17 +45,35 @@ void matrix_scan_leader(void) {
         SEQ_TWO_KEYS(KC_M, KC_N) {
             send_string(secrets[0]);
         }
-        SEQ_TWO_KEYS(KC_H, KC_E) {
+        SEQ_TWO_KEYS(KC_P, KC_E) {
             send_string(secrets[1]);
         }
-        SEQ_TWO_KEYS(KC_H, KC_P) {
+        SEQ_TWO_KEYS(KC_P, KC_P) {
             send_string(secrets[2]);
         }
-        SEQ_TWO_KEYS(KC_W, KC_E) {
+        SEQ_TWO_KEYS(KC_P, KC_U) {
             send_string(secrets[3]);
         }
-        SEQ_TWO_KEYS(KC_W, KC_P) {
+        SEQ_THREE_KEYS(KC_P, KC_P, KC_N) {
             send_string(secrets[4]);
+        }
+        SEQ_TWO_KEYS(KC_P, KC_N) {
+            send_string(secrets[5]);
+        }
+        SEQ_THREE_KEYS(KC_P, KC_E, KC_M) {
+            send_string(secrets[6]);
+        }
+        SEQ_TWO_KEYS(KC_W, KC_E) {
+            send_string(secrets[7]);
+        }
+        SEQ_TWO_KEYS(KC_W, KC_P) {
+            send_string(secrets[8]);
+        }
+        SEQ_TWO_KEYS(KC_W, KC_U) {
+            send_string(secrets[9]);
+        }
+        SEQ_THREE_KEYS(KC_W, KC_E, KC_I) {
+            send_string(secrets[10]);
         }
     }
 }
