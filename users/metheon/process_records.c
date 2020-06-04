@@ -23,7 +23,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case KC_FLASH:
             if (!record->event.pressed) {
                 SEND_STRING("make -j 4 " QMK_KEYBOARD ":" QMK_KEYMAP ":flash" SS_TAP(X_ENTER));
-                reset_keyboard();
             }
             break;
         case KC_VRSN:
