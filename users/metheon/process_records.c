@@ -17,12 +17,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
         case KC_MAKE:
             if (!record->event.pressed) {
-                SEND_STRING("make " QMK_KEYBOARD ":" QMK_KEYMAP SS_TAP(X_ENTER));
+                SEND_STRING("make -j 4 " QMK_KEYBOARD ":" QMK_KEYMAP SS_TAP(X_ENTER));
             }
             break;
         case KC_FLASH:
             if (!record->event.pressed) {
-                SEND_STRING("make " QMK_KEYBOARD ":" QMK_KEYMAP ":flash" SS_TAP(X_ENTER));
+                SEND_STRING("make -j 4 " QMK_KEYBOARD ":" QMK_KEYMAP ":flash" SS_TAP(X_ENTER));
                 reset_keyboard();
             }
             break;
