@@ -62,6 +62,19 @@ void matrix_scan_leader(void) {
             SEND_STRING("~~~~" SS_TAP(X_LEFT) SS_TAP(X_LEFT));
         }
 
+        // /// //
+        // QMK //
+        // /// //
+        SEQ_TWO_KEYS(KC_Q, KC_D) { // QMK Docs
+            SEND_STRING("https://docs.qmk.fm/#/");
+        }
+        SEQ_TWO_KEYS(KC_Q, KC_U) { // QMK User space
+            SEND_STRING("https://github.com/metheon/qmk_firmware/tree/metheon/users/metheon");
+        }
+        SEQ_THREE_KEYS(KC_Q, KC_U, KC_R) { // QMK User space, readme
+            SEND_STRING("https://github.com/metheon/qmk_firmware/blob/metheon/users/metheon/readme.md");
+        }
+
         // ////// //
         // Emojis //
         // ////// //
