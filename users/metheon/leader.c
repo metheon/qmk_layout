@@ -100,7 +100,7 @@ void matrix_scan_leader(void) {
         SEQ_THREE_KEYS(KC_E, KC_M, KC_S) {
             SEND_STRING(":man_shrugging:");
         }
-        SEQ_THREE_KEYS(KC_E, KC_F, KC_P) {
+        SEQ_THREE_KEYS(KC_E, KC_M, KC_F) {
             SEND_STRING(":man_facepalming:");
         }
 
