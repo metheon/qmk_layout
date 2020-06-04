@@ -79,29 +79,29 @@ void matrix_scan_leader(void) {
         // Keyboards I own //
         // /////////////// //
         SEQ_TWO_KEYS(KC_K, KC_K) {
-            SEND_STRING("https://blog.splitkb.com/blog/introducing-the-kyria" SS_TAP(X_ENTER));
+            SEND_STRING("https://blog.splitkb.com/blog/introducing-the-kyria");
         }
         SEQ_TWO_KEYS(KC_K, KC_P) {
-            SEND_STRING("https://ergodox-ez.com/pages/planck" SS_TAP(X_ENTER));
+            SEND_STRING("https://ergodox-ez.com/pages/planck");
         }
 
         // ////// //
         // Emojis //
         // ////// //
         SEQ_TWO_KEYS(KC_E, KC_T) {
-            SEND_STRING(":thinking:" SS_TAP(X_ENTER));
+            SEND_STRING(":thinking:");
         }
         SEQ_TWO_KEYS(KC_E, KC_P) {
-            SEND_STRING(":poop:" SS_TAP(X_ENTER));
+            SEND_STRING(":poop:");
         }
         SEQ_TWO_KEYS(KC_E, KC_M) {
-            SEND_STRING(":money_with_wings:" SS_TAP(X_ENTER));
+            SEND_STRING(":money_with_wings:");
         }
         SEQ_THREE_KEYS(KC_E, KC_M, KC_S) {
-            SEND_STRING(":man_shrugging:" SS_TAP(X_ENTER));
+            SEND_STRING(":man_shrugging:");
         }
         SEQ_THREE_KEYS(KC_E, KC_F, KC_P) {
-            SEND_STRING(":man_facepalming:" SS_TAP(X_ENTER));
+            SEND_STRING(":man_facepalming:");
         }
 
         // /////// //
