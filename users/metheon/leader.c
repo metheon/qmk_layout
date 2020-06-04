@@ -75,6 +75,16 @@ void matrix_scan_leader(void) {
             SEND_STRING("https://github.com/metheon/qmk_firmware/blob/metheon/users/metheon/readme.md");
         }
 
+        // /////////////// //
+        // Keyboards I own //
+        // /////////////// //
+        SEQ_TWO_KEYS(KC_K, KC_K) {
+            SEND_STRING("https://blog.splitkb.com/blog/introducing-the-kyria" SS_TAP(X_ENTER));
+        }
+        SEQ_TWO_KEYS(KC_K, KC_P) {
+            SEND_STRING("https://ergodox-ez.com/pages/planck" SS_TAP(X_ENTER));
+        }
+
         // ////// //
         // Emojis //
         // ////// //
