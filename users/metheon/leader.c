@@ -43,10 +43,10 @@ void matrix_scan_leader(void) {
         // //////// //
         // Markdown //
         // //////// //
-        SEQ_TWO_KEYS(KC_M, KC_C) { // Markdown Inline Code
+        SEQ_THREE_KEYS(KC_M, KC_C, KC_I) { // Markdown Inline Code
             SEND_STRING("`` " SS_TAP(X_LEFT) SS_TAP(X_LEFT));
         }
-        SEQ_TWO_KEYS(KC_M, KC_B) { // Markdown code block
+        SEQ_THREE_KEYS(KC_M, KC_C, KC_B) { // Markdown code block
             SEND_STRING("```c" SS_LSFT("\n\n") "``` " SS_TAP(X_UP));
         }
         SEQ_TWO_KEYS(KC_M, KC_U) { // Markdown url
