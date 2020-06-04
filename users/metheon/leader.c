@@ -26,6 +26,9 @@ void matrix_scan_leader(void) {
         leading = false;
         leader_end();
 
+        // /////////////////////// //
+        // Application Invocations //
+        // /////////////////////// //
         SEQ_ONE_KEY(KC_P) { // Invoke Password Manager
             register_code(KC_LCTL);
             register_code(KC_LALT);
@@ -36,13 +39,52 @@ void matrix_scan_leader(void) {
             unregister_code(KC_LALT);
             unregister_code(KC_LCTL);
         }
-        SEQ_TWO_KEYS(KC_D, KC_C) { // Discord Inline Code
+
+        // //////// //
+        // Markdown //
+        // //////// //
+        SEQ_TWO_KEYS(KC_M, KC_C) { // Markdown Inline Code
             SEND_STRING("`` " SS_TAP(X_LEFT) SS_TAP(X_LEFT));
         }
-        SEQ_TWO_KEYS(KC_D, KC_B) { // Discord code block
+        SEQ_TWO_KEYS(KC_M, KC_B) { // Markdown code block
             SEND_STRING("```c" SS_LSFT("\n\n") "``` " SS_TAP(X_UP));
         }
-        SEQ_TWO_KEYS(KC_M, KC_N) {
+        SEQ_TWO_KEYS(KC_M, KC_U) { // Markdown url
+            SEND_STRING("[]()" SS_TAP(X_LEFT) SS_TAP(X_LEFT) SS_TAP(X_LEFT));
+        }
+        SEQ_TWO_KEYS(KC_M, KC_B) { // Markdown bold
+            SEND_STRING("**" SS_TAP(X_LEFT));
+        }
+        SEQ_TWO_KEYS(KC_M, KC_I) { // Markdown italic
+            SEND_STRING("__" SS_TAP(X_LEFT));
+        }
+        SEQ_TWO_KEYS(KC_M, KC_S) { // Markdown strikethrough
+            SEND_STRING("~~~~" SS_TAP(X_LEFT) SS_TAP(X_LEFT));
+        }
+
+        // ////// //
+        // Emojis //
+        // ////// //
+        SEQ_TWO_KEYS(KC_E, KC_T) {
+            SEND_STRING(":thinking:" SS_TAP(X_ENTER));
+        }
+        SEQ_TWO_KEYS(KC_E, KC_P) {
+            SEND_STRING(":poop:" SS_TAP(X_ENTER));
+        }
+        SEQ_TWO_KEYS(KC_E, KC_M) {
+            SEND_STRING(":money_with_wings:" SS_TAP(X_ENTER));
+        }
+        SEQ_THREE_KEYS(KC_E, KC_M, KC_S) {
+            SEND_STRING(":man_shrugging:" SS_TAP(X_ENTER));
+        }
+        SEQ_THREE_KEYS(KC_E, KC_F, KC_P) {
+            SEND_STRING(":man_facepalming:" SS_TAP(X_ENTER));
+        }
+
+        // /////// //
+        // Secrets //
+        // /////// //
+        SEQ_TWO_KEYS(KC_P, KC_N) {
             send_string(secrets[0]);
         }
         SEQ_TWO_KEYS(KC_P, KC_E) {
