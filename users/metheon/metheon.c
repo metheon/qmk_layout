@@ -1,9 +1,4 @@
-#include QMK_KEYBOARD_H
 #include "metheon.h"
-#include "encoders.h"
-#include "tap_dance.h"
-#include "process_records.h"
-#include "leader.h"
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);

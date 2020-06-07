@@ -1,5 +1,3 @@
-#pragma once
-
 // Encoder tap functions
 #define BSE_E01             KC_ENTER
 #define BSE_E02             KC_NO

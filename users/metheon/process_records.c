@@ -1,6 +1,4 @@
-#include "quantum.h"
 #include "metheon.h"
-#include "process_records.h"
 #include "version.h"
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {

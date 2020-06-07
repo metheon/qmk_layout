@@ -1,6 +1,4 @@
-#include "quantum.h"
 #include "metheon.h"
-#include "encoders.h"
 
 // For the alt tab macro (rotary encoder)
 bool     is_alt_tab_active = false;
