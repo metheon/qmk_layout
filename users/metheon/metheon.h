@@ -43,7 +43,6 @@ enum layers {
 #define LOCK_PC             LGUI(KC_L)              // Lock the PC
 #define DEL_WRD             LCTL(KC_BSPC)           // Backwards delete a whole word
 #define FILES               LGUI(KC_E)              // Open File Explorer
-#define ESC_MEH             MEH_T(KC_ESC)           // Esc on tap, meh on hold (I use that for virtual box)
 
 // EurKey key combinations used on Windows for the Danish language
 #define DK_EE               RALT(KC_G)

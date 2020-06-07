@@ -18,7 +18,7 @@ void matrix_scan_user(void) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_metheon(
         KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_G    ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_SCLN ,KC_BSPC ,
-        ESC_MEH ,KC_A    ,KC_R    ,KC_S    ,KC_T    ,KC_D    ,KC_H    ,KC_N    ,KC_E    ,KC_I    ,KC_O    ,KC_QUOT ,
+        KC_ESC  ,KC_A    ,KC_R    ,KC_S    ,KC_T    ,KC_D    ,KC_H    ,KC_N    ,KC_E    ,KC_I    ,KC_O    ,KC_QUOT ,
         KC_LSFT ,NUM_Z   ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_K    ,KC_M    ,KC_COMMA,KC_DOT  ,FUN_SLSH,KC_RSFT ,
         KC_LEAD ,LOCK_PC ,ALT_GUI ,TD_CTRL ,LOWER   ,SPACE_FN,ENTER_FN,RAISE   ,TD_CTRL ,GUI_ALT ,DM_PLY1 ,DM_PLY2 ,
         BSE_E01 ,BSE_E02
