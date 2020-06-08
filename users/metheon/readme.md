@@ -28,7 +28,7 @@ I try to minimize same finger bigrams, as such I only have a few tap dances defi
 
 * `Ctrl > Ctrl+Shift`
 * `Alt > Win`
-* `Win > Alt`
+* `Win > AltGr`
 
 Files:
 
