@@ -50,12 +50,12 @@ enum layers {
 #define DEL_WRD             LCTL(KC_BSPC)           // Backwards delete a whole word
 #define FILES               LGUI(KC_E)              // Open File Explorer
 
-// EurKey key combinations used on Windows for the Danish language
-#define DK_EE               RALT(KC_G)
+// Key combinations used on Windows for the Danish language using US International keyboard layout
+#define DK_EE               RALT(KC_E)
 #define DK_AA               RALT(KC_W)
-#define DK_AE               RALT(KC_Q)
+#define DK_AE               RALT(KC_Z)
 #define DK_OE               RALT(KC_L)
-#define DK_PND              RALT(KC_4)
+#define DK_PND              RALT(LSFT(KC_4))
 #define DK_EUR              RALT(KC_5)
 
 // All keys related to Borderlands 3
