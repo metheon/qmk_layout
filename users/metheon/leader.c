@@ -84,6 +84,9 @@ void matrix_scan_leader(void) {
         SEQ_TWO_KEYS(KC_K, KC_P) {
             SEND_STRING("https://ergodox-ez.com/pages/planck");
         }
+        SEQ_TWO_KEYS(KC_K, KC_E) {
+            SEND_STRING("https://ergodox-ez.com");
+        }
 
         // ////// //
         // Emojis //
