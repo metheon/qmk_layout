@@ -85,6 +85,8 @@ void encoder_update_user(uint8_t index, bool clockwise) {
             case _EXTEND:
                 volume_control(clockwise);
                 break;
+            case _BL3_BSE:
+                volume_control(clockwise);
             default:
                 // Do nothing
                 break;
