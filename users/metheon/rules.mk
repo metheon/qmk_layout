@@ -1,7 +1,6 @@
 # Set any rules.mk overrides for your specific keymap here.
 # See rules at https://docs.qmk.fm/#/config_options?id=the-rulesmk-file
 LINK_TIME_OPTIMIZATION_ENABLE	=	yes # Reduces compiled size of firmware
-MOUSEKEY_ENABLE					=	yes # Enables usage of keyboard as mouse
 
 ifndef ENCODER_ENABLE
 	ENCODER_ENABLE				=	no  # Enables usage of rotary encoders
@@ -18,6 +17,7 @@ SRC += process_records.c
 SRC += leader.c
 
 # Disable as many features as possible
+MOUSEKEY_ENABLE					=	no  # Enables usage of keyboard as mouse
 COMMAND_ENABLE					=	no 	# Commands for debug and configuration
 AUDIO_ENABLE					=	no	# Enables any onboard speakers
 KEY_LOCK_ENABLE					=	no

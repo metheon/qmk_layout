@@ -39,9 +39,9 @@ void page_turning(bool clockwise) {
 
 void zoom(bool clockwise) {
     if (clockwise) {
-        tap_code16(C(KC_WH_D));
+        tap_code16(C(KC_MINS));
     } else {
-        tap_code16(C(KC_WH_U));
+        tap_code16(C(KC_PLUS));
     }
 }
 
