@@ -3,16 +3,20 @@
 #ifdef TAPPING_TERM
 #	undef TAPPING_TERM
 #endif
-#define TAPPING_TERM        200
+#define TAPPING_TERM                200
 
-#define ONESHOT_TIMEOUT     2500
-#define ONESHOT_TAP_TOGGLE  3
+#define ONESHOT_TIMEOUT             2500
+#define ONESHOT_TAP_TOGGLE          3
 
 #define PERMISSIVE_HOLD
 
 // The Leader key allows to flexibly assign macros to key sequences.
 #define LEADER_PER_KEY_TIMING
-#define LEADER_TIMEOUT 750
+#define LEADER_TIMEOUT              750
+
+// Mouse
+#define MOUSEKEY_WHEEL_MAX_SPEED    12      // default is 8, higher is faster
+#define MOUSEKEY_WHEEL_TIME_TO_MAX  0       // disable, constant speed
 
 
 ////////////////////////////////

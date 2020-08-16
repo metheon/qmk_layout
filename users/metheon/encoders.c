@@ -29,11 +29,11 @@ void media_control(bool clockwise) {
     }
 }
 
-void page_turning(bool clockwise) {
+void scrolling(bool clockwise) {
     if (clockwise) {
-        tap_code16(KC_PGDN);
+        tap_code16(KC_WH_D);
     } else {
-        tap_code16(KC_PGUP);
+        tap_code16(KC_WH_U);
     }
 }
 
@@ -72,7 +72,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {  // Left encoder
         switch (biton32(layer_state)) {
             case _BASE:
-                alt_tab(clockwise);
+                scrolling(clockwise);
                 break;
             case _LOWER:
                 // unused as lower is activated on the left
@@ -83,7 +83,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
             case _ADJUST:
                 break;
             case _EXTEND:
-                volume_control(clockwise);
+                alt_tab(clockwise);
                 break;
             case _BL3_BSE:
                 volume_control(clockwise);
@@ -94,7 +94,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     } else if (index == 1) {  // Right encoder
         switch (biton32(layer_state)) {
             case _BASE:
-                page_turning(clockwise);
+                volume_control(clockwise);
                 break;
             case _LOWER:
                 zoom(clockwise);
