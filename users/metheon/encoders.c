@@ -67,8 +67,6 @@ void ctrl_tab(bool clockwise) {
 }
 
 void encoder_update_user(uint8_t index, bool clockwise) {
-    // Clockwise seems inverted for some reason
-    clockwise = !clockwise;
     if (index == 0) {  // Left encoder
         switch (biton32(layer_state)) {
             case _BASE:
