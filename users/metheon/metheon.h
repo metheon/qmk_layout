@@ -9,11 +9,9 @@ enum layers {
     _LOWER,                 // Shifted characters, mostly
     _RAISE,                 // Unshifted characters, mostly
     _ADJUST,                // Mainly RGB, activated when lower and raise is pressed at the same time
-    _EXTEND,                // Home row mods, navigation cluster, window management
+    _EXTEND,                // Home row mods, navigation cluster, window management, shortcuts
     _FUNPAD,                // F1 - F12
     _NUMPAD,                // A numpad
-    _BL3_BSE,               // Base layer for Borderlands 3
-    _BL3_UPR,               // Upper layer for Borderlands 3
 };
 
 // Layer keys
@@ -21,6 +19,8 @@ enum layers {
 #define ENTER_FN            LT(_EXTEND, KC_ENTER)
 #define LOWER               MO(_LOWER)
 #define RAISE               MO(_RAISE)
+#define LWR_DEL             LT(_LOWER, KC_DEL)
+#define RSE_BSP             LT(_RAISE, KC_BSPC)
 #define NUM_Z               LT(_NUMPAD, KC_Z)
 #define FUN_SLSH            LT(_FUNPAD, KC_SLSH)
 
@@ -57,9 +57,3 @@ enum layers {
 #define DK_OE               RALT(KC_L)
 #define DK_PND              RALT(LSFT(KC_4))
 #define DK_EUR              RALT(KC_5)
-
-// All keys related to Borderlands 3
-#define TO_BL3              TO(_BL3_BSE)
-#define TO_BASE             TO(_BASE)
-#define BL3_SPC             LT(_BL3_UPR, KC_SPACE)
-#define BL3_W               LSFT(KC_W)              // BL3: Hold shift while pressing W to run instead of walking

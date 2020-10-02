@@ -13,10 +13,6 @@
 #define FUN_E02             KC_NO
 #define NUM_E01             KC_NO
 #define NUM_E02             KC_NO
-#define BL3_BSE_E01         KC_MUTE
-#define BL3_BSE_E02         KC_NO
-#define BL3_UPR_E01         KC_NO
-#define BL3_UPR_E02         KC_NO
 
 // Required for alt-tab function
 void matrix_scan_encoders(void);
