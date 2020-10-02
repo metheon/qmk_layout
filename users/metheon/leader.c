@@ -30,14 +30,7 @@ void matrix_scan_leader(void) {
         // Application Invocations //
         // /////////////////////// //
         SEQ_ONE_KEY(KC_P) { // Invoke Password Manager
-            register_code(KC_LCTL);
-            register_code(KC_LALT);
-            register_code(KC_LSFT);
-            register_code(KC_P);
-            unregister_code(KC_P);
-            unregister_code(KC_LSFT);
-            unregister_code(KC_LALT);
-            unregister_code(KC_LCTL);
+            SEND_STRING(SS_LCTL( SS_LALT( SS_LSFT("p") ) ) );
         }
 
         // //////// //
