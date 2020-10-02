@@ -12,10 +12,10 @@ void matrix_scan_user(void) {
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_metheon(
-        KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_G    ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_SCLN ,KC_BSLS ,
+        KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_G    ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_SCLN ,KC_BSPC ,
         KC_ESC  ,KC_A    ,KC_R    ,KC_S    ,KC_T    ,KC_D    ,KC_H    ,KC_N    ,KC_E    ,KC_I    ,KC_O    ,KC_QUOT ,
         KC_LSFT ,NUM_Z   ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_K    ,KC_M    ,KC_COMMA,KC_DOT  ,FUN_SLSH,KC_RSFT ,
-        KC_LEAD ,LOCK_PC ,ALT_GUI ,TD_CTRL ,LWR_DEL ,SPACE_FN,ENTER_FN,RSE_BSP ,TD_CTRL ,GUI_ALT ,DM_PLY1 ,DM_PLY2 ,
+        KC_LEAD ,LOCK_PC ,ALT_GUI ,TD_CTRL ,LOWER   ,SPACE_FN,ENTER_FN,RAISE   ,TD_CTRL ,GUI_ALT ,DM_PLY1 ,DM_PLY2 ,
         BSE_E01 ,BSE_E02
     ),
     [_LOWER] = LAYOUT_metheon(
@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_RAISE] = LAYOUT_metheon(
         KC_GRV  ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,KC_DEL  ,
         KC_CAPS ,DK_EE   ,DK_AE   ,DK_OE   ,DK_AA   ,DK_EUR  ,DK_PND  ,KC_MINS ,KC_EQL  ,KC_LBRC ,KC_RBRC ,XXXXXXX ,
-        _______ ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,_______ ,XXXXXXX ,_______ ,
+        _______ ,XXXXXXX ,XXXXXXX ,KC_PIPE ,KC_BSLS ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,_______ ,XXXXXXX ,_______ ,
         XXXXXXX ,XXXXXXX ,_______ ,_______ ,_______ ,KC_SPACE,KC_SPACE,_______ ,_______ ,_______ ,XXXXXXX ,XXXXXXX ,
         RSE_E01 ,RSE_E02
     ),
