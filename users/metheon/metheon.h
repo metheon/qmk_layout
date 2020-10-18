@@ -10,8 +10,7 @@ enum layers {
     _RAISE,                 // Unshifted characters, mostly
     _ADJUST,                // Mainly RGB, activated when lower and raise is pressed at the same time
     _EXTEND,                // Home row mods, navigation cluster, window management, shortcuts
-    _FUNPAD,                // F1 - F12
-    _NUMPAD,                // A numpad
+    _NUMFUN,                // A numpad and a funpad
 };
 
 // Layer keys
@@ -21,8 +20,27 @@ enum layers {
 #define RAISE               MO(_RAISE)
 #define LWR_DEL             LT(_LOWER, KC_DEL)
 #define RSE_BSP             LT(_RAISE, KC_BSPC)
-#define NUM_Z               LT(_NUMPAD, KC_Z)
-#define FUN_SLSH            LT(_FUNPAD, KC_SLSH)
+#define NUMFUN              MO(_NUMFUN)
+
+// Home row mods, assuming Colemak ... arst <--> neio
+#define A_SFT               LSFT_T(KC_A)
+#define R_GUI               LGUI_T(KC_R)
+#define S_ALT               LALT_T(KC_S)
+#define T_CTL               LCTL_T(KC_T)
+#define N_CTL               LCTL_T(KC_N)
+#define E_ALT               LALT_T(KC_E)
+#define I_GUI               LGUI_T(KC_I)
+#define O_SFT               LSFT_T(KC_O)
+
+// Home row mods, for the numpad and funpad ... F5, F6, F7, F8 <--> + 4 5 6
+#define F5_SFT              LSFT_T(KC_F5)
+#define F6_GUI              LGUI_T(KC_F6)
+#define F7_ALT              LALT_T(KC_F7)
+#define F8_CTL              LCTL_T(KC_F8)
+#define PLUS_CTL            LCTL_T(KC_PLUS)
+#define N4_ALT              LALT_T(KC_4)
+#define N5_GUI              LGUI_T(KC_5)
+#define N6_SFT              LSFT_T(KC_6)
 
 #define UNDO                LCTL(KC_Z)
 #define REDO                LSFT(LCTL(KC_Z))
@@ -31,6 +49,8 @@ enum layers {
 #define PASTE               LCTL(KC_V)
 #define COPY_T              LCTL(KC_INSERT)
 #define PASTE_T             LSFT(KC_INSERT)
+
+#define OSM_SFT             OSM(KC_LSFT)
 
 #define SPACES              LGUI(KC_TAB)            // I think it's called Desktops in Windows actually
 #define LEFT_MON            LGUI(LSFT(KC_LEFT))     // Move window to left monitor

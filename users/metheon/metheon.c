@@ -13,9 +13,9 @@ void matrix_scan_user(void) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_metheon(
         KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_G    ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_SCLN ,KC_BSPC ,
-        KC_ESC  ,KC_A    ,KC_R    ,KC_S    ,KC_T    ,KC_D    ,KC_H    ,KC_N    ,KC_E    ,KC_I    ,KC_O    ,KC_QUOT ,
-        KC_LSFT ,NUM_Z   ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_K    ,KC_M    ,KC_COMMA,KC_DOT  ,FUN_SLSH,KC_RSFT ,
-        KC_LEAD ,LOCK_PC ,ALT_GUI ,TD_CTRL ,LOWER   ,SPACE_FN,ENTER_FN,RAISE   ,TD_CTRL ,GUI_ALT ,DM_PLY1 ,DM_PLY2 ,
+        KC_ESC  ,A_SFT   ,R_GUI   ,S_ALT   ,T_CTL   ,KC_D    ,KC_H    ,N_CTL   ,E_ALT   ,I_GUI   ,O_SFT   ,KC_QUOT ,
+        XXXXXXX ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_K    ,KC_M    ,KC_COMMA,KC_DOT  ,KC_SLSH ,XXXXXXX ,
+        KC_LEAD ,LOCK_PC ,XXXXXXX ,OSM_SFT ,LOWER   ,SPACE_FN,ENTER_FN,RAISE   ,NUMFUN  ,XXXXXXX ,DM_PLY1 ,DM_PLY2 ,
         BSE_E01 ,BSE_E02
     ),
     [_LOWER] = LAYOUT_metheon(
@@ -46,18 +46,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX ,DM_RSTP ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,_______ ,XXXXXXX ,XXXXXXX ,XXXXXXX ,DM_REC1 ,DM_REC2 ,
         EXT_E01 ,EXT_E02
     ),
-    [_FUNPAD] = LAYOUT_metheon(
-        XXXXXXX ,KC_F9   ,KC_F10  ,KC_F11  ,KC_F12  ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
-        XXXXXXX ,KC_F5   ,KC_F6   ,KC_F7   ,KC_F8   ,XXXXXXX ,XXXXXXX ,KC_LCTRL,KC_LSFT ,KC_LALT ,KC_LGUI ,_______ ,
-        XXXXXXX ,KC_F1   ,KC_F2   ,KC_F3   ,KC_F4   ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
-        XXXXXXX ,XXXXXXX ,_______ ,_______ ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,_______ ,XXXXXXX ,XXXXXXX ,
-        FUN_E01 ,FUN_E02
-    ),
-    [_NUMPAD] = LAYOUT_metheon(
-        KC_TAB  ,XXXXXXX ,KC_F2   ,KC_LPRN ,KC_RPRN ,XXXXXXX ,XXXXXXX ,KC_7    ,KC_8    ,KC_9    ,XXXXXXX ,KC_BSPC ,
-        _______ ,KC_SLSH ,KC_ASTR ,KC_MINS ,KC_PLUS ,XXXXXXX ,XXXXXXX ,KC_4    ,KC_5    ,KC_6    ,XXXXXXX ,XXXXXXX ,
-        _______ ,XXXXXXX ,XXXXXXX ,XXXXXXX ,KC_EQL  ,XXXXXXX ,XXXXXXX ,KC_1    ,KC_2    ,KC_3    ,XXXXXXX ,XXXXXXX ,
-        XXXXXXX ,XXXXXXX ,_______ ,_______ ,XXXXXXX ,KC_ENTER,KC_ENTER,KC_0    ,KC_COMMA,KC_DOT  ,XXXXXXX ,XXXXXXX ,
+    [_NUMFUN] = LAYOUT_metheon(
+        XXXXXXX ,KC_F9   ,KC_F10  ,KC_F11  ,KC_F12  ,XXXXXXX ,KC_LPRN ,KC_7    ,KC_8    ,KC_9    ,KC_RPRN ,KC_BSPC ,
+        _______ ,F5_SFT  ,F6_GUI  ,F7_ALT  ,F8_CTL  ,XXXXXXX ,PLUS_CTL,N4_ALT  ,N5_GUI  ,N6_SFT  ,KC_ASTR ,KC_COMMA,
+        _______ ,KC_F1   ,KC_F2   ,KC_F3   ,KC_F4   ,XXXXXXX ,KC_MINS ,KC_1    ,KC_2    ,KC_3    ,KC_SLSH ,KC_DOT  ,
+        XXXXXXX ,XXXXXXX ,_______ ,_______ ,XXXXXXX ,KC_ENTER,KC_ENTER,KC_0    ,KC_0    ,KC_0    ,XXXXXXX ,XXXXXXX ,
         NUM_E01 ,NUM_E02
     )
 };
