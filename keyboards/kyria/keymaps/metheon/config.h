@@ -14,8 +14,6 @@
 // every other tick, lower the resolution to 2.
 #define ENCODER_RESOLUTION 2
 
-#define TAPPING_TERM 200
-
 // Allows to use either side as the master. Look at the documentation for info:
 // https://docs.qmk.fm/#/config_options?id=setting-handedness
 #define EE_HANDS
