@@ -13,6 +13,9 @@ enum layers {
     _NUMFUN,                // A numpad and a funpad
 };
 
+
+
+
 // Layer keys
 #define SPACE_FN            LT(_EXTEND, KC_SPACE)
 #define ENTER_FN            LT(_EXTEND, KC_ENTER)
@@ -50,7 +53,7 @@ enum layers {
 #define COPY_T              LCTL(KC_INSERT)
 #define PASTE_T             LSFT(KC_INSERT)
 
-#define OSM_SFT             OSM(KC_LSFT)
+#define OSM_SFT             OSM(MOD_LSFT)
 
 #define SPACES              LGUI(KC_TAB)            // I think it's called Desktops in Windows actually
 #define LEFT_MON            LGUI(LSFT(KC_LEFT))     // Move window to left monitor
