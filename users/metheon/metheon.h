@@ -5,7 +5,7 @@
 #include "leader.h"
 
 enum layers {
-    _BASE,                  // Colemak
+    _BASE,                  // Colemak-DH (formerly DHm)
     _LOWER,                 // Shifted characters, mostly
     _RAISE,                 // Unshifted characters, mostly
     _ADJUST,                // Mainly RGB, activated when lower and raise is pressed at the same time
