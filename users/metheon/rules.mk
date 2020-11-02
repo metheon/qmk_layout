@@ -9,15 +9,14 @@ endif
 DYNAMIC_MACRO_ENABLE			=	yes # Enables dynamic macros
 EXTRAKEY_ENABLE					=	yes # Enables audio control and System control
 LEADER_ENABLE					=	yes # Enables the Leader Key feature
-TAP_DANCE_ENABLE				=	yes # Enables the tap dance feature
 MOUSEKEY_ENABLE					=	yes # Enables usage of keyboard as mouse
 
 SRC += encoders.c
-SRC += tap_dance.c
 SRC += process_records.c
 SRC += leader.c
 
 # Disable as many features as possible
+TAP_DANCE_ENABLE				=	no # Enables the tap dance feature
 COMMAND_ENABLE					=	no 	# Commands for debug and configuration
 AUDIO_ENABLE					=	no	# Enables any onboard speakers
 KEY_LOCK_ENABLE					=	no

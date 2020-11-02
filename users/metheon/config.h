@@ -27,9 +27,6 @@
 #define MOUSEKEY_WHEEL_MAX_SPEED    12      // default is 8, higher is faster
 #define MOUSEKEY_WHEEL_TIME_TO_MAX  0       // disable, constant speed
 
-// Reverse encoder directionality
-#define ENCODER_DIRECTION_FLIP
-
 
 ////////////////////////////////
 ////// RGB LED ANIMATIONS //////
