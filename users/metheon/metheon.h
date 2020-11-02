@@ -25,15 +25,15 @@ enum layers {
 #define RSE_BSP             LT(_RAISE, KC_BSPC)
 #define NUMFUN              MO(_NUMFUN)
 
-// Home row mods, assuming Colemak ... arst <--> neio
-#define A_SFT               LSFT_T(KC_A)
-#define R_GUI               LGUI_T(KC_R)
+// Home row mods, assuming Colemak ... rst <--> nei
+// As I use a GUI/Super heavy UI for Linux I have decided to mirror the order from Apples keyboards: ctrl alt gui <--> gui alt ctrl
+// Shift is only present on the thumb
+#define R_CTL               LCTL_T(KC_R)
 #define S_ALT               LALT_T(KC_S)
-#define T_CTL               LCTL_T(KC_T)
-#define N_CTL               LCTL_T(KC_N)
+#define T_GUI               LGUI_T(KC_T)
+#define N_GUI               LGUI_T(KC_N)
 #define E_ALT               LALT_T(KC_E)
-#define I_GUI               LGUI_T(KC_I)
-#define O_SFT               LSFT_T(KC_O)
+#define I_CTL               LCTL_T(KC_I)
 
 // Home row mods, for the numpad and funpad ... F5, F6, F7, F8 <--> + 4 5 6
 #define F5_SFT              LSFT_T(KC_F5)
