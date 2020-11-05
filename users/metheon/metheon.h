@@ -15,9 +15,9 @@ enum layers {
 
 // Base layer thumb cluster from left side, left hand, to right side, right hand
 #define SPC_EXT             LT(_EXTEND, KC_SPACE)
-#define LWR_DEL             LT(_LOWER, KC_DEL)
-#define RSE_BSP             LT(_RAISE, KC_BSPC)
-#define ENT_SFT             LSFT_T(KC_ENTER)
+#define ENT_LWR             LT(_LOWER, KC_ENTER)
+#define DEL_RSE             LT(_RAISE, KC_DEL)
+#define BSPC_SFT            LSFT_T(KC_BSPC)
 
 // Home row mods, using Colemak ... arst <--> neio
 // As I use a GUI/Super heavy UI for Linux I have decided to mirror the order from Apples keyboards: shift ctrl alt gui <--> gui alt ctrl shift
