@@ -14,9 +14,9 @@ enum layers {
 #define __NONE__            KC_NO
 
 // Base layer thumb cluster from left side, left hand, to right side, right hand
-#define TAB_RSE             LT(_RAISE, KC_TAB)
+#define TAB_LWR             LT(_LOWER, KC_TAB)
 #define SPC_EXT             LT(_EXTEND, KC_SPACE)
-#define ENT_LWR             LT(_LOWER, KC_ENTER)
+#define ENT_RSE             LT(_RAISE, KC_ENTER)
 #define DEL_RSE             LT(_RAISE, KC_DEL)
 #define BSPC_EXT            LT(_EXTEND, KC_BSPC)
 #define ESC_LWR             LT(_LOWER, KC_ESC)

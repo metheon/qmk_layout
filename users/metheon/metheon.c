@@ -19,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------------------------------------------|                    |--------------------------------------------|
          KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V                         ,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,
     //  '-------------------------+--------+---------+--------+  +--------+--------+--------+--------------------------'
-                                   TAB_RSE ,SPC_EXT  ,ENT_LWR    ,DEL_RSE ,BSPC_EXT,ESC_LWR ,
+                                   TAB_LWR ,SPC_EXT  ,ENT_RSE    ,DEL_RSE ,BSPC_EXT,ESC_LWR ,
     //                            '--------+---------+--------+  +--------+--------+--------'
     //  Encoders
     //  .--------+-------.
