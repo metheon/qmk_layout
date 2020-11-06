@@ -14,29 +14,32 @@ enum layers {
 #define __NONE__            KC_NO
 
 // Base layer thumb cluster from left side, left hand, to right side, right hand
+#define TAB_RSE             LT(_RAISE, KC_TAB)
 #define SPC_EXT             LT(_EXTEND, KC_SPACE)
 #define ENT_LWR             LT(_LOWER, KC_ENTER)
 #define DEL_RSE             LT(_RAISE, KC_DEL)
-#define BSPC_SFT            LSFT_T(KC_BSPC)
+#define BSPC_EXT            LT(_EXTEND, KC_BSPC)
+#define ESC_LWR             LT(_LOWER, KC_ESC)
 
 // Home row mods, using Colemak ... arst <--> neio
-// As I use a GUI/Super heavy UI for Linux I have decided to mirror the order from Apples keyboards: shift ctrl alt gui <--> gui alt ctrl shift
-#define A_SFT               LSFT_T(KC_A)
-#define R_CTL               LCTL_T(KC_R)
-#define S_ALT               LALT_T(KC_S)
-#define T_GUI               LGUI_T(KC_T)
-#define N_GUI               LGUI_T(KC_N)
-#define E_ALT               LALT_T(KC_E)
-#define I_CTL               LCTL_T(KC_I)
-#define O_SFT               LSFT_T(KC_O)
+#define HOME_A              LGUI_T(KC_A)
+#define HOME_R              LALT_T(KC_R)
+#define HOME_S              LSFT_T(KC_S)
+#define HOME_T              LCTL_T(KC_T)
+#define HOME_N              LCTL_T(KC_N)
+#define HOME_E              LSFT_T(KC_E)
+#define HOME_I              LALT_T(KC_I)
+#define HOME_O              LGUI_T(KC_O)
 
-// Home row mods, for the numpad and funpad ... F6, F5, F4 <--> 4 5 6
-#define F6_CTL              LCTL_T(KC_F6)
-#define F5_ALT              LALT_T(KC_F5)
-#define F4_GUI              LGUI_T(KC_F4)
-#define _4_GUI              LGUI_T(KC_4)
-#define _5_ALT              LALT_T(KC_5)
-#define _6_CTL              LCTL_T(KC_6)
+// Home row mods, for the numpad and funpad ... ( F6, F5, F4 <--> 4 5 6 -
+#define HOME_LP             LGUI_T(KC_LPRN)
+#define HOME_F6             LALT_T(KC_F6)
+#define HOME_F5             LSFT_T(KC_F5)
+#define HOME_F4             LCTL_T(KC_F4)
+#define HOME_4              LCTL_T(KC_4)
+#define HOME_5              LSFT_T(KC_5)
+#define HOME_6              LALT_T(KC_6)
+#define HOME_MN             LGUI_T(KC_MINS)
 
 #define UNDO                LCTL(KC_Z)
 #define REDO                LSFT(LCTL(KC_Z))
@@ -47,24 +50,6 @@ enum layers {
 #define PASTE_T             LSFT(KC_INSERT)
 
 #define OSM_SFT             OSM(MOD_LSFT)
-
-//#define SPACES              LGUI(KC_TAB)            // I think it's called Desktops in Windows actually
-//#define LEFT_MON            LGUI(LSFT(KC_LEFT))     // Move window to left monitor
-//#define RGHT_MON            LGUI(LSFT(KC_RGHT))     // Move window to right monitor
-//#define LEFT_SPC            LGUI(LCTL(KC_LEFT))     // Move to left space
-//#define RGHT_SPC            LGUI(LCTL(KC_RGHT))     // Move to right space
-//#define WIN_MENU            LCTL(KC_ESC)            // Open the win menu
-//#define DESKTOP             LGUI(KC_D)              // Expose the Desktop
-//#define LFT_ALGN            LGUI(KC_LEFT)           // Align the window to the left half of the screen
-//#define RGT_ALGN            LGUI(KC_RGHT)           // Align the window to the right half of the screen
-//#define MAXIMIZE            LGUI(KC_UP)             // Maximize the window
-
-//#define VID_OFF             LCTL(LSFT(KC_O))        // Turns off camera in Teams
-//#define MIC_OFF             LCTL(LSFT(KC_M))        // Turns off microphone in Teams
-
-//#define LOCK_PC             LGUI(KC_L)              // Lock the PC
-//#define DEL_WRD             LCTL(KC_BSPC)           // Backwards delete a whole word
-//#define FILES               LGUI(KC_E)              // Open File Explorer
 
 // Key combinations used on Windows for the Danish language using US International keyboard layout
 #define DK_EE               RALT(KC_E)
