@@ -17,8 +17,6 @@
 #define ONESHOT_TIMEOUT             2500
 #define ONESHOT_TAP_TOGGLE          3
 
-#define PERMISSIVE_HOLD
-
 // The Leader key allows to flexibly assign macros to key sequences.
 #define LEADER_PER_KEY_TIMING
 #define LEADER_TIMEOUT              750
