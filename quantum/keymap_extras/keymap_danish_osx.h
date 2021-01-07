@@ -159,6 +159,6 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define DK_BSLS S(ALGR(DK_LABK)) // (backslash)
-#define DK_LCBR S(ALGR(DK_8))    // {
-#define DK_RCBR S(ALGR(DK_0))    // }
+#define DK_BSLS S(ALGR(DK_7)) // (backslash)
+#define DK_LCBR S(ALGR(DK_8)) // {
+#define DK_RCBR S(ALGR(DK_9)) // }
