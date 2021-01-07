@@ -2,9 +2,10 @@
 #include "encoders.h"
 #include "process_records.h"
 #include "leader.h"
+#include "keymap_danish_osx.h"
 
 enum layers {
-    _BASE,                  // Colemak-DH (formerly DHm)
+    _BASE,                  // Colemak
     _LOWER,                 // A funpad and a numpad
     _RAISE,                 // Symbols
     _ADJUST,                // Mainly RGB, activated when lower and raise is pressed at the same time
@@ -22,38 +23,33 @@ enum layers {
 #define ESC_LWR             LT(_LOWER, KC_ESC)
 
 // Home row mods, using Colemak ... arst <--> neio
-#define HOME_A              LCTL_T(KC_A)
-#define HOME_R              LALT_T(KC_R)
-#define HOME_S              LSFT_T(KC_S)
-#define HOME_T              LGUI_T(KC_T)
-#define HOME_N              LGUI_T(KC_N)
-#define HOME_E              LSFT_T(KC_E)
-#define HOME_I              LALT_T(KC_I)
-#define HOME_O              LCTL_T(KC_O)
+#define HOME_A              LCTL_T(DK_A)
+#define HOME_R              LALT_T(DK_R)
+#define HOME_S              LSFT_T(DK_S)
+#define HOME_T              LGUI_T(DK_T)
+#define HOME_N              LGUI_T(DK_N)
+#define HOME_E              LSFT_T(DK_E)
+#define HOME_I              LALT_T(DK_I)
+#define HOME_O              LCTL_T(DK_O)
 
 // Home row mods, for the numpad and funpad ... ( F6, F5, F4 <--> 4 5 6 -
-#define HOME_LP             LCTL_T(KC_LPRN)
+#define HOME_LP             LCTL_T(DK_LPRN)
 #define HOME_F6             LALT_T(KC_F6)
 #define HOME_F5             LSFT_T(KC_F5)
 #define HOME_F4             LGUI_T(KC_F4)
-#define HOME_4              LGUI_T(KC_4)
-#define HOME_5              LSFT_T(KC_5)
-#define HOME_6              LALT_T(KC_6)
-#define HOME_MN             LCTL_T(KC_MINS)
+#define HOME_4              LGUI_T(DK_4)
+#define HOME_5              LSFT_T(DK_5)
+#define HOME_6              LALT_T(DK_6)
+#define HOME_MN             LCTL_T(DK_MINS)
 
-#define UNDO                LCTL(KC_Z)
-#define REDO                LSFT(LCTL(KC_Z))
-#define CUT                 LCTL(KC_X)
-#define COPY                LCTL(KC_C)
-#define PASTE               LCTL(KC_V)
+#define UNDO                LGUI(DK_Z)
+#define REDO                LSFT(LGUI(DK_Z))
+#define CUT                 LGUI(DK_X)
+#define COPY                LGUI(DK_C)
+#define PASTE               LGUI(DK_V)
 #define COPY_T              LCTL(KC_INSERT)
 #define PASTE_T             LSFT(KC_INSERT)
 
 #define OSM_SFT             OSM(MOD_LSFT)
 
-#define DK_EE               KC_NO // RALT(KC_E)
-#define DK_AA               RALT(KC_A)
-#define DK_AE               RALT(KC_QUOT)
-#define DK_OE               RALT(KC_O)
-#define DK_PND              RALT(LSFT(KC_4))
-#define DK_EUR              RALT(KC_5)
+#define DK_EE               KC_NO // placeholder
