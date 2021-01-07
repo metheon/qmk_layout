@@ -22,24 +22,24 @@ enum layers {
 #define ESC_LWR             LT(_LOWER, KC_ESC)
 
 // Home row mods, using Colemak ... arst <--> neio
-#define HOME_A              LGUI_T(KC_A)
+#define HOME_A              LCTL_T(KC_A)
 #define HOME_R              LALT_T(KC_R)
 #define HOME_S              LSFT_T(KC_S)
-#define HOME_T              LCTL_T(KC_T)
-#define HOME_N              LCTL_T(KC_N)
+#define HOME_T              LGUI_T(KC_T)
+#define HOME_N              LGUI_T(KC_N)
 #define HOME_E              LSFT_T(KC_E)
 #define HOME_I              LALT_T(KC_I)
-#define HOME_O              LGUI_T(KC_O)
+#define HOME_O              LCTL_T(KC_O)
 
 // Home row mods, for the numpad and funpad ... ( F6, F5, F4 <--> 4 5 6 -
-#define HOME_LP             LGUI_T(KC_LPRN)
+#define HOME_LP             LCTL_T(KC_LPRN)
 #define HOME_F6             LALT_T(KC_F6)
 #define HOME_F5             LSFT_T(KC_F5)
-#define HOME_F4             LCTL_T(KC_F4)
-#define HOME_4              LCTL_T(KC_4)
+#define HOME_F4             LGUI_T(KC_F4)
+#define HOME_4              LGUI_T(KC_4)
 #define HOME_5              LSFT_T(KC_5)
 #define HOME_6              LALT_T(KC_6)
-#define HOME_MN             LGUI_T(KC_MINS)
+#define HOME_MN             LCTL_T(KC_MINS)
 
 #define UNDO                LCTL(KC_Z)
 #define REDO                LSFT(LCTL(KC_Z))
@@ -51,10 +51,9 @@ enum layers {
 
 #define OSM_SFT             OSM(MOD_LSFT)
 
-// Key combinations used on Windows for the Danish language using US International keyboard layout
-#define DK_EE               RALT(KC_E)
-#define DK_AA               RALT(KC_W)
-#define DK_AE               RALT(KC_Z)
-#define DK_OE               RALT(KC_L)
+#define DK_EE               KC_NO // RALT(KC_E)
+#define DK_AA               RALT(KC_A)
+#define DK_AE               RALT(KC_QUOT)
+#define DK_OE               RALT(KC_O)
 #define DK_PND              RALT(LSFT(KC_4))
 #define DK_EUR              RALT(KC_5)
