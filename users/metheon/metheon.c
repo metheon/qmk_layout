@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_RAISE] = LAYOUT_metheon(
     //  .--------------------------------------------.                    .--------------------------------------------.
-         KC_CIRC ,KC_AT   ,KC_HASH ,KC_DLR  ,KC_LCBR                      ,KC_RCBR ,DK_EUR  ,DK_PND  ,__NONE__,KC_BSLS ,
+         KC_CIRC ,KC_AT   ,KC_HASH ,__NONE__,KC_LCBR                      ,KC_RCBR ,KC_DLR  ,DK_EUR  ,__NONE__,KC_BSLS ,
     //  |--------------------------------------------|                    |--------------------------------------------|
          DK_EE   ,DK_AE   ,DK_OE   ,DK_AA   ,KC_LPRN                      ,KC_RPRN ,KC_EQL  ,KC_EXLM ,KC_AMPR ,KC_PIPE ,
     //  |--------------------------------------------|                    |--------------------------------------------|
