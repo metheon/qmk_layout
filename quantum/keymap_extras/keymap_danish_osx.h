@@ -72,7 +72,7 @@
 #define DK_L    KC_L    // L
 #define DK_AE   KC_SCLN // Æ
 #define DK_OE   KC_QUOT // Ø
-#define DK_QUOT KC_NUHS // '
+#define DK_QUOT KC_BSLS // '
 // Row 4
 #define DK_LABK KC_GRV  // <
 #define DK_Z    KC_Z    // Z
