@@ -7,8 +7,8 @@ My approach to keyboards and keymaps is to mentally settle on a form factor whic
 * Reduced strain on the pinky finger as it is only responsible for one alpha column as all mods are moved.
 * Easily mapped to many ergo keyboards as many has more keys than the Corne.
 
-For the actual keymap, I recommend reading through [`metheon.c`](metheon.c). For how that keymap is then mapped to each keyboard I use, read through the actual keymaps of those keyboards.
-This approach ensures that it is quite easy to add support for a new keyboard as long as it fits the mental model of a Corne. All you have to do is write an adapter. Note that the order of the `#define` and the `#include` in the individual keymaps matter. The layout to use must be defined as it is called from within the `metheon.c` file.
+For the actual keymap, I recommend reading through [`metheon.c`](metheon.c) or the diagram below. For how that keymap is then mapped to each keyboard I use, read through the actual keymaps of those keyboards.
+This approach ensures that it is quite easy to add support for a new keyboard as long as it fits the mental model of a Corne. All you have to do is write an adapter. Note that the order of the `#define` and the `#include` in the individual keymaps matter. The layout to use must be defined as it is called from within the `metheon.c` file (this is because of restrictions in the compiler order).
 
 Right now I use these three keyboards:
 
@@ -72,3 +72,84 @@ Files:
 
 * [`process_records.c`](process_records.c)
 * [`process_records.h`](process_records.h)
+
+## Keymap
+
+Some explanations:
+
+* Home row mods are present on the following layers:
+  * Base, Lower, Raise. 
+  * They are always on both sides in the order `CASG <--> GSAC` for `ARST <--> NEIO`.
+* `------` means transparent.
+* Empty box means no mapping.
+* Thumb cluster has hold functions for the following layers:
+  * Lower, Raise, Extend
+  * They are in this order `Lower Extend Raise <--> Raise Extend Lower`
+* `Make` will type a make command for the keyboard
+* `Flash` will type a make and flash command for the keyboard
+* `Vrsn` will type the version the keyboard is running
+
+**Base**
+```
+.-------------------------------------------.                    .--------------------------------------------.
+| Q      | W      | F     | P      | G      |                    | J      | L      | U      | Y      | '      |
+|-------------------------------------------|                    |--------------------------------------------|
+| A      | R      | S     | T      | D      |                    | H      | N      | E      | I      | O      |
+|-------------------------------------------|                    |--------------------------------------------|
+| Z      | X      | C     | V      | B      |                    | K      | M      | ,      | .      | -      |
+'-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
+                          | Tab    | Space  | Enter  |  | Delete | Bckspc |Esc     |
+                          '--------+--------+--------'  '--------+--------+--------'
+```
+
+**Lower**
+```
+.-------------------------------------------.                    .--------------------------------------------.
+| )      | F9     | F10   | F11    | F12    |                    | *      | 7      | 8      | 9      | /      |
+|-------------------------------------------|                    |--------------------------------------------|
+| Enter  | F5     | F6    | F7     | F8     |                    | +      | 4      | 5      | 6      | -      |
+|-------------------------------------------|                    |--------------------------------------------|
+| (      | F1     | F2    | F3     | F4     |                    | 0      | 1      | 2      | 3      | =      |
+'-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
+                          | ------ | ------ | ------ |  | ------ | ------ | ------ |
+                          '--------+--------+--------'  '--------+--------+--------'
+```
+
+**Raise**
+```
+.-------------------------------------------.                    .--------------------------------------------.
+| ^      | ¨     | #      | ~      | {      |                    | }      | $      | €      | /      | \      |
+|-------------------------------------------|                    |--------------------------------------------|
+| @      | Æ     | Ø      | Å      | (      |                    | )      | =      | !      | &      | |      |
+|-------------------------------------------|                    |--------------------------------------------|
+| %      | <      | >     | ?      | [      |                    | ]      | "      | `      | ´      |        |
+'-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
+                          | ------ | ------ | ------ |  | ------ | ------ | ------ |
+                          '--------+--------+--------'  '--------+--------+--------'
+```
+
+**Extend**
+```
+.-------------------------------------------.                    .--------------------------------------------.
+|        |       |        |        |        |                    | PgUp   | Home   | Up     | End    |        |
+|-------------------------------------------|                    |--------------------------------------------|
+| Ctrl   | Alt   | Shift  | Gui    | Lead   |                    | PgDn   | Left   | Down   | Right  |        |
+|-------------------------------------------|                    |--------------------------------------------|
+| Undo   | Cut   | Copy   | Paste  |        |                    |        |        |        |        |        |
+'-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
+                          | ------ | ------ | ------ |  | ------ | ------ | ------ |
+                          '--------+--------+--------'  '--------+--------+--------'
+```
+
+**Adjust**
+```
+.-------------------------------------------.                    .--------------------------------------------.
+|        |       |        |        |        |                    |        | Flash  | Make   | Vrsn   |        |
+|-------------------------------------------|                    |--------------------------------------------|
+| Caps   | Prev  | Play   | Next   |        |                    | RgbTog | RgbMod | RgbHui | RgbSai | RgbVai |
+|-------------------------------------------|                    |--------------------------------------------|
+|        | Mute  | VolDn  | VolUp  |        |                    |        | RgbRMod| RgbHud | RgbSad | RgbVad |
+'-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
+                          | ------ | Reset  | ------ |  | ------ | Reset  | ------ |
+                          '--------+--------+--------'  '--------+--------+--------'
+```

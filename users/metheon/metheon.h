@@ -34,16 +34,15 @@ enum layers {
 
 // Home row mods, for the numpad and funpad ... ( F6, F5, F4 <--> 4 5 6 -
 #define HOME_ENT            LCTL_T(KC_ENTER)
-#define HOME_F6             LALT_T(KC_F6)
-#define HOME_F5             LSFT_T(KC_F5)
-#define HOME_F4             LGUI_T(KC_F4)
+#define HOME_F5             LALT_T(KC_F5)
+#define HOME_F6             LSFT_T(KC_F6)
+#define HOME_F7             LGUI_T(KC_F7)
 #define HOME_4              LGUI_T(DK_4)
 #define HOME_5              LSFT_T(DK_5)
 #define HOME_6              LALT_T(DK_6)
 #define HOME_MN             LCTL_T(DK_MINS)
 
 #define UNDO                LGUI(DK_Z)
-#define REDO                LSFT(LGUI(DK_Z))
 #define CUT                 LGUI(DK_X)
 #define COPY                LGUI(DK_C)
 #define PASTE               LGUI(DK_V)
