@@ -13,11 +13,11 @@ void matrix_scan_user(void) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_metheon(
     //  .--------------------------------------------.                    .--------------------------------------------.
-         DK_Q    ,DK_W    ,DK_F    ,DK_P    ,DK_G                         ,DK_J    ,DK_L    ,DK_U    ,DK_Y    ,DK_QUOT ,
+         DK_Q    ,DK_W    ,DK_F    ,DK_P    ,DK_B                         ,DK_J    ,DK_L    ,DK_U    ,DK_Y    ,DK_QUOT ,
     //  |--------------------------------------------|                    |--------------------------------------------|
-         HOME_A  ,HOME_R  ,HOME_S ,HOME_T   ,DK_D                         ,DK_H    ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,
+         HOME_A  ,HOME_R  ,HOME_S ,HOME_T   ,DK_G                         ,DK_M    ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,
     //  |--------------------------------------------|                    |--------------------------------------------|
-         DK_Z    ,DK_X    ,DK_C    ,DK_V    ,DK_B                         ,DK_K    ,DK_M    ,KC_COMMA,KC_DOT  ,DK_MINS ,
+         DK_Z    ,DK_X    ,DK_C    ,DK_D    ,DK_V                         ,DK_K    ,DK_H    ,KC_COMMA,KC_DOT  ,DK_MINS ,
     //  '-------------------------+--------+---------+--------+  +--------+--------+--------+--------------------------'
                                    TAB_LWR ,SPC_EXT  ,ENT_RSE    ,DEL_RSE ,BSPC_EXT,ESC_LWR ,
     //                            '--------+---------+--------+  +--------+--------+--------'
