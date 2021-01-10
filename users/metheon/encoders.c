@@ -48,7 +48,7 @@ void zoom(bool clockwise) {
 void alt_tab(bool clockwise) {
     if (!is_alt_tab_active) {
         is_alt_tab_active = true;
-        register_code(KC_LALT);
+        register_code(KC_LGUI);
     }
     alt_tab_timer = timer_read();
     if (clockwise) {

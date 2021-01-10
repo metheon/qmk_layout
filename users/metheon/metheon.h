@@ -3,6 +3,7 @@
 #include "process_records.h"
 #include "leader.h"
 #include "keymap_danish_osx.h"
+#include "magnet.h"
 
 enum layers {
     _BASE,                  // Colemak
@@ -11,6 +12,7 @@ enum layers {
     _ADJUST,                // Mainly RGB, activated when lower and raise is pressed at the same time
     _EXTEND,                // Home row mods, navigation cluster
     _MOUSE,                 // Layer for mouse
+    _MAGNET,                // Layer https://magnet.crowdcafe.com/
 };
 
 #define __NONE__            KC_NO
@@ -22,6 +24,7 @@ enum layers {
 #define DEL_RSE             LT(_RAISE, KC_DEL)
 #define BSPC_MSE            LT(_MOUSE, KC_BSPC)
 #define ESC_LWR             LT(_LOWER, KC_ESC)
+#define M_MAG               LT(_MAGNET, DK_M)
 
 // Home row mods, using Colemak ... arst <--> neio
 #define HOME_A              LCTL_T(DK_A)
