@@ -9,6 +9,8 @@
 #define ADJ_E02             KC_NO
 #define EXT_E01             KC_NO
 #define EXT_E02             KC_MPLY
+#define MSE_E01             KC_NO
+#define MSE_E02             KC_NO
 #define NUM_E01             KC_NO
 #define NUM_E02             KC_NO
 

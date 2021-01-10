@@ -10,6 +10,7 @@ enum layers {
     _RAISE,                 // Symbols
     _ADJUST,                // Mainly RGB, activated when lower and raise is pressed at the same time
     _EXTEND,                // Home row mods, navigation cluster
+    _MOUSE,                 // Layer for mouse
 };
 
 #define __NONE__            KC_NO
@@ -19,7 +20,7 @@ enum layers {
 #define SPC_EXT             LT(_EXTEND, KC_SPACE)
 #define ENT_RSE             LT(_RAISE, KC_ENTER)
 #define DEL_RSE             LT(_RAISE, KC_DEL)
-#define BSPC_EXT            LT(_EXTEND, KC_BSPC)
+#define BSPC_MSE            LT(_MOUSE, KC_BSPC)
 #define ESC_LWR             LT(_LOWER, KC_ESC)
 
 // Home row mods, using Colemak ... arst <--> neio
