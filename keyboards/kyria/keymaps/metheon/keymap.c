@@ -14,4 +14,5 @@
     )
 // clang-format on
 
+#include "sendstring_danish_osx.h"
 #include "metheon.c"
