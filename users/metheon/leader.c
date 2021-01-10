@@ -117,19 +117,19 @@ void matrix_scan_leader(void) {
         SEQ_THREE_KEYS(KC_P, KC_P, KC_N) {
             send_string(secrets[4]);
         }
-        SEQ_TWO_KEYS(KC_P, KC_N) {
+        SEQ_THREE_KEYS(KC_C, KC_P, KC_R) {
             send_string(secrets[5]);
         }
         SEQ_THREE_KEYS(KC_P, KC_E, KC_M) {
             send_string(secrets[6]);
         }
-        SEQ_TWO_KEYS(KC_W, KC_E) {
+        SEQ_TWO_KEYS(KC_P, KC_M) {
             send_string(secrets[7]);
         }
-        SEQ_TWO_KEYS(KC_W, KC_P) {
+        SEQ_TWO_KEYS(KC_W, KC_E) {
             send_string(secrets[8]);
         }
-        SEQ_TWO_KEYS(KC_W, KC_U) {
+        SEQ_TWO_KEYS(KC_W, KC_P) {
             send_string(secrets[9]);
         }
     }
