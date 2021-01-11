@@ -11,6 +11,7 @@ EXTRAKEY_ENABLE					=	yes # Enables audio control and System control
 LEADER_ENABLE					=	yes # Enables the Leader Key feature
 MOUSEKEY_ENABLE					=	yes # Enables usage of keyboard as mouse
 
+SRC += metheon.c
 SRC += encoders.c
 SRC += process_records.c
 SRC += leader.c
