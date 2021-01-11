@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_RAISE] = LAYOUT_metheon(
     //  .--------------------------------------------.                    .--------------------------------------------.
-         KC_CIRC ,KC_CIRC ,KC_HASH ,KC_TILD ,KC_LCBR                      ,KC_RCBR ,KC_DLR  ,KC_EUR  ,KC_SLSH ,KC_BSLS ,
+         KC_GRV  ,KC_CIRC ,KC_HASH ,KC_TILD ,KC_LCBR                      ,KC_RCBR ,KC_DLR  ,KC_EUR  ,KC_SLSH ,KC_BSLS ,
     //  |--------------------------------------------|                    |--------------------------------------------|
          KC_AT   ,KC_AE   ,KC_OE   ,KC_AA   ,KC_LPRN                      ,KC_RPRN ,KC_EQL  ,KC_EXLM ,KC_AMPR ,KC_PIPE ,
     //  |--------------------------------------------|                    |--------------------------------------------|
@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------------------------------------------|                    |--------------------------------------------|
          KC_LCTRL,KC_LALT ,KC_LSFT ,KC_LGUI,KC_LEAD                       ,KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
     //  |--------------------------------------------|                    |--------------------------------------------|
-         UNDO    ,CUT     ,COPY    ,PASTE   ,__NONE__                     ,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
+         UNDO    ,CUT     ,COPY    ,PASTE   ,WIN_MAC                      ,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  '-------------------------+--------+---------+--------+  +--------+--------+--------+--------------------------'
                                    _______ ,_______  ,_______    ,_______ ,_______ ,_______ ,
     //                            '--------+---------+--------+  +--------+--------+--------'
@@ -92,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------------------------------------------|                    |--------------------------------------------|
          KC_CAPS ,KC_MPRV ,KC_MPLY ,KC_MNXT ,__NONE__                     ,RGB_TOG ,RGB_MOD ,RGB_HUI ,RGB_SAI ,RGB_VAI ,
     //  |--------------------------------------------|                    |--------------------------------------------|
-         __NONE__,KC_MUTE ,KC_VOLD ,KC_VOLU ,__NONE__                     ,__NONE__,RGB_RMOD,RGB_HUD ,RGB_SAD ,RGB_VAD ,
+         __NONE__,KC_MUTE ,KC_VOLD ,KC_VOLU ,USE_MAC                      ,USE_WIN ,RGB_RMOD,RGB_HUD ,RGB_SAD ,RGB_VAD ,
     //  '-------------------------+--------+---------+--------+  +--------+--------+--------+--------------------------'
                                    _______ ,RESET    ,_______    ,_______ ,RESET   ,_______ ,
     //                            '--------+---------+--------+  +--------+--------+--------'
