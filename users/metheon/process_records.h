@@ -4,4 +4,6 @@ enum keycodes {
     KC_MAKE,                // make keyboard:user
     KC_FLASH,               // make keyboard:user:bootloader
     KC_VRSN,                // prints the version
+    CUT,                    // Ctrl+X or Cmd+X
+    WIN_MAC,
 };
