@@ -13,11 +13,11 @@ void matrix_scan_user(void) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_metheon(
     //  .--------------------------------------------.                    .--------------------------------------------.
-         DK_Q    ,DK_W    ,DK_F    ,DK_P    ,DK_B                         ,DK_J    ,DK_L    ,DK_U    ,DK_Y    ,DK_QUOT ,
+         KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B                         ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_QUOT ,
     //  |--------------------------------------------|                    |--------------------------------------------|
-         HOME_A  ,HOME_R  ,HOME_S ,HOME_T   ,DK_G                         ,M_MAG   ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,
+         HOME_A  ,HOME_R  ,HOME_S ,HOME_T   ,KC_G                         ,M_MAG   ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,
     //  |--------------------------------------------|                    |--------------------------------------------|
-         DK_Z    ,DK_X    ,DK_C    ,DK_D    ,DK_V                         ,DK_K    ,DK_H    ,KC_COMMA,KC_DOT  ,DK_MINS ,
+         KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V                         ,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,
     //  '-------------------------+--------+---------+--------+  +--------+--------+--------+--------------------------'
                                    TAB_LWR ,SPC_EXT  ,ENT_RSE    ,DEL_RSE ,BSPC_MSE,ESC_LWR ,
     //                            '--------+---------+--------+  +--------+--------+--------'
@@ -28,11 +28,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_LOWER] = LAYOUT_metheon(
     //  .--------------------------------------------.                    .--------------------------------------------.
-         DK_RPRN ,KC_F9   ,KC_F10  ,KC_F11  ,KC_F12                       ,DK_ASTR ,DK_7    ,DK_8    ,DK_9    ,DK_SLSH ,
+         KC_RPRN ,KC_F9   ,KC_F10  ,KC_F11  ,KC_F12                       ,KC_ASTR ,KC_7    ,KC_8    ,KC_9    ,KC_SLSH ,
     //  |--------------------------------------------|                    |--------------------------------------------|
-         HOME_ENT,HOME_F5 ,HOME_F6,HOME_F7  ,KC_F8                        ,DK_PLUS ,HOME_4  ,HOME_5  ,HOME_6  ,HOME_MN ,
+         HOME_ENT,HOME_F5 ,HOME_F6,HOME_F7  ,KC_F8                        ,KC_PLUS ,HOME_4  ,HOME_5  ,HOME_6  ,HOME_MN ,
     //  |--------------------------------------------|                    |--------------------------------------------|
-         DK_LPRN ,KC_F1   ,KC_F2   ,KC_F3   ,KC_F4                        ,DK_0    ,DK_1    ,DK_2    ,DK_3    ,DK_EQL  ,
+         KC_LPRN ,KC_F1   ,KC_F2   ,KC_F3   ,KC_F4                        ,KC_0    ,KC_1    ,KC_2    ,KC_3    ,KC_EQL  ,
     //  '-------------------------+--------+---------+--------+  +--------+--------+--------+--------------------------'
                                    _______ ,_______ ,_______     ,_______ ,_______ ,_______ ,
     //                            '--------+---------+--------+  +--------+--------+--------'
@@ -43,11 +43,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_RAISE] = LAYOUT_metheon(
     //  .--------------------------------------------.                    .--------------------------------------------.
-         DK_CIRC ,DK_DIAE ,DK_HASH ,DK_TILD ,DK_LCBR                      ,DK_RCBR ,DK_DLR  ,DK_EUR  ,DK_SLSH ,DK_BSLS ,
+         KC_CIRC ,KC_CIRC ,KC_HASH ,KC_TILD ,KC_LCBR                      ,KC_RCBR ,KC_DLR  ,KC_EUR  ,KC_SLSH ,KC_BSLS ,
     //  |--------------------------------------------|                    |--------------------------------------------|
-         DK_AT   ,DK_AE   ,DK_OE   ,DK_AA   ,DK_LPRN                      ,DK_RPRN ,DK_EQL  ,DK_EXLM ,DK_AMPR ,DK_PIPE ,
+         KC_AT   ,KC_AE   ,KC_OE   ,KC_AA   ,KC_LPRN                      ,KC_RPRN ,KC_EQL  ,KC_EXLM ,KC_AMPR ,KC_PIPE ,
     //  |--------------------------------------------|                    |--------------------------------------------|
-         DK_PERC ,DK_LABK ,DK_RABK ,DK_QUES ,DK_LBRC                      ,DK_RBRC ,DK_DQUO ,DK_GRV  ,DK_ACUT ,__NONE__,
+         KC_PERC ,KC_LABK ,KC_RABK ,KC_SCLN ,KC_LBRC                      ,KC_RBRC ,KC_COLN ,KC_GRV  ,__NONE__,KC_MINS ,
     //  '-------------------------+--------+---------+--------+  +--------+--------+--------+--------------------------'
                                    _______ ,_______ ,_______     ,_______ ,_______ ,_______ ,
     //                            '--------+---------+--------+  +--------+--------+--------'
