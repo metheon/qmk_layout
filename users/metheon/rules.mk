@@ -1,7 +1,5 @@
 # Set any rules.mk overrides for your specific keymap here.
 # See rules at https://docs.qmk.fm/#/config_options?id=the-rulesmk-file
-LINK_TIME_OPTIMIZATION_ENABLE	=	yes 	# Reduces compiled size of firmware
-
 ifndef ENCODER_ENABLE
 	ENCODER_ENABLE				=	no  	# Ensure encoders are disabled unless set to true in a specific keymap
 endif
@@ -29,3 +27,4 @@ TERMINAL_ENABLE					=	no
 GRAVE_ESC_ENABLE				=	no
 MAGIC_ENABLE					=	no
 SPACE_CADET_ENABLE				=	no
+LINK_TIME_OPTIMIZATION_ENABLE	=	no		# Reduces compiled size of firmware
