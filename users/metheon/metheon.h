@@ -16,12 +16,11 @@ enum layers {
 #define __NONE__            KC_NO
 #define ________            _______
 
-#define LOWER               MO(_LOWER)
-#define RAISE               MO(_RAISE)
+#define DEL_LWR             LT(_LOWER, KC_DEL)
+#define BSPC_RSE            LT(_RAISE, KC_BSPC)
 #define SPC_EXT             LT(_EXTEND, KC_SPACE)
 #define ENT_EXT             LT(_RAISE, KC_ENTER)
 #define MAGNET              OSL(_MAGNET)
-
 
 #define UNDO                LGUI(KC_Z)
 #define CUT                 LGUI(KC_X)
