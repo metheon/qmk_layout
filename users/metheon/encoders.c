@@ -45,7 +45,7 @@ void zoom(bool clockwise) {
     }
 }
 
-void alt_tab(bool clockwise) {
+void gui_tab(bool clockwise) {
     if (!is_alt_tab_active) {
         is_alt_tab_active = true;
         register_code(KC_LGUI);
@@ -70,18 +70,13 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {  // Left encoder
         switch (biton32(layer_state)) {
             case _BASE:
-                scrolling(clockwise);
-                break;
-            case _LOWER:
-                // unused as lower is activated on the left
+                gui_tab(clockwise);
                 break;
             case _RAISE:
                 ctrl_tab(clockwise);
                 break;
-            case _ADJUST:
-                break;
             case _EXTEND:
-                alt_tab(clockwise);
+                media_control(clockwise);
                 break;
             default:
                 // Do nothing
@@ -93,16 +88,10 @@ void encoder_update_user(uint8_t index, bool clockwise) {
                 volume_control(clockwise);
                 break;
             case _LOWER:
-                zoom(clockwise);
-                break;
-            case _RAISE:
-                // unused as raise is activated on the right
-                break;
-            case _ADJUST:
-                // currently unused
+                scrolling(clockwise);
                 break;
             case _EXTEND:
-                media_control(clockwise);
+                volume_control(clockwise);
                 break;
             default:
                 // Do nothing
