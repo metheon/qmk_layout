@@ -2,19 +2,22 @@
 
 ## Introduction
 
-My approach to keyboards and keymaps is to mentally settle on a form factor which is simple, effective and intuitive. For me that is the basic Planck keyboard with its four rows by twelve columns. I then select keyboards which are physically able to map to this mental model.
+My approach to keyboards and keymaps is to mentally settle on a form factor which is simple, effective and intuitive. For me that is the basic Corne keyboard. It is a simple split keyboard with each half having a 3 by 5 alpha cluster and another 3 keys for the thumb cluster. That is 18 keys per half and 36 in total. I then select keyboards which are physically able to map to this mental model. Key advantages of this keyboard layout are:
 
-For the actual keymap, I recommend reading through [`metheon.c`](metheon.c) or the diagram below. For how that keymap is then mapped to each keyboard I use, read through the config file of each keyboard.
-This approach ensures that it is quite easy to add support for a new keyboard as long as it fits the mental model of a Planck. All you have to do is write an adapter.
+* Reduced strain on the pinky finger as it is only responsible for one alpha column as all mods are moved.
+* Easily mapped to many ergo keyboards as many has more keys than the Corne.
+
+For the actual keymap, I recommend reading through [`metheon.c`](metheon.c) or the diagram below. For how that keymap is then mapped to each keyboard I use, read through the actual keymaps of those keyboards.
+This approach ensures that it is quite easy to add support for a new keyboard as long as it fits the mental model of a Corne. All you have to do is write an adapter. Note that the order of the `#define` and the `#include` in the individual keymaps matter. The layout to use must be defined as it is called from within the `metheon.c` file (this is because of restrictions in the compiler order).
 
 Right now I use these three keyboards:
 
-* The [*Ergodox EZ*](https://ergodox-ez.com/) ([`config.h`](../../keyboards/ergodox_ez/keymaps/metheon/config.h)):
-  * The Ergodox EZ is the archetype split keyboard, it is kinda like a Planck but split and with a lot of extra keys.
-* The [*Kyria*](https://blog.splitkb.com/blog/introducing-the-kyria) ([`config.h`](../../keyboards/kyria/keymaps/metheon/config.h)):
-  * A Kyria is really just a reshuffled split Planck with two additional encoders. The aggresive pinky column is a good fit for me.
-* The [*Planck EZ*](https://ergodox-ez.com/pages/planck) ([`config.h`](../../keyboards/planck/keymaps/metheon/config.h)):
-  * The Planck EZ is of course just a Planck with a 2U spacebar. I accomodate for the 2U spacebar by having the alternative functions mapped on my Lower layer. So e.g. on the Kyria I have Space and Enter as those two functions but on my Planck EZ it is that same 2U key. So the 2U key is space, and Lower-Space is then Enter. My left thumb is always Space and my right thumb is always Enter. The only difference is my left thumb holding Lower. It makes sence, trust me.
+* The [*Ergodox EZ*](https://ergodox-ez.com/) ([`keymap.c`](../../keyboards/ergodox_ez/keymaps/metheon/keymap.c)):
+  * The Ergodox EZ is the archetype split keyboard, it is kinda like a Corne but with a lot of extra keys.
+* The [*Kyria*](https://blog.splitkb.com/blog/introducing-the-kyria) ([`keymap.c`](../../keyboards/kyria/keymaps/metheon/keymap.c)):
+  * A Kyria is really just a reshuffled Planck with two additional encoders. It is however split and easily maps to a Corne layout. The aggresive pinky column is a good fit for me.
+* The [*Planck EZ*](https://ergodox-ez.com/pages/planck) ([`keymap.c`](../../keyboards/planck/keymaps/metheon/keymap.c)):
+  * The Planck EZ is of course just a Planck with a 2U spacebar. I do not use the two middle columns, just the five outer columns on each side. This is actually quite perfect as I get a sort of semi-split one-piece keyboard with three thumb keys per hand.
 
 In the following sections I will dive into different aspects of my keymap.
 
@@ -74,114 +77,97 @@ Files:
 
 Some explanations:
 
+* Home row mods are present on the following layers:
+  * Base, Lower, Raise. 
+  * They are always on both sides in the order `CASG <--> GSAC` for `ARST <--> NEIO`.
 * `------` means transparent.
 * Empty box means no mapping.
+* Thumb cluster has hold functions for the following layers:
+  * Lower, Raise, Extend
+  * They are in this order `Lower Extend Raise <--> Raise Extend Lower`
 * `Make` will type a make command for the keyboard
 * `Flash` will type a make and flash command for the keyboard
 * `Vrsn` will type the version the keyboard is running
 
 **Base**
 ```
-.--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------.
-| Tab    | Q      | W      | F      | P      | B      | J      | L      | U      | Y      | ;      | Bckspc |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-| Esc    | A      | R      | S      | T      | G      | M      | N      | E      | I      | O      | '      |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-| Shift  | Z      | X      | C      | D      | V      | K      | H      | ,      | .      | /      | Shift  |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-| Lead   | Magnet | Alt    | Gui    | Lower  | SpcExt | EntExt | Raise  | Gui    | Ctrl   |        |        |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------'
-
-.--------+--------.
-| BseE01 | BseE02 |
-'--------+--------'
+.-------------------------------------------.                    .--------------------------------------------.
+| Q      | W      | F     | P      | G      |                    | J      | L      | U      | Y      | '      |
+|-------------------------------------------|                    |--------------------------------------------|
+| A      | R      | S     | T      | D      |                    | H      | N      | E      | I      | O      |
+|-------------------------------------------|                    |--------------------------------------------|
+| Z      | X      | C     | V      | B      |                    | K      | M      | ,      | .      | /      |
+'-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
+                          | Tab    | Space  | Enter  |  | Delete | Bckspc |Esc     |
+                          '--------+--------+--------'  '--------+--------+--------'
 ```
 
 **Lower**
 ```
-.--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------.
-| ------ | F9     | F10    | F11    | F12    | )      | *      | 7      | 8      | 9      | =      | Delete |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-| ------ | F5     | F6     | F7     | F8     | (      | +      | 4      | 5      | 6      | -      |        |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-| ------ | F1     | F2     | F3     | F4     | %      | 0      | 1      | 2      | 3      | /      | ------ |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-|        |        | ------ | ------ | Lower  | Enter  | Enter  | Raise  | ------ | ------ |        |        |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------'
-
-.--------+--------.
-| LwrE01 | LwrE02 |
-'--------+--------'
+.-------------------------------------------.                    .--------------------------------------------.
+| )      | F9     | F10   | F11    | F12    |                    | *      | 7      | 8      | 9      | /      |
+|-------------------------------------------|                    |--------------------------------------------|
+| Enter  | F5     | F6    | F7     | F8     |                    | +      | 4      | 5      | 6      | -      |
+|-------------------------------------------|                    |--------------------------------------------|
+| (      | F1     | F2    | F3     | F4     |                    | 0      | 1      | 2      | 3      | =      |
+'-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
+                          | ------ | ------ | ------ |  | ------ | ------ | ------ |
+                          '--------+--------+--------'  '--------+--------+--------'
 ```
 
 **Raise**
 ```
-.--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------.
-| ------ | ^      | @      | #      | ~      | {      | }      | $      | €      | £      |        |        |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-| ------ | |      | &      | !      | =      | (      | )      |        |        |        |        |        |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-| ------ | \      | `      | _      | -      | [      | ]      |        |        |        |        | ------ |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-|        |        | ------ | ------ | Lower  | Space  | Space  | Raise  | ------ | ------ |        |        |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------'
-
-.--------+--------.
-| RseE01 | RseE02 |
-'--------+--------'
+.-------------------------------------------.                    .--------------------------------------------.
+| `      | ^     | #      | ~      | {      |                    | }      | $      | €      |        |        |
+|-------------------------------------------|                    |--------------------------------------------|
+| @      | Æ     | Ø      | Å      | (      |                    | )      | =      | !      | &      | |      |
+|-------------------------------------------|                    |--------------------------------------------|
+| _      | -     |        |        | [      |                    | ]      | ;      | :      | %      | \      |
+'-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
+                          | ------ | ------ | ------ |  | ------ | ------ | ------ |
+                          '--------+--------+--------'  '--------+--------+--------'
 ```
 
 **Extend**
 ```
-.--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------.
-|        |        |        |        |        |        | PgUP   | Home   | Up     | End    | Æ      | Ø      |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-| ------ | Ctrl   | Alt    | Shift  | Gui    |        | PgDn   | Left   | Down   | Right  |        | Å      |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-| ------ | Undo   | Cut    | Copy   | Paste  |        |        | PasteT | CopyT  |        |        | ------ |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-|        |        | ------ | ------ | Lower  | Enter  | Enter  | Raise  | ------ | ------ |        |        |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------'
+.-------------------------------------------.                    .--------------------------------------------.
+|        |       |        |        |        |                    | PgUp   | Home   | Up     | End    |        |
+|-------------------------------------------|                    |--------------------------------------------|
+| Ctrl   | Alt   | Shift  | Gui    | Lead   |                    | PgDn   | Left   | Down   | Right  |        |
+|-------------------------------------------|                    |--------------------------------------------|
+| Undo   | Cut   | Copy   | Paste  |        |                    |        |        |        |        |        |
+'-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
+                          | ------ | ------ | ------ |  | ------ | ------ | ------ |
+                          '--------+--------+--------'  '--------+--------+--------'
+```
 
-.--------+--------.
-| ExtE01 | ExtE02 |
-'--------+--------'
+**Mouse**
+```
+.-------------------------------------------.                    .--------------------------------------------.
+|        | WhLft | MsUp   | WhRght | WhUp   |                    |        |        |        |        |        |
+|-------------------------------------------|                    |--------------------------------------------|
+|        | MsLft | MsDn   | MsRght | WhDn   |                    |        | Gui    | Shift  | Alt    | Ctrl   |
+|-------------------------------------------|                    |--------------------------------------------|
+|        |       |        |        |        |                    |        |        |        |        |        |
+'-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
+                          | Btn1   | Btn2   | Btn3   |  | ------ | ------ | ------ |
+                          '--------+--------+--------'  '--------+--------+--------'
 ```
 
 **Adjust**
 ```
-.--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------.
-|        |        |        |        |        |        |        | Flash  | Make   | Vrsn   |        |        |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-| Caps   |        | Prev   | Play   | Next   |        | RgbTog | RgbMod | RgbHui | RgbSai | RgbVai |        |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-| ------ |        | Mute   | VolDn  | VolUp  |        |        | RgbRMod| RgbHud | RgbSad | RgbVad | ------ |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-|        |        | ------ | ------ | Lower  | Reset  | Reset  | Raise  | ------ | ------ |        |        |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------'
-
-.--------+--------.
-| AdjE01 | AdjE02 |
-'--------+--------'
+.-------------------------------------------.                    .--------------------------------------------.
+|        |       |        |        |        |                    |        | Flash  | Make   | Vrsn   |        |
+|-------------------------------------------|                    |--------------------------------------------|
+| Caps   | Prev  | Play   | Next   |        |                    | RgbTog | RgbMod | RgbHui | RgbSai | RgbVai |
+|-------------------------------------------|                    |--------------------------------------------|
+|        | Mute  | VolDn  | VolUp  |        |                    |        | RgbRMod| RgbHud | RgbSad | RgbVad |
+'-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
+                          | ------ | Reset  | ------ |  | ------ | Reset  | ------ |
+                          '--------+--------+--------'  '--------+--------+--------'
 ```
 
 **Magnet**
-
-```
-.--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------.
-|        |        |MG UL QD|MG UP HF|MG UR QD|MG RT TD|        |        |        |        |        |        |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-|MG L2 TD|MG R2 TD|MG LF HF|MG FSCR |MG RT HF|MG MD TD|        |        |        |        |        |        |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-|        |        |MG BL QD|MG BT HF|MG BR QD|MG LF TD|        |        |        |        |        |        |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-|        |        |        |        |        |        |        |        |        |        |        |        |
-|--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------'
-
-.--------+--------.
-| MagE01 | MagE02 |
-'--------+--------'
-```
 
 Shortcuts for the [Magnet app](https://magnet.crowdcafe.com/).
 
@@ -203,3 +189,15 @@ Shortcuts for the [Magnet app](https://magnet.crowdcafe.com/).
 * `MG UR QD` -> Upper Right Quadrant
 * `MG BL QD` -> Bottom Left Quadrant
 * `MG BR QD` -> Bottom Right Quadrant
+
+```
+.--------------------------------------------.                    .--------------------------------------------.
+|        |        |MG UL QD|MG UP HF|MG UR QD|                    |        |        |        |        |        |
+|--------------------------------------------|                    |--------------------------------------------|
+|MG L2 TD|MG R2 TD|MG LF HF|MG FSCR |MG RT HF|                    | ------ |        |        |        |        |
+|--------------------------------------------|                    |--------------------------------------------|
+|        |        |MG BL QD|MG BT HF|MG BR QD|                    |        |        |        |        |        |
+'--------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
+                           |MG LF TD|MG MD TD|MG RT TD|  | ------ | ------ | ------ |
+                           '--------+--------+--------'  '--------+--------+--------'
+```
