@@ -39,9 +39,9 @@ void scrolling(bool clockwise) {
 
 void zoom(bool clockwise) {
     if (clockwise) {
-        tap_code16(C(KC_MINS));
+        tap_code16(G(KC_MINS));
     } else {
-        tap_code16(C(KC_PLUS));
+        tap_code16(G(KC_PLUS));
     }
 }
 
@@ -75,8 +75,8 @@ void encoder_update_user(uint8_t index, bool clockwise) {
             case _SYMBOLS:
                 ctrl_tab(clockwise);
                 break;
-            case _EXTEND:
-                media_control(clockwise);
+            case _FUNPAD:
+                zoom(clockwise);
                 break;
             default:
                 // Do nothing
@@ -87,11 +87,11 @@ void encoder_update_user(uint8_t index, bool clockwise) {
             case _BASE:
                 volume_control(clockwise);
                 break;
+            case _EXTEND:
+                media_control(clockwise);
+                break;
             case _NUMPAD:
                 scrolling(clockwise);
-                break;
-            case _EXTEND:
-                volume_control(clockwise);
                 break;
             default:
                 // Do nothing

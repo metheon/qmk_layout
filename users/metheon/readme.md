@@ -109,7 +109,7 @@ Some explanations:
 **Numpad**
 
 * Enc 1: Nothing
-* Enc 2: Nothing
+* Enc 2: Scroll Up / Scroll Down / Nothing
 
 ```
 .-------------------------------------------.                    .--------------------------------------------.
@@ -125,7 +125,7 @@ Some explanations:
 
 **Symbols**
 
-* Enc 1: Nothing
+* Enc 1: Ctrl Shift Tab / Ctrl Tab / Nothing
 * Enc 2: Nothing
 * EscExt: Escape/Extend
 
@@ -137,7 +137,7 @@ Some explanations:
 |-------------------------------------------|                    |--------------------------------------------|
 | _      | -     | :      | ;      | [      |                    | ]      |        |        | %      | \      |
 '-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
-                          | Enc 2  | EscExt | ------ |  | ------ | ------ | Enc 2  |
+                          | Enc 1  | EscExt | ------ |  | ------ | ------ | Enc 2  |
                           '--------+--------+--------'  '--------+--------+--------'
 ```
 
@@ -145,7 +145,7 @@ Some explanations:
 
 * Paste: Yes, it is there twice. Normal V position as well as Colemak-DH V.
 * Enc 1: Nothing
-* Enc 2: Nothing
+* Enc 2: Prev / Next / Play
 * StbFun: Shift Tab / Funpad
 * TabSym: Tab/Symbols
 
@@ -163,7 +163,7 @@ Some explanations:
 
 **Funpad**
 
-* Enc 1: Nothing
+* Enc 1: Zoom Out / Zoom In / Nothing
 * Enc 2: Nothing
 
 ```
