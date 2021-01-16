@@ -7,7 +7,7 @@ uint16_t alt_tab_timer     = 0;
 void matrix_scan_encoders(void) {
     if (is_alt_tab_active) {
         if (timer_elapsed(alt_tab_timer) > 750) {
-            unregister_code(KC_LALT);
+            unregister_code(KC_LGUI);
             is_alt_tab_active = false;
         }
     }
