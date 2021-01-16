@@ -1,3 +1,5 @@
+#pragma once
+
 #include QMK_KEYBOARD_H
 #include "encoders.h"
 #include "process_records.h"
@@ -5,25 +7,28 @@
 #include "magnet.h"
 
 enum layers {
-    _BASE,                  // Colemak
-    _LOWER,                 // A funpad and a numpad
-    _RAISE,                 // Symbols
-    _ADJUST,                // Mainly RGB, activated when lower and raise is pressed at the same time
-    _EXTEND,                // Home row mods, navigation cluster
-    _MOUSE,                 // Layer for mouse
+    _BASE,                  // Colemak-DH
+    _NUMPAD,
+    _SYMBOLS,
+    _EXTEND,                // Navigation cluster
+    _FUNPAD,                // Left hand funpad (F1 - F12)
+    _ADJUST,                // Mainly RGB and media keys, activated when lower and raise is pressed at the same time
     _MAGNET,                // Layer https://magnet.crowdcafe.com/
 };
 
 #define __NONE__            KC_NO
+#define ________            _______
 
 // Base layer thumb cluster from left side, left hand, to right side, right hand
-#define TAB_LWR             LT(_LOWER, KC_TAB)
-#define SPC_EXT             LT(_EXTEND, KC_SPACE)
-#define ENT_RSE             LT(_RAISE, KC_ENTER)
-#define DEL_RSE             LT(_RAISE, KC_DEL)
-#define BSPC_MSE            LT(_MOUSE, KC_BSPC)
-#define ESC_LWR             LT(_LOWER, KC_ESC)
-#define M_MAG               LT(_MAGNET, KC_M)
+#define SPC_EXT             LT(_EXTEND, KC_SPACE)   // Left hand, left thumb
+#define ENT_NUM             LT(_NUMPAD, KC_ENTER)   // Left hand, right thumb
+#define DEL_FUN             LT(_FUNPAD, KC_DEL)     // Right hand, left thumb
+#define BSPC_SYM            LT(_SYMBOLS, KC_BSPC)   // Right hand, right thumb
+
+#define KC_STAB             LSFT(KC_TAB)            // Shift Tab
+#define STAB_FUN            LT(_FUNPAD, KC_STAB)    // Right hand, left thumb
+#define TAB_SYM             LT(_SYMBOLS, KC_TAB)    // Right hand, right thumb
+#define ESC_EXT             LT(_EXTEND, KC_ESC)     // Left hand, left thumb
 
 // Home row mods, using Colemak ... arst <--> neio
 #define HOME_A              LCTL_T(KC_A)

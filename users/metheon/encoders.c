@@ -1,4 +1,4 @@
-#include "metheon.h"
+#include "encoders.h"
 
 // For the alt tab macro (rotary encoder)
 bool     is_alt_tab_active = false;
@@ -72,7 +72,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
             case _BASE:
                 gui_tab(clockwise);
                 break;
-            case _RAISE:
+            case _SYMBOLS:
                 ctrl_tab(clockwise);
                 break;
             case _EXTEND:
@@ -87,7 +87,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
             case _BASE:
                 volume_control(clockwise);
                 break;
-            case _LOWER:
+            case _NUMPAD:
                 scrolling(clockwise);
                 break;
             case _EXTEND:
