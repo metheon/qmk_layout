@@ -27,4 +27,4 @@ TERMINAL_ENABLE					=	no
 GRAVE_ESC_ENABLE				=	no
 MAGIC_ENABLE					=	no
 SPACE_CADET_ENABLE				=	no
-LINK_TIME_OPTIMIZATION_ENABLE	=	no		# Reduces compiled size of firmware
+LTO_ENABLE						=	no		# Reduces compiled size of firmware
