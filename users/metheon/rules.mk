@@ -9,6 +9,7 @@ EXTRAKEY_ENABLE					=	yes 	# Enables audio control and System control
 LEADER_ENABLE					=	yes 	# Enables the Leader Key feature
 MOUSEKEY_ENABLE					=	yes 	# Enables usage of keyboard as mouse
 BOOTMAGIC_ENABLE				=	full	# Used for toggling ctrl and gui
+LTO_ENABLE						=	yes		# Reduces compiled size of firmware
 
 SRC += metheon.c
 SRC += encoders.c
@@ -27,4 +28,3 @@ TERMINAL_ENABLE					=	no
 GRAVE_ESC_ENABLE				=	no
 MAGIC_ENABLE					=	no
 SPACE_CADET_ENABLE				=	no
-LTO_ENABLE						=	no		# Reduces compiled size of firmware

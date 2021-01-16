@@ -2,28 +2,28 @@
 
 ## Introduction
 
-My approach to keyboards and keymaps is to mentally settle on a form factor which is simple, effective and intuitive. For me that is the basic Corne keyboard. It is a simple split keyboard with each half having a 3 by 5 alpha cluster and another 3 keys for the thumb cluster. That is 18 keys per half and 36 in total. I then select keyboards which are physically able to map to this mental model. Key advantages of this keyboard layout are:
+My approach to keyboards and keymaps is to mentally settle on a form factor which is simple, effective and intuitive. For me that is the basic Aysu keyboard, currently being developed by Thomas from [SplitKb](https://splitkb.com/). It is a simple split keyboard with each half having a 3 by 5 alpha cluster and another 3 keys for the thumb cluster. One of these thumb keys can be an encoder. That has been pushing me towrds adopting a two-thumb keys per hand layout. That is 17 keys per half and 34 in total, not counting the two encoders. I then select keyboards which are physically able to map to this mental model, disregarding the encoders, as they never feature anything thats not doable via key presses anyways. Key advantages of this keyboard layout are:
 
-* Reduced strain on the pinky finger as it is only responsible for one alpha column as all mods are moved.
-* Easily mapped to many ergo keyboards as many has more keys than the Corne.
+* Reduced strain on the pinky finger as it is only responsible for one alpha column.
+* Easily mapped to many ergo keyboards as many has more keys than the Aysu.
 
-For the actual keymap, I recommend reading through [`metheon.c`](metheon.c) or the diagram below. For how that keymap is then mapped to each keyboard I use, read through the actual keymaps of those keyboards.
-This approach ensures that it is quite easy to add support for a new keyboard as long as it fits the mental model of a Corne. All you have to do is write an adapter. Note that the order of the `#define` and the `#include` in the individual keymaps matter. The layout to use must be defined as it is called from within the `metheon.c` file (this is because of restrictions in the compiler order).
+For the actual keymap, I recommend reading through [`metheon.c`](metheon.c) or the diagram below. For how that keymap is then mapped to each keyboard I use, read through the config files of each keyboard listed below. Every config file contains a define which basically maps the Aysu layout to the particular keyboard, what I call an adapter.
+This approach ensures that it is quite easy to add support for a new keyboard as long as it fits the mental model of an Aysu. All you have to do is write an adapter. Note that the order of the `#define` and the `#include` in the individual keymaps matter. The layout to use must be defined as it is called from within the `metheon.c` file (this is because of restrictions in the compiler order).
 
 Right now I use these three keyboards:
 
-* The [*Ergodox EZ*](https://ergodox-ez.com/) ([`keymap.c`](../../keyboards/ergodox_ez/keymaps/metheon/keymap.c)):
+* The [*Ergodox EZ*](https://ergodox-ez.com/) ([`config.h`](../../keyboards/ergodox_ez/keymaps/metheon/config.h)):
   * The Ergodox EZ is the archetype split keyboard, it is kinda like a Corne but with a lot of extra keys.
-* The [*Kyria*](https://blog.splitkb.com/blog/introducing-the-kyria) ([`keymap.c`](../../keyboards/kyria/keymaps/metheon/keymap.c)):
-  * A Kyria is really just a reshuffled Planck with two additional encoders. It is however split and easily maps to a Corne layout. The aggresive pinky column is a good fit for me.
-* The [*Planck EZ*](https://ergodox-ez.com/pages/planck) ([`keymap.c`](../../keyboards/planck/keymaps/metheon/keymap.c)):
-  * The Planck EZ is of course just a Planck with a 2U spacebar. I do not use the two middle columns, just the five outer columns on each side. This is actually quite perfect as I get a sort of semi-split one-piece keyboard with three thumb keys per hand.
+* The [*Kyria*](https://blog.splitkb.com/blog/introducing-the-kyria) ([`config.h`](../../keyboards/kyria/keymaps/metheon/config.h)):
+  * A Kyria is really just a reshuffled Planck with two additional encoders. It is however split and easily maps to the Aysu layout. The aggresive pinky column is a good fit for me.
+* The [*Planck EZ*](https://ergodox-ez.com/pages/planck) ([`config.h`](../../keyboards/planck/keymaps/metheon/config.h)):
+  * The Planck EZ is of course just a Planck with a 2U spacebar. I do not use the two middle columns, just the five outer columns on each side. This is actually quite perfect as I get a sort of semi-split one-piece keyboard with two thumb keys per hand.
 
 In the following sections I will dive into different aspects of my keymap.
 
 ### Special thanks
 
-A lot of inspiration is drawn from [*Drashna*](https://github.com/qmk/qmk_firmware/tree/master/users/drashna) and [*manna-harbour_miryoku*](https://github.com/qmk/qmk_firmware/tree/master/users/manna-harbour_miryoku).
+A lot of inspiration is drawn from [*Drashna*](https://github.com/qmk/qmk_firmware/tree/master/users/drashna) and [*manna-harbour_miryoku*](https://github.com/qmk/qmk_firmware/tree/master/users/manna-harbour_miryoku). Also a big shoutout to the very active community on the splitkb discord, Colemak discord and QMK discord.
 
 ## Leader
 
@@ -77,84 +77,115 @@ Files:
 
 Some explanations:
 
-* Home row mods are present on the following layers:
-  * Base, Lower, Raise. 
-  * They are always on both sides in the order `CASG <--> GSAC` for `ARST <--> NEIO`.
+* I currently have seven layers: Base, Numpad, Funpad, Extend, Symbols, Adjust, Magnet. The following layer combinations active a third layer (tri layer combos):
+  * Extend + Symbols = Adjust
+  * Numpad + Funpad = Magnet
 * `------` means transparent.
 * Empty box means no mapping.
-* Thumb cluster has hold functions for the following layers:
-  * Lower, Raise, Extend
-  * They are in this order `Lower Extend Raise <--> Raise Extend Lower`
-* `Make` will type a make command for the keyboard
-* `Flash` will type a make and flash command for the keyboard
-* `Vrsn` will type the version the keyboard is running
+* All encoders are written as left/right/pres actions
+* All dual function keys written as tap/hold actions
 
 **Base**
+
+* Enc 1: Cmd Shift Tab / Cmd Tab / Nothing
+* Enc 2: Vol Down / Vol Up / Mute
+* SpcExt: Space/Extend
+* EntNum: Enter/Numpad
+* DelFun: Delete/Funpad
+* BspSym: Backspace/Symbols
+
 ```
 .-------------------------------------------.                    .--------------------------------------------.
-| Q      | W      | F     | P      | G      |                    | J      | L      | U      | Y      | '      |
+| Q      | W      | F     | P      | B      |                    | J      | L      | U      | Y      | '      |
 |-------------------------------------------|                    |--------------------------------------------|
-| A      | R      | S     | T      | D      |                    | H      | N      | E      | I      | O      |
+| A  Ctl | R Alt  | S Sft | T Gui  | G      |                    | M      | N Gui  | E Sft  | I Alt  | O Ctl  |
 |-------------------------------------------|                    |--------------------------------------------|
-| Z      | X      | C     | V      | B      |                    | K      | M      | ,      | .      | /      |
+| Z      | X      | C     | D      | V      |                    | K      | H      | ,      | .      | /      |
 '-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
-                          | Tab    | Space  | Enter  |  | Delete | Bckspc |Esc     |
+                          | Enc 1  | SpcExt | EntNum |  | DelFun | BspSym | Enc 2  |
                           '--------+--------+--------'  '--------+--------+--------'
 ```
 
-**Lower**
+**Numpad**
+
+* Enc 1: Nothing
+* Enc 2: Nothing
+
 ```
 .-------------------------------------------.                    .--------------------------------------------.
-| )      | F9     | F10   | F11    | F12    |                    | *      | 7      | 8      | 9      | /      |
+|        |        |       |        |        |                    | =      | 7      | 8      | 9      | *      |
 |-------------------------------------------|                    |--------------------------------------------|
-| Enter  | F5     | F6    | F7     | F8     |                    | +      | 4      | 5      | 6      | -      |
+| Ctrl   | Alt    | Shift | Gui    |        |                    | +      | 4      | 5      | 6      | 0      |
 |-------------------------------------------|                    |--------------------------------------------|
-| (      | F1     | F2    | F3     | F4     |                    | 0      | 1      | 2      | 3      | =      |
+|        |        |       |        |        |                    | -      | 1      | 2      | 3      | /      |
 '-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
-                          | ------ | ------ | ------ |  | ------ | ------ | ------ |
+                          | Enc 1  | ------ | ------ |  | ------ | ------ | Enc 2  |
                           '--------+--------+--------'  '--------+--------+--------'
 ```
 
-**Raise**
+**Symbols**
+
+* Enc 1: Nothing
+* Enc 2: Nothing
+* EscExt: Escape/Extend
+
 ```
 .-------------------------------------------.                    .--------------------------------------------.
 | `      | ^     | #      | ~      | {      |                    | }      | $      | €      |        |        |
 |-------------------------------------------|                    |--------------------------------------------|
 | @      | Æ     | Ø      | Å      | (      |                    | )      | =      | !      | &      | |      |
 |-------------------------------------------|                    |--------------------------------------------|
-| _      | -     |        |        | [      |                    | ]      | ;      | :      | %      | \      |
+| _      | -     | :      | ;      | [      |                    | ]      |        |        | %      | \      |
 '-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
-                          | ------ | ------ | ------ |  | ------ | ------ | ------ |
+                          | Enc 2  | EscExt | ------ |  | ------ | ------ | Enc 2  |
                           '--------+--------+--------'  '--------+--------+--------'
 ```
 
 **Extend**
+
+* Paste: Yes, it is there twice. Normal V position as well as Colemak-DH V.
+* Enc 1: Nothing
+* Enc 2: Nothing
+* StbFun: Shift Tab / Funpad
+* TabSym: Tab/Symbols
+
 ```
 .-------------------------------------------.                    .--------------------------------------------.
 |        |       |        |        |        |                    | PgUp   | Home   | Up     | End    |        |
 |-------------------------------------------|                    |--------------------------------------------|
 | Ctrl   | Alt   | Shift  | Gui    | Lead   |                    | PgDn   | Left   | Down   | Right  |        |
 |-------------------------------------------|                    |--------------------------------------------|
-| Undo   | Cut   | Copy   | Paste  |        |                    |        |        |        |        |        |
+| Undo   | Cut   | Copy   | Paste  | Paste  |                    |        |        |        |        |        |
 '-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
-                          | ------ | ------ | ------ |  | ------ | ------ | ------ |
+                          | Enc 1  | ------ | ------ |  | StbFun | TabSym | Enc 2  |
                           '--------+--------+--------'  '--------+--------+--------'
 ```
 
-**Mouse**
+**Funpad**
+
+* Enc 1: Nothing
+* Enc 2: Nothing
+
 ```
 .-------------------------------------------.                    .--------------------------------------------.
-|        | WhLft | MsUp   | WhRght | WhUp   |                    |        |        |        |        |        |
+| F9     | F10   | F11    | F12    |        |                    |        |        |        |        |        |
 |-------------------------------------------|                    |--------------------------------------------|
-|        | MsLft | MsDn   | MsRght | WhDn   |                    |        | Gui    | Shift  | Alt    | Ctrl   |
+| F5     | F6    | F7     | F8     |        |                    |        | Gui    | Shift  | Alt    | Ctrl   |
 |-------------------------------------------|                    |--------------------------------------------|
-|        |       |        |        |        |                    |        |        |        |        |        |
+| F1     | F2    | F3     | F4     |        |                    |        |        |        |        |        |
 '-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
-                          | Btn1   | Btn2   | Btn3   |  | ------ | ------ | ------ |
+                          | Enc 1  | ------ | ------ |  | ------ | ------ | Enc 2  |
                           '--------+--------+--------'  '--------+--------+--------'
 ```
 
 **Adjust**
+
+* Enc 1: Nothing
+* Enc 2: Nothing
+* `Make` will type a make command for the keyboard
+* `Flash` will type a make and flash command for the keyboard
+* `Vrsn` will type the version the keyboard is running
+
 ```
 .-------------------------------------------.                    .--------------------------------------------.
 |        |       |        |        |        |                    |        | Flash  | Make   | Vrsn   |        |
@@ -163,7 +194,7 @@ Some explanations:
 |-------------------------------------------|                    |--------------------------------------------|
 |        | Mute  | VolDn  | VolUp  |        |                    |        | RgbRMod| RgbHud | RgbSad | RgbVad |
 '-------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
-                          | ------ | Reset  | ------ |  | ------ | Reset  | ------ |
+                          | Enc 2  | Reset  | ------ |  | ------ | Reset  | Enc 2  |
                           '--------+--------+--------'  '--------+--------+--------'
 ```
 
@@ -171,33 +202,36 @@ Some explanations:
 
 Shortcuts for the [Magnet app](https://magnet.crowdcafe.com/).
 
-* `MG FSCR` -> Fullscreen
+* `MgFscr` -> Fullscreen
 
-* `MG LF HF` -> Left Half
-* `MG RT HF` -> Right Half
-* `MG UP HF` -> Upper Half
-* `MG BT HF` -> Bottom Half
+* `MgLFHf` -> Left Half
+* `MgRtHf` -> Right Half
+* `MgUpHf` -> Upper Half
+* `MgBtHf` -> Bottom Half
 
-* `MG LF TD` -> Left Third
-* `MG MD TD` -> Middle Third
-* `MG RT TD` -> Right Third
+* `MgLfTd` -> Left Third
+* `MgMdTd` -> Middle Third
+* `MgRtTd` -> Right Third
 
-* `MG L2 TD` -> Right Two Thirds
-* `MG R2 TD` -> Right Two Thirds
+* `MgL2Td` -> Right Two Thirds
+* `MgR2Td` -> Right Two Thirds
 
-* `MG UL QD` -> Upper Left Quadrant
-* `MG UR QD` -> Upper Right Quadrant
-* `MG BL QD` -> Bottom Left Quadrant
-* `MG BR QD` -> Bottom Right Quadrant
+* `MgUlQd` -> Upper Left Quadrant
+* `MgUrQd` -> Upper Right Quadrant
+* `MgBLQd` -> Bottom Left Quadrant
+* `MgBrQd` -> Bottom Right Quadrant
+
+* Enc 1: Nothing
+* Enc 2: Nothing
 
 ```
 .--------------------------------------------.                    .--------------------------------------------.
-|        |        |MG UL QD|MG UP HF|MG UR QD|                    |        |        |        |        |        |
+|        | MgUlQd | MgUpHf | MgUrQd |        |                    |        |        |        |        |        |
 |--------------------------------------------|                    |--------------------------------------------|
-|MG L2 TD|MG R2 TD|MG LF HF|MG FSCR |MG RT HF|                    | ------ |        |        |        |        |
+|        | MgLFHf | MgFscr | MgRtHf |        |                    |        | MgLfTd | MgMdTd | MgRtTd |        |
 |--------------------------------------------|                    |--------------------------------------------|
-|        |        |MG BL QD|MG BT HF|MG BR QD|                    |        |        |        |        |        |
+|        | MgBLQd | MgBtHf | MgBrQd |        |                    |        | MgL2Td | MgR2Td |        |        |
 '--------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
-                           |MG LF TD|MG MD TD|MG RT TD|  | ------ | ------ | ------ |
+                           | Enc 1  | ------ | ------ |  | ------ | ------ | Enc 2  |
                            '--------+--------+--------'  '--------+--------+--------'
 ```
