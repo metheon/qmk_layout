@@ -58,6 +58,14 @@ void gui_tab(bool clockwise) {
     }
 }
 
+void tabbing(bool clockwise) {
+    if (clockwise) {
+        tap_code16(KC_TAB);
+    } else {
+        tap_code16(S(KC_TAB));
+    }
+}
+
 void ctrl_tab(bool clockwise) {
     if (clockwise) {
         tap_code16(C(KC_TAB));
@@ -70,13 +78,13 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {  // Left encoder
         switch (biton32(layer_state)) {
             case _BASE:
-                gui_tab(clockwise);
+                tabbing(clockwise);
                 break;
             case _SYMBOLS:
-                ctrl_tab(clockwise);
+                gui_tab(clockwise);
                 break;
             case _FUNPAD:
-                zoom(clockwise);
+                ctrl_tab(clockwise);
                 break;
             default:
                 // Do nothing
