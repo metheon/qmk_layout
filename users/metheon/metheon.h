@@ -25,10 +25,8 @@ enum layers {
 #define DEL_FUN             LT(_FUNPAD, KC_DEL)     // Right hand, left thumb
 #define BSPC_SYM            LT(_SYMBOLS, KC_BSPC)   // Right hand, right thumb
 
-#define KC_STAB             LSFT(KC_TAB)            // Shift Tab
-#define STAB_FUN            LT(_FUNPAD, KC_STAB)    // Right hand, left thumb
-#define TAB_SYM             LT(_SYMBOLS, KC_TAB)    // Right hand, right thumb
-#define ESC_EXT             LT(_EXTEND, KC_ESC)     // Left hand, left thumb
+#define TAB_EXT             LT(_EXTEND, KC_TAB)     // Left hand, left thumb
+#define ESC_NUM             LT(_NUMPAD, KC_ESC)     // Left hand, right thumb
 
 // Home row mods, using Colemak ... arst <--> neio
 #define HOME_A              LCTL_T(KC_A)
