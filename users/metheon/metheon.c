@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_SYMBOLS] = LAYOUT_metheon(
     //  .--------------------------------------------.                    .--------------------------------------------.
-         KC_GRV  ,KC_CIRC ,KC_HASH ,KC_TILD ,KC_LCBR                      ,KC_RCBR ,KC_DLR  ,KC_EUR  ,__NONE__,__NONE__,
+         KC_GRV  ,KC_CIRC ,KC_HASH ,KC_TILD ,KC_LCBR                      ,KC_RCBR ,KC_DLR  ,KC_EUR  ,KC_PND  ,__NONE__,
     //  |--------------------------------------------|                    |--------------------------------------------|
          KC_AT   ,KC_AE   ,KC_OE   ,KC_AA   ,KC_LPRN                      ,KC_RPRN ,KC_EQL  ,KC_EXLM ,KC_AMPR ,KC_PIPE ,
     //  |--------------------------------------------|                    |--------------------------------------------|

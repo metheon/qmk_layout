@@ -62,4 +62,5 @@ enum layers {
 #define KC_AA               RALT(KC_A)
 #define KC_OE               RALT(KC_O)
 #define KC_AE               RALT(KC_QUOT)
-#define KC_EUR              LSFT(KC_4)
+#define KC_PND              RALT(KC_3)
+#define KC_EUR              LSFT(RALT(KC_4))
