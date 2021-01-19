@@ -10,11 +10,13 @@ LEADER_ENABLE					=	yes 	# Enables the Leader Key feature
 MOUSEKEY_ENABLE					=	yes 	# Enables usage of keyboard as mouse
 BOOTMAGIC_ENABLE				=	full	# Used for toggling ctrl and gui
 LTO_ENABLE						=	yes		# Reduces compiled size of firmware
+COMBO_ENABLE					=	yes		# Enables the usage of combos
 
 SRC += metheon.c
 SRC += encoders.c
 SRC += process_records.c
 SRC += leader.c
+SRC += combos.c
 
 # Disable as many features as possible
 TAP_DANCE_ENABLE				=	no		# Enables the tap dance feature
@@ -26,5 +28,4 @@ VELOCIKEY_ENABLE				=	no
 STENO_ENABLE					=	no
 TERMINAL_ENABLE					=	no
 GRAVE_ESC_ENABLE				=	no
-MAGIC_ENABLE					=	no
 SPACE_CADET_ENABLE				=	no
