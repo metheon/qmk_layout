@@ -25,7 +25,7 @@
 #define MOUSEKEY_WHEEL_MAX_SPEED    20      // default is 8, higher is faster
 #define MOUSEKEY_WHEEL_TIME_TO_MAX  0       // disable, constant speed
 
-#define COMBO_COUNT                 2
+#define COMBO_COUNT                 3
 
 
 ////////////////////////////////
