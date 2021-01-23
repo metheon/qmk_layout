@@ -54,3 +54,6 @@ enum layers {
 #define OSM_SFT             OSM(MOD_LSFT)
 
 #define KC_STAB             LSFT(KC_TAB)
+
+#define NEXT_TAB            LCTL(KC_TAB)
+#define PREV_TAB            LCTL(KC_STAB)

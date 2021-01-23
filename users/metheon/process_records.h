@@ -14,5 +14,8 @@ enum keycodes {
     CUT,
     COPY,
     PASTE,
-
+    NEXT_WRD,               // Next word
+    PREV_WRD,               // Previous word
+    NEXT_WIN,               // Next window (alt tab / gui tab)
+    PREV_WIN,               // Previous window (like above but shifted)
 };
