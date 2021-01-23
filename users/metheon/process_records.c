@@ -1,5 +1,7 @@
 #include "metheon.h"
 #include "version.h"
+#include "which_os.h"
+#include "window_tab.h"
 
 // OS dependant key codes
 // Mac uses standard US ANSI keyboard
@@ -17,9 +19,6 @@
 #define MAC_NEXT_WRD         LALT(KC_RIGHT)
 #define MAC_PREV_WRD         LALT(KC_LEFT)
 
-#define MAC_NEXT_WIN         LGUI(KC_TAB)
-#define MAC_PREV_WIN         LGUI(KC_STAB)
-
 // Windows uses EurKey
 #define WIN_AE               RALT(KC_Q)
 #define WIN_OE               RALT(KC_L)
@@ -34,16 +33,6 @@
 
 #define WIN_NEXT_WRD         LCTL(KC_RIGHT)
 #define WIN_PREV_WRD         LCTL(KC_LEFT)
-#define WIN_NEXT_WIN         LALT(KC_TAB)
-#define WIN_PREV_WIN         LALT(KC_STAB)
-
-bool is_mac(void) {
-    return keymap_config.swap_lctl_lgui;
-}
-
-bool is_windows(void) {
-    return !is_mac();
-}
 
 // call this function for plain tapping a keycode which differs on on the OS'es
 bool tab_os_key(uint16_t win_keycode, uint16_t mac_keycode, keyrecord_t *record) {
@@ -126,9 +115,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case PREV_WRD:
             return tab_os_key(WIN_PREV_WRD, MAC_PREV_WRD, record);
         case NEXT_WIN:
-            return tab_os_key(WIN_NEXT_WIN, MAC_NEXT_WIN, record);
+            if(record->event.pressed) {
+                return mod_tab(KC_TAB);
+            }
         case PREV_WIN:
-            return tab_os_key(WIN_PREV_WIN, MAC_PREV_WIN, record);
+            if(record->event.pressed) {
+                return mod_tab(S(KC_TAB));
+            }
         return false;
     }
     return true;

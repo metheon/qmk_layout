@@ -9,6 +9,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 void matrix_scan_user(void) {
     matrix_scan_encoders();
     matrix_scan_leader();
+    matrix_scan_window_tab();
 }
 
 // clang-format off

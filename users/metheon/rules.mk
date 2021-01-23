@@ -16,6 +16,7 @@ SRC += process_records.c
 SRC += leader.c
 SRC += combos.c
 SRC += which_os.c
+SRC += window_tab.c
 
 # Disable as many features as possible
 BOOTMAGIC_ENABLE				=	no	    # Not required for CG_TOGG which is the only bootmagic feature I use
