@@ -4,6 +4,10 @@ enum keycodes {
     KC_MAKE,                // make keyboard:user
     KC_FLASH,               // make keyboard:user:bootloader
     KC_VRSN,                // prints the version
-    CUT,                    // Ctrl+X or Cmd+X
-    WIN_MAC,
+    WHICH_OS,               // Prints which OS the keyboard is set to
+    KC_AE,                  // Æ
+    KC_OE,                  // Ø
+    KC_AA,                  // Å
+    KC_EUR,                 // €
+    KC_PND,                 // £
 };

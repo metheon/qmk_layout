@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  .--------------------------------------------.                    .--------------------------------------------.
          __NONE__,__NONE__,__NONE__,__NONE__,__NONE__                     ,KC_EQL  ,KC_7    ,KC_8    ,KC_9    ,KC_ASTR ,
     //  |--------------------------------------------|                    |--------------------------------------------|
-         KC_LCTRL,KC_LALT ,KC_LSFT ,KC_LGUI ,__NONE__                     ,KC_PLUS ,KC_4    ,KC_5    ,KC_6    ,KC_0    ,
+         KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,__NONE__                     ,KC_PLUS ,KC_4    ,KC_5    ,KC_6    ,KC_0    ,
     //  |--------------------------------------------|                    |--------------------------------------------|
          __NONE__,__NONE__,__NONE__,__NONE__,__NONE__                     ,KC_MINS ,KC_1    ,KC_2    ,KC_3    ,KC_SLSH ,
     //  '-------------------------+--------+---------+--------+  +--------+--------+--------+--------------------------'
@@ -50,9 +50,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  .--------+--------+--------+--------+--------.                    .--------------------------------------------.
          KC_ESC  ,__NONE__,__NONE__,__NONE__,__NONE__                     ,KC_PGUP ,KC_HOME ,KC_UP   ,KC_END  ,__NONE__,
     //  |--------------------------------------------|                    |--------------------------------------------|
-         KC_LCTRL,KC_LALT ,KC_LSFT ,KC_LGUI ,KC_LEAD                      ,KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
+         KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,KC_LEAD                      ,KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
     //  |--------------------------------------------|                    |--------------------------------------------|
-         UNDO    ,CUT     ,COPY    ,PASTE   ,PASTE                        ,__NONE__,KC_STAB ,KC_TAB  ,__NONE__,__NONE__,
+         KC_UNDO ,KC_CUT  ,KC_COPY ,KC_PSTE ,KC_PSTE                      ,__NONE__,KC_STAB ,KC_TAB  ,__NONE__,__NONE__,
     //  '--------+--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------+--------'
                                    EXT_E01  ,________ ,________  ,ESC_FUN ,TAB_SYM ,EXT_E02
     //                            '--------+---------+--------+  +--------+--------+--------'
@@ -61,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  .--------------------------------------------.                    .--------------------------------------------.
          KC_F9   ,KC_F10  ,KC_F11  ,KC_F12  ,__NONE__                     ,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------------------------------------------|                    |--------------------------------------------|
-         KC_F5   ,KC_F6   ,KC_F7   ,KC_F8   ,__NONE__                     ,__NONE__,KC_LGUI ,KC_LSFT ,KC_LALT ,KC_LCTL ,
+         KC_F5   ,KC_F6   ,KC_F7   ,KC_F8   ,__NONE__                     ,__NONE__,KC_LCTRL,KC_LSFT ,KC_LALT ,KC_LGUI ,
     //  |--------------------------------------------|                    |--------------------------------------------|
          KC_F1   ,KC_F2   ,KC_F3   ,KC_F4   ,__NONE__                     ,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  '-------------------------+--------+---------+--------+  +--------+--------+--------+--------------------------'
@@ -70,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_ADJUST] = LAYOUT_metheon(
     //  .--------------------------------------------.                    .--------------------------------------------.
-         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__                     ,__NONE__,KC_FLASH,KC_MAKE ,KC_VRSN ,__NONE__,
+         __NONE__,__NONE__,WHICH_OS,CG_TOGG ,__NONE__                     ,__NONE__,KC_FLASH,KC_MAKE ,KC_VRSN ,__NONE__,
     //  |--------------------------------------------|                    |--------------------------------------------|
          KC_CAPS ,KC_MPRV ,KC_MPLY ,KC_MNXT ,__NONE__                     ,RGB_TOG ,RGB_MOD ,RGB_HUI ,RGB_SAI ,RGB_VAI ,
     //  |--------------------------------------------|                    |--------------------------------------------|
@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_MAGNET] = LAYOUT_metheon(
     //  .--------------------------------------------.                    .--------------------------------------------.
-         __NONE__,MG_UL_QD,MG_UP_HF,MG_UR_QD,__NONE__                     ,__NONE__,CG_TOGG ,KC_LGUI ,KC_LCTL ,__NONE__,
+         __NONE__,MG_UL_QD,MG_UP_HF,MG_UR_QD,__NONE__                     ,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------------------------------------------|                    |--------------------------------------------|
          __NONE__,MG_LF_HF,MG_FSCR ,MG_RT_HF,__NONE__                     ,________,MG_LF_TD,MG_MD_TD,MG_RT_TD,__NONE__,
     //  |--------------------------------------------|                    |--------------------------------------------|

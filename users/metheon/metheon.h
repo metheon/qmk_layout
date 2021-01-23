@@ -29,14 +29,14 @@ enum layers {
 #define ESC_FUN             LT(_FUNPAD, KC_ESC)     // Left hand, right thumb
 
 // Home row mods, using Colemak ... arst <--> neio
-#define HOME_A              LCTL_T(KC_A)
+#define HOME_A              LGUI_T(KC_A)
 #define HOME_R              LALT_T(KC_R)
 #define HOME_S              LSFT_T(KC_S)
-#define HOME_T              LGUI_T(KC_T)
-#define HOME_N              LGUI_T(KC_N)
+#define HOME_T              LCTL_T(KC_T)
+#define HOME_N              LCTL_T(KC_N)
 #define HOME_E              LSFT_T(KC_E)
 #define HOME_I              LALT_T(KC_I)
-#define HOME_O              LCTL_T(KC_O)
+#define HOME_O              LGUI_T(KC_O)
 
 // Home row mods, for the numpad and funpad ... ( F6, F5, F4 <--> 4 5 6 -
 #define HOME_ENT            LCTL_T(KC_ENTER)
@@ -48,19 +48,9 @@ enum layers {
 #define HOME_6              LALT_T(KC_6)
 #define HOME_MN             LCTL_T(KC_MINS)
 
-#define UNDO                LGUI(KC_Z)
-#define CUT                 LGUI(KC_X)
-#define COPY                LGUI(KC_C)
-#define PASTE               LGUI(KC_V)
 #define COPY_T              LCTL(KC_INSERT)
 #define PASTE_T             LSFT(KC_INSERT)
 
 #define OSM_SFT             OSM(MOD_LSFT)
 
 #define KC_STAB             LSFT(KC_TAB)
-
-#define KC_AA               RALT(KC_A)
-#define KC_OE               RALT(KC_O)
-#define KC_AE               RALT(KC_QUOT)
-#define KC_PND              RALT(KC_3)
-#define KC_EUR              LSFT(RALT(KC_4))
