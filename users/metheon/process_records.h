@@ -10,4 +10,9 @@ enum keycodes {
     KC_AA,                  // Å
     KC_EUR,                 // €
     KC_PND,                 // £
+    UNDO,
+    CUT,
+    COPY,
+    PASTE,
+
 };

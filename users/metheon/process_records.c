@@ -9,12 +9,22 @@
 #define MAC_EUR              LSFT(RALT(KC_2))
 #define MAC_PND              RALT(KC_3)
 
+#define MAC_UNDO             LGUI(KC_Z)
+#define MAC_CUT              LGUI(KC_X)
+#define MAC_COPY             LGUI(KC_C)
+#define MAC_PSTE             LGUI(KC_V)
+
 // Windows uses EurKey
 #define WIN_AE               RALT(KC_Q)
 #define WIN_OE               RALT(KC_L)
 #define WIN_AA               RALT(KC_W)
 #define WIN_EUR              RALT(KC_5)
 #define WIN_PND              RALT(KC_4)
+
+#define WIN_UNDO             LCTL(KC_Z)
+#define WIN_CUT              LCTL(KC_X)
+#define WIN_COPY             LCTL(KC_C)
+#define WIN_PSTE             LCTL(KC_V)
 
 bool is_mac(void) {
     return keymap_config.swap_lctl_lgui;
@@ -92,6 +102,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return tab_os_key(WIN_EUR, MAC_EUR, record);
         case KC_PND:
             return tab_os_key(WIN_PND, MAC_PND, record);
+        case UNDO:
+            return tab_os_key(WIN_UNDO, MAC_UNDO, record);
+        case CUT:
+            return tab_os_key(WIN_CUT, MAC_CUT, record);
+        case COPY:
+            return tab_os_key(WIN_COPY, MAC_COPY, record);
+        case PASTE:
+            return tab_os_key(WIN_PSTE, MAC_PSTE, record);
         return false;
     }
     return true;
