@@ -4,11 +4,9 @@ ifndef ENCODER_ENABLE
 	ENCODER_ENABLE				=	no  	# Ensure encoders are disabled unless set to true in a specific keymap
 endif
 
-DYNAMIC_MACRO_ENABLE			=	yes 	# Enables dynamic macros
 EXTRAKEY_ENABLE					=	yes 	# Enables audio control and System control
 LEADER_ENABLE					=	yes 	# Enables the Leader Key feature
 MOUSEKEY_ENABLE					=	yes 	# Enables usage of keyboard as mouse
-BOOTMAGIC_ENABLE				=	full	# Used for toggling ctrl and gui
 LTO_ENABLE						=	yes		# Reduces compiled size of firmware
 COMBO_ENABLE					=	yes		# Enables the usage of combos
 
@@ -19,6 +17,8 @@ SRC += leader.c
 SRC += combos.c
 
 # Disable as many features as possible
+BOOTMAGIC_ENABLE				=	no	    # Not required for CG_TOGG which is the only bootmagic feature I use
+DYNAMIC_MACRO_ENABLE			=	no 		# Enables dynamic macros
 TAP_DANCE_ENABLE				=	no		# Enables the tap dance feature
 COMMAND_ENABLE					=	no 		# Commands for debug and configuration
 AUDIO_ENABLE					=	no		# Enables any onboard speakers
