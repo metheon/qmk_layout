@@ -14,8 +14,8 @@
 #define MAC_COPY             LGUI(KC_C)
 #define MAC_PSTE             LGUI(KC_V)
 
-#define MAC_NEXT_WRD         LALT(KC_LEFT)
-#define MAC_PREV_WRD         LALT(KC_RIGHT)
+#define MAC_NEXT_WRD         LALT(KC_RIGHT)
+#define MAC_PREV_WRD         LALT(KC_LEFT)
 
 #define MAC_NEXT_WIN         LGUI(KC_TAB)
 #define MAC_PREV_WIN         LGUI(KC_STAB)
@@ -32,8 +32,8 @@
 #define WIN_COPY             LCTL(KC_C)
 #define WIN_PSTE             LCTL(KC_V)
 
-#define WIN_NEXT_WRD         LCTL(KC_LEFT)
-#define WIN_PREV_WRD         LCTL(KC_RIGHT)
+#define WIN_NEXT_WRD         LCTL(KC_RIGHT)
+#define WIN_PREV_WRD         LCTL(KC_LEFT)
 #define WIN_NEXT_WIN         LALT(KC_TAB)
 #define WIN_PREV_WIN         LALT(KC_STAB)
 
