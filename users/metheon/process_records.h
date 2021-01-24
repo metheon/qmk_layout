@@ -1,3 +1,7 @@
+#pragma once
+
+#include QMK_KEYBOARD_H
+
 enum keycodes {
     HIBRNT = SAFE_RANGE,    // Hibernate the computer
     SLEEP,                  // Sleep the computer
