@@ -15,6 +15,8 @@ enum layers {
     _FUNPAD,                // Left hand funpad (F1 - F12)
     _ADJUST,                // Mainly RGB and media keys, activated when lower and raise is pressed at the same time
     _MAGNET,                // Layer https://magnet.crowdcafe.com/
+    _BL3_BSE,               // Base layer for Borderlands 3
+    _BL3_UPR,               // Upper layer for Borderlands 3
 };
 
 #define __NONE__            KC_NO
@@ -58,3 +60,12 @@ enum layers {
 
 #define NEXT_TAB            LCTL(KC_TAB)
 #define PREV_TAB            LCTL(KC_STAB)
+
+// All keys related to Borderlands 3
+#define TO_BL3              TO(_BL3_BSE)
+#define TO_BASE             TO(_BASE)
+#define BL3_SPC             LT(_BL3_UPR, KC_SPACE)
+#define BL3_W               LSFT(KC_W)              // BL3: Hold shift while pressing W to run instead of walking
+#define BL3_A               LSFT(KC_A)              // BL3: Hold shift while pressing A to run instead of walking
+#define BL3_S               LSFT(KC_S)              // BL3: Hold shift while pressing S to run instead of walking
+#define BL3_D               LSFT(KC_D)              // BL3: Hold shift while pressing D to run instead of walking
