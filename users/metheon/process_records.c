@@ -117,13 +117,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case PREV_WRD:
             return tab_os_key(WIN_PREV_WRD, MAC_PREV_WRD, record);
         case NEXT_WIN:
-            if(record->event.pressed) {
-                return mod_tab(KC_TAB);
-            }
+            return mod_tab(record, false);
         case PREV_WIN:
-            if(record->event.pressed) {
-                return mod_tab(S(KC_TAB));
-            }
+            return mod_tab(record, S(true));
         return false;
     }
     return true;

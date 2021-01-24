@@ -28,14 +28,18 @@ void matrix_scan_window_tab(void) {
     }
 }
 
-bool mod_tab(uint16_t keycode) {
-    if(keycode == KC_TAB || keycode == S(KC_TAB)) {
+bool mod_tab(keyrecord_t *record, bool shifted) {
+    if(record->event.pressed) {
         if (!is_mod_tab_active) {
             is_mod_tab_active = true;
             register_mod();
         }
         mod_tab_timer = timer_read();
-        tap_code16(keycode);
+        if(shifted) {
+            tap_code16(S(KC_TAB));
+        } else {
+            tap_code16(KC_TAB);
+        }
         return true;
     }
     return false;
