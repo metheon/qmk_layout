@@ -71,13 +71,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_ADJUST] = LAYOUT_metheon(
     //  .--------------------------------------------.                    .--------------------------------------------.
-         __NONE__,__NONE__,WHICH_OS,CG_TOGG ,__NONE__                     ,TO_BL3  ,KC_FLASH,KC_MAKE ,KC_VRSN ,__NONE__,
+         RESET   ,__NONE__,WHICH_OS,CG_TOGG ,__NONE__                     ,TO_BL3  ,KC_FLASH,KC_MAKE ,KC_VRSN ,__NONE__,
     //  |--------------------------------------------|                    |--------------------------------------------|
          KC_CAPS ,KC_MPRV ,KC_MPLY ,KC_MNXT ,__NONE__                     ,RGB_TOG ,RGB_MOD ,RGB_HUI ,RGB_SAI ,RGB_VAI ,
     //  |--------------------------------------------|                    |--------------------------------------------|
          __NONE__,KC_MUTE ,KC_VOLD ,KC_VOLU ,__NONE__                     ,__NONE__,RGB_RMOD,RGB_HUD ,RGB_SAD ,RGB_VAD ,
     //  '--------------------------+--------+--------+--------+  +--------+--------+--------+--------------------------'
-                                    ADJ_E01 ,________,RESET      ,RESET   ,________,ADJ_E02
+                                    ADJ_E01 ,________,________   ,________,________,ADJ_E02
     //                             '--------+--------+--------+  +--------+--------+--------'
     ),
     [_MAGNET] = LAYOUT_metheon(
