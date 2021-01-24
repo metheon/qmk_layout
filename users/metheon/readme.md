@@ -143,11 +143,12 @@ Some explanations:
 
 **Extend**
 
-* Paste: Yes, it is there twice. Normal V position as well as Colemak-DH V.
+* Paste: Put in Colemak-DH V, because appearently that is how my brain works.
 * Enc 1: Nothing
 * Enc 2: Prev / Next / Play
 * StbFun: Shift Tab / Funpad
 * TabSym: Tab/Symbols
+* TxtMod: The mod used when moving around text, ctrl on windows, alt on mac
 
 ```
 .--------------------------------------------.                    .--------------------------------------------.
@@ -155,7 +156,7 @@ Some explanations:
 |--------------------------------------------|                    |--------------------------------------------|
 | Ctrl   | Alt    | Shift  | Gui    | Lead   |                    | PgDn   | Left   | Down   | Right  |        |
 |--------------------------------------------|                    |--------------------------------------------|
-| Undo   | Cut    | Copy   | Paste  | Paste  |                    |        | PrvWrd | NxtWrd |        |        |
+| Undo   | Cut    | Copy   | TxtMod | Paste  |                    |        | PrvWrd | NxtWrd |        |        |
 '--------------------------+--------+--------+--------.  .--------+--------+--------+--------+-----------------'
                            | Enc 1  | ------ | ------ |  | StbFun | TabSym | Enc 2  |
                            '--------+--------+--------'  '--------+--------+--------'

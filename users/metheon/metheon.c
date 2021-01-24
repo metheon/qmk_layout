@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------------------------------------------|                    |--------------------------------------------|
          KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,KC_LEAD                      ,KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
     //  |--------------------------------------------|                    |--------------------------------------------|
-         UNDO    ,CUT     ,COPY    ,PASTE   ,PASTE                        ,__NONE__,PREV_WRD,NEXT_WRD,__NONE__,__NONE__,
+         UNDO    ,CUT     ,COPY     ,TEXT_MOD,PASTE                       ,__NONE__,PREV_WRD,NEXT_WRD,__NONE__,__NONE__,
     //  '--------+--------+---------+--------+-------+--------+  +--------+--------+--------+--------+--------+--------'
                                     EXT_E01  ,________,________  ,ESC_FUN ,TAB_SYM ,EXT_E02
     //                             '--------+--------+--------+  +--------+--------+--------'

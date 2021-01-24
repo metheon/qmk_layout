@@ -18,4 +18,5 @@ enum keycodes {
     PREV_WRD,               // Previous word
     NEXT_WIN,               // Next window (alt tab / gui tab)
     PREV_WIN,               // Previous window (like above but shifted)
+    TEXT_MOD,               // The mod used when moving around text, ctrl on windows, alt on mac
 };

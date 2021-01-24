@@ -92,6 +92,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
             }
             break;
+        case TEXT_MOD:
+            return tab_os_key(KC_LCTL, KC_LALT, record);
         case KC_AE:
             return tab_os_key(WIN_AE, MAC_AE, record);
         case KC_OE:
