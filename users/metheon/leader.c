@@ -12,6 +12,8 @@ static const char * const secrets[] = {
   "no secrets to be found",
   "no secrets to be found",
   "no secrets to be found",
+  "no secrets to be found",
+  "no secrets to be found",
 };
 #endif
 
@@ -119,6 +121,12 @@ void matrix_scan_leader(void) {
         }
         SEQ_TWO_KEYS(KC_W, KC_P) {
             send_string(secrets[6]);
+        }
+        SEQ_TWO_KEYS(KC_N, KC_I) {
+            send_string(secrets[7]);
+        }
+        SEQ_TWO_KEYS(KC_P, KC_N) {
+            send_string(secrets[8]);
         }
     }
 }

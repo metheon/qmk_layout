@@ -73,7 +73,7 @@ Files:
 * [`process_records.c`](process_records.c)
 * [`process_records.h`](process_records.h)
 
-## Keymap
+## Keymap (out of date, scheduled to be removed)
 
 Some explanations:
 
