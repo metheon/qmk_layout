@@ -9,7 +9,7 @@
 
 enum layers {
     _BASE,                  // Colemak-DH
-    _NUMPAD,
+    _NUMBERS,
     _SYMBOLS,
     _EXTEND,                // Navigation cluster
     _FUNPAD,                // Left hand funpad (F1 - F12)
@@ -22,14 +22,11 @@ enum layers {
 #define __NONE__            KC_NO
 #define ________            _______
 
-// Base layer thumb cluster from left side, left hand, to right side, right hand
-#define SPC_EXT             LT(_EXTEND, KC_SPACE)   // Left hand, left thumb
-#define ENT_NUM             LT(_NUMPAD, KC_ENTER)   // Left hand, right thumb
-#define DEL_FUN             LT(_FUNPAD, KC_DEL)     // Right hand, left thumb
-#define BSPC_SYM            LT(_SYMBOLS, KC_BSPC)   // Right hand, right thumb
-
-#define TAB_SYM             LT(_SYMBOLS, KC_TAB)     // Left hand, left thumb
-#define ESC_FUN             LT(_FUNPAD, KC_ESC)     // Left hand, right thumb
+#define SPC_EXT             LT(_EXTEND, KC_SPACE)
+#define SYMBOLS             MO(_SYMBOLS)
+#define NUMBERS             MO(_NUMBERS)
+#define MAGNET              OSL(_MAGNET)
+#define FUNPAD              OSL(_FUNPAD)
 
 #define SHIFT               OSM(MOD_LSFT)
 

@@ -98,7 +98,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
             case _EXTEND:
                 media_control(clockwise);
                 break;
-            case _NUMPAD:
+            case _NUMBERS:
                 scrolling(clockwise);
                 break;
             default:
