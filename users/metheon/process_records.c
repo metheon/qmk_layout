@@ -62,34 +62,53 @@ bool tab_os_key(uint16_t win_keycode, uint16_t mac_keycode, keyrecord_t *record)
     return false;
 }
 
+bool make(keyrecord_t *record) {
+    if (!record->event.pressed) {
+        SEND_STRING("make clean && make -j 8 " QMK_KEYBOARD ":" QMK_KEYMAP SS_TAP(X_ENTER));
+        return false;
+    }
+    return true;
+}
+
+bool flash(keyrecord_t *record) {
+    if (!record->event.pressed) {
+        SEND_STRING("make clean && make -j 8 " QMK_KEYBOARD ":" QMK_KEYMAP ":flash" SS_TAP(X_ENTER));
+        return false;
+    }
+    return true;
+}
+
+bool version(keyrecord_t *record) {
+    if (!record->event.pressed) {
+        SEND_STRING(QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
+        return false;
+    }
+    return true;
+}
+
+bool which_os(keyrecord_t *record) {
+    if (record->event.pressed) {
+        if(is_windows()) {
+            SEND_STRING("WIN");
+            return true;
+        } else if(is_mac()) {
+            SEND_STRING("MAC");
+            return true;
+        }
+    }
+    return false;
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case KC_MAKE:
-            if (!record->event.pressed) {
-                SEND_STRING("make clean && make -j 8 " QMK_KEYBOARD ":" QMK_KEYMAP SS_TAP(X_ENTER));
-            }
-            break;
+            return make(record);
         case KC_FLASH:
-            if (!record->event.pressed) {
-                SEND_STRING("make clean && make -j 8 " QMK_KEYBOARD ":" QMK_KEYMAP ":flash" SS_TAP(X_ENTER));
-            }
-            break;
+            return flash(record);
         case KC_VRSN:
-            if (record->event.pressed) {
-                SEND_STRING(QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
-            }
-            break;
+             return version(record);
         case WHICH_OS:
-            if (record->event.pressed) {
-                if(is_windows()) {
-                    SEND_STRING("WIN");
-                    return true;
-                } else if(is_mac()) {
-                    SEND_STRING("MAC");
-                    return true;
-                }
-            }
-            break;
+            return which_os(record);
         case TEXT_MOD:
             return tab_os_key(KC_LCTL, KC_LALT, record);
         case KC_AE:
@@ -124,7 +143,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return tab_os_key(WIN_IJ_RNAME, MAC_IJ_RNAME, record);
         case IJ_TERM:
             return tab_os_key(WIN_IJ_TERM, MAC_IJ_TERM, record);
-        return false;
     }
     return true;
 };
