@@ -31,6 +31,8 @@ enum layers {
 #define TAB_SYM             LT(_SYMBOLS, KC_TAB)     // Left hand, left thumb
 #define ESC_FUN             LT(_FUNPAD, KC_ESC)     // Left hand, right thumb
 
+#define SHIFT               OSM(MOD_LSFT)
+
 // Home row mods, using Colemak ... arst <--> neio
 #define HOME_A              LGUI_T(KC_A)
 #define HOME_R              LALT_T(KC_R)

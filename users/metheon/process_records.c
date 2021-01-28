@@ -18,6 +18,7 @@
 
 #define MAC_NEXT_WRD         LALT(KC_RIGHT)
 #define MAC_PREV_WRD         LALT(KC_LEFT)
+#define MAC_LOCK             LCTL(LGUI(KC_Q))
 
 // Windows uses EurKey
 #define WIN_AE               RALT(KC_Q)
@@ -33,6 +34,7 @@
 
 #define WIN_NEXT_WRD         LCTL(KC_RIGHT)
 #define WIN_PREV_WRD         LCTL(KC_LEFT)
+#define WIN_LOCK             LGUI(KC_L)
 
 // call this function for plain tapping a keycode which differs on on the OS'es
 bool tab_os_key(uint16_t win_keycode, uint16_t mac_keycode, keyrecord_t *record) {
@@ -120,6 +122,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return mod_tab(record, false);
         case PREV_WIN:
             return mod_tab(record, S(true));
+        case LOCK:
+            return tab_os_key(WIN_LOCK, MAC_LOCK, record);
         return false;
     }
     return true;

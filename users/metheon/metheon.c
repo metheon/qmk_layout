@@ -16,11 +16,11 @@ void matrix_scan_user(void) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------+--------.                                      .--------+--------+--------+--------+--------+--------.
-         __NONE__,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B                                           ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_QUOT ,__NONE__,
+         KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B                                           ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_AE   ,KC_OE   ,
     //  |--------+--------+--------+--------+--------+--------|                                      |--------+--------+--------+--------+--------+--------|
-         __NONE__,HOME_A  ,HOME_R  ,HOME_S ,HOME_T   ,KC_G                                           ,KC_M    ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,__NONE__,
+         KC_ESC  ,HOME_A  ,HOME_R  ,HOME_S ,HOME_T   ,KC_G                                           ,KC_M    ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,KC_AA   ,
     //  |--------+--------+--------+--------+--------+--------+--------+--------|  |--------+--------|--------+--------+--------+--------+--------+--------|
-         __NONE__,KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,__NONE__,__NONE__   ,__NONE__,__NONE__,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,__NONE__,
+         SHIFT   ,KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,KC_LEAD ,LOCK       ,__NONE__,__NONE__,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,SHIFT   ,
     //  '--------+--------+--------+--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------+--------+--------+--------'
                                     BSE_E01 ,__NONE__,__NONE__,SPC_EXT ,ENT_NUM    ,DEL_FUN ,BSPC_SYM,__NONE__,__NONE__,BSE_E02
     //                             '--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------'
@@ -40,9 +40,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  .--------+--------+--------+--------+--------+--------.                                      .--------+--------+--------+--------+--------+--------.
          __NONE__,KC_GRV  ,KC_CIRC ,KC_HASH ,KC_TILD ,KC_LCBR                                        ,KC_RCBR ,KC_DLR  ,KC_EUR  ,KC_PND  ,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------+--------|                                      |--------+--------+--------+--------+--------+--------|
-         __NONE__,KC_AT   ,KC_AE   ,KC_OE   ,KC_AA   ,KC_LPRN                                        ,KC_RPRN ,KC_EQL  ,KC_EXLM ,KC_AMPR ,KC_PIPE ,__NONE__,
+         __NONE__,KC_AT   ,KC_MINS ,KC_SCLN ,KC_QUOT ,KC_LPRN                                        ,KC_RPRN ,KC_EQL  ,KC_EXLM ,KC_AMPR ,KC_PIPE ,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------|  |--------+--------|--------+--------+--------+--------+--------+--------|
-         __NONE__,KC_UNDS ,KC_MINS ,KC_COLN ,KC_SCLN ,KC_LBRC ,__NONE__,__NONE__   ,__NONE__,__NONE__,KC_RBRC ,__NONE__,__NONE__,KC_PERC ,KC_BSLS ,__NONE__,
+         __NONE__,__NONE__,KC_UNDS ,KC_COLN ,KC_DQUO ,KC_LBRC ,__NONE__,__NONE__   ,__NONE__,__NONE__,KC_RBRC ,__NONE__,__NONE__,KC_PERC ,KC_BSLS ,__NONE__,
     //  '--------+--------+--------+--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------+--------+--------+--------'
                                    SYM_E01  ,__NONE__,__NONE__,________,________   ,________,________,__NONE__,__NONE__,SYM_E02
     //                             '--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------'
@@ -51,11 +51,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  .--------+--------+--------+--------+--------+--------.                                      .--------+--------+--------+--------+--------+--------.
          __NONE__,PREV_TAB,NEXT_TAB,PREV_WIN,NEXT_WIN,__NONE__                                       ,KC_PGUP ,KC_HOME ,KC_UP   ,KC_END  ,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------+--------|                                      |--------+--------+--------+--------+--------+--------|
-         __NONE__,KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,KC_LEAD                                        ,KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,__NONE__,
+         __NONE__,KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,__NONE__                                       ,KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------|  |--------+--------|--------+--------+--------+--------+--------+--------|
          __NONE__,UNDO    ,CUT     ,COPY     ,TEXT_MOD,PASTE  ,__NONE__,__NONE__   ,__NONE__,__NONE__,__NONE__,PREV_WRD,NEXT_WRD,__NONE__,__NONE__,__NONE__,
     //  '--------+--------+--------+--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------+--------+--------+--------'
-                                    EXT_E01  ,__NONE__,__NONE__,________,________  ,ESC_FUN ,TAB_SYM ,__NONE__,__NONE__,EXT_E02
+                                    EXT_E01  ,__NONE__,__NONE__,________,________  ,________,________,__NONE__,__NONE__,EXT_E02
     //                             '--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------'
     ),
     [_FUNPAD] = LAYOUT_metheon(
