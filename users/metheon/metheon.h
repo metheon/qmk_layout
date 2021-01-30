@@ -26,8 +26,7 @@ enum layers {
 #define ENT_NUM             LT(_NUMBERS, KC_ENTER)
 #define DEL_SYM             LT(_SYMBOLS, KC_DELETE)
 #define BSP_EXT             LT(_EXTEND, KC_BSPC)
-#define SYMBOLS             MO(_SYMBOLS)
-#define NUMBERS             MO(_NUMBERS)
+#define NUMBERS             TG(_NUMBERS)
 #define MAGNET              OSL(_MAGNET)
 #define FUNPAD              OSL(_FUNPAD)
 
