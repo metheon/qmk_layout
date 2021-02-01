@@ -18,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------+--------|                                      |--------+--------+--------+--------+--------+--------|
          KC_ESC  ,HOME_A  ,HOME_R  ,HOME_S ,HOME_T   ,KC_G                                           ,KC_M    ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,KC_QUOT ,
     //  |--------+--------+--------+--------+--------+--------+--------+--------|  |--------+--------|--------+--------+--------+--------+--------+--------|
-         SHIFT   ,KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,__NONE__,NUMBERS    ,FUNPAD  ,MAGNET  ,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,SHIFT   ,
+         SHIFT   ,KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,FUNPAD  ,NUMBERS    ,SYMBOLS ,MAGNET  ,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,SHIFT   ,
     //  '--------+--------+--------+--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------+--------+--------+--------'
                                     BSE_E01 ,KC_LALT ,KC_LCTL ,SPC_EXT ,ENT_NUM    ,DEL_SYM ,BSP_EXT ,KC_LCTL ,KC_LGUI ,BSE_E02
     //                             '--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------'
