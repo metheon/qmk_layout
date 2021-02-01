@@ -8,17 +8,17 @@ EXTRAKEY_ENABLE					=	yes 	# Enables audio control and System control
 LEADER_ENABLE					=	yes 	# Enables the Leader Key feature
 MOUSEKEY_ENABLE					=	yes 	# Enables usage of keyboard as mouse
 LTO_ENABLE						=	yes		# Reduces compiled size of firmware
-COMBO_ENABLE					=	yes		# Enables the usage of combos
 
 SRC += metheon.c
 SRC += encoders.c
 SRC += process_records.c
 SRC += leader.c
-SRC += combos.c
+//SRC += combos.c
 SRC += which_os.c
 SRC += window_tab.c
 
 # Disable as many features as possible
+COMBO_ENABLE					=	no		# Enables the usage of combos
 BOOTMAGIC_ENABLE				=	no	    # Not required for CG_TOGG which is the only bootmagic feature I use
 DYNAMIC_MACRO_ENABLE			=	no 		# Enables dynamic macros
 TAP_DANCE_ENABLE				=	no		# Enables the tap dance feature
