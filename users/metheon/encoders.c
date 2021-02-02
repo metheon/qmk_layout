@@ -6,7 +6,7 @@ uint16_t alt_tab_timer     = 0;
 
 void matrix_scan_encoders(void) {
     if (is_alt_tab_active) {
-        if (timer_elapsed(alt_tab_timer) > 750) {
+        if (timer_elapsed(alt_tab_timer) > 2000) {
             unregister_code(KC_LGUI);
             is_alt_tab_active = false;
         }
@@ -83,7 +83,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
             case _SYMBOLS:
                 gui_tab(clockwise);
                 break;
-            case _FUNPAD:
+            case _EXTEND:
                 ctrl_tab(clockwise);
                 break;
             default:
