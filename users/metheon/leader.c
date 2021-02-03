@@ -14,6 +14,7 @@ static const char * const secrets[] = {
   "no secrets to be found",
   "no secrets to be found",
   "no secrets to be found",
+  "no secrets to be found",
 };
 #endif
 
