@@ -104,32 +104,29 @@ void matrix_scan_leader(void) {
         SEQ_ONE_KEY(KC_N) {
             send_string(secrets[0]);
         }
-        SEQ_TWO_KEYS(KC_P, KC_E) {
+        SEQ_ONE_KEY(KC_M) {
             send_string(secrets[1]);
         }
-        SEQ_TWO_KEYS(KC_P, KC_P) {
+        SEQ_ONE_KEY(KC_P) {
             send_string(secrets[2]);
         }
-        SEQ_TWO_KEYS(KC_P, KC_U) {
+        SEQ_TWO_KEYS(KC_N, KC_I) {
             send_string(secrets[3]);
         }
-        SEQ_THREE_KEYS(KC_P, KC_E, KC_M) {
+        SEQ_TWO_KEYS(KC_P, KC_N) {
             send_string(secrets[4]);
         }
-        SEQ_TWO_KEYS(KC_W, KC_E) {
+        SEQ_TWO_KEYS(KC_P, KC_D) {
             send_string(secrets[5]);
         }
-        SEQ_TWO_KEYS(KC_W, KC_P) {
+        SEQ_ONE_KEY(KC_G) {
             send_string(secrets[6]);
         }
-        SEQ_TWO_KEYS(KC_N, KC_I) {
+        SEQ_TWO_KEYS(KC_S, KC_P) {
             send_string(secrets[7]);
         }
-        SEQ_TWO_KEYS(KC_P, KC_N) {
+        SEQ_TWO_KEYS(KC_S, KC_W) {
             send_string(secrets[8]);
-        }
-        SEQ_TWO_KEYS(KC_P, KC_D) {
-            send_string(secrets[9]);
         }
     }
 }
