@@ -128,5 +128,8 @@ void matrix_scan_leader(void) {
         SEQ_TWO_KEYS(KC_P, KC_N) {
             send_string(secrets[8]);
         }
+        SEQ_TWO_KEYS(KC_P, KC_D) {
+            send_string(secrets[9]);
+        }
     }
 }
