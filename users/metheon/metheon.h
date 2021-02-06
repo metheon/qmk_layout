@@ -23,11 +23,9 @@ enum layers {
 #define ________            _______
 
 #define SPC_EXT             LT(_EXTEND, KC_SPACE)
-#define ENT_NUM             LT(_NUMBERS, KC_ENTER)
-#define DEL_SYM             LT(_SYMBOLS, KC_DELETE)
+#define NUMBERS             MO(_NUMBERS)
+#define SYMBOLS             MO(_SYMBOLS)
 #define BSP_EXT             LT(_EXTEND, KC_BSPC)
-#define NUMBERS             TG(_NUMBERS)
-#define SYMBOLS             OSL(_SYMBOLS)
 #define MAGNET              OSL(_MAGNET)
 #define FUNPAD              OSL(_FUNPAD)
 
