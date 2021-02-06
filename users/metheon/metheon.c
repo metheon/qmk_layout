@@ -4,6 +4,22 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return update_tri_layer_state(state, _NUMBERS, _SYMBOLS , _ADJUST);
 };
 
+bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case HOME_A:
+        case HOME_R:
+        case HOME_S:
+        case HOME_T:
+        case HOME_N:
+        case HOME_E:
+        case HOME_I:
+        case HOME_O:
+                  return true;
+        default:
+            return false;
+    }
+}
+
 void matrix_scan_user(void) {
     matrix_scan_encoders();
     matrix_scan_leader();
