@@ -3,7 +3,7 @@
 #ifdef TAPPING_TERM
 #undef TAPPING_TERM
 #endif
-#define TAPPING_TERM                300
+#define TAPPING_TERM                250
 
 // Prevent normal rollover on alphas from accidentally triggering mods.
 #define IGNORE_MOD_TAP_INTERRUPT
@@ -14,12 +14,12 @@
 // Recommended for heavy chording.
 #define QMK_KEYS_PER_SCAN 4
 
-#define ONESHOT_TIMEOUT             2500
+#define ONESHOT_TIMEOUT             2000
 #define ONESHOT_TAP_TOGGLE          3
 
 // The Leader key allows to flexibly assign macros to key sequences.
 #define LEADER_PER_KEY_TIMING
-#define LEADER_TIMEOUT              750
+#define LEADER_TIMEOUT              2000
 
 #define COMBO_COUNT                 3
 
