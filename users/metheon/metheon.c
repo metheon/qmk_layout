@@ -20,6 +20,27 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     }
 }
 
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case HOME_A:
+        case HOME_R:
+        case HOME_S:
+        case HOME_T:
+        case HOME_N:
+        case HOME_E:
+        case HOME_I:
+        case HOME_O:
+            return TAPPING_TERM + 50;
+        case SPC_EXT:
+        case ENT_NUM:
+        case DEL_SYM:
+        case BSP_EXT:
+            return TAPPING_TERM - 50;
+        default:
+            return TAPPING_TERM;
+    }
+}
+
 void matrix_scan_user(void) {
     matrix_scan_encoders();
     matrix_scan_leader();
