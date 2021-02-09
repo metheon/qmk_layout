@@ -39,7 +39,7 @@
 #define LNX_NEXT_WRD         LCTL(KC_RIGHT)
 #define LNX_PREV_WRD         LCTL(KC_LEFT)
 
-#define LNX_LOCK             LGUI(KC_Q)
+#define LNX_LOCK             LGUI(KC_ESC)
 #define LNX_IJ_RNAME         LSFT(KC_F6)
 #define LNX_IJ_TERM          LALT(KC_F12)
 #define LNX_SEARCH           LGUI(KC_SLSH)
