@@ -22,6 +22,7 @@
 #define MAC_LOCK             LCTL(LGUI(KC_Q))
 #define MAC_IJ_RNAME         LSFT(KC_F6)
 #define MAC_IJ_TERM          LALT(KC_F12)
+#define MAC_SEARCH           LGUI(KC_SPACE)
 
 // Linux uses EurKey
 #define LNX_AE               RALT(KC_Q)
@@ -41,6 +42,7 @@
 #define LNX_LOCK             LGUI(KC_Q)
 #define LNX_IJ_RNAME         LSFT(KC_F6)
 #define LNX_IJ_TERM          LALT(KC_F12)
+#define LNX_SEARCH           LGUI(KC_SLSH)
 
 // call this function for plain tapping a keycode which differs on the OS'es
 bool tab_os_key(uint16_t lnx_keycode, uint16_t mac_keycode, keyrecord_t *record) {
@@ -139,6 +141,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return mod_tab(record, S(true));
         case LOCK:
             return tab_os_key(LNX_LOCK, MAC_LOCK, record);
+        case SEARCH:
+            return tab_os_key(LNX_SEARCH, MAC_SEARCH, record);
          case IJ_RNAME:
             return tab_os_key(LNX_IJ_RNAME, MAC_IJ_RNAME, record);
         case IJ_TERM:

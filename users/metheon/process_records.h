@@ -22,6 +22,7 @@ enum keycodes {
     PREV_WIN,               // Previous window (like above but shifted)
     TEXT_MOD,               // The mod used when moving around text, ctrl on windows, alt on mac
     LOCK,
+    SEARCH,
     IJ_RNAME,
     IJ_TERM,
 };
