@@ -23,27 +23,27 @@
 #define MAC_IJ_RNAME         LSFT(KC_F6)
 #define MAC_IJ_TERM          LALT(KC_F12)
 
-// Windows uses EurKey
-#define WIN_AE               RALT(KC_Q)
-#define WIN_OE               RALT(KC_L)
-#define WIN_AA               RALT(KC_W)
-#define WIN_EUR              RALT(KC_5)
-#define WIN_PND              RALT(KC_4)
+// Linux uses EurKey
+#define LNX_AE               RALT(KC_Q)
+#define LNX_OE               RALT(KC_L)
+#define LNX_AA               RALT(KC_W)
+#define LNX_EUR              RALT(KC_5)
+#define LNX_PND              RALT(KC_4)
 
-#define WIN_UNDO             LCTL(KC_Z)
-#define WIN_CUT              LCTL(KC_X)
-#define WIN_COPY             LCTL(KC_C)
-#define WIN_PSTE             LCTL(KC_V)
+#define LNX_UNDO             LCTL(KC_Z)
+#define LNX_CUT              LCTL(KC_X)
+#define LNX_COPY             LCTL(KC_C)
+#define LNX_PSTE             LCTL(KC_V)
 
-#define WIN_NEXT_WRD         LCTL(KC_RIGHT)
-#define WIN_PREV_WRD         LCTL(KC_LEFT)
+#define LNX_NEXT_WRD         LCTL(KC_RIGHT)
+#define LNX_PREV_WRD         LCTL(KC_LEFT)
 
-#define WIN_LOCK             LGUI(KC_L)
-#define WIN_IJ_RNAME         LSFT(KC_F6)
-#define WIN_IJ_TERM          LALT(KC_F12)
+#define LNX_LOCK             LGUI(KC_Q)
+#define LNX_IJ_RNAME         LSFT(KC_F6)
+#define LNX_IJ_TERM          LALT(KC_F12)
 
-// call this function for plain tapping a keycode which differs on on the OS'es
-bool tab_os_key(uint16_t win_keycode, uint16_t mac_keycode, keyrecord_t *record) {
+// call this function for plain tapping a keycode which differs on the OS'es
+bool tab_os_key(uint16_t lnx_keycode, uint16_t mac_keycode, keyrecord_t *record) {
     if (is_mac()) {
         if (record->event.pressed) {
             register_code16(mac_keycode);
@@ -51,11 +51,11 @@ bool tab_os_key(uint16_t win_keycode, uint16_t mac_keycode, keyrecord_t *record)
             unregister_code16(mac_keycode);
         }
         return true;
-    } else if (is_windows()) {
+    } else if (is_linux()) {
         if (record->event.pressed) {
-            register_code16(win_keycode);
+            register_code16(lnx_keycode);
         } else {
-            unregister_code16(win_keycode);
+            unregister_code16(lnx_keycode);
         }
         return true;
     }
@@ -88,8 +88,8 @@ bool version(keyrecord_t *record) {
 
 bool which_os(keyrecord_t *record) {
     if (record->event.pressed) {
-        if(is_windows()) {
-            SEND_STRING("WIN");
+        if(is_linux()) {
+            SEND_STRING("LINUX");
             return true;
         } else if(is_mac()) {
             SEND_STRING("MAC");
@@ -112,37 +112,37 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case TEXT_MOD:
             return tab_os_key(KC_LCTL, KC_LALT, record);
         case KC_AE:
-            return tab_os_key(WIN_AE, MAC_AE, record);
+            return tab_os_key(LNX_AE, MAC_AE, record);
         case KC_OE:
-            return tab_os_key(WIN_OE, MAC_OE, record);
+            return tab_os_key(LNX_OE, MAC_OE, record);
         case KC_AA:
-            return tab_os_key(WIN_AA, MAC_AA, record);
+            return tab_os_key(LNX_AA, MAC_AA, record);
         case KC_EUR:
-            return tab_os_key(WIN_EUR, MAC_EUR, record);
+            return tab_os_key(LNX_EUR, MAC_EUR, record);
         case KC_PND:
-            return tab_os_key(WIN_PND, MAC_PND, record);
+            return tab_os_key(LNX_PND, MAC_PND, record);
         case UNDO:
-            return tab_os_key(WIN_UNDO, MAC_UNDO, record);
+            return tab_os_key(LNX_UNDO, MAC_UNDO, record);
         case CUT:
-            return tab_os_key(WIN_CUT, MAC_CUT, record);
+            return tab_os_key(LNX_CUT, MAC_CUT, record);
         case COPY:
-            return tab_os_key(WIN_COPY, MAC_COPY, record);
+            return tab_os_key(LNX_COPY, MAC_COPY, record);
         case PASTE:
-            return tab_os_key(WIN_PSTE, MAC_PSTE, record);
+            return tab_os_key(LNX_PSTE, MAC_PSTE, record);
         case NEXT_WRD:
-            return tab_os_key(WIN_NEXT_WRD, MAC_NEXT_WRD, record);
+            return tab_os_key(LNX_NEXT_WRD, MAC_NEXT_WRD, record);
         case PREV_WRD:
-            return tab_os_key(WIN_PREV_WRD, MAC_PREV_WRD, record);
+            return tab_os_key(LNX_PREV_WRD, MAC_PREV_WRD, record);
         case NEXT_WIN:
             return mod_tab(record, false);
         case PREV_WIN:
             return mod_tab(record, S(true));
         case LOCK:
-            return tab_os_key(WIN_LOCK, MAC_LOCK, record);
-        case IJ_RNAME:
-            return tab_os_key(WIN_IJ_RNAME, MAC_IJ_RNAME, record);
+            return tab_os_key(LNX_LOCK, MAC_LOCK, record);
+         case IJ_RNAME:
+            return tab_os_key(LNX_IJ_RNAME, MAC_IJ_RNAME, record);
         case IJ_TERM:
-            return tab_os_key(WIN_IJ_TERM, MAC_IJ_TERM, record);
+            return tab_os_key(LNX_IJ_TERM, MAC_IJ_TERM, record);
     }
     return true;
 };

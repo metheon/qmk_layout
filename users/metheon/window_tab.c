@@ -4,7 +4,7 @@ bool     is_mod_tab_active = false;
 uint16_t mod_tab_timer     = 0;
 
 void register_mod(void) {
-    if(is_windows()) {
+    if(is_linux()) {
         register_code(KC_LALT);
     } else if (is_mac()) {
         register_code(KC_LGUI);
@@ -12,7 +12,7 @@ void register_mod(void) {
 }
 
 void unregister_mod(void) {
-    if(is_windows()) {
+    if(is_linux()) {
         unregister_code(KC_LALT);
     } else if (is_mac()) {
         unregister_code(KC_LGUI);
