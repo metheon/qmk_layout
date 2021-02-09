@@ -23,6 +23,9 @@ enum keycodes {
     TEXT_MOD,               // The mod used when moving around text, ctrl on windows, alt on mac
     LOCK,
     SEARCH,
+    NXT_DSKT,               // Next Desktop
+    PRV_DSKT,               // Previous Desktop
+    OVERVIEW,               // See all windows on a desktop
     IJ_RNAME,
     IJ_TERM,
 };

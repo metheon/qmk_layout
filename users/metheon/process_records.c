@@ -23,6 +23,9 @@
 #define MAC_IJ_RNAME         LSFT(KC_F6)
 #define MAC_IJ_TERM          LALT(KC_F12)
 #define MAC_SEARCH           LGUI(KC_SPACE)
+#define MAC_NXT_DSKT         LCTL(KC_RIGHT)
+#define MAC_PRV_DSKT         LCTL(KC_LEFT)
+#define MAC_OVERVIEW         KC_NO // unknown, check later
 
 // Linux uses EurKey
 #define LNX_AE               RALT(KC_Q)
@@ -43,6 +46,9 @@
 #define LNX_IJ_RNAME         LSFT(KC_F6)
 #define LNX_IJ_TERM          LALT(KC_F12)
 #define LNX_SEARCH           LGUI(KC_SLSH)
+#define LNX_NXT_DSKT         LGUI(LCTL(KC_DOWN))
+#define LNX_PRV_DSKT         LGUI(LCTL(KC_UP))
+#define LNX_OVERVIEW         KC_LGUI
 
 // call this function for plain tapping a keycode which differs on the OS'es
 bool tab_os_key(uint16_t lnx_keycode, uint16_t mac_keycode, keyrecord_t *record) {
@@ -147,6 +153,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return tab_os_key(LNX_IJ_RNAME, MAC_IJ_RNAME, record);
         case IJ_TERM:
             return tab_os_key(LNX_IJ_TERM, MAC_IJ_TERM, record);
+        case PRV_DSKT:
+            return tab_os_key(LNX_PRV_DSKT, MAC_PRV_DSKT, record);
+        case NXT_DSKT:
+            return tab_os_key(LNX_NXT_DSKT, MAC_NXT_DSKT, record);
+        case OVERVIEW:
+            return tab_os_key(LNX_OVERVIEW, MAC_OVERVIEW, record);
     }
     return true;
 };
