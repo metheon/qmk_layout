@@ -35,6 +35,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case ENT_NUM:
         case DEL_SYM:
         case BSP_EXT:
+        case TAB_FUN:
+        case ESC_MAG:
             return TAPPING_TERM - 50;
         default:
             return TAPPING_TERM;
@@ -57,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------+--------+--------+--------|  |--------+--------|--------+--------+--------+--------+--------+--------|
          SHIFT   ,KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,FUNPAD  ,SEARCH  ,   LOCK    ,MAGNET  ,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,SHIFT   ,
     //  '--------+--------+--------+--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------+--------+--------+--------'
-                                    BSE_E01 ,KC_LALT ,KC_LCTL ,SPC_EXT ,ENT_NUM ,   DEL_SYM ,BSP_EXT ,KC_LCTL ,KC_LGUI ,BSE_E02
+                                    BSE_E01 ,__NONE__,TAB_FUN ,SPC_EXT ,ENT_NUM ,   DEL_SYM ,BSP_EXT ,ESC_MAG ,__NONE__,BSE_E02
     //                             '--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------'
     ),
     [_NUMBERS] = LAYOUT_metheon(
