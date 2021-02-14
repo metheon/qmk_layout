@@ -30,16 +30,16 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case HOME_E:
         case HOME_I:
         case HOME_O:
-            return TAPPING_TERM + 100;
+            return TAPPING_TERM - 100; // 400-100=300
         case SPC_EXT:
         case ENT_NUM:
         case DEL_SYM:
         case BSP_EXT:
         case TAB_FUN:
         case ESC_MAG:
-            return TAPPING_TERM - 50;
+            return TAPPING_TERM - 300; // 400-300=100
         default:
-            return TAPPING_TERM;
+            return TAPPING_TERM;       // 400
     }
 }
 
@@ -53,9 +53,9 @@ void matrix_scan_user(void) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------+--------.                                      .--------+--------+--------+--------+--------+--------.
-         KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,                                       KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_SCLN ,KC_MINS ,
+         KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,                                       KC_J    ,KC_L    ,KC_U    ,KC_Y    ,TD_SCLN ,TD_MINS ,
     //  |--------+--------+--------+--------+--------+--------|                                      |--------+--------+--------+--------+--------+--------|
-         KC_ESC  ,HOME_A  ,HOME_R  ,HOME_S ,HOME_T   ,KC_G    ,                                       KC_M    ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,KC_QUOT ,
+         KC_ESC  ,HOME_A  ,HOME_R  ,HOME_S ,HOME_T   ,KC_G    ,                                       KC_M    ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,TD_QUOT ,
     //  |--------+--------+--------+--------+--------+--------+--------+--------|  |--------+--------|--------+--------+--------+--------+--------+--------|
          SHIFT   ,KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,FUNPAD  ,SEARCH  ,   LOCK    ,MAGNET  ,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,SHIFT   ,
     //  '--------+--------+--------+--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------+--------+--------+--------'

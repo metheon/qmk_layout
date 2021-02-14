@@ -29,3 +29,8 @@ enum keycodes {
     IJ_RNAME,
     IJ_TERM,
 };
+
+bool tap_kc_ae(bool key_down);
+bool tap_kc_oe(bool key_down);
+bool tap_kc_aa(bool key_down);
+

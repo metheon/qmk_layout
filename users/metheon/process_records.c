@@ -51,16 +51,16 @@
 #define LNX_OVERVIEW         KC_LGUI
 
 // call this function for plain tapping a keycode which differs on the OS'es
-bool tab_os_key(uint16_t lnx_keycode, uint16_t mac_keycode, keyrecord_t *record) {
+bool tap_os_key(uint16_t lnx_keycode, uint16_t mac_keycode, bool key_down) {
     if (is_mac()) {
-        if (record->event.pressed) {
+        if (key_down) {
             register_code16(mac_keycode);
         } else {
             unregister_code16(mac_keycode);
         }
         return true;
     } else if (is_linux()) {
-        if (record->event.pressed) {
+        if (key_down) {
             register_code16(lnx_keycode);
         } else {
             unregister_code16(lnx_keycode);
@@ -68,6 +68,18 @@ bool tab_os_key(uint16_t lnx_keycode, uint16_t mac_keycode, keyrecord_t *record)
         return true;
     }
     return false;
+}
+
+bool tap_kc_ae(bool key_down) {
+    return tap_os_key(LNX_AE, MAC_AE, key_down);
+}
+
+bool tap_kc_oe(bool key_down) {
+    return tap_os_key(LNX_OE, MAC_OE, key_down);
+}
+
+bool tap_kc_aa(bool key_down) {
+    return tap_os_key(LNX_AA, MAC_AA, key_down);
 }
 
 bool make(keyrecord_t *record) {
@@ -118,47 +130,47 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case WHICH_OS:
             return which_os(record);
         case TEXT_MOD:
-            return tab_os_key(KC_LCTL, KC_LALT, record);
+            return tap_os_key(KC_LCTL, KC_LALT, record->event.pressed);
         case KC_AE:
-            return tab_os_key(LNX_AE, MAC_AE, record);
+            return tap_kc_ae(record->event.pressed);
         case KC_OE:
-            return tab_os_key(LNX_OE, MAC_OE, record);
+            return tap_kc_oe(record->event.pressed);
         case KC_AA:
-            return tab_os_key(LNX_AA, MAC_AA, record);
+            return tap_kc_aa(record->event.pressed);
         case KC_EUR:
-            return tab_os_key(LNX_EUR, MAC_EUR, record);
+            return tap_os_key(LNX_EUR, MAC_EUR, record->event.pressed);
         case KC_PND:
-            return tab_os_key(LNX_PND, MAC_PND, record);
+            return tap_os_key(LNX_PND, MAC_PND, record->event.pressed);
         case UNDO:
-            return tab_os_key(LNX_UNDO, MAC_UNDO, record);
+            return tap_os_key(LNX_UNDO, MAC_UNDO, record->event.pressed);
         case CUT:
-            return tab_os_key(LNX_CUT, MAC_CUT, record);
+            return tap_os_key(LNX_CUT, MAC_CUT, record->event.pressed);
         case COPY:
-            return tab_os_key(LNX_COPY, MAC_COPY, record);
+            return tap_os_key(LNX_COPY, MAC_COPY, record->event.pressed);
         case PASTE:
-            return tab_os_key(LNX_PSTE, MAC_PSTE, record);
+            return tap_os_key(LNX_PSTE, MAC_PSTE, record->event.pressed);
         case NEXT_WRD:
-            return tab_os_key(LNX_NEXT_WRD, MAC_NEXT_WRD, record);
+            return tap_os_key(LNX_NEXT_WRD, MAC_NEXT_WRD, record->event.pressed);
         case PREV_WRD:
-            return tab_os_key(LNX_PREV_WRD, MAC_PREV_WRD, record);
+            return tap_os_key(LNX_PREV_WRD, MAC_PREV_WRD, record->event.pressed);
         case NEXT_WIN:
             return mod_tab(record, false);
         case PREV_WIN:
             return mod_tab(record, S(true));
         case LOCK:
-            return tab_os_key(LNX_LOCK, MAC_LOCK, record);
+            return tap_os_key(LNX_LOCK, MAC_LOCK, record->event.pressed);
         case SEARCH:
-            return tab_os_key(LNX_SEARCH, MAC_SEARCH, record);
+            return tap_os_key(LNX_SEARCH, MAC_SEARCH, record->event.pressed);
          case IJ_RNAME:
-            return tab_os_key(LNX_IJ_RNAME, MAC_IJ_RNAME, record);
+            return tap_os_key(LNX_IJ_RNAME, MAC_IJ_RNAME, record->event.pressed);
         case IJ_TERM:
-            return tab_os_key(LNX_IJ_TERM, MAC_IJ_TERM, record);
+            return tap_os_key(LNX_IJ_TERM, MAC_IJ_TERM, record->event.pressed);
         case PRV_DSKT:
-            return tab_os_key(LNX_PRV_DSKT, MAC_PRV_DSKT, record);
+            return tap_os_key(LNX_PRV_DSKT, MAC_PRV_DSKT, record->event.pressed);
         case NXT_DSKT:
-            return tab_os_key(LNX_NXT_DSKT, MAC_NXT_DSKT, record);
+            return tap_os_key(LNX_NXT_DSKT, MAC_NXT_DSKT, record->event.pressed);
         case OVERVIEW:
-            return tab_os_key(LNX_OVERVIEW, MAC_OVERVIEW, record);
+            return tap_os_key(LNX_OVERVIEW, MAC_OVERVIEW, record->event.pressed);
     }
     return true;
 };

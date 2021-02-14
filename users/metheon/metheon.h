@@ -6,6 +6,7 @@
 #include "leader.h"
 #include "magnet.h"
 #include "window_tab.h"
+#include "tap_dances.h"
 
 enum layers {
     _BASE,                  // Colemak-DH
