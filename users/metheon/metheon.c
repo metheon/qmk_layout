@@ -37,7 +37,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case BSP_EXT:
         case TAB_FUN:
         case ESC_MAG:
-            return TAPPING_TERM - 300; // 400-300=100
+            return TAPPING_TERM - 225; // 400-225=175
         default:
             return TAPPING_TERM;       // 400
     }
