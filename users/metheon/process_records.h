@@ -21,6 +21,7 @@ enum keycodes {
     NEXT_WIN,               // Next window (alt tab / gui tab)
     PREV_WIN,               // Previous window (like above but shifted)
     TEXT_MOD,               // The mod used when moving around text, ctrl on windows, alt on mac
+    DEL_WRD,                // Delete a word, i.e., ctrl+backspace on Linux and alt+backspace on mac
     LOCK,
     SEARCH,
     NXT_DSKT,               // Next Desktop

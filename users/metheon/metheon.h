@@ -24,15 +24,10 @@ enum layers {
 #define ________            _______
 
 #define SPC_EXT             LT(_EXTEND, KC_SPACE)
-#define BSP_EXT             LT(_EXTEND, KC_BSPC)
-#define ENT_NUM             LT(_NUMBERS, KC_ENTER)
-#define DEL_SYM             LT(_SYMBOLS, KC_DELETE)
-#define TAB_FUN             LT(_FUNPAD, KC_TAB)
-#define ESC_MAG             LT(_MAGNET, KC_ESC)
-#define NUMBERS             TG(_NUMBERS)
-#define SYMBOLS             OSL(_SYMBOLS)
-#define MAGNET              OSL(_MAGNET)
-#define FUNPAD              OSL(_FUNPAD)
+#define NUMBERS             MO(_NUMBERS)
+#define SYMBOLS             MO(_SYMBOLS)
+#define MAGNET              MO(_MAGNET)
+#define FUNPAD              MO(_FUNPAD)
 
 #define SHIFT               OSM(MOD_LSFT)
 

@@ -27,6 +27,8 @@
 #define MAC_PRV_DSKT         LCTL(KC_LEFT)
 #define MAC_OVERVIEW         KC_NO // unknown, check later
 
+#define MAC_DEL_WRD         LALT(KC_BSPC)
+
 // Linux uses EurKey
 #define LNX_AE               RALT(KC_Q)
 #define LNX_OE               RALT(KC_L)
@@ -49,6 +51,8 @@
 #define LNX_NXT_DSKT         LGUI(LCTL(KC_DOWN))
 #define LNX_PRV_DSKT         LGUI(LCTL(KC_UP))
 #define LNX_OVERVIEW         KC_LGUI
+
+#define LNX_DEL_WRD         LCTL(KC_BSPC)
 
 // call this function for plain tapping a keycode which differs on the OS'es
 bool tap_os_key(uint16_t lnx_keycode, uint16_t mac_keycode, bool key_down) {
@@ -171,6 +175,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return tap_os_key(LNX_NXT_DSKT, MAC_NXT_DSKT, record->event.pressed);
         case OVERVIEW:
             return tap_os_key(LNX_OVERVIEW, MAC_OVERVIEW, record->event.pressed);
+        case DEL_WRD:
+            return tap_os_key(LNX_DEL_WRD, MAC_DEL_WRD, record->event.pressed);
     }
     return true;
 };

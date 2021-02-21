@@ -14,7 +14,7 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
         case HOME_E:
         case HOME_I:
         case HOME_O:
-                  return true;
+            return true;
         default:
             return false;
     }
@@ -32,11 +32,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case HOME_O:
             return TAPPING_TERM - 100; // 400-100=300
         case SPC_EXT:
-        case ENT_NUM:
-        case DEL_SYM:
-        case BSP_EXT:
-        case TAB_FUN:
-        case ESC_MAG:
             return TAPPING_TERM - 225; // 400-225=175
         default:
             return TAPPING_TERM;       // 400
@@ -53,24 +48,24 @@ void matrix_scan_user(void) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------+--------.                                      .--------+--------+--------+--------+--------+--------.
-         KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,                                       KC_J    ,KC_L    ,KC_U    ,KC_Y    ,TD_SCLN ,TD_MINS ,
+         KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,                                       KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_SCLN ,KC_BSPC ,
     //  |--------+--------+--------+--------+--------+--------|                                      |--------+--------+--------+--------+--------+--------|
-         KC_ESC  ,HOME_A  ,HOME_R  ,HOME_S ,HOME_T   ,KC_G    ,                                       KC_M    ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,TD_QUOT ,
+         KC_ESC  ,HOME_A  ,HOME_R  ,HOME_S ,HOME_T   ,KC_G    ,                                       KC_M    ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,KC_QUOT ,
     //  |--------+--------+--------+--------+--------+--------+--------+--------|  |--------+--------|--------+--------+--------+--------+--------+--------|
          SHIFT   ,KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,FUNPAD  ,SEARCH  ,   LOCK    ,MAGNET  ,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,SHIFT   ,
     //  '--------+--------+--------+--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------+--------+--------+--------'
-                                    BSE_E01 ,__NONE__,TAB_FUN ,SPC_EXT ,ENT_NUM ,   DEL_SYM ,BSP_EXT ,ESC_MAG ,__NONE__,BSE_E02
+                                    BSE_E01 ,__NONE__,FUNPAD  ,SPC_EXT ,NUMBERS ,   SYMBOLS ,SPC_EXT ,MAGNET  ,__NONE__,BSE_E02
     //                             '--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------'
     ),
     [_NUMBERS] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------+--------.                                      .--------+--------+--------+--------+--------+--------.
-         KC_TAB  ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,                                       KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,__NONE__,
+         KC_TAB  ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,                                       KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,KC_DEL  ,
     //  |--------+--------+--------+--------+--------+--------|                                      |--------+--------+--------+--------+--------+--------|
          __NONE__,KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,KC_LPRN ,                                       KC_RPRN ,KC_4    ,KC_5    ,KC_6    ,KC_ENTER,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------|  |--------+--------|--------+--------+--------+--------+--------+--------|
-         __NONE__,KC_SLSH ,KC_ASTR ,KC_MINS ,KC_PLUS ,__NONE__,__NONE__,________,   __NONE__,__NONE__,__NONE__,KC_1    ,KC_2    ,KC_3    ,KC_EQL  ,__NONE__,
+         __NONE__,KC_SLSH ,KC_ASTR ,KC_MINS ,KC_PLUS ,KC_PERC ,__NONE__,________,   __NONE__,__NONE__,__NONE__,KC_1    ,KC_2    ,KC_3    ,KC_EQL  ,__NONE__,
     //  '--------+--------+--------+--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------+--------+--------+--------'
-                                    NUM_E01 ,________,________,KC_BSPC ,________,   ________,KC_BSPC ,________,________,NUM_E02
+                                    NUM_E01 ,________,________,KC_ENTER,________,   ________,KC_ENTER,________,________,NUM_E02
     //                             '--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------'
     ),
     [_SYMBOLS] = LAYOUT_metheon(
@@ -79,14 +74,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------+--------|                                      |--------+--------+--------+--------+--------+--------|
          __NONE__,KC_AT   ,KC_AE   ,KC_OE   ,KC_AA   ,KC_LPRN ,                                       KC_RPRN ,KC_EQL  ,KC_EXLM ,KC_AMPR ,KC_PIPE ,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------|  |--------+--------|--------+--------+--------+--------+--------+--------|
-         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,KC_LBRC ,__NONE__,__NONE__,   ________,__NONE__,KC_RBRC ,__NONE__,__NONE__,KC_PERC ,KC_BSLS ,__NONE__,
+         __NONE__,__NONE__,__NONE__,__NONE__,KC_PERC ,KC_LBRC ,__NONE__,__NONE__,   ________,__NONE__,KC_RBRC ,KC_MINS ,KC_UNDS ,__NONE__,KC_BSLS ,__NONE__,
     //  '--------+--------+--------+--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------+--------+--------+--------'
-                                   SYM_E01  ,________,________,KC_DEL  ,________,   ________,KC_DEL  ,________,________,SYM_E02
+                                   SYM_E01  ,________,________,KC_SPACE,________,   ________,KC_SPACE,________,________,SYM_E02
     //                             '--------+--------+--------+--------+--------+  +--------+--------+--------+--------+--------'
     ),
     [_EXTEND] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------+--------.                                      .--------+--------+--------+--------+--------+--------.
-         __NONE__,PREV_TAB,NEXT_TAB,PREV_WIN,NEXT_WIN,__NONE__,                                       KC_PGUP ,KC_HOME ,KC_UP   ,KC_END  ,__NONE__,__NONE__,
+         __NONE__,PREV_TAB,NEXT_TAB,PREV_WIN,NEXT_WIN,__NONE__,                                       KC_PGUP ,KC_HOME ,KC_UP   ,KC_END  ,__NONE__,DEL_WRD ,
     //  |--------+--------+--------+--------+--------+--------|                                      |--------+--------+--------+--------+--------+--------|
          __NONE__,KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,KC_LEAD ,                                       KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RGHT ,KC_ENTER,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------|  |--------+--------|--------+--------+--------+--------+--------+--------|
