@@ -1,5 +1,4 @@
 #pragma once
-
 #ifdef TAPPING_TERM
 #undef TAPPING_TERM
 #endif
@@ -21,8 +20,6 @@
 // The Leader key allows to flexibly assign macros to key sequences.
 #define LEADER_PER_KEY_TIMING
 #define LEADER_TIMEOUT              750
-
-#define COMBO_COUNT                 3
 
 ////////////////////////////////
 ////// RGB LED ANIMATIONS //////
