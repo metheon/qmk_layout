@@ -2,22 +2,15 @@
 
 ## Introduction
 
-My approach to keyboards and keymaps is to mentally settle on a form factor which is simple, effective and intuitive. For me that is the basic Aysu keyboard, currently being developed by Thomas from [SplitKb](https://splitkb.com/). It is a simple split keyboard with each half having a 3 by 5 alpha cluster and another 3 keys for the thumb cluster. One of these thumb keys can be an encoder. That has been pushing me towrds adopting a two-thumb keys per hand layout. That is 17 keys per half and 34 in total, not counting the two encoders. I then select keyboards which are physically able to map to this mental model, disregarding the encoders, as they never feature anything thats not doable via key presses anyways. Key advantages of this keyboard layout are:
+I only use one type of keyboard, the Planck! To me this is peak effeciency. It's form factor is simple, effective, intuitive. I use various Planck-like keyboards and hence my keyboards layouts are created in the users folder and then shared among several Planck layouts.
 
-* Reduced strain on the pinky finger as it is only responsible for one alpha column.
-* Easily mapped to many ergo keyboards as many has more keys than the Aysu.
-
-For the actual keymap, I recommend reading through [`metheon.c`](metheon.c) or the diagram below. For how that keymap is then mapped to each keyboard I use, read through the config files of each keyboard listed below. Every config file contains a define which basically maps the Aysu layout to the particular keyboard, what I call an adapter.
-This approach ensures that it is quite easy to add support for a new keyboard as long as it fits the mental model of an Aysu. All you have to do is write an adapter. Note that the order of the `#define` and the `#include` in the individual keymaps matter. The layout to use must be defined as it is called from within the `metheon.c` file (this is because of restrictions in the compiler order).
+For the actual keymap, I recommend reading through [`metheon.c`](metheon.c) or the diagram below. For how that keymap is then mapped to each keyboard I use, read through the config files of each keyboard listed below. Every config file contains a define which basically maps my layout to that particular keyboard.
+This approach ensures that it is quite easy to add support for a new keyboard PCB as long as it fits the layout of a Planck. All you have to do is write the adapter configuration.
 
 Right now I use these three keyboards:
 
-* The [*Ergodox EZ*](https://ergodox-ez.com/) ([`config.h`](../../keyboards/ergodox_ez/keymaps/metheon/config.h)):
-  * The Ergodox EZ is the archetype split keyboard, it is kinda like a Corne but with a lot of extra keys.
-* The [*Kyria*](https://blog.splitkb.com/blog/introducing-the-kyria) ([`config.h`](../../keyboards/kyria/keymaps/metheon/config.h)):
-  * A Kyria is really just a reshuffled Planck with two additional encoders. It is however split and easily maps to the Aysu layout. The aggresive pinky column is a good fit for me.
+* The [*Eon40*](https://anykeys.eu/product/eon40/) ([`config.h`](../../keyboards/evyd13/eon40/keymaps/metheon/config.h)):
 * The [*Planck EZ*](https://ergodox-ez.com/pages/planck) ([`config.h`](../../keyboards/planck/keymaps/metheon/config.h)):
-  * The Planck EZ is of course just a Planck with a 2U spacebar. I do not use the two middle columns, just the five outer columns on each side. This is actually quite perfect as I get a sort of semi-split one-piece keyboard with two thumb keys per hand.
 
 In the following sections I will dive into different aspects of my keymap.
 
