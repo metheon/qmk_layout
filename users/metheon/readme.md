@@ -7,10 +7,14 @@ I only use one type of keyboard, the Planck! To me this is peak effeciency. It's
 For the actual keymap, I recommend reading through [`metheon.c`](metheon.c) or the diagram below. For how that keymap is then mapped to each keyboard I use, read through the config files of each keyboard listed below. Every config file contains a define which basically maps my layout to that particular keyboard.
 This approach ensures that it is quite easy to add support for a new keyboard PCB as long as it fits the layout of a Planck. All you have to do is write the adapter configuration.
 
-Right now I use these three keyboards:
+Right now I have support for the following PCBs:
 
-* The [*Eon40*](https://anykeys.eu/product/eon40/) ([`config.h`](../../keyboards/evyd13/eon40/keymaps/metheon/config.h)):
-* The [*Planck EZ*](https://ergodox-ez.com/pages/planck) ([`config.h`](../../keyboards/planck/keymaps/metheon/config.h)):
+* [*Eon40*](https://anykeys.eu/product/eon40/) ([`config.h`](../../keyboards/evyd13/eon40/keymaps/metheon/config.h)):
+  * `make evyd13/eon40:metheon`
+* [*Planck EZ*](https://ergodox-ez.com/pages/planck) ([`config.h`](../../keyboards/planck/keymaps/metheon/config.h)):
+  * `make planck/ez:metheon`
+* [*Planck rev6*](https://ergodox-ez.com/pages/planck) ([`config.h`](../../keyboards/planck/keymaps/metheon/config.h)):
+  * `make planck/rev6:metheon`
 
 In the following sections I will dive into different aspects of my keymap.
 
