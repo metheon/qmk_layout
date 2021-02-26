@@ -57,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
          SHIFT   ,KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,SHIFT   ,
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-         LOCK    ,SEARCH  ,__NONE__,FUNPAD  ,NUMBERS ,SPC_EXT ,ENT_EXT ,SYMBOLS ,MAGNET  ,__NONE__,SECRETS ,__NONE__
+         LOCK    ,SEARCH  ,__NONE__,FUNPAD  ,NUM_SFT ,SPC_EXT ,ENT_EXT ,SYM_SFT ,MAGNET  ,__NONE__,SECRETS ,__NONE__
     //  '--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------'
     ),
     [_NUMBERS] = LAYOUT_metheon(

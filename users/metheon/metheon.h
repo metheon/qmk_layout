@@ -25,8 +25,8 @@ enum layers {
 
 #define SPC_EXT             LT(_EXTEND, KC_SPACE)
 #define ENT_EXT             LT(_EXTEND, KC_ENTER)
-#define NUMBERS             MO(_NUMBERS)
-#define SYMBOLS             MO(_SYMBOLS)
+#define NUM_SFT             LT(_NUMBERS, KC_F22)
+#define SYM_SFT             LT(_SYMBOLS, KC_F23)
 #define MAGNET              MO(_MAGNET)
 #define FUNPAD              MO(_FUNPAD)
 #define SECRETS             OSL(_SECRETS)

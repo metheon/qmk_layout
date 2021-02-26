@@ -2,6 +2,7 @@
 #include "version.h"
 #include "which_os.h"
 #include "window_tab.h"
+#include "metheon.h"
 
 #if (__has_include("secrets.h") && !defined(NO_SECRETS))
 #include "secrets.h"
@@ -224,6 +225,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SECRET00...SECRET19:
             return secret(keycode, record->event.pressed);
+        case LT(_NUMBERS, KC_F22):
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    set_oneshot_mods(MOD_LSFT);
+                }
+                return false;
+            }
+            break;
+        case LT(_SYMBOLS, KC_F23):
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    set_oneshot_mods(MOD_LSFT);
+                }
+                return false;
+            }
+            break;
         case KC_MAKE:
             return make(record);
         case KC_FLASH:
