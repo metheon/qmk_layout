@@ -12,7 +12,7 @@
 #define TAPPING_TERM_PER_KEY
 
 // Recommended for heavy chording.
-#define QMK_KEYS_PER_SCAN 4
+#define QMK_KEYS_PER_SCAN           4
 
 #define ONESHOT_TIMEOUT             2000
 #define ONESHOT_TAP_TOGGLE          3

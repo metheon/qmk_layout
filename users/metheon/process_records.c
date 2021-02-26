@@ -3,6 +3,34 @@
 #include "which_os.h"
 #include "window_tab.h"
 
+#if (__has_include("secrets.h") && !defined(NO_SECRETS))
+#include "secrets.h"
+#else
+// If the secret.h file is ever lost, simply create it again with this array being the only content
+static const char * const secrets[] = {
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+};
+#endif
+
 // OS dependant key codes
 // Mac uses standard US ANSI keyboard
 #define MAC_AE               RALT(KC_QUOT)
@@ -62,16 +90,16 @@ bool tap_os_key(uint16_t lnx_keycode, uint16_t mac_keycode, bool key_down) {
         } else {
             unregister_code16(mac_keycode);
         }
-        return true;
+        return false;
     } else if (is_linux()) {
         if (key_down) {
             register_code16(lnx_keycode);
         } else {
             unregister_code16(lnx_keycode);
         }
-        return true;
+        return false;
     }
-    return false;
+    return true;
 }
 
 bool tap_kc_ae(bool key_down) {
@@ -84,6 +112,75 @@ bool tap_kc_oe(bool key_down) {
 
 bool tap_kc_aa(bool key_down) {
     return tap_os_key(LNX_AA, MAC_AA, key_down);
+}
+
+bool secret(uint16_t keycode, bool key_down) {
+    if(key_down) {
+        switch(keycode) {
+            case SECRET00:
+                send_string(secrets[0]);
+                break;
+            case SECRET01:
+                send_string(secrets[1]);
+                break;
+            case SECRET02:
+                send_string(secrets[2]);
+                break;
+            case SECRET03:
+                send_string(secrets[3]);
+                break;
+            case SECRET04:
+                send_string(secrets[4]);
+                break;
+            case SECRET05:
+                send_string(secrets[5]);
+                break;
+            case SECRET06:
+                send_string(secrets[6]);
+                break;
+            case SECRET07:
+                send_string(secrets[7]);
+                break;
+            case SECRET08:
+                send_string(secrets[8]);
+                break;
+            case SECRET09:
+                send_string(secrets[9]);
+                break;
+            case SECRET10:
+                send_string(secrets[10]);
+                break;
+            case SECRET11:
+                send_string(secrets[11]);
+                break;
+            case SECRET12:
+                send_string(secrets[12]);
+                break;
+            case SECRET13:
+                send_string(secrets[13]);
+                break;
+            case SECRET14:
+                send_string(secrets[14]);
+                break;
+            case SECRET15:
+                send_string(secrets[15]);
+                break;
+            case SECRET16:
+                send_string(secrets[16]);
+                break;
+            case SECRET17:
+                send_string(secrets[17]);
+                break;
+            case SECRET18:
+                send_string(secrets[18]);
+                break;
+            case SECRET19:
+                send_string(secrets[19]);
+                break;
+        }
+        return false;
+    }
+    return true;
 }
 
 bool make(keyrecord_t *record) {
@@ -114,17 +211,19 @@ bool which_os(keyrecord_t *record) {
     if (record->event.pressed) {
         if(is_linux()) {
             SEND_STRING("LINUX");
-            return true;
+            return false;
         } else if(is_mac()) {
             SEND_STRING("MAC");
-            return true;
+            return false;
         }
     }
-    return false;
+    return true;
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case SECRET00...SECRET19:
+            return secret(keycode, record->event.pressed);
         case KC_MAKE:
             return make(record);
         case KC_FLASH:

@@ -3,7 +3,6 @@
 #include QMK_KEYBOARD_H
 #include "encoders.h"
 #include "process_records.h"
-#include "leader.h"
 #include "magnet.h"
 #include "window_tab.h"
 #include "tap_dances.h"
@@ -16,6 +15,7 @@ enum layers {
     _FUNPAD,                // Left hand funpad (F1 - F12)
     _ADJUST,                // Mainly RGB and media keys, activated when lower and raise is pressed at the same time
     _MAGNET,                // Layer https://magnet.crowdcafe.com/
+    _SECRETS,               // Dedicated layer for all the secrets
     _BL3_BSE,               // Base layer for Borderlands 3
     _BL3_UPR,               // Upper layer for Borderlands 3
 };
@@ -29,6 +29,7 @@ enum layers {
 #define SYMBOLS             MO(_SYMBOLS)
 #define MAGNET              MO(_MAGNET)
 #define FUNPAD              MO(_FUNPAD)
+#define SECRETS             OSL(_SECRETS)
 
 #define SHIFT               OSM(MOD_LSFT)
 
@@ -55,8 +56,6 @@ enum layers {
 #define COPY_T              LCTL(KC_INSERT)
 #define PASTE_T             LSFT(KC_INSERT)
 
-#define OSM_SFT             OSM(MOD_LSFT)
-
 #define KC_STAB             LSFT(KC_TAB)
 
 #define NEXT_TAB            LCTL(KC_TAB)
@@ -70,3 +69,4 @@ enum layers {
 #define BL3_A               LSFT(KC_A)              // BL3: Hold shift while pressing A to run instead of walking
 #define BL3_S               LSFT(KC_S)              // BL3: Hold shift while pressing S to run instead of walking
 #define BL3_D               LSFT(KC_D)              // BL3: Hold shift while pressing D to run instead of walking
+

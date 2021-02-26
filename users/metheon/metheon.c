@@ -44,7 +44,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 
 void matrix_scan_user(void) {
     matrix_scan_encoders();
-    matrix_scan_leader();
     matrix_scan_window_tab();
 }
 
@@ -58,18 +57,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
          SHIFT   ,KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,SHIFT   ,
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-         LOCK    ,SEARCH  ,__NONE__,FUNPAD  ,NUMBERS ,SPC_EXT ,ENT_EXT ,SYMBOLS ,MAGNET  ,__NONE__,__NONE__,__NONE__
+         LOCK    ,SEARCH  ,__NONE__,FUNPAD  ,NUMBERS ,SPC_EXT ,ENT_EXT ,SYMBOLS ,MAGNET  ,__NONE__,SECRETS ,__NONE__
     //  '--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------'
     ),
     [_NUMBERS] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------.
-         KC_TAB  ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,KC_DEL  ,
+         KC_TAB  ,KC_SLSH ,KC_ASTR ,KC_MINS ,KC_PLUS ,KC_EQL  ,KC_PERC ,KC_7    ,KC_8    ,KC_9    ,__NONE__,KC_BSPC ,
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-         __NONE__,KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,KC_LPRN ,KC_RPRN ,KC_4    ,KC_5    ,KC_6    ,KC_ENTER,__NONE__,
+         __NONE__,KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,KC_LPRN ,KC_RPRN ,KC_4    ,KC_5    ,KC_6    ,KC_0    ,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-         __NONE__,KC_SLSH ,KC_ASTR ,KC_MINS ,KC_PLUS ,KC_PERC ,__NONE__,KC_1    ,KC_2    ,KC_3    ,KC_EQL  ,__NONE__,
+         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,KC_1    ,KC_2    ,KC_3    ,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-         __NONE__,__NONE__,__NONE__,__NONE__,________,ENT_EXT ,ENT_EXT ,________,__NONE__,__NONE__,__NONE__,__NONE__
+         __NONE__,__NONE__,__NONE__,__NONE__,________,ENT_EXT ,ENT_EXT ,________,KC_COMMA,KC_DOT  ,__NONE__,__NONE__
     //  '--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------'
     ),
     [_SYMBOLS] = LAYOUT_metheon(
@@ -78,16 +77,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
          __NONE__,KC_AT   ,KC_AE   ,KC_OE   ,KC_AA   ,KC_LPRN ,KC_RPRN ,KC_EQL  ,KC_EXLM ,KC_AMPR ,KC_PIPE ,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-         __NONE__,__NONE__,__NONE__,__NONE__,KC_PERC ,KC_LBRC ,KC_RBRC ,KC_MINS ,KC_UNDS ,__NONE__,KC_BSLS ,__NONE__,
+         __NONE__,KC_BSLS ,KC_PERC ,KC_UNDS ,KC_MINS ,KC_LBRC ,KC_RBRC ,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
          __NONE__,__NONE__,__NONE__,__NONE__,________,SPC_EXT ,SPC_EXT ,________,__NONE__,__NONE__,__NONE__,__NONE__
     //  '--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------'
     ),
     [_EXTEND] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------.
-         __NONE__,PREV_TAB,NEXT_TAB,PREV_WIN,NEXT_WIN,__NONE__,KC_PGUP ,KC_HOME ,KC_UP   ,KC_END  ,__NONE__,DEL_WRD ,
+         __NONE__,PREV_TAB,NEXT_TAB,PREV_WIN,NEXT_WIN,__NONE__,KC_PGUP ,KC_HOME ,KC_UP   ,KC_END  ,__NONE__,KC_DEL  ,
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-         __NONE__,KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,KC_LEAD ,KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RGHT ,KC_ENTER,__NONE__,
+         __NONE__,KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,__NONE__,KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RGHT ,KC_ENTER,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
          __NONE__,UNDO    ,CUT     ,COPY     ,TEXT_MOD,PASTE  ,OVERVIEW,PRV_DSKT,NXT_DSKT,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
@@ -123,6 +122,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          __NONE__,__NONE__,MG_LF_HF,MG_FSCR ,MG_RT_HF,__NONE__,________,MG_LF_TD,MG_MD_TD,MG_RT_TD,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
          __NONE__,__NONE__,MG_BL_QD,MG_BT_HF,MG_BR_QD,__NONE__,__NONE__,MG_L2_TD,MG_R2_TD,__NONE__,__NONE__,__NONE__,
+    //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
+         __NONE__,__NONE__,__NONE__,__NONE__,________,________,________,________,__NONE__,__NONE__,__NONE__,__NONE__
+    //  '--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------'
+    ),
+    [_SECRETS] = LAYOUT_metheon(
+    //  .--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------.
+         __NONE__,SECRET00,SECRET01,SECRET02,SECRET03,SECRET04,SECRET05,SECRET06,SECRET07,SECRET08,SECRET09,__NONE__,
+    //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
+         __NONE__,SECRET10,SECRET11,SECRET12,SECRET13,SECRET14,SECRET15,SECRET16,SECRET17,SECRET18,SECRET19,__NONE__,
+    //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
+         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
          __NONE__,__NONE__,__NONE__,__NONE__,________,________,________,________,__NONE__,__NONE__,__NONE__,__NONE__
     //  '--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------'
