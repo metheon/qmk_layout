@@ -23,6 +23,12 @@ enum layers {
 #define __NONE__            KC_NO
 #define ________            _______
 
+//tre knapper på hver side
+//space/extend vs backspace/secret
+//enter/lower  vs delete/raise   ----> adjust
+//funpad       vs magnet         ----> secrets
+
+
 #define SPC_EXT             LT(_EXTEND, KC_SPACE)
 #define ENT_EXT             LT(_EXTEND, KC_ENTER)
 #define LWR_SFT             LT(_LOWER, KC_F22)
