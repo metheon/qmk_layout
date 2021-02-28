@@ -4,11 +4,11 @@
 #define BSE_E01             KC_NO
 #define BSE_E02             KC_MUTE
 
-#define NUM_E01             KC_NO
-#define NUM_E02             KC_NO
+#define LWR_E01             KC_NO
+#define LWR_E02             KC_NO
 
-#define SYM_E01             LGUI(KC_W) // close tab
-#define SYM_E02             KC_NO
+#define RSE_E01             LGUI(KC_W) // close tab
+#define RSE_E02             KC_NO
 
 #define EXT_E01             KC_NO
 #define EXT_E02             KC_MPLY

@@ -80,7 +80,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
             case _BASE:
                 tabbing(clockwise);
                 break;
-            case _SYMBOLS:
+            case _RAISE:
                 gui_tab(clockwise);
                 break;
             case _EXTEND:
@@ -98,7 +98,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
             case _EXTEND:
                 media_control(clockwise);
                 break;
-            case _NUMBERS:
+            case _LOWER:
                 scrolling(clockwise);
                 break;
             default:

@@ -1,9 +1,9 @@
 #include "metheon.h"
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    state = update_tri_layer_state(state, _NUMBERS, _EXTEND, _MAGNET);
-    state = update_tri_layer_state(state, _EXTEND, _SYMBOLS, _FUNPAD);
-    state = update_tri_layer_state(state, _NUMBERS, _SYMBOLS, _ADJUST);
+    state = update_tri_layer_state(state, _LOWER, _EXTEND, _MAGNET);
+    state = update_tri_layer_state(state, _EXTEND, _RAISE, _FUNPAD);
+    state = update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
     return state;
 };
 
@@ -57,10 +57,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
          SHIFT   ,KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,SHIFT   ,
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-         LOCK    ,SEARCH  ,__NONE__,FUNPAD  ,NUM_SFT ,SPC_EXT ,ENT_EXT ,SYM_SFT ,MAGNET  ,__NONE__,SECRETS ,__NONE__
+         LOCK    ,SEARCH  ,__NONE__,FUNPAD  ,LWR_SFT ,SPC_EXT ,ENT_EXT ,RSE_SFT ,MAGNET  ,__NONE__,SECRETS ,__NONE__
     //  '--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------'
     ),
-    [_NUMBERS] = LAYOUT_metheon(
+    [_LOWER] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------.
          KC_TAB  ,KC_SLSH ,KC_ASTR ,KC_MINS ,KC_PLUS ,KC_EQL  ,KC_PERC ,KC_7    ,KC_8    ,KC_9    ,__NONE__,KC_BSPC ,
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
@@ -71,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          __NONE__,__NONE__,__NONE__,__NONE__,________,ENT_EXT ,ENT_EXT ,________,KC_COMMA,KC_DOT  ,__NONE__,__NONE__
     //  '--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------'
     ),
-    [_SYMBOLS] = LAYOUT_metheon(
+    [_RAISE] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------.
          __NONE__,KC_GRV  ,KC_CIRC ,KC_HASH ,KC_TILD ,KC_LCBR ,KC_RCBR ,KC_DLR  ,KC_EUR  ,KC_PND  ,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|

@@ -9,8 +9,8 @@
 
 enum layers {
     _BASE,                  // Colemak-DH
-    _NUMBERS,
-    _SYMBOLS,
+    _LOWER,
+    _RAISE,
     _EXTEND,                // Navigation cluster
     _FUNPAD,                // Left hand funpad (F1 - F12)
     _ADJUST,                // Mainly RGB and media keys, activated when lower and raise is pressed at the same time
@@ -25,8 +25,8 @@ enum layers {
 
 #define SPC_EXT             LT(_EXTEND, KC_SPACE)
 #define ENT_EXT             LT(_EXTEND, KC_ENTER)
-#define NUM_SFT             LT(_NUMBERS, KC_F22)
-#define SYM_SFT             LT(_SYMBOLS, KC_F23)
+#define LWR_SFT             LT(_LOWER, KC_F22)
+#define RSE_SFT             LT(_RAISE, KC_F23)
 #define MAGNET              MO(_MAGNET)
 #define FUNPAD              MO(_FUNPAD)
 #define SECRETS             OSL(_SECRETS)

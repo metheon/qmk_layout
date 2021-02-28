@@ -225,7 +225,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SECRET00...SECRET19:
             return secret(keycode, record->event.pressed);
-        case LT(_NUMBERS, KC_F22):
+        case LT(_LOWER, KC_F22):
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     set_oneshot_mods(MOD_LSFT);
@@ -233,7 +233,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 return false;
             }
             break;
-        case LT(_SYMBOLS, KC_F23):
+        case LT(_RAISE, KC_F23):
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     set_oneshot_mods(MOD_LSFT);
