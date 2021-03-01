@@ -23,21 +23,12 @@ enum layers {
 #define __NONE__            KC_NO
 #define ________            _______
 
-//tre knapper på hver side
-//space/extend vs backspace/secret
-//enter/lower  vs delete/raise   ----> adjust
-//funpad       vs magnet         ----> secrets
-
-
-#define SPC_EXT             LT(_EXTEND, KC_SPACE)
-#define ENT_EXT             LT(_EXTEND, KC_ENTER)
-#define LWR_SFT             LT(_LOWER, KC_F22)
-#define RSE_SFT             LT(_RAISE, KC_F23)
-#define MAGNET              MO(_MAGNET)
-#define FUNPAD              MO(_FUNPAD)
-#define SECRETS             OSL(_SECRETS)
-
-#define SHIFT               OSM(MOD_LSFT)
+#define FUN_TAB             LT(_FUNPAD, KC_TAB)     // Left hand, thumb one
+#define EXT_SPC             LT(_EXTEND, KC_SPACE)   // Left hand, thumb two
+#define LWR_ENT             LT(_LOWER, KC_ENTER)    // Left hand, thumb three
+#define RSE_DEL             LT(_RAISE, KC_DEL)      // Right hand, thumb three
+#define SFT_BSP             LSFT_T(KC_BSPC)         // Right hand, thumb two
+#define ESC_MAG             LT(_MAGNET, KC_ESC)     // Right hand, thumb one
 
 // Home row mods, using Colemak ... arst <--> neio
 #define HOME_A              LGUI_T(KC_A)

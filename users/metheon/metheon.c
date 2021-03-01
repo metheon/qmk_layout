@@ -1,8 +1,7 @@
 #include "metheon.h"
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    state = update_tri_layer_state(state, _LOWER, _EXTEND, _MAGNET);
-    state = update_tri_layer_state(state, _EXTEND, _RAISE, _FUNPAD);
+    state = update_tri_layer_state(state, _FUNPAD, _MAGNET, _SECRETS);
     state = update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
     return state;
 };
@@ -34,8 +33,12 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case HOME_I:
         case HOME_O:
             return TAPPING_TERM - 100; // 400-100=300
-        case SPC_EXT:
-        case ENT_EXT:
+        case FUN_TAB:
+        case EXT_SPC:
+        case LWR_ENT:
+        case RSE_DEL:
+        case ESC_MAG:
+        case KC_COLN:
             return TAPPING_TERM - 225; // 400-225=175
         default:
             return TAPPING_TERM;       // 400
@@ -50,7 +53,6 @@ void matrix_scan_user(void) {
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_metheon(
-    // missing keys: esc, tap, shift, scln, bspc, secrets, lock, search
     //  .--------+--------+--------+--------+--------.  .--------+--------+--------+--------+--------.
          KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B       ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_QUOT ,
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
@@ -58,19 +60,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
          KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V       ,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH , 
     //  '--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------'
-                           FUNPAD  ,LWR_SFT ,SPC_EXT    ,ENT_EXT ,RSE_SFT ,MAGNET   
+                           FUN_TAB ,EXT_SPC ,LWR_ENT    ,RSE_DEL ,SFT_BSP ,ESC_MAG
     //                    '--------+--------+--------'  '--------+--------+--------'
     ),
     [_LOWER] = LAYOUT_metheon(
-    // missing keys: tap, dot, bspc
     //  .--------+--------+--------+--------+--------.  .--------+--------+--------+--------+--------.
          KC_SLSH ,KC_ASTR ,KC_MINS ,KC_PLUS ,KC_EQL     ,KC_PERC ,KC_7    ,KC_8    ,KC_9    ,__NONE__,
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
          KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,KC_LPRN    ,KC_RPRN ,KC_4    ,KC_5    ,KC_6    ,KC_0    ,
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
-         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__   ,__NONE__,KC_1    ,KC_2    ,KC_3    ,__NONE__,
+         __NONE__,KC_COMMA,KC_DOT  ,__NONE__,__NONE__   ,__NONE__,KC_1    ,KC_2    ,KC_3    ,__NONE__,
     //  '--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------'
-                           __NONE__,________,ENT_EXT    ,ENT_EXT ,________,KC_COMMA
+                           ________,________,________,   ________,________,________
     //                    '--------+--------+--------'  '--------+--------+--------'
     ),
     [_RAISE] = LAYOUT_metheon(
@@ -79,21 +80,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
          KC_AT   ,KC_AE   ,KC_OE   ,KC_AA   ,KC_LPRN    ,KC_RPRN ,KC_EQL  ,KC_EXLM ,KC_AMPR ,KC_PIPE ,
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
-         KC_BSLS ,KC_PERC ,KC_UNDS ,KC_MINS ,KC_LBRC    ,KC_RBRC ,__NONE__,__NONE__,__NONE__,__NONE__,
+         KC_BSLS ,KC_PERC ,KC_UNDS ,KC_MINS ,KC_LBRC    ,KC_RBRC ,KC_COLN ,KC_SCLN ,__NONE__,__NONE__,
     //  '--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------'
-                           __NONE__,________,SPC_EXT    ,SPC_EXT ,________,__NONE__
+                           ________,________,________,   ________,________,________
     //                    '--------+--------+--------'  '--------+--------+--------'
     ),
     [_EXTEND] = LAYOUT_metheon(
     //  missing keys: del, IJ_RNAME,IJ_TERM 
     //  .--------+--------+--------+--------+--------.  .--------+--------+--------+--------+--------.
-         PREV_TAB,NEXT_TAB,PREV_WIN,NEXT_WIN,__NONE__   ,KC_PGUP ,KC_HOME ,KC_UP   ,KC_END  ,__NONE__,
+         PREV_TAB,NEXT_TAB,PREV_WIN,NEXT_WIN,__NONE__   ,KC_PGUP ,KC_HOME ,KC_UP   ,KC_END  ,LOCK    ,
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
-         KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,__NONE__   ,KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RGHT ,KC_ENTER,
+         KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,SEARCH     ,KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RGHT ,KC_ENTER,
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
          UNDO    ,CUT     ,COPY     ,TEXT_MOD,PASTE     ,OVERVIEW,PRV_DSKT,NXT_DSKT,__NONE__,__NONE__,
     //  '--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------'
-                           __NONE__,________,________   ,________,________,__NONE__
+                           ________,________,________,   ________,________,________
     //                    '--------+--------+--------'  '--------+--------+--------'
     ),
     [_FUNPAD] = LAYOUT_metheon(
@@ -104,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
          __NONE__,__NONE__,__NONE__,__NONE__,__NONE__   ,__NONE__,KC_F1   ,KC_F2   ,KC_F3   ,KC_F11  ,
     //  '--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------'
-                           __NONE__,________,________   ,________,________,__NONE__
+                           ________,________,________,   ________,________,________
     //                    '--------+--------+--------'  '--------+--------+--------'
     ),
     [_ADJUST] = LAYOUT_metheon(
@@ -115,7 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
          __NONE__,KC_MUTE ,KC_VOLD ,KC_VOLU ,__NONE__   ,__NONE__,RGB_RMOD,RGB_HUD ,RGB_SAD ,RGB_VAD ,
     //  '--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------'
-                           __NONE__,________,________   ,________,________,__NONE__
+                           ________,________,________,   ________,________,________
     //                    '--------+--------+--------'  '--------+--------+--------'
     ),
     [_MAGNET] = LAYOUT_metheon(
@@ -126,7 +127,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
          __NONE__,MG_BL_QD,MG_BT_HF,MG_BR_QD,__NONE__   ,__NONE__,MG_L2_TD,MG_R2_TD,__NONE__,__NONE__,
     //  '--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------'
-                           __NONE__,________,________   ,________,________,__NONE__
+                           ________,________,________,   ________,________,________
     //                    '--------+--------+--------'  '--------+--------+--------'
     ),
     [_SECRETS] = LAYOUT_metheon(
@@ -137,7 +138,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
          __NONE__,__NONE__,__NONE__,__NONE__,__NONE__   ,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  '--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------'
-                           __NONE__,________,________   ,________,________,__NONE__
+                           ________,________,________,   ________,________,________
     //                    '--------+--------+--------'  '--------+--------+--------'
     ),
     [_BL3_BSE] = LAYOUT_metheon(
