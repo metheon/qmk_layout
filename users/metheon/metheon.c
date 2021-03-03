@@ -37,8 +37,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case EXT_SPC:
         case LWR_ENT:
         case RSE_DEL:
+        case SFT_BSP:
         case ESC_MAG:
-        case KC_COLN:
             return TAPPING_TERM - 225; // 400-225=175
         default:
             return TAPPING_TERM;       // 400
