@@ -16,6 +16,7 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
         case HOME_E:
         case HOME_I:
         case HOME_O:
+        case SFT_BSP:
             return true;
         default:
             return false;
