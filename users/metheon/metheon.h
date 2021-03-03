@@ -23,12 +23,12 @@ enum layers {
 #define __NONE__            KC_NO
 #define ________            _______
 
-#define FUNPAD              MO(_FUNPAD)     // Left hand, thumb one
+#define FUN_TAB             LT(_FUNPAD, KC_TAB)     // Left hand, thumb one
 #define EXT_SPC             LT(_EXTEND, KC_SPACE)   // Left hand, thumb two
-#define LOWER               MO(_LOWER)    // Left hand, thumb three
-#define RAISE               MO(_RAISE)      // Right hand, thumb three
-#define SHIFT               OSM(MOD_LSFT)           // Right hand, thumb two
-#define MAGNET              MO(_MAGNET)     // Right hand, thumb one
+#define LWR_ENT             LT(_LOWER, KC_ENTER)    // Left hand, thumb three
+#define RSE_DEL             LT(_RAISE, KC_DEL)      // Right hand, thumb three
+#define SFT_BSP             LSFT_T(KC_BSPC)   // Right hand, thumb two
+#define MAG_ESC             LT(_MAGNET, KC_ESC)     // Right hand, thumb one
 
 // Home row mods, using Colemak ... arst <--> neio
 #define HOME_A              LGUI_T(KC_A)

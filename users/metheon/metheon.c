@@ -33,7 +33,12 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case HOME_I:
         case HOME_O:
             return TAPPING_TERM - 100; // 400-100=300
+        case FUN_TAB:
         case EXT_SPC:
+        case LWR_ENT:
+        case RSE_DEL:
+        case SFT_BSP:
+        case MAG_ESC:
             return TAPPING_TERM - 225; // 400-225=175
         default:
             return TAPPING_TERM;       // 400
@@ -55,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
          KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V       ,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH , 
     //  '--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------'
-                           FUNPAD  ,EXT_SPC ,LOWER      ,RAISE   ,SHIFT   ,MAGNET
+                           FUN_TAB ,EXT_SPC ,LWR_ENT    ,RSE_DEL ,SFT_BSP ,MAG_ESC
     //                    '--------+--------+--------'  '--------+--------+--------'
     ),
     [_LOWER] = LAYOUT_metheon(
