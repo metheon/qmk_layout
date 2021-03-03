@@ -1,5 +1,9 @@
 #include "metheon.h"
 
+#if defined(COMBO_ENABLE)
+#include "g/keymap_combo.h" // to make combo def dictionary work
+#endif
+
 layer_state_t layer_state_set_user(layer_state_t state) {
     state = update_tri_layer_state(state, _FUNPAD, _MAGNET, _SECRETS);
     state = update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);

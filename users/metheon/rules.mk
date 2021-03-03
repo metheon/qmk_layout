@@ -14,7 +14,8 @@ SRC += encoders.c
 SRC += process_records.c
 SRC += which_os.c
 SRC += window_tab.c
-SRC += combos.c
+
+VPATH += keyboards/gboards
 
 # Disable as many features as possible
 TAP_DANCE_ENABLE				=	no	  	# Enables the tap dance feature
