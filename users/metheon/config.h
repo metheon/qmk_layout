@@ -15,7 +15,7 @@
 #define QMK_KEYS_PER_SCAN           4
 
 #define ONESHOT_TIMEOUT             2000
-#define ONESHOT_TAP_TOGGLE          3
+#define ONESHOT_TAP_TOGGLE          5
 
 // The Leader key allows to flexibly assign macros to key sequences.
 #define LEADER_PER_KEY_TIMING
