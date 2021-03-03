@@ -29,6 +29,12 @@ enum layers {
 #define RSE_DEL             LT(_RAISE, KC_DEL)      // Right hand, thumb three
 #define SFT_BSP             LSFT_T(KC_BSPC)   // Right hand, thumb two
 #define MAG_ESC             LT(_MAGNET, KC_ESC)     // Right hand, thumb one
+#define SHIFT               OSM(MOD_LSFT)
+
+#define FUNPAD              MO(_FUNPAD)
+#define LOWER               MO(_LOWER)
+#define RAISE               MO(_RAISE)
+#define MAGNET              MO(_MAGNET)
 
 // Home row mods, using Colemak ... arst <--> neio
 #define HOME_A              LGUI_T(KC_A)

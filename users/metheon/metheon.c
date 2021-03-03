@@ -58,13 +58,13 @@ void matrix_scan_user(void) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.  .--------+--------+--------+--------+--------.
-         KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B       ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_QUOT ,
+         KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B       ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_BSPC ,
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
          HOME_A  ,HOME_R  ,HOME_S ,HOME_T   ,KC_G       ,KC_M    ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
          KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V       ,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH , 
     //  '--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------'
-                           FUN_TAB ,EXT_SPC ,LWR_ENT    ,RSE_DEL ,SFT_BSP ,MAG_ESC
+                           FUNPAD  ,EXT_SPC ,LOWER      ,RAISE   ,SHIFT   ,MAGNET
     //                    '--------+--------+--------'  '--------+--------+--------'
     ),
     [_LOWER] = LAYOUT_metheon(
@@ -92,11 +92,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_EXTEND] = LAYOUT_metheon(
     //  missing keys: del, IJ_RNAME,IJ_TERM 
     //  .--------+--------+--------+--------+--------.  .--------+--------+--------+--------+--------.
-         PREV_TAB,NEXT_TAB,PREV_WIN,NEXT_WIN,__NONE__   ,KC_PGUP ,KC_HOME ,KC_UP   ,KC_END  ,LOCK    ,
+         PREV_TAB,NEXT_TAB,PREV_WIN,NEXT_WIN,__NONE__   ,KC_PGUP ,KC_HOME ,KC_UP   ,KC_END  ,KC_DEL  ,
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
          KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,SEARCH     ,KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RGHT ,KC_ENTER,
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
-         UNDO    ,CUT     ,COPY     ,TEXT_MOD,PASTE     ,OVERVIEW,PRV_DSKT,NXT_DSKT,__NONE__,__NONE__,
+         UNDO    ,CUT     ,COPY     ,TEXT_MOD,PASTE     ,OVERVIEW,PRV_DSKT,NXT_DSKT,__NONE__,LOCK    ,
     //  '--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------'
                            ________,________,________,   ________,________,________
     //                    '--------+--------+--------'  '--------+--------+--------'

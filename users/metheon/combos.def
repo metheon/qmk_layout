@@ -3,8 +3,12 @@
 //   name            result    chord keys
 COMB(RST_ESC         ,KC_ESC   ,HOME_R, HOME_S, HOME_T)
 COMB(NEI_ENTER       ,KC_ENTER ,HOME_N, HOME_E, HOME_I)
-COMB(CD_MINS         ,KC_MINS  ,KC_C, KC_D, KC_T)
-COMB(XC_UNDS         ,KC_UNDS  ,KC_X, KC_C, KC_T)
-COMB(HC_COLN         ,KC_COLN  ,KC_H, KC_COMMA, KC_T)
-COMB(CD_SCLN         ,KC_SCLN  ,KC_COMMA, KC_DOT, KC_T)
+COMB(CD_MINS         ,KC_MINS  ,KC_C, KC_D)
+COMB(XC_UNDS         ,KC_UNDS  ,KC_X, KC_C)
+COMB(HC_COLN         ,KC_COLN  ,KC_H, KC_COMMA)
+COMB(CD_SCLN         ,KC_SCLN  ,KC_COMMA, KC_DOT)
+COMB(LU_QUOT         ,KC_QUOT  ,KC_L, KC_U)
+COMB(UY_DQT          ,KC_DQT   ,KC_U, KC_Y)
+COMB(XCD_TAB         ,KC_TAB   ,KC_X, KC_C, KC_D)
+COMB(HCD_STAB        ,KC_STAB  ,KC_H, KC_COMMA, KC_DOT)
 
