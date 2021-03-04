@@ -3,6 +3,7 @@
 #include "which_os.h"
 #include "window_tab.h"
 #include "metheon.h"
+#include "caps_word.c"
 
 #if (__has_include("secrets.h") && !defined(NO_SECRETS))
 #include "secrets.h"
@@ -222,9 +223,17 @@ bool which_os(keyrecord_t *record) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    const bool pressed = record->event.pressed;
+    if (!process_caps_word(keycode, record)) {
+        return false;
+    }
     switch (keycode) {
+        case CAPSWORD:
+            if (pressed) return false;
+            caps_word_toggle();
+            return false;    
         case SECRET00...SECRET19:
-            return secret(keycode, record->event.pressed);
+            return secret(keycode, pressed);
         case KC_MAKE:
             return make(record);
         case KC_FLASH:
@@ -234,49 +243,49 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case WHICH_OS:
             return which_os(record);
         case TEXT_MOD:
-            return tap_os_key(KC_LCTL, KC_LALT, record->event.pressed);
+            return tap_os_key(KC_LCTL, KC_LALT, pressed);
         case KC_AE:
-            return tap_kc_ae(record->event.pressed);
+            return tap_kc_ae(pressed);
         case KC_OE:
-            return tap_kc_oe(record->event.pressed);
+            return tap_kc_oe(pressed);
         case KC_AA:
-            return tap_kc_aa(record->event.pressed);
+            return tap_kc_aa(pressed);
         case KC_EUR:
-            return tap_os_key(LNX_EUR, MAC_EUR, record->event.pressed);
+            return tap_os_key(LNX_EUR, MAC_EUR, pressed);
         case KC_PND:
-            return tap_os_key(LNX_PND, MAC_PND, record->event.pressed);
+            return tap_os_key(LNX_PND, MAC_PND, pressed);
         case UNDO:
-            return tap_os_key(LNX_UNDO, MAC_UNDO, record->event.pressed);
+            return tap_os_key(LNX_UNDO, MAC_UNDO, pressed);
         case CUT:
-            return tap_os_key(LNX_CUT, MAC_CUT, record->event.pressed);
+            return tap_os_key(LNX_CUT, MAC_CUT, pressed);
         case COPY:
-            return tap_os_key(LNX_COPY, MAC_COPY, record->event.pressed);
+            return tap_os_key(LNX_COPY, MAC_COPY, pressed);
         case PASTE:
-            return tap_os_key(LNX_PSTE, MAC_PSTE, record->event.pressed);
+            return tap_os_key(LNX_PSTE, MAC_PSTE, pressed);
         case NEXT_WRD:
-            return tap_os_key(LNX_NEXT_WRD, MAC_NEXT_WRD, record->event.pressed);
+            return tap_os_key(LNX_NEXT_WRD, MAC_NEXT_WRD, pressed);
         case PREV_WRD:
-            return tap_os_key(LNX_PREV_WRD, MAC_PREV_WRD, record->event.pressed);
+            return tap_os_key(LNX_PREV_WRD, MAC_PREV_WRD, pressed);
         case NEXT_WIN:
             return mod_tab(record, false);
         case PREV_WIN:
             return mod_tab(record, S(true));
         case LOCK:
-            return tap_os_key(LNX_LOCK, MAC_LOCK, record->event.pressed);
+            return tap_os_key(LNX_LOCK, MAC_LOCK, pressed);
         case SEARCH:
-            return tap_os_key(LNX_SEARCH, MAC_SEARCH, record->event.pressed);
+            return tap_os_key(LNX_SEARCH, MAC_SEARCH, pressed);
          case IJ_RNAME:
-            return tap_os_key(LNX_IJ_RNAME, MAC_IJ_RNAME, record->event.pressed);
+            return tap_os_key(LNX_IJ_RNAME, MAC_IJ_RNAME, pressed);
         case IJ_TERM:
-            return tap_os_key(LNX_IJ_TERM, MAC_IJ_TERM, record->event.pressed);
+            return tap_os_key(LNX_IJ_TERM, MAC_IJ_TERM, pressed);
         case PRV_DSKT:
-            return tap_os_key(LNX_PRV_DSKT, MAC_PRV_DSKT, record->event.pressed);
+            return tap_os_key(LNX_PRV_DSKT, MAC_PRV_DSKT, pressed);
         case NXT_DSKT:
-            return tap_os_key(LNX_NXT_DSKT, MAC_NXT_DSKT, record->event.pressed);
+            return tap_os_key(LNX_NXT_DSKT, MAC_NXT_DSKT, pressed);
         case OVERVIEW:
-            return tap_os_key(LNX_OVERVIEW, MAC_OVERVIEW, record->event.pressed);
+            return tap_os_key(LNX_OVERVIEW, MAC_OVERVIEW, pressed);
         case DEL_WRD:
-            return tap_os_key(LNX_DEL_WRD, MAC_DEL_WRD, record->event.pressed);
+            return tap_os_key(LNX_DEL_WRD, MAC_DEL_WRD, pressed);
     }
     return true;
 };

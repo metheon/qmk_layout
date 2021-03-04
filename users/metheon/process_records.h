@@ -29,6 +29,7 @@ enum keycodes {
     OVERVIEW,               // See all windows on a desktop
     IJ_RNAME,
     IJ_TERM,
+    CAPSWORD,               // Capitalizes next word
     // SECRETS
     SECRET00,
     SECRET01,

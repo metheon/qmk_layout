@@ -4,8 +4,8 @@
 // /////////////////// //
 // FOUR FINGERS COMBOS //
 // /////////////////// //
-COMB(ARST_CAPS       ,KC_CAPS  ,HOME_A, HOME_R ,HOME_S, HOME_T)
-COMB(NEIO_CAPS       ,KC_CAPS  ,HOME_N, HOME_E ,HOME_I, HOME_O)
+COMB(ARST_CAPS       ,CAPSWORD ,HOME_A, HOME_R ,HOME_S, HOME_T)
+COMB(NEIO_CAPS       ,CAPSWORD ,HOME_N, HOME_E ,HOME_I, HOME_O)
 
 // //////////////////// //
 // THREE FINGERS COMBOS //
