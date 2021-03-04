@@ -5,7 +5,6 @@
 #include "process_records.h"
 #include "magnet.h"
 #include "window_tab.h"
-#include "tap_dances.h"
 
 enum layers {
     _BASE,                  // Colemak-DH
@@ -38,6 +37,9 @@ enum layers {
 #define LOWER               MO(_LOWER)
 #define RAISE               MO(_RAISE)
 #define MAGNET              MO(_MAGNET)
+
+#define LWR_SFT             LT(_LOWER, KC_F22)
+#define RSE_SFT             LT(_RAISE, KC_F23)
 
 // Home row mods, using Colemak ... arst <--> neio
 #define HOME_A              LGUI_T(KC_A)
