@@ -28,20 +28,21 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case HOME_A:
         case HOME_R:
         case HOME_S:
         case HOME_T:
         case HOME_N:
         case HOME_E:
         case HOME_I:
-        case HOME_O:
             return TAPPING_TERM - 100; // 400-100=300
+        case HOME_A:
+        case HOME_O:
+            return TAPPING_TERM - 200; // 400-200=200
         case FUN_TAB:
         case EXT_SPC:
         case LWR_ENT:
         case RSE_DEL:
-        case SFT_BSP:
+        case EXT_BSP:
         case MAG_ESC:
             return TAPPING_TERM - 225; // 400-225=175
         default:
@@ -58,13 +59,13 @@ void matrix_scan_user(void) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.  .--------+--------+--------+--------+--------.
-         KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B       ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_BSPC ,
+         KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B       ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_QUOT ,
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
          HOME_A  ,HOME_R  ,HOME_S ,HOME_T   ,KC_G       ,KC_M    ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,
     //  |--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
          KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V       ,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH , 
     //  '--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------'
-                           FUNPAD  ,EXT_SPC ,LOWER      ,RAISE   ,SHIFT   ,MAGNET
+                           FUN_TAB ,EXT_SPC ,LWR_ENT    ,RSE_DEL ,EXT_BSP ,MAG_ESC
     //                    '--------+--------+--------'  '--------+--------+--------'
     ),
     [_LOWER] = LAYOUT_metheon(

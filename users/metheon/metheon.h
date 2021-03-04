@@ -27,7 +27,8 @@ enum layers {
 #define EXT_SPC             LT(_EXTEND, KC_SPACE)   // Left hand, thumb two
 #define LWR_ENT             LT(_LOWER, KC_ENTER)    // Left hand, thumb three
 #define RSE_DEL             LT(_RAISE, KC_DEL)      // Right hand, thumb three
-#define SFT_BSP             LSFT_T(KC_BSPC)   // Right hand, thumb two
+#define SFT_BSP             LSFT_T(KC_BSPC)         // Right hand, thumb two
+#define EXT_BSP             LT(_EXTEND, KC_BSPC)    // Right hand, thumb two
 #define MAG_ESC             LT(_MAGNET, KC_ESC)     // Right hand, thumb one
 #define SHIFT               OSM(MOD_LSFT)
 
@@ -37,14 +38,14 @@ enum layers {
 #define MAGNET              MO(_MAGNET)
 
 // Home row mods, using Colemak ... arst <--> neio
-#define HOME_A              LGUI_T(KC_A)
-#define HOME_R              LALT_T(KC_R)
-#define HOME_S              LSFT_T(KC_S)
+#define HOME_A              LSFT_T(KC_A)
+#define HOME_R              LGUI_T(KC_R)
+#define HOME_S              LALT_T(KC_S)
 #define HOME_T              LCTL_T(KC_T)
 #define HOME_N              LCTL_T(KC_N)
-#define HOME_E              LSFT_T(KC_E)
-#define HOME_I              LALT_T(KC_I)
-#define HOME_O              LGUI_T(KC_O)
+#define HOME_E              LALT_T(KC_E)
+#define HOME_I              LGUI_T(KC_I)
+#define HOME_O              LSFT_T(KC_O)
 
 // Home row mods, for the numpad and funpad ... ( F6, F5, F4 <--> 4 5 6 -
 #define HOME_ENT            LCTL_T(KC_ENTER)
