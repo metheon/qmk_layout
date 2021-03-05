@@ -37,14 +37,12 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case HOME_I:
         case HOME_O:
             return TAPPING_TERM - 100; // 400-100=300
-        case SFT_Z:
-        case SFT_SLSH:
-        case FUN_TAB:
-        case EXT_SPC:
-        case LWR_ENT:
-        case RSE_DEL:
-        case EXT_BSP:
-        case MAG_ESC:
+        case THMB_L1:
+        case THMB_L2:
+        case THMB_L3:
+        case THMB_R1:
+        case THMB_R2:
+        case THMB_R3:
             return TAPPING_TERM - 225; // 400-225=175
         default:
             return TAPPING_TERM;       // 400
@@ -66,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------+--------+--------+--------. .--------+--------+--------+--------+--------+--------+--------+--------|
          SHIFT   ,KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,SEARCH  ,LOCK    ,  __NONE__,__NONE__,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,SHIFT   ,
     //  '--------+--------+--------+--------+--------+--------+--------+--------| |--------+--------+--------+--------+--------+--------+--------+--------'
-                                    __NONE__,__NONE__,FUN_TAB ,EXT_SPC ,LWR_ENT ,  RSE_DEL ,EXT_BSP ,MAG_ESC ,__NONE__,__NONE__ 
+                                    __NONE__,__NONE__,THMB_L1 ,THMB_L2 ,THMB_L3 ,  THMB_R3 ,THMB_R2 ,THMB_R1 ,__NONE__,__NONE__ 
     //                             '--------+--------+--------+--------+--------' '--------+--------+--------+--------+--------'
     ),
     [_LOWER] = LAYOUT_metheon( // add funpad to this layer, combos for 12 as , and ,. as . mayby others?
@@ -77,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------+--------+--------+--------. .--------+--------+--------+--------+--------+--------+--------+--------|
          __NONE__,__NONE__,KC_COMMA,KC_DOT  ,__NONE__,LOCK    ,__NONE__,__NONE__,  __NONE__,__NONE__,__NONE__,KC_1    ,KC_2    ,KC_3    ,__NONE__,__NONE__,
     //  '--------+--------+--------+--------+--------+--------+--------+--------| |--------+--------+--------+--------+--------+--------+--------+--------'
-                                    ________,________,________,EXT_BSP ,________,  ________,EXT_BSP ,________,________,________
+                                    ________,________,________,THMB_R2 ,________,  ________,THMB_R2 ,________,________,________
     //                             '--------+--------+--------+--------+--------' '--------+--------+--------+--------+--------'
     ),
     [_RAISE] = LAYOUT_metheon(
@@ -88,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------+--------+--------+--------. .--------+--------+--------+--------+--------+--------+--------+--------|
          __NONE__,KC_BSLS ,KC_PERC ,KC_UNDS ,KC_MINS ,KC_LBRC ,__NONE__,__NONE__,  __NONE__,__NONE__,KC_RBRC ,KC_COLN ,KC_SCLN ,__NONE__,__NONE__,__NONE__,
     //  '--------+--------+--------+--------+--------+--------+--------+--------| |--------+--------+--------+--------+--------+--------+--------+--------'
-                                    ________,________,________,EXT_SPC ,________,  ________,EXT_SPC ,________,________,________
+                                    ________,________,________,THMB_L2 ,________,  ________,THMB_L2 ,________,________,________
     //                             '--------+--------+--------+--------+--------' '--------+--------+--------+--------+--------'
     ),
     [_EXTEND] = LAYOUT_metheon(

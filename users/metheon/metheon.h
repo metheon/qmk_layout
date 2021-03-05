@@ -22,24 +22,13 @@ enum layers {
 #define __NONE__            KC_NO
 #define ________            _______
 
-#define FUN_TAB             LT(_FUNPAD, KC_TAB)     // Left hand, thumb one
-#define EXT_SPC             LT(_EXTEND, KC_SPACE)   // Left hand, thumb two
-#define LWR_ENT             LT(_LOWER, KC_ENTER)    // Left hand, thumb three
-#define RSE_DEL             LT(_RAISE, KC_DEL)      // Right hand, thumb three
-#define SFT_BSP             LSFT_T(KC_BSPC)         // Right hand, thumb two
-#define EXT_BSP             LT(_EXTEND, KC_BSPC)    // Right hand, thumb two
-#define MAG_ESC             LT(_MAGNET, KC_ESC)     // Right hand, thumb one
 #define SHIFT               OSM(MOD_LSFT)
-#define SFT_Z               LSFT_T(KC_Z)
-#define SFT_SLSH            LSFT_T(KC_SLSH)
-
-#define FUNPAD              MO(_FUNPAD)
-#define LOWER               MO(_LOWER)
-#define RAISE               MO(_RAISE)
-#define MAGNET              MO(_MAGNET)
-
-#define LWR_SFT             LT(_LOWER, KC_F22)
-#define RSE_SFT             LT(_RAISE, KC_F23)
+#define THMB_L1             LT(_FUNPAD, KC_TAB)
+#define THMB_L2             LT(_EXTEND, KC_SPACE)
+#define THMB_L3             LT(_LOWER, KC_DEL)
+#define THMB_R3             LT(_RAISE, KC_BSPC)
+#define THMB_R2             LT(_EXTEND, KC_ENTER)
+#define THMB_R1             LT(_MAGNET, KC_ESC)
 
 // Home row mods, using Colemak ... arst <--> neio
 #define HOME_A              LGUI_T(KC_A)

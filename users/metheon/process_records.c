@@ -225,22 +225,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SECRET00...SECRET19:
             return secret(keycode, record->event.pressed);
-        case LWR_SFT:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    set_oneshot_mods(MOD_LSFT);
-                }
-                return false;
-            }
-            break;
-        case RSE_SFT:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    set_oneshot_mods(MOD_LSFT);
-                }
-                return false;
-            }
-            break;
         case KC_MAKE:
             return make(record);
         case KC_FLASH:
