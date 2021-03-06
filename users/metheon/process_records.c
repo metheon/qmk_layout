@@ -227,6 +227,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         return false;
     }
     switch (keycode) {
+        case CPS_DSBL:
+            if (pressed) return false;
+            disable_all();
+            return false;    
         case SCRM_SNK:
             if (pressed) return false;
             toggle_screaming_snake_case();

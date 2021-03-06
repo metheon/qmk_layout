@@ -33,6 +33,7 @@ enum keycodes {
     CAPSWORD,               // CAPITALIZES next word
     SNK_CASE,               // snake_case
     SCRM_SNK,               // SCREAMING_SNAKE_CASE
+    CPS_DSBL,               // Disables any caps word mode
     // SECRETS
     SECRET00,
     SECRET01,
