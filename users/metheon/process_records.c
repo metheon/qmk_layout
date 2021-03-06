@@ -3,7 +3,6 @@
 #include "which_os.h"
 #include "window_tab.h"
 #include "metheon.h"
-#include "caps_word.c"
 
 #if (__has_include("secrets.h") && !defined(NO_SECRETS))
 #include "secrets.h"
@@ -228,9 +227,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         return false;
     }
     switch (keycode) {
+        case SCRM_SNK:
+            if (pressed) return false;
+            toggle_screaming_snake_case();
+            return false;    
+        case SNK_CASE:
+            if (pressed) return false;
+            toggle_snake_case();
+            return false;    
         case CAPSWORD:
             if (pressed) return false;
-            caps_word_toggle();
+            toggle_caps_word();
             return false;    
         case SECRET00...SECRET19:
             return secret(keycode, pressed);

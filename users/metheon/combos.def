@@ -1,27 +1,34 @@
 #include "metheon.h"
 //   name            result    chord keys
 
-// /////////////////// //
-// FOUR FINGERS COMBOS //
-// /////////////////// //
-//COMB(ARST_CAPS       ,CAPSWORD ,HOME_A, HOME_R ,HOME_S, HOME_T)
-//COMB(NEIO_CAPS       ,CAPSWORD ,HOME_N, HOME_E ,HOME_I, HOME_O)
 
 // //////////////////// //
 // THREE FINGERS COMBOS //
 // //////////////////// //
-//COMB(WFP_TAB         ,KC_TAB   ,KC_W, KC_F, KC_P)
-//COMB(LUY_STAB        ,KC_STAB  ,KC_L, KC_U, KC_Y)
+COMB(WFP_TAB         ,KC_TAB   ,KC_W, KC_F, KC_P)
+COMB(LUY_STAB        ,KC_STAB  ,KC_L, KC_U, KC_Y)
 COMB(RST_ESC         ,KC_ESC   ,HOME_R, HOME_S, HOME_T)
-COMB(NEI_CPSWRD      ,CAPSWORD ,HOME_N, HOME_E, HOME_I)
+COMB(NEI_ENTER       ,KC_ENTER ,HOME_N, HOME_E, HOME_I)
 
-// ////////////////// //
-// TWO FINGERS COMBOS //
-// ////////////////// //
-//COMB(QW_ESC          ,KC_ESC   ,KC_Q, KC_W)
+COMB(XCD_SNAKE       ,SNK_CASE ,KC_X, KC_C, KC_D)
+COMB(ZXCD_SCREAM     ,SCRM_SNK ,KC_Z, KC_X, KC_C, KC_D)
+COMB(HCD_CPSWRD      ,CAPSWORD ,KC_H, KC_COMMA, KC_DOT)
+COMB(HCDS_SCREAM     ,SCRM_SNK ,KC_H, KC_COMMA, KC_DOT, KC_SLSH)
+
+// ///////////// //
+// SYMBOS COMBOS //
+// ///////////// //
 COMB(CD_MINS         ,KC_MINS  ,KC_C, KC_D)
 COMB(XC_UNDS         ,KC_UNDS  ,KC_X, KC_C)
 COMB(HC_COLN         ,KC_COLN  ,KC_H, KC_COMMA)
 COMB(CD_SCLN         ,KC_SCLN  ,KC_COMMA, KC_DOT)
 COMB(LU_QUOT         ,KC_QUOT  ,KC_L, KC_U)
 COMB(UY_DQT          ,KC_DQT   ,KC_U, KC_Y)
+
+// ///////////// //
+// UNUSED COMBOS //
+// ///////////// //
+//COMB(ARST_CAPS       ,CAPSWORD ,HOME_A, HOME_R ,HOME_S, HOME_T)
+//COMB(NEIO_CAPS       ,CAPSWORD ,HOME_N, HOME_E ,HOME_I, HOME_O)
+//COMB(QW_ESC          ,KC_ESC   ,KC_Q, KC_W)
+

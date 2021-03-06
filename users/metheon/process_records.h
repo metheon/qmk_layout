@@ -1,6 +1,7 @@
 #pragma once
 
 #include QMK_KEYBOARD_H
+#include "caps_word.h"
 
 enum keycodes {
     KC_MAKE = SAFE_RANGE,   // make keyboard:user
@@ -29,7 +30,9 @@ enum keycodes {
     OVERVIEW,               // See all windows on a desktop
     IJ_RNAME,
     IJ_TERM,
-    CAPSWORD,               // Capitalizes next word
+    CAPSWORD,               // CAPITALIZES next word
+    SNK_CASE,               // snake_case
+    SCRM_SNK,               // SCREAMING_SNAKE_CASE
     // SECRETS
     SECRET00,
     SECRET01,

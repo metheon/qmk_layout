@@ -14,6 +14,7 @@ SRC += encoders.c
 SRC += process_records.c
 SRC += which_os.c
 SRC += window_tab.c
+SRC += caps_word.c
 
 VPATH += keyboards/gboards
 
