@@ -3,7 +3,6 @@
 #include QMK_KEYBOARD_H
 #include "encoders.h"
 #include "process_records.h"
-#include "magnet.h"
 #include "window_tab.h"
 #include "leader.h"
 
@@ -14,7 +13,6 @@ enum layers {
     _EXTEND,                // Navigation cluster
     _FUNPAD,                // Left hand funpad (F1 - F12)
     _ADJUST,                // Mainly RGB and media keys, activated when lower and raise is pressed at the same time
-    _MAGNET,                // Layer https://magnet.crowdcafe.com/
     _SECRETS,               // Dedicated layer for all the secrets
     _BL3_BSE,               // Base layer for Borderlands 3
     _BL3_UPR,               // Upper layer for Borderlands 3
@@ -29,7 +27,7 @@ enum layers {
 #define THMB_L3             LT(_LOWER, KC_ENTER)
 #define THMB_R3             LT(_RAISE, KC_BSPC)
 #define THMB_R2             SHIFT
-#define THMB_R1             MO(_MAGNET)
+#define THMB_R1             __NONE__
 
 // Home row mods, using Colemak ... arst <--> neio
 #define HOME_A              LGUI_T(KC_A)

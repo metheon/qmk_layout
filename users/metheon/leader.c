@@ -42,6 +42,52 @@ void matrix_scan_leader(void) {
             SEND_STRING(SS_LCTL( SS_LALT( SS_LSFT("p") ) ) );
         }
 
+        // ////// //
+        // MAGNET //
+        // ////// //
+        SEQ_TWO_KEYS(KC_M, KC_W) {
+            tap_code16(MAGNET_UPPER_LEFT_QUADRANT);
+        }
+        SEQ_TWO_KEYS(KC_M, KC_F) {
+            tap_code16(MAGNET_UPPER_HALF);
+        }
+        SEQ_TWO_KEYS(KC_M, KC_P) {
+            tap_code16(MAGNET_UPPER_RIGHT_QUADRANT);
+        }
+        SEQ_TWO_KEYS(KC_M, KC_R) {
+            tap_code16(MAGNET_LEFT_HALF);
+        }
+        SEQ_TWO_KEYS(KC_M, KC_S) {
+            tap_code16(MAGNET_FULLSCREEN);
+        }
+        SEQ_TWO_KEYS(KC_M, KC_T) {
+            tap_code16(MAGNET_RIGHT_HALF);
+        }
+        SEQ_TWO_KEYS(KC_M, KC_X) {
+            tap_code16(MAGNET_BOTTOM_LEFT_QUADRANT);
+        }
+        SEQ_TWO_KEYS(KC_M, KC_C) {
+            tap_code16(MAGNET_BOTTOM_HALF);
+        }
+        SEQ_TWO_KEYS(KC_M, KC_D) {
+            tap_code16(MAGNET_BOTTOM_RIGHT_QUADRANT);
+        }
+        SEQ_TWO_KEYS(KC_M, KC_N) {
+            tap_code16(MAGNET_LEFT_THIRD);
+        }
+        SEQ_TWO_KEYS(KC_M, KC_E) {
+            tap_code16(MAGNET_MIDDLE_THIRD);
+        }
+        SEQ_TWO_KEYS(KC_M, KC_I) {
+            tap_code16(MAGNET_RIGHT_THIRD);
+        }
+        SEQ_TWO_KEYS(KC_M, KC_L) {
+            tap_code16(MAGNET_LEFT_TWO_THIRDS);
+        }
+        SEQ_TWO_KEYS(KC_M, KC_U) {
+            tap_code16(MAGNET_RIGHT_TWO_THIRDS);
+        }
+
         // /////// //
         // Secrets //
         // /////// //
