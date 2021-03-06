@@ -28,7 +28,7 @@
 #define MAC_PRV_DSKT         LCTL(KC_LEFT)
 #define MAC_OVERVIEW         KC_NO // unknown, check later
 
-#define MAC_DEL_WRD         LALT(KC_BSPC)
+#define MAC_DEL_WRD          LALT(KC_BSPC)
 
 // Linux uses EurKey
 #define LNX_AE               RALT(KC_Q)
