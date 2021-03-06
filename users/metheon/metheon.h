@@ -23,12 +23,12 @@ enum layers {
 #define ________            _______
 
 #define SHIFT               OSM(MOD_LSFT)
-#define THMB_L1             LT(_FUNPAD, KC_TAB)
+#define THMB_L1             MO(_FUNPAD)
 #define THMB_L2             LT(_EXTEND, KC_SPACE)
-#define THMB_L3             LT(_LOWER, KC_DEL)
+#define THMB_L3             LT(_LOWER, KC_ENTER)
 #define THMB_R3             LT(_RAISE, KC_BSPC)
-#define THMB_R2             LT(_EXTEND, KC_ENTER)
-#define THMB_R1             LT(_MAGNET, KC_ESC)
+#define THMB_R2             SHIFT
+#define THMB_R1             MO(_MAGNET)
 
 // Home row mods, using Colemak ... arst <--> neio
 #define HOME_A              LGUI_T(KC_A)

@@ -4,16 +4,16 @@
 // /////////////////// //
 // FOUR FINGERS COMBOS //
 // /////////////////// //
-COMB(ARST_CAPS       ,CAPSWORD ,HOME_A, HOME_R ,HOME_S, HOME_T)
-COMB(NEIO_CAPS       ,CAPSWORD ,HOME_N, HOME_E ,HOME_I, HOME_O)
+//COMB(ARST_CAPS       ,CAPSWORD ,HOME_A, HOME_R ,HOME_S, HOME_T)
+//COMB(NEIO_CAPS       ,CAPSWORD ,HOME_N, HOME_E ,HOME_I, HOME_O)
 
 // //////////////////// //
 // THREE FINGERS COMBOS //
 // //////////////////// //
 //COMB(WFP_TAB         ,KC_TAB   ,KC_W, KC_F, KC_P)
 //COMB(LUY_STAB        ,KC_STAB  ,KC_L, KC_U, KC_Y)
-//COMB(RST_SFT         ,SHIFT    ,HOME_R, HOME_S, HOME_T)
-//COMB(NEI_SFT         ,SHIFT    ,HOME_N, HOME_E, HOME_I)
+COMB(RST_ESC         ,KC_ESC   ,HOME_R, HOME_S, HOME_T)
+COMB(NEI_CPSWRD      ,CAPSWORD ,HOME_N, HOME_E, HOME_I)
 
 // ////////////////// //
 // TWO FINGERS COMBOS //
