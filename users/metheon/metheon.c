@@ -5,7 +5,6 @@
 #endif
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    state = update_tri_layer_state(state, _FUNPAD, _MAGNET, _SECRETS);
     state = update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
     return state;
 };
@@ -51,6 +50,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 
 void matrix_scan_user(void) {
     matrix_scan_encoders();
+    matrix_scan_leader();
     matrix_scan_window_tab();
 }
 
@@ -91,9 +91,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_EXTEND] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------+--------.                                     .--------+--------+--------+--------+--------+--------.
-         __NONE__,PREV_TAB,NEXT_TAB,PREV_WIN,NEXT_WIN,__NONE__,                                      KC_PGUP ,KC_HOME ,KC_UP   ,KC_END  ,KC_DEL  ,__NONE__,
+         __NONE__,PREV_TAB,NEXT_TAB,PREV_WIN,NEXT_WIN,SEARCH  ,                                      KC_PGUP ,KC_HOME ,KC_UP   ,KC_END  ,KC_DEL  ,__NONE__,
     //  |--------+--------+--------+--------+--------+--------|                                     |--------+--------+--------+--------+--------+--------|
-         __NONE__,KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,SEARCH  ,                                      KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RGHT ,KC_ENTER,__NONE__,
+         __NONE__,KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,KC_LEAD ,                                      KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RGHT ,KC_ENTER,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------. .--------+--------+--------+--------+--------+--------+--------+--------|
          __NONE__,LOCK    ,SEARCH  ,KC_STAB ,KC_TAB  ,__NONE__,__NONE__,__NONE__,  __NONE__,__NONE__,__NONE__,KC_BSPC ,KC_DEL  ,__NONE__,__NONE__,__NONE__,
     //  '--------+--------+--------+--------+--------+--------+--------+--------| |--------+--------+--------+--------+--------+--------+--------+--------'
@@ -129,17 +129,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          __NONE__,__NONE__,MG_LF_HF,MG_FSCR ,MG_RT_HF,__NONE__,                                      ________,MG_LF_TD,MG_MD_TD,MG_RT_TD,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------. .--------+--------+--------+--------+--------+--------+--------+--------|
          __NONE__,__NONE__,MG_BL_QD,MG_BT_HF,MG_BR_QD,__NONE__,__NONE__,__NONE__,  __NONE__,__NONE__,__NONE__,MG_L2_TD,MG_R2_TD,__NONE__,__NONE__,__NONE__,
-    //  '--------+--------+--------+--------+--------+--------+--------+--------| |--------+--------+--------+--------+--------+--------+--------+--------'
-                                    ________,________,________,________,________,  ________,________,________,________,________
-    //                             '--------+--------+--------+--------+--------' '--------+--------+--------+--------+--------'
-    ),
-    [_SECRETS] = LAYOUT_metheon(
-    //  .--------+--------+--------+--------+--------+--------.                                     .--------+--------+--------+--------+--------+--------.
-         __NONE__,SECRET00,SECRET01,SECRET02,SECRET03,SECRET04,                                      SECRET05,SECRET06,SECRET07,SECRET08,SECRET09,__NONE__,
-    //  |--------+--------+--------+--------+--------+--------|                                     |--------+--------+--------+--------+--------+--------|
-         __NONE__,SECRET10,SECRET11,SECRET12,SECRET13,SECRET14,                                      SECRET15,SECRET16,SECRET17,SECRET18,SECRET19,__NONE__,
-    //  |--------+--------+--------+--------+--------+--------+--------+--------. .--------+--------+--------+--------+--------+--------+--------+--------|
-         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,  __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  '--------+--------+--------+--------+--------+--------+--------+--------| |--------+--------+--------+--------+--------+--------+--------+--------'
                                     ________,________,________,________,________,  ________,________,________,________,________
     //                             '--------+--------+--------+--------+--------' '--------+--------+--------+--------+--------'

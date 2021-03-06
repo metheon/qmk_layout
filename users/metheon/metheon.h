@@ -5,6 +5,7 @@
 #include "process_records.h"
 #include "magnet.h"
 #include "window_tab.h"
+#include "leader.h"
 
 enum layers {
     _BASE,                  // Colemak-DH

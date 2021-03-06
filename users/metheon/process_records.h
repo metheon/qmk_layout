@@ -34,27 +34,6 @@ enum keycodes {
     SNK_CASE,               // snake_case
     SCRM_SNK,               // SCREAMING_SNAKE_CASE
     CPS_DSBL,               // Disables any caps word mode
-    // SECRETS
-    SECRET00,
-    SECRET01,
-    SECRET02,
-    SECRET03,
-    SECRET04,
-    SECRET05,
-    SECRET06,
-    SECRET07,
-    SECRET08,
-    SECRET09,
-    SECRET10,
-    SECRET11,
-    SECRET12,
-    SECRET13,
-    SECRET14,
-    SECRET15,
-    SECRET16,
-    SECRET17,
-    SECRET18,
-    SECRET19,
 };
 
 bool tap_kc_ae(bool key_down);
