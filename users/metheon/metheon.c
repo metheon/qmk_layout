@@ -69,11 +69,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_LOWER] = LAYOUT_metheon( // add funpad to this layer, combos for 12 as , and ,. as . mayby others?
     //  .--------+--------+--------+--------+--------+--------.                                     .--------+--------+--------+--------+--------+--------.
-         __NONE__,KC_SLSH ,KC_ASTR ,KC_MINS ,KC_PLUS ,KC_EQL  ,                                      KC_PERC ,KC_7    ,KC_8    ,KC_9    ,__NONE__,__NONE__,
+         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,                                      KC_EQL  ,KC_7    ,KC_8    ,KC_9    ,KC_ASTR ,__NONE__,
     //  |--------+--------+--------+--------+--------+--------|                                     |--------+--------+--------+--------+--------+--------|
-         __NONE__,KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,KC_LPRN ,                                      KC_RPRN ,KC_4    ,KC_5    ,KC_6    ,KC_0    ,__NONE__,
+         __NONE__,KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,__NONE__,                                      KC_PLUS ,KC_4    ,KC_5    ,KC_6    ,KC_0    ,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------. .--------+--------+--------+--------+--------+--------+--------+--------|
-         __NONE__,__NONE__,KC_COMMA,KC_DOT  ,__NONE__,LOCK    ,__NONE__,__NONE__,  __NONE__,__NONE__,__NONE__,KC_1    ,KC_2    ,KC_3    ,__NONE__,__NONE__,
+         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,LOCK    ,__NONE__,__NONE__,  __NONE__,__NONE__,KC_MINS ,KC_1    ,KC_2    ,KC_3    ,KC_SLSH ,__NONE__,
     //  '--------+--------+--------+--------+--------+--------+--------+--------| |--------+--------+--------+--------+--------+--------+--------+--------'
                                     ________,________,________,THMB_R2 ,________,  ________,THMB_R2 ,________,________,________
     //                             '--------+--------+--------+--------+--------' '--------+--------+--------+--------+--------'
