@@ -47,6 +47,7 @@ void disable_all(void) {
     snake_case_enabled = false;
 }
 
+static bool last_press_was_space = false;
 bool process_caps_word(uint16_t keycode, keyrecord_t *record) {
     /* Return value determines if processing the keycode should continue to core code.
      * This allows more customizability. */
@@ -62,20 +63,19 @@ bool process_caps_word(uint16_t keycode, keyrecord_t *record) {
 
         // we end caps word on one of the following keypresses
         switch (keycode) {
-            case KC_ESC:
-            case KC_ENT:
-            case KC_TAB:
-            case KC_DOT:
-            case KC_COMM:
-                if (record->event.pressed) {
-                    disable_all();
-                }
-                return true;
             case KC_SPC:
                 if (snake_case_enabled) {
                     // _ on space
                     if (record->event.pressed) {
-                        register_code16(KC_UNDS);
+                        if (last_press_was_space) {
+                            last_press_was_space = false;
+                            disable_all();
+                            tap_code(KC_BSPC);
+                            return true;
+                        } else {
+                            last_press_was_space = true;
+                            register_code16(KC_UNDS);
+                        }
                     } else {
                         unregister_code16(KC_UNDS);
                     }
@@ -86,6 +86,18 @@ bool process_caps_word(uint16_t keycode, keyrecord_t *record) {
                     }
                     return true;
                 }
+            case KC_ESC:
+            case KC_ENT:
+            case KC_TAB:
+            case KC_DOT:
+            case KC_COMM:
+                if (record->event.pressed) {
+                    last_press_was_space = false;
+                    disable_all();
+                }
+                return true;
+            default:
+                last_press_was_space = false;
         }
     }
     return true;
