@@ -11,6 +11,15 @@ enum keycodes {
     KC_AE,                  // Æ
     KC_OE,                  // Ø
     KC_AA,                  // Å
+    KC_AC_A,                // Á
+    KC_AC_E,                // É
+    KC_AC_I,                // Í
+    KC_AC_O,                // Ó
+    KC_AC_U,                // Ú
+    KC_DI_U,                // Ü
+    KC_TI_N,                // Ñ
+    INV_EXCL,               // ¡
+    INV_QUES,               // ¿
     KC_EUR,                 // €
     KC_PND,                 // £
     UNDO,

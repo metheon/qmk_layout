@@ -51,6 +51,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case HOME_5:
         case HOME_6:
         case HOME_0:
+        case ACC_D:
+        case ACC_H:
             return TAPPING_TERM - 100; // 400-100=300
         case SPC_EXT:
         case ENT_LWR:
@@ -76,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------| |--------+--------+--------+--------+--------|
          HOME_A  ,HOME_R  ,HOME_S  ,HOME_T  ,KC_G    ,  KC_M    ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,
     //  |--------+--------+--------+--------+--------. .--------+--------+--------+--------+--------|
-         KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,  KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,
+         KC_Z    ,KC_X    ,KC_C    ,ACC_D   ,KC_V    ,  KC_K    ,ACC_H   ,KC_COMMA,KC_DOT  ,KC_SLSH ,
     //  '--------+--------+--------+--------+--------| |--------+--------+--------+--------+--------'
                            BSE_E01 ,SPC_EXT ,ENT_LWR ,  BSPC_RSE,OSM_SFT ,BSE_E02  
     //                    '--------+--------+--------' '--------+--------+--------'
@@ -123,6 +125,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          __NONE__,KC_MUTE ,KC_VOLD ,KC_VOLU ,__NONE__,  __NONE__,RGB_RMOD,RGB_HUD ,RGB_SAD ,RGB_VAD ,
     //  '--------+--------+--------+--------+--------| |--------+--------+--------+--------+--------'
                            ADJ_E01 ,________,________,  ________,________,ADJ_E02
+    //                    '--------+--------+--------' '--------+--------+--------'
+    ),
+    [_ACCENTS] = LAYOUT_metheon(
+    //  .--------+--------+--------+--------+--------. .--------+--------+--------+--------+--------.
+         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,  __NONE__,__NONE__,KC_AC_U ,KC_DI_U ,__NONE__,
+    //  |--------+--------+--------+--------+--------| |--------+--------+--------+--------+--------|
+         KC_AC_A ,KC_AE   ,KC_OE   ,KC_AA   ,__NONE__,  __NONE__,KC_TI_N ,KC_AC_E ,KC_AC_I ,KC_AC_O ,
+    //  |--------+--------+--------+--------+--------. .--------+--------+--------+--------+--------|
+         INV_EXCL,__NONE__,__NONE__,__NONE__,__NONE__,  __NONE__,__NONE__,__NONE__,__NONE__,INV_QUES,
+    //  '--------+--------+--------+--------+--------| |--------+--------+--------+--------+--------'
+                           ACC_E01 ,________,________,  ________,________,ACC_E02
     //                    '--------+--------+--------' '--------+--------+--------'
     )
 };

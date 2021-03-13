@@ -12,15 +12,19 @@ enum layers {
     _RAISE,
     _EXTEND,                // Navigation cluster
     _ADJUST,                // Mainly RGB and media keys, activated when lower and raise is pressed at the same time
+    _ACCENTS,               // Danish and Spanish accents
 };
 
 #define __NONE__            KC_NO
 #define ________            _______
 
+// Layers keys
 #define SPC_EXT             LT(_EXTEND, KC_SPACE)
 #define ENT_LWR             LT(_LOWER, KC_ENTER)
 #define BSPC_RSE            LT(_RAISE, KC_BSPC)
 #define OSM_SFT             OSM(MOD_LSFT)
+#define ACC_D               LT(_ACCENTS, KC_D)
+#define ACC_H               LT(_ACCENTS, KC_H)
 
 // Home row mods, using Colemak ... arst <--> neio
 #define HOME_A              LGUI_T(KC_A)
