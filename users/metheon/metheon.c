@@ -83,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            BSE_E01 ,SPC_EXT ,ENT_LWR ,  BSPC_RSE,OSM_SFT ,BSE_E02  
     //                    '--------+--------+--------' '--------+--------+--------'
     ),
-    [_LOWER] = LAYOUT_metheon( // combos for 12 as , and 23 as . maybe others?
+    [_LOWER] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------. .--------+--------+--------+--------+--------.
          KC_F9   ,KC_F10  ,KC_F11  ,KC_F12  ,__NONE__,  KC_EQL  ,KC_7    ,KC_8    ,KC_9    ,KC_ASTR ,
     //  |--------+--------+--------+--------+--------| |--------+--------+--------+--------+--------|
