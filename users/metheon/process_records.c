@@ -30,6 +30,16 @@
 
 #define MAC_DEL_WRD          LALT(KC_BSPC)
 
+#define MAC_KC_AC_A          KC_NO
+#define MAC_KC_AC_E          KC_NO
+#define MAC_KC_AC_I          KC_NO
+#define MAC_KC_AC_O          KC_NO
+#define MAC_KC_AC_U          KC_NO
+#define MAC_KC_DI_U          KC_NO
+#define MAC_KC_TI_N          KC_NO
+#define MAC_INV_EXCL         KC_NO
+#define MAC_INV_QUES         KC_NO
+
 // Linux uses EurKey
 #define LNX_AE               RALT(KC_Q)
 #define LNX_OE               RALT(KC_L)
@@ -53,7 +63,17 @@
 #define LNX_PRV_DSKT         LGUI(LCTL(KC_UP))
 #define LNX_OVERVIEW         KC_LGUI
 
-#define LNX_DEL_WRD         LCTL(KC_BSPC)
+#define LNX_DEL_WRD          LCTL(KC_BSPC)
+
+#define LNX_KC_AC_A          RALT(KC_X)
+#define LNX_KC_AC_E          RALT(KC_G)
+#define LNX_KC_AC_I          RALT(KC_B)
+#define LNX_KC_AC_O          RALT(KC_DOT)
+#define LNX_KC_AC_U          RALT(KC_J)
+#define LNX_KC_DI_U          RALT(KC_U)
+#define LNX_KC_TI_N          RALT(KC_N)
+#define LNX_INV_EXCL         RALT(KC_1)
+#define LNX_INV_QUES         RALT(KC_SLSH)
 
 // call this function for plain tapping a keycode which differs on the OS'es
 bool tap_os_key(uint16_t lnx_keycode, uint16_t mac_keycode, bool key_down) {
@@ -162,6 +182,24 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return tap_kc_oe(pressed);
         case KC_AA:
             return tap_kc_aa(pressed);
+        case KC_AC_A:
+            return tap_os_key(LNX_KC_AC_A,MAC_KC_AC_A, pressed);
+        case KC_AC_E:
+            return tap_os_key(LNX_KC_AC_E,MAC_KC_AC_E, pressed);
+        case KC_AC_I:
+            return tap_os_key(LNX_KC_AC_I,MAC_KC_AC_I, pressed);
+        case KC_AC_O:
+            return tap_os_key(LNX_KC_AC_O,MAC_KC_AC_O, pressed);
+        case KC_AC_U:
+            return tap_os_key(LNX_KC_AC_U,MAC_KC_AC_U, pressed);
+        case KC_DI_U:
+            return tap_os_key(LNX_KC_DI_U,MAC_KC_DI_U, pressed);
+        case KC_TI_N:
+            return tap_os_key(LNX_KC_TI_N,MAC_KC_TI_N, pressed);
+        case INV_EXCL:
+            return tap_os_key(LNX_INV_EXCL,MAC_INV_EXCL, pressed);
+        case INV_QUES:
+            return tap_os_key(LNX_INV_QUES,MAC_INV_QUES, pressed);
         case KC_EUR:
             return tap_os_key(LNX_EUR, MAC_EUR, pressed);
         case KC_PND:
