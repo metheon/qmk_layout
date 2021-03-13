@@ -91,10 +91,11 @@ void matrix_scan_leader(void) {
         // /////// //
         // Secrets //
         // /////// //
+
+        // 0 not in use
         SEQ_ONE_KEY(KC_P) {
-            send_string(secrets[0]);
+            send_string(secrets[1]);
         }
-        // 1 not in use
         SEQ_THREE_KEYS(KC_P, KC_N, KC_I) {
             send_string(secrets[2]);
         }
