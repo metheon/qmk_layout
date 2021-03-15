@@ -45,7 +45,3 @@ enum keycodes {
     CPS_DSBL,               // Disables any caps word mode
 };
 
-bool tap_kc_ae(bool key_down);
-bool tap_kc_oe(bool key_down);
-bool tap_kc_aa(bool key_down);
-

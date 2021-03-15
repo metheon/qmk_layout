@@ -1,5 +1,4 @@
 #include "process_records.h"
-#include "version.h"
 #include "which_os.h"
 #include "window_tab.h"
 #include "metheon.h"
@@ -76,166 +75,138 @@
 #define LNX_INV_QUES         RALT(KC_SLSH)
 
 // call this function for plain tapping a keycode which differs on the OS'es
-bool tap_os_key(uint16_t lnx_keycode, uint16_t mac_keycode, bool key_down) {
-    if (is_mac()) {
-        if (key_down) {
-            register_code16(mac_keycode);
-        } else {
-            unregister_code16(mac_keycode);
-        }
-        return false;
-    } else if (is_linux()) {
-        if (key_down) {
-            register_code16(lnx_keycode);
-        } else {
-            unregister_code16(lnx_keycode);
-        }
-        return false;
+void tap_os_key(uint16_t lnx_keycode, uint16_t mac_keycode, bool pressed) {
+    if (pressed) {
+        tap_code16(is_linux() ? lnx_keycode : mac_keycode);
     }
-    return true;
-}
-
-bool tap_kc_ae(bool key_down) {
-    return tap_os_key(LNX_AE, MAC_AE, key_down);
-}
-
-bool tap_kc_oe(bool key_down) {
-    return tap_os_key(LNX_OE, MAC_OE, key_down);
-}
-
-bool tap_kc_aa(bool key_down) {
-    return tap_os_key(LNX_AA, MAC_AA, key_down);
-}
-
-bool make(keyrecord_t *record) {
-    if (!record->event.pressed) {
-        SEND_STRING("make clean && make -j 8 " QMK_KEYBOARD ":" QMK_KEYMAP SS_TAP(X_ENTER));
-        return false;
-    }
-    return true;
-}
-
-bool flash(keyrecord_t *record) {
-    if (!record->event.pressed) {
-        SEND_STRING("make clean && make -j 8 " QMK_KEYBOARD ":" QMK_KEYMAP ":flash" SS_TAP(X_ENTER));
-        return false;
-    }
-    return true;
-}
-
-bool version(keyrecord_t *record) {
-    if (!record->event.pressed) {
-        SEND_STRING(QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
-        return false;
-    }
-    return true;
-}
-
-bool which_os(keyrecord_t *record) {
-    if (record->event.pressed) {
-        if(is_linux()) {
-            SEND_STRING("LINUX");
-            return false;
-        } else if(is_mac()) {
-            SEND_STRING("MAC");
-            return false;
-        }
-    }
-    return true;
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    const bool pressed = record->event.pressed;
+    // caps word related processing
     if (!process_caps_word(keycode, record)) {
         return false;
     }
+
+    const bool pressed = record->event.pressed;
     switch (keycode) {
+        // caps word related cases (start and stop modes)
         case CPS_DSBL:
-            if (pressed) return false;
-            disable_all();
-            return false;    
+            if(pressed) {
+                disable_all();
+            }
+            break;
         case SCRM_SNK:
-            if (pressed) return false;
-            toggle_screaming_snake_case();
-            return false;    
+            if(pressed) {
+                toggle_screaming_snake_case();
+            }
+            break;
         case SNK_CASE:
-            if (pressed) return false;
-            toggle_snake_case();
-            return false;    
+            if (pressed) {
+                toggle_snake_case();
+            }
+            break;
         case CAPSWORD:
-            if (pressed) return false;
-            toggle_caps_word();
-            return false;    
-        case KC_MAKE:
-            return make(record);
-        case KC_FLASH:
-            return flash(record);
-        case KC_VRSN:
-             return version(record);
-        case WHICH_OS:
-            return which_os(record);
+            if (pressed) {
+                toggle_caps_word();
+            }
+            break;
+        // all tap_os_key cases
         case TEXT_MOD:
-            return tap_os_key(KC_LCTL, KC_LALT, pressed);
+            tap_os_key(KC_LCTL, KC_LALT, pressed); 
+            break;
         case KC_AE:
-            return tap_kc_ae(pressed);
+            tap_os_key(LNX_AE ,MAC_AE, pressed);
+            break;
         case KC_OE:
-            return tap_kc_oe(pressed);
+            tap_os_key(LNX_OE ,MAC_OE, pressed);
+            break;
         case KC_AA:
-            return tap_kc_aa(pressed);
+            tap_os_key(LNX_AA ,MAC_AA, pressed);
+            break;
         case KC_AC_A:
-            return tap_os_key(LNX_KC_AC_A,MAC_KC_AC_A, pressed);
+            tap_os_key(LNX_KC_AC_A,MAC_KC_AC_A, pressed);
+            break;
         case KC_AC_E:
-            return tap_os_key(LNX_KC_AC_E,MAC_KC_AC_E, pressed);
+            tap_os_key(LNX_KC_AC_E,MAC_KC_AC_E, pressed);
+            break;
         case KC_AC_I:
-            return tap_os_key(LNX_KC_AC_I,MAC_KC_AC_I, pressed);
+            tap_os_key(LNX_KC_AC_I,MAC_KC_AC_I, pressed);
+            break;
         case KC_AC_O:
-            return tap_os_key(LNX_KC_AC_O,MAC_KC_AC_O, pressed);
+            tap_os_key(LNX_KC_AC_O,MAC_KC_AC_O, pressed);
+            break;
         case KC_AC_U:
-            return tap_os_key(LNX_KC_AC_U,MAC_KC_AC_U, pressed);
+            tap_os_key(LNX_KC_AC_U,MAC_KC_AC_U, pressed);
+            break;
         case KC_DI_U:
-            return tap_os_key(LNX_KC_DI_U,MAC_KC_DI_U, pressed);
+            tap_os_key(LNX_KC_DI_U,MAC_KC_DI_U, pressed);
+            break;
         case KC_TI_N:
-            return tap_os_key(LNX_KC_TI_N,MAC_KC_TI_N, pressed);
+            tap_os_key(LNX_KC_TI_N,MAC_KC_TI_N, pressed);
+            break;
         case INV_EXCL:
-            return tap_os_key(LNX_INV_EXCL,MAC_INV_EXCL, pressed);
+            tap_os_key(LNX_INV_EXCL,MAC_INV_EXCL, pressed);
+            break;
         case INV_QUES:
-            return tap_os_key(LNX_INV_QUES,MAC_INV_QUES, pressed);
+            tap_os_key(LNX_INV_QUES,MAC_INV_QUES, pressed);
+            break;
         case KC_EUR:
-            return tap_os_key(LNX_EUR, MAC_EUR, pressed);
+            tap_os_key(LNX_EUR, MAC_EUR, pressed);
+            break;
         case KC_PND:
-            return tap_os_key(LNX_PND, MAC_PND, pressed);
+            tap_os_key(LNX_PND, MAC_PND, pressed);
+            break;
         case UNDO:
-            return tap_os_key(LNX_UNDO, MAC_UNDO, pressed);
+            tap_os_key(LNX_UNDO, MAC_UNDO, pressed);
+            break;
         case CUT:
-            return tap_os_key(LNX_CUT, MAC_CUT, pressed);
+            tap_os_key(LNX_CUT, MAC_CUT, pressed);
+            break;
         case COPY:
-            return tap_os_key(LNX_COPY, MAC_COPY, pressed);
+            tap_os_key(LNX_COPY, MAC_COPY, pressed);
+            break;
         case PASTE:
-            return tap_os_key(LNX_PSTE, MAC_PSTE, pressed);
+            tap_os_key(LNX_PSTE, MAC_PSTE, pressed);
+            break;
         case NEXT_WRD:
-            return tap_os_key(LNX_NEXT_WRD, MAC_NEXT_WRD, pressed);
+            tap_os_key(LNX_NEXT_WRD, MAC_NEXT_WRD, pressed);
+            break;
         case PREV_WRD:
-            return tap_os_key(LNX_PREV_WRD, MAC_PREV_WRD, pressed);
-        case NEXT_WIN:
-            return mod_tab(record, false);
-        case PREV_WIN:
-            return mod_tab(record, S(true));
+            tap_os_key(LNX_PREV_WRD, MAC_PREV_WRD, pressed);
+            break;
         case LOCK:
-            return tap_os_key(LNX_LOCK, MAC_LOCK, pressed);
+            tap_os_key(LNX_LOCK, MAC_LOCK, pressed);
+            break;
         case SEARCH:
-            return tap_os_key(LNX_SEARCH, MAC_SEARCH, pressed);
+            tap_os_key(LNX_SEARCH, MAC_SEARCH, pressed);
+            break;
          case IJ_RNAME:
-            return tap_os_key(LNX_IJ_RNAME, MAC_IJ_RNAME, pressed);
+            tap_os_key(LNX_IJ_RNAME, MAC_IJ_RNAME, pressed);
+            break;
         case IJ_TERM:
-            return tap_os_key(LNX_IJ_TERM, MAC_IJ_TERM, pressed);
+            tap_os_key(LNX_IJ_TERM, MAC_IJ_TERM, pressed);
+            break;
         case PRV_DSKT:
-            return tap_os_key(LNX_PRV_DSKT, MAC_PRV_DSKT, pressed);
+            tap_os_key(LNX_PRV_DSKT, MAC_PRV_DSKT, pressed);
+            break;
         case NXT_DSKT:
-            return tap_os_key(LNX_NXT_DSKT, MAC_NXT_DSKT, pressed);
+            tap_os_key(LNX_NXT_DSKT, MAC_NXT_DSKT, pressed);
+            break;
         case OVERVIEW:
-            return tap_os_key(LNX_OVERVIEW, MAC_OVERVIEW, pressed);
+            tap_os_key(LNX_OVERVIEW, MAC_OVERVIEW, pressed);
+            break;
         case DEL_WRD:
-            return tap_os_key(LNX_DEL_WRD, MAC_DEL_WRD, pressed);
+            tap_os_key(LNX_DEL_WRD, MAC_DEL_WRD, pressed);
+            break;
+        // all mod_tab cases
+        case NEXT_WIN:
+            mod_tab(record, false);
+            break;
+        case PREV_WIN:
+            mod_tab(record, S(true));
+            break;
+        default:
+            return true;
     }
-    return true;
+    return false;
 };

@@ -1,4 +1,5 @@
 #include "leader.h"
+#include "version.h"
 
 #if (__has_include("secrets.h") && !defined(NO_SECRETS))
 #include "secrets.h"
@@ -42,8 +43,21 @@ void matrix_scan_leader(void) {
             SEND_STRING(SS_LCTL( SS_LALT( SS_LSFT("p") ) ) );
         }
 
+        // ////////////////////// //
+        // Keyboard Related Stuff //
+        // ////////////////////// //
+        SEQ_TWO_KEYS(KC_Q, KC_M) {
+            SEND_STRING("make clean && make -j 8 " QMK_KEYBOARD ":" QMK_KEYMAP SS_TAP(X_ENTER));
+        }
+        SEQ_TWO_KEYS(KC_Q, KC_F) {
+            SEND_STRING("make clean && make -j 8 " QMK_KEYBOARD ":" QMK_KEYMAP ":flash" SS_TAP(X_ENTER));
+        }
+        SEQ_TWO_KEYS(KC_Q, KC_V) {
+            SEND_STRING(QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
+        }
+
         // ////// //
-        // MAGNET //
+        // Magnet //
         // ////// //
         SEQ_TWO_KEYS(KC_M, KC_W) {
             tap_code16(MAGNET_UPPER_LEFT_QUADRANT);
