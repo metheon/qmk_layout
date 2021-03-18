@@ -1,0 +1,36 @@
+// danish letters
+OSKEY(KC_AE,        RALT(KC_Q),         RALT(KC_QUOT))          // Æ
+OSKEY(KC_OE,        RALT(KC_L),         RALT(KC_O))             // Ø
+OSKEY(KC_AA,        RALT(KC_W),         RALT(KC_A))             // Å
+
+// danish/spanish accents
+OSKEY(KC_AC_E,      RALT(KC_G),         KC_NO)                  // É
+
+// spanish letters/accents
+OSKEY(KC_AC_A,      RALT(KC_X),         KC_NO)                  // Á
+OSKEY(KC_AC_I,      RALT(KC_B),         KC_NO)                  // Í
+OSKEY(KC_AC_O,      RALT(KC_DOT),       KC_NO)                  // Ó
+OSKEY(KC_AC_U,      RALT(KC_J),         KC_NO)                  // Ú
+OSKEY(KC_DI_U,      RALT(KC_U),         KC_NO)                  // Ü
+OSKEY(KC_TI_N,      RALT(KC_N),         KC_NO)                  // Ñ
+OSKEY(INV_EXCL,     RALT(KC_1),         KC_NO)                  // ¡
+OSKEY(INV_QUES,     RALT(KC_SLSH),      KC_NO)                  // ¿
+
+// other symbols
+OSKEY(KC_EUR,       RALT(KC_5),         LSFT(RALT(KC_2)))       // €
+OSKEY(KC_PND,       RALT(KC_4),         RALT(KC_3))             // £
+
+// clipboard
+OSKEY(UNDO,         LCTL(KC_Z),         LGUI(KC_Z))             // Undo
+OSKEY(CUT,          LCTL(KC_X),         LGUI(KC_X))             // Cut
+OSKEY(COPY,         LCTL(KC_C),         LGUI(KC_C))             // Copy
+OSKEY(PASTE,        LCTL(KC_V),         LGUI(KC_V))             // Paste
+
+// utilities
+OSKEY(LOCK,          LGUI(KC_ESC),          LCTL(LGUI(KC_Q)))   // Lock computer      
+OSKEY(SEARCH,        LGUI(KC_SLSH),         LGUI(KC_SPACE))     // Search 
+OSKEY(NXT_DSKT,      LGUI(LCTL(KC_DOWN)),   LCTL(KC_RIGHT))     // Next Desktop
+OSKEY(PRV_DSKT,      LGUI(LCTL(KC_UP)),     LCTL(KC_LEFT))      // Previous Desktop
+OSKEY(OVERVIEW,      KC_LGUI,               KC_NO)              // Overview/Exposé
+OSKEY(DEL_WRD,       LCTL(KC_BSPC),         LALT(KC_BSPC))      // Delete word
+
