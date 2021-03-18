@@ -15,6 +15,11 @@ COMB(ZXCD_SCREAM     ,SCRM_SNK ,KC_Z, KC_X, KC_C, ACC_D)
 COMB(HCD_CPSWRD      ,CAPSWORD ,ACC_H, KC_COMMA, KC_DOT)
 COMB(HCDS_CPSLCK     ,KC_CAPS  ,ACC_H, KC_COMMA, KC_DOT, KC_SLSH)
 
+// //////////// //
+// THUMB COMBOS //
+// //////////// //
+COMB(OSL_ACCENTS     ,OSL(_ACCENTS), SPC_EXT, OSM_SFT)
+
 // ////////////// //
 // SYMBOLS COMBOS //
 // ////////////// //
