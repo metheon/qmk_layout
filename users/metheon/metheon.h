@@ -23,8 +23,7 @@ enum layers {
 #define ENT_LWR             LT(_LOWER, KC_ENTER)
 #define BSPC_RSE            LT(_RAISE, KC_BSPC)
 #define OSM_SFT             OSM(MOD_LSFT)
-#define ACC_D               LT(_ACCENTS, KC_D)
-#define ACC_H               LT(_ACCENTS, KC_H)
+#define ACCENTS             OSL(_ACCENTS)
 
 // Home row mods, using Colemak ... arst <--> neio
 #define HOME_A              LGUI_T(KC_A)

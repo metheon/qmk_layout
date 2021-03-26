@@ -33,4 +33,6 @@ OSKEY(NXT_DSKT,      LGUI(LCTL(KC_DOWN)),   LCTL(KC_RIGHT))     // Next Desktop
 OSKEY(PRV_DSKT,      LGUI(LCTL(KC_UP)),     LCTL(KC_LEFT))      // Previous Desktop
 OSKEY(OVERVIEW,      KC_LGUI,               KC_NO)              // Overview/Exposé
 OSKEY(DEL_WRD,       LCTL(KC_BSPC),         LALT(KC_BSPC))      // Delete word
+OSKEY(ZOOM_AUD,      LCTL(LSFT(KC_A)),      LGUI(LSFT(KC_A)))   // Zoom Audio Off/On
+OSKEY(ZOOM_VID,      LCTL(LSFT(KC_V)),      LGUI(LSFT(KC_V)))   // Zoom Video Off/On
 
