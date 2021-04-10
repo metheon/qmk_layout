@@ -16,6 +16,12 @@
 #define ADJ_E01             KC_NO
 #define ADJ_E02             KC_NO
 
+#define MAG_E01             KC_NO
+#define MAG_E02             KC_NO
+
+#define SYM_E01             KC_NO
+#define SYM_E02             KC_NO
+
 #define ACC_E01             KC_NO
 #define ACC_E02             KC_NO
 
