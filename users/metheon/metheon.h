@@ -21,19 +21,12 @@ enum layers {
 #define ________            _______
 
 // Thumb keys from left to right, four on each side
-#define STAB_SYM            LT(_SYMBOLS, KC_STAB)
-#define TAB_RSE             LT(_RAISE, KC_TAB)
+#define MAGNET              OSL(_MAGNET)
 #define SPC_EXT             LT(_EXTEND, KC_SPACE)
 #define ENT_LWR             LT(_LOWER, KC_ENTER)
 
-#define BSPC_RSE            LT(_RAISE, KC_BSPC)
-#define OSM_SFT             OSM(MOD_LSFT)
-#define ESC_LWR             LT(_LOWER, KC_ESC)
-#define DEL_SYM             LT(_SYMBOLS, KC_DEL)
-
-// An upper thumb key
-#define MAGNET              OSL(_MAGNET)
-// For a vertical thumb combo
+#define DEL_RSE             LT(_RAISE, KC_DEL)
+#define BSPC_SYM            LT(_SYMBOLS, KC_BSPC)
 #define ACCENTS             OSL(_ACCENTS)
 
 // Home row mods, using Colemak ... arst <--> neio

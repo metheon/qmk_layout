@@ -51,16 +51,12 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case HOME_5:
         case HOME_6:
         case HOME_0:
-            return TAPPING_TERM - 100; // 400-100=300
-        case STAB_SYM:
-        case TAB_RSE:
+            return TAPPING_TERM - 200; // 400-200=200
         case SPC_EXT:
         case ENT_LWR:
-        case BSPC_RSE:
-        case OSM_SFT:
-        case ESC_LWR:
-        case DEL_SYM:
-            return TAPPING_TERM - 225; // 400-225=175
+        case DEL_RSE:
+        case BSPC_SYM:
+            return TAPPING_TERM - 250; // 400-250=150
         default:
             return TAPPING_TERM;       // 400
     }
@@ -82,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------+--------+--------|
          KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,__NONE__,__NONE__,    __NONE__,__NONE__,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,
     //  '--------+--------+--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------+--------+--------'
-                           BSE_E01 ,MAGNET  ,SPC_EXT ,ENT_LWR ,__NONE__,    __NONE__,BSPC_RSE,OSM_SFT ,KC_DEL  ,BSE_E02  
+                           BSE_E01 ,MAGNET  ,SPC_EXT ,ENT_LWR ,__NONE__,    __NONE__,DEL_RSE ,BSPC_SYM,ACCENTS ,BSE_E02  
     //                    '--------+--------+--------+--------+--------'   '--------+--------+--------+--------+--------'
     ),
     [_LOWER] = LAYOUT_metheon(
@@ -98,11 +94,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_RAISE] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.                                       .--------+--------+--------+--------+--------.
-         KC_GRV  ,KC_CIRC ,KC_HASH ,KC_TILD ,KC_LCBR ,                                        KC_RCBR ,KC_DLR  ,KC_EUR  ,KC_PND  ,__NONE__,
+         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,                                        __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|                                       |--------+--------+--------+--------+--------|
-         KC_AT   ,KC_AE   ,KC_OE   ,KC_AA   ,KC_LPRN ,                                        KC_RPRN ,KC_EQL  ,KC_EXLM ,KC_AMPR ,KC_PIPE ,
+         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,                                        __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------+--------+--------|
-         KC_BSLS ,KC_PERC ,KC_UNDS ,KC_MINS ,KC_LBRC ,________,________,    ________,________,KC_RBRC ,KC_COLN ,KC_SCLN ,__NONE__,__NONE__,
+         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,________,________,    ________,________,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------+--------+--------|
                            RSE_E01 ,________,________,________,________,    ________,________,________,________,RSE_E02
     //                    '--------+--------+--------+--------+--------'   '--------+--------+--------+--------+--------'
@@ -120,15 +116,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_SYMBOLS] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.                                       .--------+--------+--------+--------+--------.
-         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,                                        __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
+         KC_GRV  ,KC_CIRC ,KC_HASH ,KC_TILD ,KC_LCBR ,                                        KC_RCBR ,KC_DLR  ,KC_EUR  ,KC_PND  ,__NONE__,
     //  |--------+--------+--------+--------+--------|                                       |--------+--------+--------+--------+--------|
-         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,                                        __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
+         KC_AT   ,KC_AE   ,KC_OE   ,KC_AA   ,KC_LPRN ,                                        KC_RPRN ,KC_EQL  ,KC_EXLM ,KC_AMPR ,KC_PIPE ,
     //  |--------+--------+--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------+--------+--------|
-         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,________,________,    ________,________,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
+         KC_BSLS ,KC_PERC ,KC_UNDS ,KC_MINS ,KC_LBRC ,________,________,    ________,________,KC_RBRC ,KC_COLN ,KC_SCLN ,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------+--------+--------|
                            SYM_E01 ,________,________,________,________,    ________,________,________,________,SYM_E02
     //                    '--------+--------+--------+--------+--------'   '--------+--------+--------+--------+--------'
-    ),
+     ),
     [_ADJUST] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.                                       .--------+--------+--------+--------+--------.
          RESET   ,__NONE__,__NONE__,CG_TOGG ,__NONE__,                                        __NONE__,KC_FLASH,KC_MAKE ,KC_VRSN ,__NONE__,
