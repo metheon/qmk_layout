@@ -1,16 +1,16 @@
 #include "metheon.h"
 
 //   name           result    chord keys
-COMB(CD_MINS       ,KC_MINS  ,KC_C, KC_D)
-COMB(XC_UNDS       ,KC_UNDS  ,KC_X, KC_C)
-COMB(HC_COLN       ,KC_COLN  ,KC_H, KC_COMMA)
-COMB(CD_SCLN       ,KC_SCLN  ,KC_COMMA, KC_DOT)
-COMB(LU_QUOT       ,KC_QUOT  ,KC_L, KC_U)
-COMB(UY_DQT        ,KC_DQT   ,KC_U, KC_Y)
+//COMB(CD_MINS       ,KC_MINS  ,KC_C, KC_D)
+//COMB(XC_UNDS       ,KC_UNDS  ,KC_X, KC_C)
+//COMB(HC_COLN       ,KC_COLN  ,KC_H, KC_COMMA)
+//COMB(CD_SCLN       ,KC_SCLN  ,KC_COMMA, KC_DOT)
+//COMB(LU_QUOT       ,KC_QUOT  ,KC_L, KC_U)
+//COMB(UY_DQT        ,KC_DQT   ,KC_U, KC_Y)
 
-COMB(WFP_TAB       ,KC_TAB   ,KC_W, KC_F, KC_P)
-COMB(LUY_STAB      ,KC_STAB  ,KC_L, KC_U, KC_Y)
-COMB(RST_ESC       ,KC_ESC   ,HOME_R, HOME_S, HOME_T)
-COMB(NEI_LEAD      ,KC_LEAD  ,HOME_N, HOME_E, HOME_I)
+//COMB(WFP_TAB       ,KC_TAB   ,KC_W, KC_F, KC_P)
+//COMB(LUY_STAB      ,KC_STAB  ,KC_L, KC_U, KC_Y)
+//COMB(RST_ESC       ,KC_ESC   ,HOME_R, HOME_S, HOME_T)
+//COMB(NEI_LEAD      ,KC_LEAD  ,HOME_N, HOME_E, HOME_I)
 
 

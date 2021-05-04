@@ -14,7 +14,6 @@ enum layers {
     _EXTEND,                // Navigation cluster
     _ADJUST,                // Mainly RGB and media keys, activated when lower and raise is pressed at the same time
     _MAGNET,                // Shortcuts for Magnet software on mac
-    _ACCENTS,               // Layer for Spanish accents and Danish vowels
 };
 
 #define __NONE__            KC_NO
@@ -27,7 +26,8 @@ enum layers {
 
 #define DEL_RSE             LT(_RAISE, KC_DEL)
 #define BSPC_SYM            LT(_SYMBOLS, KC_BSPC)
-#define ACCENTS             OSL(_ACCENTS)
+
+#define SHIFT               OSM(MOD_LSFT)
 
 // Home row mods, using Colemak ... arst <--> neio
 #define HOME_A              LGUI_T(KC_A)
