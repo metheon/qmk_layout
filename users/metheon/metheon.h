@@ -10,7 +10,6 @@ enum layers {
     _BASE,                  // Colemak-DH
     _LOWER,                 // Numpad and funpad layer
     _RAISE,                 // Primary symbols layer
-    _SYMBOLS,               // Secondary symbols layer
     _EXTEND,                // Navigation cluster
     _ADJUST,                // Mainly RGB and media keys, activated when lower and raise is pressed at the same time
     _MAGNET,                // Shortcuts for Magnet software on mac
@@ -21,12 +20,11 @@ enum layers {
 
 // Thumb keys from left to right, four on each side
 #define MAGNET              OSL(_MAGNET)
+
 #define SPC_EXT             LT(_EXTEND, KC_SPACE)
 #define ENT_LWR             LT(_LOWER, KC_ENTER)
 
-#define DEL_RSE             LT(_RAISE, KC_DEL)
-#define BSPC_SYM            LT(_SYMBOLS, KC_BSPC)
-
+#define BSPC_RSE            LT(_RAISE, KC_BSPC)
 #define SHIFT               OSM(MOD_LSFT)
 
 // Home row mods, using Colemak ... arst <--> neio
@@ -56,4 +54,6 @@ enum layers {
 
 #define NEXT_TAB            LCTL(KC_TAB)
 #define PREV_TAB            LCTL(KC_STAB)
+
+#define SCRNSHT             LGUI(LSFT(KC_5))
 

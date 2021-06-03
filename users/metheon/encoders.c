@@ -78,12 +78,9 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {  // Left encoder
         switch (biton32(layer_state)) {
             case _BASE:
-                tabbing(clockwise);
-                break;
-            case _RAISE:
                 gui_tab(clockwise);
                 break;
-            case _EXTEND:
+            case _RAISE:
                 ctrl_tab(clockwise);
                 break;
             default:

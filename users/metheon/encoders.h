@@ -19,8 +19,5 @@
 #define MAG_E01             KC_NO
 #define MAG_E02             KC_NO
 
-#define SYM_E01             KC_NO
-#define SYM_E02             KC_NO
-
 // Required for cmd-tab function
 void matrix_scan_encoders(void);
