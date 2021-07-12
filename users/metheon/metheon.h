@@ -36,6 +36,7 @@ enum layers {
 #define HOME_E              LSFT_T(KC_E)
 #define HOME_I              LALT_T(KC_I)
 #define HOME_O              LGUI_T(KC_O)
+#define M_MAG               LT(_MAGNET, KC_M)
 
 // Home row mods, for the funpad and numpad... F5 F6 F7 F8 <--> 4 5 6 0
 #define HOME_F5             LGUI_T(KC_F5)

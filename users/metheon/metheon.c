@@ -11,6 +11,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
 bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case M_MAG:
         case HOME_A:
         case HOME_R:
         case HOME_S:
@@ -35,6 +36,7 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case M_MAG:
         case HOME_A:
         case HOME_R:
         case HOME_S:
@@ -73,11 +75,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  .--------+--------+--------+--------+--------+--------.                                       .--------+--------+--------+--------+--------+--------.
          __NONE__,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,                                        KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_QUOT ,__NONE__,
     //  |--------+--------+--------+--------+--------+--------|                                       |--------+--------+--------+--------+--------+--------|
-         __NONE__,HOME_A  ,HOME_R  ,HOME_S  ,HOME_T  ,KC_G    ,                                        KC_M    ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,__NONE__,
+         __NONE__,HOME_A  ,HOME_R  ,HOME_S  ,HOME_T  ,KC_G    ,                                        M_MAG   ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------+--------+--------+--------|
          __NONE__,KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,SEARCH  ,SCRNSHT ,    ZOOM_VID,ZOOM_AUD,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,__NONE__,
     //  '--------+--------+--------+--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------+--------+--------+--------'
-                                    BSE_E01 ,MAGNET  ,SHIFT   ,SPC_EXT ,ENT_LWR ,    KC_DEL  ,BSPC_RSE,SHIFT   ,MAGNET  ,BSE_E02
+                                    BSE_E01 ,__NONE__,SHIFT   ,SPC_EXT ,ENT_LWR ,    KC_DEL  ,BSPC_RSE,SHIFT   ,__NONE__,BSE_E02
     //                             '--------+--------+--------+--------+--------'   '--------+--------+--------+--------+--------'
     ),
     [_LOWER] = LAYOUT_metheon(
@@ -126,13 +128,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_MAGNET] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------+--------.                                       .--------+--------+--------+--------+--------+--------.
-         __NONE__,__NONE__,M_UL_QD ,M_UP_HF ,M_UR_QD ,__NONE__,                                        __NONE__,M_L2_3RD,M_R2_3RD,__NONE__,__NONE__,__NONE__,
+         __NONE__,__NONE__,M_LT_3RD,M_MD_3RD,M_RT_3RD,__NONE__,                                        __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------+--------|                                       |--------+--------+--------+--------+--------+--------|
-         __NONE__,__NONE__,M_LT_HF ,M_FSCRN ,M_RT_HF ,__NONE__,                                        __NONE__,M_LT_3RD,M_MD_3RD,M_RT_3RD,__NONE__,__NONE__,
+         __NONE__,__NONE__,M_LT_HF ,M_FSCRN ,M_RT_HF ,__NONE__,                                        ________,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------+--------+--------+--------|
-         __NONE__,__NONE__,M_BL_QD ,M_BT_HF ,M_BR_QD ,__NONE__,________,________,    ________,________,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
+         __NONE__,__NONE__,M_L2_3RD,HIDE_WIN,M_R2_3RD,__NONE__,__NONE__,__NONE__,    __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------+--------+--------+--------|
-                                    MAG_E01 ,________,________,________,________,    ________,________,________,________,MAG_E02
+                                    __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,    __NONE__,__NONE__,__NONE__,__NONE__,__NONE__
     //                             '--------+--------+--------+--------+--------'   '--------+--------+--------+--------+--------'
     )
 };
