@@ -73,13 +73,13 @@ void matrix_scan_user(void) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------+--------.                                       .--------+--------+--------+--------+--------+--------.
-         __NONE__,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,                                        KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_QUOT ,__NONE__,
+         __NONE__,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,                                        KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_Z    ,__NONE__,
     //  |--------+--------+--------+--------+--------+--------|                                       |--------+--------+--------+--------+--------+--------|
          __NONE__,HOME_A  ,HOME_R  ,HOME_S  ,HOME_T  ,KC_G    ,                                        M_MAG   ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------+--------+--------+--------|
-         __NONE__,KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,SEARCH  ,SCRNSHT ,    ZOOM_VID,ZOOM_AUD,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,__NONE__,
+         __NONE__,SHIFT   ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,SEARCH  ,SCRNSHT ,    ZOOM_VID,ZOOM_AUD,KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,SHIFT   ,__NONE__,
     //  '--------+--------+--------+--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------+--------+--------+--------'
-                                    BSE_E01 ,__NONE__,SHIFT   ,SPC_EXT ,ENT_LWR ,    KC_DEL  ,BSPC_RSE,SHIFT   ,__NONE__,BSE_E02
+                                    BSE_E01 ,__NONE__,__NONE__,SPC_EXT ,ENT_LWR ,    KC_DEL  ,BSPC_RSE,__NONE__,__NONE__,BSE_E02
     //                             '--------+--------+--------+--------+--------'   '--------+--------+--------+--------+--------'
     ),
     [_LOWER] = LAYOUT_metheon(
@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_RAISE] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------+--------.                                       .--------+--------+--------+--------+--------+--------.
-         __NONE__,KC_GRV  ,KC_CIRC ,KC_HASH ,KC_TILD ,KC_LCBR ,                                        KC_RCBR ,KC_DLR  ,KC_EUR  ,KC_PND  ,__NONE__,__NONE__,
+         __NONE__,KC_GRV  ,KC_CIRC ,KC_HASH ,KC_TILD ,KC_LCBR ,                                        KC_RCBR ,KC_DLR  ,KC_EUR  ,KC_PND  ,KC_QUOT ,__NONE__,
     //  |--------+--------+--------+--------+--------+--------|                                       |--------+--------+--------+--------+--------+--------|
          __NONE__,KC_AT   ,KC_AE   ,KC_OE   ,KC_AA   ,KC_LPRN ,                                        KC_RPRN ,KC_EQL  ,KC_EXLM ,KC_AMPR ,KC_PIPE ,__NONE__,
     //  |--------+--------+--------+--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------+--------+--------+--------|
