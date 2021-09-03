@@ -74,7 +74,7 @@ void ctrl_tab(bool clockwise) {
     }
 }
 
-void encoder_update_user(uint8_t index, bool clockwise) {
+bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {  // Left encoder
         switch (biton32(layer_state)) {
             case _BASE:
@@ -103,4 +103,5 @@ void encoder_update_user(uint8_t index, bool clockwise) {
                 break;
         }
     }
+    return true;
 }
