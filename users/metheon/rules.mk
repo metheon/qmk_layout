@@ -5,9 +5,11 @@ ifndef ENCODER_ENABLE
 endif
 
 EXTRAKEY_ENABLE					=	yes 	# Enables audio control and System control
-LTO_ENABLE						=	yes		# Reduces compiled size of firmware
 COMBO_ENABLE					=	yes		# Enables the usage of combos
 LEADER_ENABLE					=	yes  	# Enables the Leader Key feature
+ifndef LTO_ENABLE
+	LTO_ENABLE					=	yes		# Reduces compiled size of firmware
+endif
 
 SRC += metheon.c
 SRC += encoders.c

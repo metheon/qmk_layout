@@ -52,10 +52,10 @@ void matrix_scan_leader(void) {
         // Keyboard Related Stuff //
         // ////////////////////// //
         SEQ_TWO_KEYS(KC_Q, KC_M) {
-            SEND_STRING("make clean && make -j 8 " QMK_KEYBOARD ":" QMK_KEYMAP SS_TAP(X_ENTER));
+            SEND_STRING("qmk compile -c -kb" QMK_KEYBOARD " -km " QMK_KEYMAP SS_TAP(X_ENTER));
         }
         SEQ_TWO_KEYS(KC_Q, KC_F) {
-            SEND_STRING("make clean && make -j 8 " QMK_KEYBOARD ":" QMK_KEYMAP ":flash" SS_TAP(X_ENTER));
+            SEND_STRING("qmk flash -c -kb" QMK_KEYBOARD " -km " QMK_KEYMAP SS_TAP(X_ENTER));
         }
         SEQ_TWO_KEYS(KC_Q, KC_V) {
             SEND_STRING(QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
