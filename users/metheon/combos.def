@@ -1,26 +1,26 @@
 #include "metheon.h"
 
 //   name           result    chord keys
-//COMB(CD_MINS       ,KC_MINS  ,KC_C, KC_D)
-//COMB(XC_UNDS       ,KC_UNDS  ,KC_X, KC_C)
-//COMB(HC_COLN       ,KC_COLN  ,KC_H, KC_COMMA)
-//COMB(CD_SCLN       ,KC_SCLN  ,KC_COMMA, KC_DOT)
-//COMB(LU_QUOT       ,KC_QUOT  ,KC_L, KC_U)
-//COMB(UY_DQT        ,KC_DQT   ,KC_U, KC_Y)
+// top row combos
+COMB(WF_Q            ,KC_Q     ,KC_W, KC_F)
+COMB(FP_B            ,KC_B     ,KC_F, KC_P)
+COMB(LU_J            ,KC_J     ,KC_L, KC_U)
+COMB(UY_QUOT         ,KC_QUOT  ,KC_U, KC_Y)
 
-COMB(COMMA           ,KC_COMMA ,KC_N, KC_E)
-COMB(DOT             ,KC_DOT   ,KC_E, KC_I)
+COMB(NE_AE           ,KC_AE    ,HOME_N, HOME_E)
+COMB(NI_OE           ,KC_OE    ,HOME_N, HOME_I)
+COMB(EI_AA           ,KC_AA    ,HOME_E, HOME_I)
 
 COMB(COMBO_TAB       ,KC_TAB   ,KC_W, KC_F, KC_P)
 COMB(COMBO_STAB      ,KC_STAB  ,KC_L, KC_U, KC_Y)
 
-COMB(RST_ESC         ,KC_ESC   ,HOME_R, HOME_S, HOME_T)
+COMB(COMBO_ESC       ,KC_ESC   ,HOME_R, HOME_S, HOME_T)
 COMB(COMBO_MAGNET    ,MAGNET   ,HOME_N, HOME_E, HOME_I)
 
 COMB(COMBO_CUT       ,CUT      ,KC_Z, KC_X)
 COMB(COMBO_COPY      ,COPY     ,KC_X, KC_C)
 COMB(COMBO_PASTE     ,PASTE    ,KC_C, KC_D)
-//COMB(COMBO_UNDO      ,UNDO     ,KC_D, KC_V)
+//COMB(COMBO_UNDO    ,UNDO     ,KC_D, KC_V)
 
 //COMB(COMBO_SCRM_SNK  ,SCRM_SNK ,KC_Z, KC_X, KC_C)
 //COMB(COMBO_SNK_CASE  ,SNK_CASE ,KC_X, KC_C, KC_D)
