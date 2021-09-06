@@ -7,9 +7,8 @@ COMB(FP_B            ,KC_B     ,KC_F, KC_P)
 COMB(LU_J            ,KC_J     ,KC_L, KC_U)
 COMB(UY_QUOT         ,KC_QUOT  ,KC_U, KC_Y)
 
-COMB(NE_AE           ,KC_AE    ,HOME_N, HOME_E)
-COMB(NI_OE           ,KC_OE    ,HOME_N, HOME_I)
-COMB(EI_AA           ,KC_AA    ,HOME_E, HOME_I)
+COMB(NE_COMMA        ,KC_COMMA ,HOME_N, HOME_E)
+COMB(EI_DOT          ,KC_DOT   ,HOME_E, HOME_I)
 
 COMB(COMBO_TAB       ,KC_TAB   ,KC_W, KC_F, KC_P)
 COMB(COMBO_STAB      ,KC_STAB  ,KC_L, KC_U, KC_Y)
