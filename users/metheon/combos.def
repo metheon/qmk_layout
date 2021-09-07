@@ -6,25 +6,14 @@ COMB(WF_Q            ,KC_Q     ,KC_W, KC_F)
 COMB(FP_B            ,KC_B     ,KC_F, KC_P)
 COMB(LU_J            ,KC_J     ,KC_L, KC_U)
 COMB(UY_QUOT         ,KC_QUOT  ,KC_U, KC_Y)
+COMB(CD_V            ,KC_V     ,KC_C, KC_D)
+COMB(HC_K            ,KC_K     ,KC_H, KC_COMMA)
 
-//COMB(NE_COMMA        ,KC_COMMA ,HOME_N, HOME_E)
-//COMB(EI_DOT          ,KC_DOT   ,HOME_E, HOME_I)
-COMB(OEC_Z             ,KC_Z    ,KC_OE, KC_C)
-COMB(CD_X              ,KC_X     ,KC_C, KC_D)
-
+COMB(AEOE_Z          ,KC_Z     ,KC_AE, KC_OE)
+COMB(OEC_X           ,KC_X     ,KC_OE, KC_C)
 
 COMB(COMBO_TAB       ,KC_TAB   ,KC_W, KC_F, KC_P)
 COMB(COMBO_STAB      ,KC_STAB  ,KC_L, KC_U, KC_Y)
 
 COMB(COMBO_ESC       ,KC_ESC   ,HOME_R, HOME_S, HOME_T)
 COMB(COMBO_MAGNET    ,MAGNET   ,HOME_N, HOME_E, HOME_I)
-
-//COMB(COMBO_CUT       ,CUT      ,KC_Z, KC_X)
-//COMB(COMBO_COPY      ,COPY     ,KC_X, KC_C)
-//COMB(COMBO_PASTE     ,PASTE    ,KC_C, KC_D)
-//COMB(COMBO_UNDO      ,UNDO     ,KC_D, KC_V)
-
-//COMB(COMBO_SCRM_SNK  ,SCRM_SNK ,KC_Z, KC_X, KC_C)
-//COMB(COMBO_SNK_CASE  ,SNK_CASE ,KC_X, KC_C, KC_D)
-//COMB(COMBO_CAPSWORD  ,CAPSWORD ,KC_H, KC_COMMA, KC_DOT)
-//COMB(COMBO_KC_CAPS   ,KC_CAPS  ,KC_COMMA, KC_DOT, KC_SLSH)
