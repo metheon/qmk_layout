@@ -104,11 +104,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_EXTEND] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         PREV_TAB,NEXT_TAB,PREV_WIN,NEXT_WIN,LOCK    ,    KC_PGUP ,KC_HOME ,KC_UP   ,KC_END  ,__NONE__,
+         PREV_TAB,NEXT_TAB,PREV_WIN,NEXT_WIN,__NONE__,    LOCK    ,KC_STAB ,KC_UP   ,KC_TAB  ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,KC_LEAD ,    KC_PGDN ,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
+         KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,KC_LEAD ,    SEARCH  ,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         ZOOM_AUD,ZOOM_VID,SCRNSHT ,SEARCH  ,__NONE__,    __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
+         UNDO    ,CUT     ,COPY    ,PASTE   ,__NONE__,    SCRNSHT ,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
                   EXT_E01 ,________,________,________,    ________,________,________,EXT_E02
     //           '--------+--------+--------+--------'   '--------+--------+--------+--------'
@@ -128,7 +128,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
          __NONE__,M_LT_3RD,M_MD_3RD,M_RT_3RD,__NONE__,    __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         M_UP_HF ,M_LT_HF ,M_FSCRN ,M_RT_HF ,__NONE__,    ________,__NONE__,__NONE__,__NONE__,__NONE__,
+         M_UP_HF ,M_LT_HF ,M_FSCRN ,M_RT_HF ,__NONE__,    ________,ZOOM_AUD,ZOOM_VID,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          M_BT_HF ,M_L2_3RD,HIDE_WIN,M_R2_3RD,__NONE__,    __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
