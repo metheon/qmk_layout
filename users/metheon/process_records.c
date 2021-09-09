@@ -1,20 +1,6 @@
 #include "process_records.h"
-#include "which_os.h"
 #include "window_tab.h"
 #include "metheon.h"
-
-#undef OSKEY
-#define OSKEY(name, linux, mac)           \
-    case name:                            \
-        tap_os_key(linux, mac, pressed);  \
-        break;
-
-// call this function for plain tapping a keycode which differs on the OS'es
-void tap_os_key(uint16_t lnx_keycode, uint16_t mac_keycode, bool pressed) {
-    if (pressed) {
-        tap_code16(is_linux() ? lnx_keycode : mac_keycode);
-    }
-}
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // caps word related processing
@@ -52,8 +38,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case PREV_WIN:
             mod_tab(record, S(true));
             break;
-        // include all keys that change between OS'es
-#include "oskeys.def"
         default:
             return true;
     }

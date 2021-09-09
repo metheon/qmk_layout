@@ -106,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
          PREV_TAB,NEXT_TAB,PREV_WIN,NEXT_WIN,__NONE__,    LOCK    ,KC_STAB ,KC_UP   ,KC_TAB  ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         KC_LGUI ,KC_LALT ,KC_LSFT ,KC_LCTRL,KC_LEAD ,    SEARCH  ,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
+         KC_LCTRL,KC_LALT ,KC_LSFT ,KC_LGUI ,KC_LEAD ,    SEARCH  ,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          UNDO    ,CUT     ,COPY    ,PASTE   ,__NONE__,    SCRNSHT ,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
@@ -115,7 +115,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_ADJUST] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         RESET   ,__NONE__,__NONE__,CG_TOGG ,__NONE__,    __NONE__,KC_FLASH,KC_MAKE ,KC_VRSN ,__NONE__,
+         RESET   ,__NONE__,__NONE__,__NONE__,__NONE__,    __NONE__,KC_FLASH,KC_MAKE ,KC_VRSN ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          __NONE__,KC_MPRV ,KC_MPLY ,KC_MNXT ,__NONE__,    RGB_TOG ,RGB_MOD ,RGB_HUI ,RGB_SAI ,RGB_VAI ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
