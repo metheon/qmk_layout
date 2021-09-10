@@ -105,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_EXTEND] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         UNDO    ,CUT     ,COPY    ,PASTE   ,__NONE__,    LOCK    ,KC_BSPC ,KC_UP   ,KC_DEL  ,__NONE__,
+         UNDO    ,CUT     ,COPY    ,PASTE   ,__NONE__,    LOCK    ,KC_STAB ,KC_UP   ,KC_TAB  ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          KC_LCTRL,KC_LALT ,KC_LSFT ,KC_LGUI ,KC_LEAD ,    SEARCH  ,KC_LEFT ,KC_DOWN ,KC_RGHT ,KC_ENTER,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
