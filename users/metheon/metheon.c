@@ -54,7 +54,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM - 100; // 400-100=300
         case SPC_EXT:
         case ENT_LWR:
-        case BSPC_RSE:
+        case BSPC_SFT:
+        case DEL_RSE:
             return TAPPING_TERM - 225; // 400-225=175
         default:
             return TAPPING_TERM;       // 400
@@ -77,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
          KC_AE   ,KC_OE   ,KC_C    ,KC_D    ,KC_V    ,    KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_AA   ,
     //  '--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
-                           BSE_E01 ,ENT_LWR ,SPC_EXT ,    SHIFT   ,BSPC_RSE,BSE_E02
+                           BSE_E01 ,ENT_LWR ,SPC_EXT ,    BSPC_SFT,DEL_RSE ,BSE_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
     ),
     [_LOWER] = LAYOUT_metheon(
@@ -88,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
          KC_F1   ,KC_F2   ,KC_F3   ,KC_F4   ,__NONE__,    KC_MINS ,KC_1    ,KC_2    ,KC_3    ,KC_SLSH ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
-                           LWR_E01 ,________,________,    KC_0    ,__NONE__,LWR_E02
+                           LWR_E01 ,________,________,    ________,________,LWR_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
     ),
     [_RAISE] = LAYOUT_metheon(

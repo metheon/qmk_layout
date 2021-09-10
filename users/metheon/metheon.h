@@ -24,7 +24,8 @@ enum layers {
 #define SPC_EXT             LT(_EXTEND, KC_SPACE)
 #define ENT_LWR             LT(_LOWER, KC_ENTER)
 
-#define BSPC_RSE            LT(_RAISE, KC_BSPC)
+#define BSPC_SFT            LSFT_T(KC_BSPC)
+#define DEL_RSE             LT(_RAISE, KC_DEL)
 #define SHIFT               OSM(MOD_LSFT)
 
 // Home row mods, using Colemak ... arst <--> neio
