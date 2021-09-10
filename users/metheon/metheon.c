@@ -116,7 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_ADJUST] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         RESET   ,__NONE__,__NONE__,__NONE__,__NONE__,    __NONE__,KC_FLASH,KC_MAKE ,KC_VRSN ,__NONE__,
+         RESET   ,__NONE__,__NONE__,__NONE__,__NONE__,    __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          __NONE__,KC_MPRV ,KC_MPLY ,KC_MNXT ,__NONE__,    RGB_TOG ,RGB_MOD ,RGB_HUI ,RGB_SAI ,RGB_VAI ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|

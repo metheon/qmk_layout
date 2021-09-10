@@ -31,13 +31,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 toggle_caps_word();
             }
             break;
-        // all mod_tab cases
-        case NEXT_WIN:
-            mod_tab(record, false);
-            break;
-        case PREV_WIN:
-            mod_tab(record, S(true));
-            break;
         default:
             return true;
     }
