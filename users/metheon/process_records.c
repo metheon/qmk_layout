@@ -2,6 +2,14 @@
 #include "window_tab.h"
 #include "metheon.h"
 
+#undef VIM
+#define VIM(name, command)              \
+    case name:                          \
+        if(pressed) {                   \
+            SEND_STRING(command);       \
+        }                               \
+        break;
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // caps word related processing
     if (!process_caps_word(keycode, record)) {
@@ -31,6 +39,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 toggle_caps_word();
             }
             break;
+#include "vim.def"
         default:
             return true;
     }
