@@ -94,11 +94,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_RAISE] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         KC_GRV  ,KC_CIRC ,KC_HASH ,KC_TILD ,KC_LCBR ,    KC_RCBR ,KC_DLR  ,KC_EUR  ,KC_PND  ,KC_QUOT ,
+         KC_GRV  ,KC_CIRC ,KC_HASH ,KC_TILD ,KC_LCBR ,    KC_RCBR ,KC_DLR  ,KC_EUR  ,KC_PND  ,KC_DQT  ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         KC_AT   ,KC_AE   ,KC_OE   ,KC_AA   ,KC_LPRN ,    KC_RPRN ,KC_EQL  ,KC_EXLM ,KC_AMPR ,KC_PIPE ,
+         KC_AT   ,KC_SLSH ,KC_MINS ,KC_SCLN ,KC_LPRN ,    KC_RPRN ,KC_EQL  ,KC_EXLM ,KC_AMPR ,KC_PIPE ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         KC_BSLS ,KC_PERC ,KC_COLN ,KC_SCLN ,KC_LBRC ,    KC_RBRC ,KC_MINS ,KC_UNDS ,__NONE__,KC_QUES ,
+         KC_BSLS ,KC_QUES ,KC_UNDS ,KC_COLN ,KC_LBRC ,    KC_RBRC ,KC_PERC ,KC_LT   ,KC_GT   ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
                            RSE_E01 ,________,________,    ________,________,RSE_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
