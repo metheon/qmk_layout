@@ -23,9 +23,6 @@ enum layers {
 
 #define SPC_EXT             LT(_EXTEND, KC_SPACE)
 #define ENT_LWR             LT(_LOWER, KC_ENTER)
-#define LOWER               MO(_LOWER)
-#define RAISE               MO(_RAISE)
-#define SHIFT               KC_LSFT
 
 #define BSPC_SFT            LSFT_T(KC_BSPC)
 #define DEL_RSE             LT(_RAISE, KC_DEL)

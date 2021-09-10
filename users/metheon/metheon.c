@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
          KC_AE   ,KC_OE   ,KC_C    ,KC_D    ,KC_V    ,    KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_AA   ,
     //  '--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
-                           BSE_E01 ,LOWER   ,SPC_EXT ,    SHIFT   ,RAISE   ,BSE_E02
+                           BSE_E01 ,ENT_LWR ,SPC_EXT ,    BSPC_SFT,DEL_RSE ,BSE_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
     ),
     [_LOWER] = LAYOUT_metheon(
