@@ -105,13 +105,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_EXTEND] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         PREV_TAB,NEXT_TAB,PREV_WIN,NEXT_WIN,__NONE__,    LOCK    ,KC_STAB ,KC_UP   ,KC_TAB  ,__NONE__,
+         PREV_TAB,NEXT_TAB,PREV_WIN,NEXT_WIN,__NONE__,    LOCK    ,KC_BSPC ,KC_UP   ,KC_DEL  ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         KC_LCTRL,KC_LALT ,KC_LSFT ,KC_LGUI ,KC_LEAD ,    SEARCH  ,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
+         KC_LCTRL,KC_LALT ,KC_LSFT ,KC_LGUI ,KC_LEAD ,    SEARCH  ,KC_LEFT ,KC_DOWN ,KC_RGHT ,KC_ENTER,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         UNDO    ,CUT     ,COPY    ,PASTE   ,__NONE__,    SCRNSHT ,__NONE__,__NONE__,__NONE__,__NONE__,
+         UNDO    ,CUT     ,COPY    ,PASTE   ,__NONE__,    SCRNSHT ,KC_TAB  ,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-                           EXT_E01 ,________,________,    KC_DEL  ,________,EXT_E02
+                           EXT_E01 ,________,________,    ________,________,EXT_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
     ),
     [_ADJUST] = LAYOUT_metheon(
@@ -133,7 +133,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          M_BT_HF ,M_L2_3RD,HIDE_WIN,M_R2_3RD,__NONE__,    __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-                           __NONE__,__NONE__,__NONE__,    __NONE__,__NONE__,__NONE__
+                           __NONE__,________,________,    ________,________,__NONE__
     //                    '--------+--------+--------'   '--------+--------+--------'
     )
 };
