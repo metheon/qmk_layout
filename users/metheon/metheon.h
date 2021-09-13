@@ -19,12 +19,11 @@ enum layers {
 #define __NONE__            KC_NO
 #define ________            _______
 
-// Thumb keys from left to right, four on each side
 #define MAGNET              OSL(_MAGNET)
+#define SHIFT               OSM(MOD_LSFT)
 
 #define SPC_EXT             LT(_EXTEND, KC_SPACE)
 #define ENT_LWR             LT(_LOWER, KC_ENTER)
-
 #define BSPC_SFT            LSFT_T(KC_BSPC)
 #define DEL_RSE             LT(_RAISE, KC_DEL)
 

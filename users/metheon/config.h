@@ -4,7 +4,7 @@
 #endif
 #define TAPPING_TERM                400
 
-#define COMBO_TERM                  50
+#define COMBO_TERM                  30
 // Prevent normal rollover on alphas from accidentally triggering mods.
 #define IGNORE_MOD_TAP_INTERRUPT
 
