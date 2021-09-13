@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          HOME_A  ,HOME_R  ,HOME_S  ,HOME_T  ,KC_G    ,    KC_M    ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,
     //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
-         KC_AE   ,KC_OE   ,KC_C    ,KC_D    ,KC_V    ,    KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_AA   ,
+         KC_AA   ,KC_AE   ,KC_C    ,KC_D    ,KC_V    ,    KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_OE   ,
     //  '--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
                            BSE_E01 ,ENT_LWR ,SPC_EXT ,    BSPC_SFT,DEL_RSE ,BSE_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          HRM_R   ,HRM_S   ,HRM_N   ,HRM_T   ,KC_G    ,    KC_M    ,HRM_A   ,HRM_E   ,HRM_I   ,HRM_O   ,
     //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
-         KC_AE   ,KC_OE   ,KC_C    ,KC_D    ,KC_V    ,    KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_AA   ,
+         KC_AA   ,KC_AE   ,KC_C    ,KC_D    ,KC_V    ,    KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_OE   ,
     //  '--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
                            BSE_E01 ,ENT_LWR ,SPC_EXT ,    BSPC_SFT,DEL_RSE ,BSE_E02
     //                    '--------+--------+--------'   '--------+--------+--------'

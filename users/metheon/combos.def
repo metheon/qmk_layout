@@ -12,8 +12,8 @@ COMB(HC_K            ,KC_K     ,KC_H, KC_COMMA)
 COMB(LEFT_SHIFT      ,SHIFT    ,HOME_S, HOME_T)
 COMB(RIGHT_SHIFT     ,SHIFT    ,HOME_N, HOME_E)
 
-COMB(AEOE_Z          ,KC_Z     ,KC_AE, KC_OE)
-COMB(OEC_X           ,KC_X     ,KC_OE, KC_C)
+COMB(AAAE_Z          ,KC_Z     ,KC_AA, KC_AE)
+COMB(AEC_X           ,KC_X     ,KC_AE, KC_C)
 
 COMB(COMBO_TAB       ,KC_TAB   ,KC_W, KC_F, KC_P)
 COMB(COMBO_STAB      ,KC_STAB  ,KC_L, KC_U, KC_Y)
