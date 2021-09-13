@@ -6,11 +6,15 @@
 #undef VIM
 #define VIM(name, command) name,
 
+#undef BIGRAM
+#define BIGRAM(name, bigram) name,
+
 enum keycodes {
     CAPSWORD = SAFE_RANGE,  // CAPITALIZES next word
     SNK_CASE,               // snake_case
     SCRM_SNK,               // SCREAMING_SNAKE_CASE
     CPS_DSBL,               // Disables any caps word mode
 #include "vim.def"
+#include "bigram.def"
 };
 

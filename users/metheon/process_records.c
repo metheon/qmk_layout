@@ -10,6 +10,14 @@
         }                               \
         break;
 
+#undef BIGRAM
+#define BIGRAM(name, bigram)            \
+    case name:                          \
+        if(pressed) {                   \
+            SEND_STRING(bigram);        \
+        }                               \
+        break;
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // caps word related processing
     if (!process_caps_word(keycode, record)) {
@@ -40,6 +48,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 #include "vim.def"
+#include "bigram.def"
         default:
             return true;
     }

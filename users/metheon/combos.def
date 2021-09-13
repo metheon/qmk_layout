@@ -3,11 +3,11 @@
 //   name           result    chord keys
 // top row combos
 COMB(WF_Q            ,KC_Q     ,KC_W, KC_F)
-COMB(FP_B            ,KC_B     ,KC_F, KC_P)
-COMB(LU_J            ,KC_J     ,KC_L, KC_U)
 COMB(UY_QUOT         ,KC_QUOT  ,KC_U, KC_Y)
-COMB(CD_V            ,KC_V     ,KC_C, KC_D)
-COMB(HC_K            ,KC_K     ,KC_H, KC_COMMA)
+
+//COMB(FP_B            ,KC_B     ,KC_F, KC_P)
+//COMB(LU_J            ,KC_J     ,KC_L, KC_U)
+//COMB(CD_V            ,KC_V     ,KC_C, KC_D)
 
 COMB(LEFT_SHIFT      ,SHIFT    ,HOME_S, HOME_T)
 COMB(RIGHT_SHIFT     ,SHIFT    ,HOME_N, HOME_E)
@@ -22,3 +22,8 @@ COMB(COMBO_ESC       ,KC_ESC   ,HOME_R, HOME_S, HOME_T)
 COMB(COMBO_ESC2      ,KC_ESC   ,HRM_S, HRM_S, HRM_T)
 COMB(COMBO_MAGNET    ,MAGNET   ,HOME_N, HOME_E, HOME_I)
 COMB(COMBO_MAGNET2   ,MAGNET   ,HRM_A, HRM_E, HRM_I)
+
+// bigrams
+COMB(AR_AER          ,BG_AER   ,HOME_A, HOME_R)
+COMB(HC_HV           ,BG_HV    ,KC_H, KC_COMMA)
+COMB(FT_TH           ,BG_TH    ,KC_F, HOME_T)
