@@ -138,7 +138,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_MAGNET] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         __NONE__,M_L2_3RD,M_UP_HF ,M_R2_3RD,__NONE__,    VIM_NLA ,__NONE__,__NONE__,__NONE__,__NONE__,
+         __NONE__,M_L2_3RD,M_UP_HF ,M_R2_3RD,__NONE__,    VIM_NLA ,DC_TOGGL,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          __NONE__,M_LT_HF ,M_BT_HF ,M_RT_HF ,__NONE__,    VIM_NLB ,ZOOM_AUD,ZOOM_VID,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
