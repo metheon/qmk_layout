@@ -53,7 +53,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case HOME_0:
             return TAPPING_TERM - 100; // 400-100=300
         case SPC_EXT:
-        case ENT_LWR:
+        case TAB_LWR:
         case BSPC_SFT:
         case DEL_RSE:
             return TAPPING_TERM - 225; // 400-225=175
@@ -78,18 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
          KC_AA   ,KC_AE   ,KC_C    ,KC_D    ,KC_V    ,    KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_OE   ,
     //  '--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
-                           BSE_E01 ,ENT_LWR ,SPC_EXT ,    BSPC_SFT,DEL_RSE ,BSE_E02
-    //                    '--------+--------+--------'   '--------+--------+--------'
-    ),
-    [_COLHD] = LAYOUT_metheon(
-    //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,    KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_QUOT ,
-    //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         HRM_R   ,HRM_S   ,HRM_N   ,HRM_T   ,KC_G    ,    KC_M    ,HRM_A   ,HRM_E   ,HRM_I   ,HRM_O   ,
-    //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
-         KC_AA   ,KC_AE   ,KC_C    ,KC_D    ,KC_V    ,    KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_OE   ,
-    //  '--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
-                           BSE_E01 ,ENT_LWR ,SPC_EXT ,    BSPC_SFT,DEL_RSE ,BSE_E02
+                           BSE_E01 ,TAB_LWR ,SPC_EXT ,    BSPC_SFT,DEL_RSE ,BSE_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
     ),
     [_LOWER] = LAYOUT_metheon(
@@ -138,9 +127,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_MAGNET] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         __NONE__,M_L2_3RD,M_UP_HF ,M_R2_3RD,__NONE__,    VIM_NLA ,DC_TOGGL,__NONE__,__NONE__,__NONE__,
+         __NONE__,M_L2_3RD,M_UP_HF ,M_R2_3RD,__NONE__,    __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         __NONE__,M_LT_HF ,M_BT_HF ,M_RT_HF ,__NONE__,    VIM_NLB ,ZOOM_AUD,ZOOM_VID,__NONE__,__NONE__,
+         __NONE__,M_LT_HF ,M_BT_HF ,M_RT_HF ,__NONE__,    __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          __NONE__,M_LT_3RD,M_MD_3RD,M_RT_3RD,__NONE__,    __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
