@@ -1,27 +1,14 @@
 #include "metheon.h"
 
 //   name           result    chord keys
-// top row combos
-COMB(WF_Q            ,KC_Q     ,KC_W, KC_F)
-COMB(UY_QUOT         ,KC_QUOT  ,KC_U, KC_Y)
+COMB(COMB_AE         ,KC_AE    ,KC_L, KC_U)
+COMB(COMB_OE         ,KC_OE    ,KC_U, KC_Y)
+COMB(COMB_AA         ,KC_AA    ,HOME_E, HOME_I)
 
-//COMB(FP_B            ,KC_B     ,KC_F, KC_P)
-//COMB(LU_J            ,KC_J     ,KC_L, KC_U)
-//COMB(CD_V            ,KC_V     ,KC_C, KC_D)
+COMB(COMB_LSFT       ,SHIFT    ,HOME_S, HOME_T)
+COMB(COMB_RSFT       ,SHIFT    ,HOME_N, HOME_E)
 
-COMB(LEFT_SHIFT      ,SHIFT    ,HOME_S, HOME_T)
-COMB(RIGHT_SHIFT     ,SHIFT    ,HOME_N, HOME_E)
-
-COMB(AAAE_Z          ,KC_Z     ,KC_AA, KC_AE)
-COMB(AEC_X           ,KC_X     ,KC_AE, KC_C)
-
-//COMB(COMBO_MAGNET    ,MAGNET   ,KC_W, KC_F, KC_P)
 COMB(COMBO_MAGNET    ,MAGNET   ,KC_L, KC_U, KC_Y)
 
 COMB(COMBO_ESC       ,KC_ESC   ,HOME_R, HOME_S, HOME_T)
 COMB(COMBO_ENTER     ,KC_ENTER ,HOME_N, HOME_E, HOME_I)
-
-// bigrams
-COMB(AR_AER          ,BG_AER   ,HOME_A, HOME_R)
-COMB(HC_HV           ,BG_HV    ,KC_H, KC_COMMA)
-COMB(FT_TH           ,BG_TH    ,KC_F, HOME_T)
