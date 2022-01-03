@@ -81,6 +81,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            BSE_E01 ,TAB_LWR ,SPC_EXT ,    BSPC_SFT,DEL_RSE ,BSE_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
     ),
+    [_GOLD] = LAYOUT_metheon(
+    //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
+         KC_DQT  ,KC_QUOT ,KC_SLSH ,KC_DOT  ,KC_SCLN ,    KC_W    ,KC_P    ,KC_M    ,KC_F    ,KC_X    ,
+    //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
+         GOLD_H  ,GOLD_I  ,GOLD_E  ,GOLD_A  ,KC_COMMA,    KC_V    ,GOLD_D  ,GOLD_N  ,GOLD_S  ,GOLD_R  ,
+    //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
+         KC_K    ,KC_Y    ,KC_O    ,KC_U    ,KC_MINS ,    KC_B    ,KC_C    ,KC_L    ,KC_G    ,KC_J    ,
+    //  '--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
+                           BSE_E01 ,LOWER   ,GOLD_SPC,    GOLD_T  ,RAISE   ,BSE_E02
+    //                    '--------+--------+--------'   '--------+--------+--------'
+    ),
     [_LOWER] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
          KC_F9   ,KC_F10  ,KC_F11  ,KC_F12  ,__NONE__,    KC_EQL  ,KC_7    ,KC_8    ,KC_9    ,KC_ASTR ,
@@ -105,18 +116,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_EXTEND] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         UNDO    ,CUT     ,COPY    ,PASTE   ,__NONE__,    LOCK    ,KC_STAB ,KC_UP   ,KC_TAB  ,__NONE__,
+         __NONE__,KC_LGUI ,KC_STAB ,KC_TAB  ,__NONE__,    LOCK    ,KC_BSPC ,KC_UP   ,KC_DEL  ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          KC_LCTRL,KC_LALT ,KC_LSFT ,KC_LGUI ,KC_LEAD ,    SEARCH  ,KC_LEFT ,KC_DOWN ,KC_RGHT ,KC_ENTER,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,    SCRNSHT ,KC_TAB  ,__NONE__,__NONE__,__NONE__,
+         UNDO    ,CUT     ,COPY    ,PASTE   ,__NONE__,    SCRNSHT ,KC_TAB  ,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-                           EXT_E01 ,__NONE__,________,    __NONE__,__NONE__,EXT_E02
+                           EXT_E01 ,__NONE__,________,    KC_BSPC ,KC_DEL  ,EXT_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
     ),
     [_ADJUST] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         RESET   ,__NONE__,__NONE__,__NONE__,__NONE__,    __NONE__,BASE    ,COLHD   ,__NONE__,__NONE__,
+         RESET   ,__NONE__,__NONE__,__NONE__,__NONE__,    __NONE__,BASE    ,GOLD   ,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          __NONE__,KC_MPRV ,KC_MPLY ,KC_MNXT ,__NONE__,    RGB_TOG ,RGB_MOD ,RGB_HUI ,RGB_SAI ,RGB_VAI ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
