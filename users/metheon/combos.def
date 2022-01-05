@@ -1,10 +1,8 @@
 #include "metheon.h"
 
 //   name           result    chord keys
-COMB(COMB_AE         ,KC_AE    ,KC_L, KC_U)
-COMB(COMB_OE         ,KC_OE    ,KC_U, KC_Y)
-COMB(COMB_AA         ,KC_AA    ,HOME_E, HOME_I)
-
+COMB(COMB_Q          ,KC_Q     ,KC_W, KC_P)
+COMB(COMB_Z          ,KC_Z     ,KC_X, KC_D)
 
 COMB(COMB_LSFT       ,SHIFT    ,HOME_S, HOME_T)
 COMB(COMB_RSFT       ,SHIFT    ,HOME_N, HOME_E)
@@ -13,18 +11,3 @@ COMB(COMBO_MAGNET    ,MAGNET   ,KC_L, KC_U, KC_Y)
 
 COMB(COMBO_ESC       ,KC_ESC   ,HOME_R, HOME_S, HOME_T)
 COMB(COMBO_ENTER     ,KC_ENTER ,HOME_N, HOME_E, HOME_I)
-
-// ALL COMBOS FOR HANDS DOWN GOLD
-COMB(GOLD_Z          ,KC_Z     ,GOLD_I, GOLD_A)
-COMB(GOLD_Q          ,KC_Q     ,KC_QUOTE, KC_DOT)
-COMB(GOLD_AA         ,KC_AA    ,GOLD_I, GOLD_E)
-COMB(GOLD_AE         ,KC_AE    ,KC_Y, KC_O)
-COMB(GOLD_OE         ,KC_OE    ,KC_O, KC_U)
-
-COMB(GOLD_LSFT       ,SHIFT    ,GOLD_E, GOLD_A)
-COMB(GOLD_RSFT       ,SHIFT    ,GOLD_D, GOLD_N)
-
-COMB(GOLD_MAGNET    ,MAGNET   ,KC_P, KC_M, KC_F)
-
-COMB(GOLD_ESC       ,KC_ESC   ,GOLD_I, GOLD_E, GOLD_A)
-COMB(GOLD_ENTER     ,KC_ENTER ,GOLD_D, GOLD_N, GOLD_S)

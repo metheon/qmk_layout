@@ -72,24 +72,13 @@ void matrix_scan_user(void) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,    KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_QUOT ,
+         KC_AE   ,KC_W    ,KC_F    ,KC_P    ,KC_V    ,    KC_K    ,KC_L    ,KC_U    ,KC_Y    ,KC_QUOT ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          HOME_A  ,HOME_R  ,HOME_S  ,HOME_T  ,KC_G    ,    KC_M    ,HOME_N  ,HOME_E  ,HOME_I  ,HOME_O  ,
     //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
-         KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,    KC_K    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,
+         KC_AA   ,KC_X    ,KC_C    ,KC_D    ,KC_B    ,    KC_J    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_OE   ,
     //  '--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
                            BSE_E01 ,TAB_LWR ,SPC_EXT ,    BSPC_SFT,DEL_RSE ,BSE_E02
-    //                    '--------+--------+--------'   '--------+--------+--------'
-    ),
-    [_GOLD] = LAYOUT_metheon(
-    //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         KC_DQT  ,KC_QUOT ,KC_SLSH ,KC_DOT  ,KC_SCLN ,    KC_W    ,KC_P    ,KC_M    ,KC_F    ,KC_X    ,
-    //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         GOLD_H  ,GOLD_I  ,GOLD_E  ,GOLD_A  ,KC_COMMA,    KC_V    ,GOLD_D  ,GOLD_N  ,GOLD_S  ,GOLD_R  ,
-    //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
-         KC_K    ,KC_Y    ,KC_O    ,KC_U    ,KC_MINS ,    KC_B    ,KC_C    ,KC_L    ,KC_G    ,KC_J    ,
-    //  '--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
-                           BSE_E01 ,LOWER   ,GOLD_SPC,    GOLD_T  ,RAISE   ,BSE_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
     ),
     [_LOWER] = LAYOUT_metheon(
@@ -109,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          KC_AT   ,KC_SLSH ,KC_MINS ,KC_SCLN ,KC_LPRN ,    KC_RPRN ,KC_EQL  ,KC_EXLM ,KC_AMPR ,KC_PIPE ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         KC_BSLS ,KC_QUES ,KC_UNDS ,KC_COLN ,KC_LBRC ,    KC_RBRC ,KC_PERC ,KC_LT   ,KC_GT   ,__NONE__,
+         KC_BSLS ,KC_QUES ,KC_UNDS ,KC_COLN ,KC_LBRC ,    KC_RBRC ,KC_PERC ,KC_LT   ,KC_GT   ,KC_SLSH ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
                            RSE_E01 ,________,__NONE__,    __NONE__,________,RSE_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
@@ -127,7 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_ADJUST] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         RESET   ,__NONE__,__NONE__,__NONE__,__NONE__,    __NONE__,BASE    ,GOLD   ,__NONE__,__NONE__,
+         RESET   ,__NONE__,__NONE__,__NONE__,__NONE__,    __NONE__,BASE    ,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          __NONE__,KC_MPRV ,KC_MPLY ,KC_MNXT ,__NONE__,    RGB_TOG ,RGB_MOD ,RGB_HUI ,RGB_SAI ,RGB_VAI ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|

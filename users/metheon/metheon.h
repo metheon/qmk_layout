@@ -10,8 +10,6 @@
 
 enum layers {
     _BASE,                  // Colemak-DH
-    _GOLD,               // Hands Down Gold - Mirror
-    _COLHD,                 // Colemak and Hands Down hybrid
     _LOWER,                 // Numpad and funpad layer
     _RAISE,                 // Primary symbols layer
     _EXTEND,                // Navigation cluster
@@ -40,22 +38,6 @@ enum layers {
 #define HOME_I              LALT_T(KC_I)
 #define HOME_O              LCTL_T(KC_O)
 #define BASE                DF(_BASE)
-
-// Home row mods, using hands down gold
-#define GOLD_H              LCTL_T(KC_H)
-#define GOLD_I              LALT_T(KC_I)
-#define GOLD_E              LSFT_T(KC_E)
-#define GOLD_A              LGUI_T(KC_A)
-#define GOLD_D              LGUI_T(KC_D)
-#define GOLD_N              LSFT_T(KC_N)
-#define GOLD_S              LALT_T(KC_S)
-#define GOLD_R              LCTL_T(KC_R)
-#define GOLD                DF(_GOLD)
-// Thumbs for hands down gold
-#define GOLD_T              LSFT_T(KC_T)
-#define GOLD_SPC            SPC_EXT
-#define LOWER               MO(_LOWER)
-#define RAISE               MO(_RAISE)
 
 // Home row mods, for the funpad and numpad... F5 F6 F7 F8 <--> 4 5 6 0
 #define HOME_F5             LCTL_T(KC_F5)
