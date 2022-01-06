@@ -2,13 +2,10 @@
 
 //   name           result    chord keys
 COMB(COMB_AER        ,BG_AER   ,KC_AE, KC_W)
-COMB(COMB_Q          ,KC_Q     ,KC_W, KC_P)
-COMB(COMB_Z          ,KC_Z     ,KC_X, KC_D)
+COMB(COMBO_Q         ,KC_Q     ,KC_W, KC_P)
+COMB(COMBO_Z         ,KC_Z     ,KC_X, KC_D)
 
 COMB(COMB_LSFT       ,SHIFT    ,HOME_S, HOME_T)
 COMB(COMB_RSFT       ,SHIFT    ,HOME_N, HOME_E)
-
-COMB(COMBO_MAGNET    ,MAGNET   ,KC_L, KC_U, KC_Y)
-
 COMB(COMBO_ESC       ,KC_ESC   ,HOME_R, HOME_S, HOME_T)
 COMB(COMBO_ENTER     ,KC_ENTER ,HOME_N, HOME_E, HOME_I)

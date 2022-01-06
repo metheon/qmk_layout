@@ -9,24 +9,28 @@
 #include "desk_control.h"
 
 enum layers {
-    _BASE,                  // Colemak-DH
-    _LOWER,                 // Numpad and funpad layer
-    _RAISE,                 // Primary symbols layer
-    _EXTEND,                // Navigation cluster
-    _ADJUST,                // Mainly RGB and media keys, activated when lower and raise is pressed at the same time
-    _MAGNET,                // Shortcuts for Magnet software on mac
+    _COLDH,                 // Colemak-DH
+    _NAV,                   // Navigation cluster layer
+    _NUM,                   // Numpad layer
+    _SYM,                   // Symbols, both hands
+    _SYS,                   // Window navigation and media keys
 };
 
 #define __NONE__            KC_NO
 #define ________            _______
 
-#define MAGNET              OSL(_MAGNET)
+ 
+#define TAB_SYM             LT(_SYM, KC_TAB)
+#define SPC_NAV             LT(_NAV, KC_SPC)
+#define BSPC_NUM            LT(_NUM, KC_BSPC)
+#define DEL_SYM             LT(_SYM, KC_DEL)
+#define ZERO_NAV            LT(_NAV, KC_0)
+
 #define SHIFT               OSM(MOD_LSFT)
 
-#define SPC_EXT             LT(_EXTEND, KC_SPACE)
-#define TAB_LWR             LT(_LOWER, KC_TAB)
-#define BSPC_SFT            LSFT_T(KC_BSPC)
-#define DEL_RSE             LT(_RAISE, KC_DEL)
+#define LOWER               MO(_LOWER)
+#define RAISE               MO(_RAISE)
+#define SYMBOLS             OSL(_SYMBOLS)
 
 // Home row mods, using Colemak ... arst <--> neio
 #define HOME_A              LCTL_T(KC_A)
@@ -37,7 +41,6 @@ enum layers {
 #define HOME_E              LSFT_T(KC_E)
 #define HOME_I              LALT_T(KC_I)
 #define HOME_O              LCTL_T(KC_O)
-#define BASE                DF(_BASE)
 
 // Home row mods, for the funpad and numpad... F5 F6 F7 F8 <--> 4 5 6 0
 #define HOME_F5             LCTL_T(KC_F5)
@@ -78,7 +81,8 @@ enum layers {
 #define SEARCH              LGUI(KC_SPACE)      // Search 
 #define NXT_DSKT            LCTL(KC_RIGHT)      // Next Desktop
 #define PRV_DSKT            LCTL(KC_LEFT)       // Previous Desktop
-#define DEL_WRD             LALT(KC_BSPC)       // Delete word
+#define BSPC_WRD            LALT(KC_BSPC)       // Backspace a word
+#define DEL_WRD             LALT(KC_DEL)        // Delete a word
 #define ZOOM_AUD            LGUI(LSFT(KC_A))    // Zoom Audio Off/On
 #define ZOOM_VID            LGUI(LSFT(KC_V))    // Zoom Video Off/On
 #define HIDE_WIN            LGUI(KC_H)          // Hide a Window

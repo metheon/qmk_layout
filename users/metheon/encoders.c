@@ -77,10 +77,10 @@ void ctrl_tab(bool clockwise) {
 bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {  // Left encoder
         switch (biton32(layer_state)) {
-            case _BASE:
+            case _COLDH:
                 gui_tab(clockwise);
                 break;
-            case _RAISE:
+            case _NAV:
                 ctrl_tab(clockwise);
                 break;
             default:
@@ -89,13 +89,10 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         }
     } else if (index == 1) {  // Right encoder
         switch (biton32(layer_state)) {
-            case _BASE:
+            case _COLDH:
                 volume_control(clockwise);
                 break;
-            case _EXTEND:
-                media_control(clockwise);
-                break;
-            case _LOWER:
+            case _NUM:
                 scrolling(clockwise);
                 break;
             default:
