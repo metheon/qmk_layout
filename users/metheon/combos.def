@@ -1,6 +1,7 @@
 #include "metheon.h"
 
 //   name           result    chord keys
+COMB(COMB_AER        ,BG_AER   ,KC_AE, KC_W)
 COMB(COMB_Q          ,KC_Q     ,KC_W, KC_P)
 COMB(COMB_Z          ,KC_Z     ,KC_X, KC_D)
 
