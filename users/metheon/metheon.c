@@ -95,22 +95,32 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_HDT] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         KC_QUOT ,KC_DQT  ,KC_SLSH ,KC_DOT  ,KC_SCLN ,    KC_B    ,KC_P    ,KC_M    ,KC_G    ,KC_X    ,
+         KC_X    ,KC_G    ,KC_M    ,KC_P    ,KC_B    ,    KC_SCLN ,KC_DOT  ,KC_SLSH ,KC_DQT  ,KC_QUOT ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         KC_H    ,HDT_M_I ,HDT_M_E ,HDT_M_A ,KC_COMMA,    KC_W    ,HDT_M_T ,HDT_M_N ,HDT_M_S ,KC_C    ,
+         C_SYM   ,HDT_M_S ,HDT_M_N ,HDT_M_T ,KC_W    ,    KC_COMMA,HDT_M_A ,HDT_M_E ,HDT_M_I ,H_SYM   ,
     //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
-         KC_K    ,KC_Y    ,KC_O    ,HDT_M_U ,KC_MINS ,    KC_V    ,HDT_M_D ,KC_L    ,KC_F    ,KC_J    ,
+         KC_J    ,KC_F    ,KC_L    ,HDT_M_D ,KC_V    ,    KC_MINS ,HDT_M_U ,KC_O    ,KC_Y    ,KC_K    ,
     //  '--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
                            CHD_E01 ,TAB_SYM ,SPC_NAV ,    R_NUM   ,BSPC_SYM,CHD_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
     ),
+    //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
+     //     KC_QUOT ,KC_DQT  ,KC_SLSH ,KC_DOT  ,KC_SCLN ,    KC_B    ,KC_P    ,KC_M    ,KC_G    ,KC_X    ,
+    //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
+     //     H_SYM   ,HDT_M_I ,HDT_M_E ,HDT_M_A ,KC_COMMA,    KC_W    ,HDT_M_T ,HDT_M_N ,HDT_M_S ,C_SYM   ,
+    //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
+     //     KC_K    ,KC_Y    ,KC_O    ,HDT_M_U ,KC_MINS ,    KC_V    ,HDT_M_D ,KC_L    ,KC_F    ,KC_J    ,
+    //  '--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
+                         //   CHD_E01 ,NAV     ,KC_SPACE,    KC_R    ,NUM     ,CHD_E02
+    //                    '--------+--------+--------'   '--------+--------+--------'
+//     ),
     [_NAV] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         PREV_TAB,NEXT_TAB,PRV_DSKT,NXT_DSKT,LOCK    ,    __NONE__,KC_BSPC ,KC_UP   ,KC_DEL  ,__NONE__,
+         UNDO    ,CUT     ,COPY    ,PASTE   ,LOCK    ,    SNK_CASE,KC_STAB ,KC_UP   ,KC_TAB  ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         KC_LCTL ,KC_LALT ,KC_LSFT ,KC_LGUI ,SEARCH  ,    CAPSWORD,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
+         KC_LCTL ,KC_LALT ,KC_LSFT ,KC_LGUI ,KC_ESC  ,    CAPSWORD,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         UNDO    ,CUT     ,COPY    ,PASTE   ,SCRNSHT ,    SCRM_SNK,KC_ENTER,__NONE__,__NONE__,__NONE__,
+         PREV_TAB,NEXT_TAB,PRV_DSKT,NXT_DSKT,SCRNSHT ,    SCRM_SNK,KC_ENTER,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
                            NAV_E01 ,________,________,    ________,DEL_SYM ,NAV_E02
     //                    '--------+--------+--------'   '--------+--------+--------'

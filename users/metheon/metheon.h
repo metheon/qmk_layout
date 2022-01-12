@@ -24,10 +24,14 @@ enum layers {
 // Colemak thumb keys 
 #define TAB_SYM             LT(_SYM, KC_TAB)
 #define SPC_NAV             LT(_NAV, KC_SPC)
+#define NAV                 MO(_NAV)
 #define NUM                 MO(_NUM)
+#define SYM                 MO(_SYM)
 #define BSPC_SYM            LT(_SYM, KC_BSPC)
 #define ZERO_NAV            LT(_NAV, KC_0)
 #define DEL_SYM             LT(_SYM, KC_DEL)
+#define H_SYM               LT(_SYM, KC_H)
+#define C_SYM               LT(_SYM, KC_C)
 
 // hands down thumb keys
 #define R_NUM               LT(_NUM, KC_R)
