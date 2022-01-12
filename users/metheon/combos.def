@@ -1,16 +1,5 @@
 #include "metheon.h"
 
-//   name           result    chord keys
-COMB(COMB_AER        ,BG_AER   ,KC_AE, KC_W)
-COMB(COMBO_Q         ,KC_Q     ,KC_W, KC_P)
-COMB(COMBO_Z         ,KC_Z     ,KC_X, HOME_D)
-
-COMB(COMB_LSFT       ,SHIFT    ,HOME_S, HOME_T)
-COMB(COMB_RSFT       ,SHIFT    ,HOME_N, HOME_E)
-COMB(COMBO_ESC       ,KC_ESC   ,HOME_R, HOME_S, HOME_T)
-COMB(COMBO_ENTER     ,KC_ENTER ,HOME_N, HOME_E, HOME_I)
-
-// hands down combos
 COMB(HDT_Q           ,KC_Q     ,KC_G, KC_P)
 COMB(HDT_Z           ,KC_Z     ,KC_F, HDT_M_D)
 
@@ -22,8 +11,6 @@ COMB(HDT_BSPC        ,KC_BSPC  ,HDT_M_E, HDT_M_A)
 COMB(HDT_BSPC_WRD    ,BSPC_WRD ,HDT_M_I, HDT_M_E, HDT_M_A)
 COMB(HDT_DEL         ,KC_DEL   ,HDT_M_T, HDT_M_N)
 COMB(HDT_DEL_WRD     ,DEL_WRD  ,HDT_M_T, HDT_M_N, HDT_M_S)
-
-COMB(HDT_BASE        ,TO_BASE  ,KC_SCLN, KC_B)
 
 COMB(COMB_RSFT2      ,SHIFT    ,KC_SLSH ,KC_DOT)
 COMB(COMB_LSFT2      ,SHIFT    ,KC_P    ,KC_M)

@@ -9,7 +9,6 @@
 #include "desk_control.h"
 
 enum layers {
-    _COLDH,                 // Colemak-DH
     _HDT,                   // Hands Down Titanium (neu-rx)
     _NAV,                   // Navigation cluster layer
     _NUM,                   // Numpad layer
@@ -21,34 +20,17 @@ enum layers {
 #define ________            _______
 
 
-// Colemak thumb keys 
+// Thumb keys 
 #define TAB_SYM             LT(_SYM, KC_TAB)
 #define SPC_NAV             LT(_NAV, KC_SPC)
-#define NAV                 MO(_NAV)
-#define NUM                 MO(_NUM)
-#define SYM                 MO(_SYM)
 #define BSPC_SYM            LT(_SYM, KC_BSPC)
 #define ZERO_NAV            LT(_NAV, KC_0)
 #define DEL_SYM             LT(_SYM, KC_DEL)
 #define H_SYM               LT(_SYM, KC_H)
 #define C_SYM               LT(_SYM, KC_C)
-
-// hands down thumb keys
 #define R_NUM               LT(_NUM, KC_R)
 
-#define TO_BASE             TO(_COLDH)
-#define TO_HDT              TO(_HDT)
 #define SHIFT               OSM(MOD_LSFT)
-
-// Home row mods, using Colemak ... rst/d <--> h/nei
-#define HOME_R              LALT_T(KC_R)
-#define HOME_S              LSFT_T(KC_S)
-#define HOME_T              LGUI_T(KC_T)
-#define HOME_D              LCTL_T(KC_D)
-#define HOME_H              LCTL_T(KC_H)
-#define HOME_N              LGUI_T(KC_N)
-#define HOME_E              LSFT_T(KC_E)
-#define HOME_I              LALT_T(KC_I)
 
 // Home row mods, using Hands Down Titanium ... iea/u <--> d/tns
 // Pinkies not used, instead ctrl is put under cmd
