@@ -12,14 +12,14 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
           // hands down
-          case HDT_M_I:
-          case HDT_M_E:
-          case HDT_M_A:
-          case HDT_M_U:
-          case HDT_M_D:
-          case HDT_M_T:
-          case HDT_M_N:
-          case HDT_M_S:
+          case HOME_I:
+          case HOME_E:
+          case HOME_A:
+          case HOME_U:
+          case HOME_P:
+          case HOME_T:
+          case HOME_N:
+          case HOME_S:
           // thumb keys
           case TAB_SYM:
           case SPC_NAV:
@@ -34,14 +34,14 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
           // hands down
-          case HDT_M_I:
-          case HDT_M_E:
-          case HDT_M_A:
-          case HDT_M_U:
-          case HDT_M_D:
-          case HDT_M_T:
-          case HDT_M_N:
-          case HDT_M_S:
+          case HOME_I:
+          case HOME_E:
+          case HOME_A:
+          case HOME_U:
+          case HOME_P:
+          case HOME_T:
+          case HOME_N:
+          case HOME_S:
                return TAPPING_TERM - 100; // 400-100=300
           // thumb keys
           case TAB_SYM:
@@ -64,11 +64,11 @@ void matrix_scan_user(void) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_HDT] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         KC_X    ,KC_G    ,KC_M    ,KC_P    ,KC_B    ,    KC_SCLN ,KC_DOT  ,KC_SLSH ,KC_DQT  ,KC_QUOT ,
+         KC_X    ,KC_G    ,KC_M    ,HOME_P  ,KC_B    ,    KC_SCLN ,HOME_U  ,KC_O    ,KC_Y    ,KC_QUOT ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         C_SYM   ,HDT_M_S ,HDT_M_N ,HDT_M_T ,KC_W    ,    KC_COMMA,HDT_M_A ,HDT_M_E ,HDT_M_I ,H_SYM   ,
+         C_SYM   ,HOME_S  ,HOME_N  ,HOME_T  ,KC_W    ,    KC_COMMA,HOME_A  ,HOME_E  ,HOME_I  ,H_SYM   ,
     //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
-         KC_J    ,KC_F    ,KC_L    ,HDT_M_D ,KC_V    ,    KC_MINS ,HDT_M_U ,KC_O    ,KC_Y    ,KC_K    ,
+         KC_J    ,KC_F    ,KC_L    ,KC_D    ,KC_V    ,    KC_MINS ,KC_DOT  ,KC_SLSH ,KC_DQT  ,KC_K    ,
     //  '--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
                            CHD_E01 ,TAB_SYM ,SPC_NAV ,    R_NUM   ,BSPC_SYM,CHD_E02
     //                    '--------+--------+--------'   '--------+--------+--------'

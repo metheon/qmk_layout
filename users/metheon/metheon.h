@@ -35,14 +35,14 @@ enum layers {
 // Home row mods, using Hands Down Titanium ... iea/u <--> d/tns
 // Pinkies not used, instead ctrl is put under cmd
 
-#define HDT_M_I              LALT_T(KC_I)
-#define HDT_M_E              LSFT_T(KC_E)
-#define HDT_M_A              LGUI_T(KC_A)
-#define HDT_M_U              LCTL_T(KC_U)
-#define HDT_M_D              LCTL_T(KC_D)
-#define HDT_M_T              LGUI_T(KC_T)
-#define HDT_M_N              LSFT_T(KC_N)
-#define HDT_M_S              LALT_T(KC_S)
+#define HOME_I              LALT_T(KC_I)
+#define HOME_E              LSFT_T(KC_E)
+#define HOME_A              LGUI_T(KC_A)
+#define HOME_U              LCTL_T(KC_U)
+#define HOME_P              LCTL_T(KC_P)
+#define HOME_T              LGUI_T(KC_T)
+#define HOME_N              LSFT_T(KC_N)
+#define HOME_S              LALT_T(KC_S)
 
 // Home row mods, for the funpad and numpad... F5 F6 F7 F8 <--> 4 5 6 0
 #define HOME_F5             LCTL_T(KC_F5)

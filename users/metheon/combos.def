@@ -1,16 +1,16 @@
 #include "metheon.h"
 
-COMB(HDT_Q           ,KC_Q     ,KC_G, KC_P)
-COMB(HDT_Z           ,KC_Z     ,KC_F, HDT_M_D)
+COMB(HDT_Q           ,KC_Q     ,KC_G, HOME_P)
+COMB(HDT_Z           ,KC_Z     ,KC_F, KC_D)
 
-COMB(HDT_AA          ,KC_AA    ,HDT_M_I, HDT_M_E)
+COMB(HDT_AA          ,KC_AA    ,HOME_I, HOME_E)
 COMB(HDT_AE          ,KC_AE    ,KC_Y, KC_O)
-COMB(HDT_OE          ,KC_OE    ,KC_O, HDT_M_U)
+COMB(HDT_OE          ,KC_OE    ,KC_O, HOME_U)
 
-COMB(HDT_BSPC        ,KC_BSPC  ,HDT_M_E, HDT_M_A)
-COMB(HDT_BSPC_WRD    ,BSPC_WRD ,HDT_M_I, HDT_M_E, HDT_M_A)
-COMB(HDT_DEL         ,KC_DEL   ,HDT_M_T, HDT_M_N)
-COMB(HDT_DEL_WRD     ,DEL_WRD  ,HDT_M_T, HDT_M_N, HDT_M_S)
+COMB(HDT_BSPC        ,KC_BSPC  ,HOME_E, HOME_A)
+COMB(HDT_BSPC_WRD    ,BSPC_WRD ,HOME_I, HOME_E, HOME_A)
+COMB(HDT_DEL         ,KC_DEL   ,HOME_T, HOME_N)
+COMB(HDT_DEL_WRD     ,DEL_WRD  ,HOME_T, HOME_N, HOME_S)
 
 COMB(COMB_RSFT2      ,SHIFT    ,KC_SLSH ,KC_DOT)
-COMB(COMB_LSFT2      ,SHIFT    ,KC_P    ,KC_M)
+COMB(COMB_LSFT2      ,SHIFT    ,HOME_P    ,KC_M)
