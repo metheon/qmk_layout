@@ -13,6 +13,7 @@ enum layers {
     _NAV,                   // Navigation cluster layer
     _NUM,                   // Numpad layer
     _SYM,                   // Symbols, both hands
+    _NEW_SYM,               // Symbols, both hands
     _SYS,                   // Window navigation and media keys
 };
 
