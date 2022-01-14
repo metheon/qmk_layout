@@ -20,11 +20,14 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
           case HOME_T:
           case HOME_N:
           case HOME_S:
+               return true;
           // thumb keys
           case TAB_SYM:
           case SPC_NAV:
           case R_NUM:
-          case BSPC_SYM:
+          case ENT_SYM:
+          case BSPC_NUM:
+          case DEL_SYM:
                return true;
           default:
                return false;
@@ -47,7 +50,9 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
           case TAB_SYM:
           case SPC_NAV:
           case R_NUM:
-          case BSPC_SYM:
+          case ENT_SYM:
+          case BSPC_NUM:
+          case DEL_SYM:
                return TAPPING_TERM - 100; // 400-100=300
           default:
                return TAPPING_TERM;       // 400
@@ -64,13 +69,13 @@ void matrix_scan_user(void) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_HDT] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         KC_X    ,KC_G    ,KC_M    ,HOME_P  ,KC_B    ,    KC_SCLN ,HOME_U  ,KC_O    ,KC_Y    ,KC_QUOT ,
+         __NONE__,KC_G    ,KC_M    ,HOME_P  ,KC_B    ,    KC_SCLN ,HOME_U  ,KC_O    ,KC_Y    ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         C_SYM   ,HOME_S  ,HOME_N  ,HOME_T  ,KC_W    ,    KC_COMMA,HOME_A  ,HOME_E  ,HOME_I  ,H_SYM   ,
+         C_SYM   ,HOME_S  ,HOME_N  ,HOME_T  ,KC_W    ,    KC_K    ,HOME_A  ,HOME_E  ,HOME_I  ,H_SYM   ,
     //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
-         KC_J    ,KC_F    ,KC_L    ,KC_D    ,KC_V    ,    KC_MINS ,KC_DOT  ,KC_SLSH ,KC_DQT  ,KC_K    ,
+         __NONE__,KC_F    ,KC_L    ,KC_D    ,KC_V    ,    KC_MINS ,KC_COMMA,KC_DOT  ,KC_QUOT ,__NONE__,
     //  '--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
-                           CHD_E01 ,TAB_SYM ,SPC_NAV ,    R_NUM   ,BSPC_SYM,CHD_E02
+                           CHD_E01 ,TAB_SYM ,SPC_NAV ,    R_NUM   ,ENT_SYM ,CHD_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
     ),
     [_NAV] = LAYOUT_metheon(
@@ -81,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          PREV_TAB,NEXT_TAB,PRV_DSKT,NXT_DSKT,SCRNSHT ,    SCRM_SNK,KC_ENTER,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-                           NAV_E01 ,________,________,    ________,DEL_SYM ,NAV_E02
+                           NAV_E01 ,________,________,    BSPC_NUM,DEL_SYM ,NAV_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
     ),
     [_NUM] = LAYOUT_metheon(
@@ -119,4 +124,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 // clang-format on
-

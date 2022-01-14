@@ -20,21 +20,25 @@ enum layers {
 #define ________            _______
 
 
-// Thumb keys 
+// Thumb keys for hands down
 #define TAB_SYM             LT(_SYM, KC_TAB)
 #define SPC_NAV             LT(_NAV, KC_SPC)
-#define BSPC_SYM            LT(_SYM, KC_BSPC)
-#define ZERO_NAV            LT(_NAV, KC_0)
+#define R_NUM               LT(_NUM, KC_R)
+#define ENT_SYM             LT(_SYM, KC_ENT)
+
+#define BSPC_NUM            LT(_NUM, KC_BSPC)
 #define DEL_SYM             LT(_SYM, KC_DEL)
+
+#define ZERO_NAV            LT(_NAV, KC_0)
+
 #define H_SYM               LT(_SYM, KC_H)
 #define C_SYM               LT(_SYM, KC_C)
-#define R_NUM               LT(_NUM, KC_R)
 
+// Other
 #define SHIFT               OSM(MOD_LSFT)
 
 // Home row mods, using Hands Down Titanium ... iea/u <--> d/tns
-// Pinkies not used, instead ctrl is put under cmd
-
+// Pinkies not used, instead ctrl is put over cmd
 #define HOME_I              LALT_T(KC_I)
 #define HOME_E              LSFT_T(KC_E)
 #define HOME_A              LGUI_T(KC_A)
@@ -46,7 +50,7 @@ enum layers {
 
 // Home row mods, for the funpad and numpad... F5 F6 F7 F8 <--> 4 5 6 0
 #define HOME_F5             LCTL_T(KC_F5)
-#define HOME_F6             LALT_T(KC_F6)
+#define HOME_F6             LALT_T(KC_FN6)
 #define HOME_F7             LSFT_T(KC_F7)
 #define HOME_F8             LGUI_T(KC_F8)
 #define HOME_4              LGUI_T(KC_4)
