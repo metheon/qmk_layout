@@ -1,0 +1,38 @@
+#include "metheon.h"
+
+// //// //
+// BASE //
+// //// //
+
+KO(slash_pipe, MOD_MASK_SHIFT, KC_SLSH, KC_PIPE, _BASE)
+KO(slash_backslash, MOD_MASK_ALT, KC_SLSH, KC_BSLS, _BASE)
+
+KO(at_hash, MOD_MASK_SHIFT, KC_AT, KC_HASH, _BASE)
+
+KO(comma_semicolon, MOD_MASK_SHIFT, KC_COMMA, KC_SCLN, _BASE)
+KO(comma_questionmark, MOD_MASK_ALT, KC_COMMA, KC_QUES, _BASE)
+
+KO(dot_colon, MOD_MASK_SHIFT, KC_DOT, KC_COLN, _BASE)
+KO(dot_exclamationmark, MOD_MASK_ALT, KC_DOT, KC_EXLM, _BASE)
+
+KO(mins_plus, MOD_MASK_SHIFT, KC_MINS, KC_PLUS, _BASE)
+
+KO(space_unds, MOD_MASK_SHIFT, SPC_NAV, KC_UNDS, _BASE)
+
+KO(enter_tab, MOD_MASK_GUI, ENT_SYM, G(KC_TAB), _BASE)
+
+KO(bspc_del, MOD_MASK_SHIFT, BSPC_SYM, DEL_SYM, _BASE)
+
+// /// //
+// NUM //
+// /// //
+
+KO(zero_plus, MOD_MASK_SHIFT, ZERO_NAV, KC_PLUS, _NUM)
+KO(N2_dot, MOD_MASK_SHIFT, KC_2, KC_DOT, _NUM)
+KO(N3_comma, MOD_MASK_SHIFT, KC_3, KC_COMMA, _NUM)
+KO(N4_slsh, MOD_MASK_SHIFT, KC_4, KC_SLSH, _NUM)
+KO(N5_astr, MOD_MASK_SHIFT, KC_5, KC_ASTR, _NUM)
+KO(N6_mins, MOD_MASK_SHIFT, KC_6, KC_MINS, _NUM)
+KO(N7_lprn, MOD_MASK_SHIFT, KC_7, KC_LPRN, _NUM)
+KO(N8_rprn, MOD_MASK_SHIFT, KC_8, KC_RPRN, _NUM)
+KO(N9_eql, MOD_MASK_SHIFT, KC_9, KC_EQL, _NUM)

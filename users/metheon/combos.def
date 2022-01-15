@@ -1,17 +1,17 @@
 #include "metheon.h"
 
 COMB(HDT_Q              ,KC_Q       ,KC_G, KC_M)            // Q
-COMB(HDT_J              ,KC_J       ,KC_M, HOME_P)          // J
 COMB(HDT_Z              ,KC_Z       ,KC_F, KC_L)            // Z
-COMB(HDT_X              ,KC_X       ,KC_L, KC_D)            // X
 
 COMB(HDT_AA             ,KC_AA      ,HOME_I, HOME_E)        // Å
 COMB(HDT_AE             ,KC_AE      ,KC_O, HOME_U)          // Æ
 COMB(HDT_OE             ,KC_OE      ,KC_Y, KC_O)            // Ø
 
-COMB(HDT_SLSH           ,KC_SLSH    ,HOME_A, HOME_I)        // /
+//COMB(HDT_SLSH           ,KC_SLSH    ,HOME_A, HOME_I)        // /
 COMB(HDT_QUES           ,KC_QUES    ,HOME_U, KC_Y)          // ?
 COMB(HDT_EXLM           ,KC_EXLM    ,KC_COMMA, KC_QUOT)     // !
 
 COMB(COMB_RSFT2         ,SHIFT      ,HOME_A, HOME_E)        // one shot shift
 COMB(COMB_LSFT2         ,SHIFT      ,HOME_N, HOME_T)        // one shot shift
+
+COMB(COMB_UNDO          ,UNDO       ,CUT, PASTE)            // undo

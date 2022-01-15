@@ -7,6 +7,7 @@ endif
 EXTRAKEY_ENABLE					=	yes 	# Enables audio control and System control
 COMBO_ENABLE					=	yes		# Enables the usage of combos
 LEADER_ENABLE					=	yes  	# Enables the Leader Key feature
+KEY_OVERRIDE_ENABLE				=	yes		# Enables key overrides
 ifndef LTO_ENABLE
 	LTO_ENABLE					=	yes		# Reduces compiled size of firmware
 endif
