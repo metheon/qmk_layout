@@ -26,6 +26,7 @@ enum layers {
 #define R_NUM               LT(_NUM, KC_R)
 #define BSPC_SYM            LT(_SYM, KC_BSPC)
 #define DEL_SYM             LT(_SYM, KC_DEL)
+#define BSPC_NUM            LT(_NUM, KC_BSPC)
 #define ZERO_NAV            LT(_NAV, KC_0)
 
 // Other

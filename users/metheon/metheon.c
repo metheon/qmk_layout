@@ -28,6 +28,7 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
           case R_NUM:
           case BSPC_SYM:
           case DEL_SYM:
+          case BSPC_NUM:
           case ZERO_NAV:
                return true;
           default:
@@ -53,6 +54,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
           case R_NUM:
           case BSPC_SYM:
           case DEL_SYM:
+          case BSPC_NUM:
           case ZERO_NAV:
                return TAPPING_TERM - 100; // 400-100=300
           default:
@@ -87,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          PREV_TAB,NEXT_TAB,PRV_DSKT,NXT_DSKT,SCRNSHT ,    SCRM_SNK,KC_ENTER,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-                           NAV_E01 ,________,________,    ________,________,NAV_E02
+                           NAV_E01 ,__NONE__,________,    BSPC_NUM,DEL_SYM ,NAV_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
     ),
     [_NUM] = LAYOUT_metheon(
@@ -98,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
          __NONE__,KC_1    ,KC_2    ,KC_3    ,__NONE__,    __NONE__,KC_ENTER,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
-                           NUM_E01 ,________,ZERO_NAV,    ________,________,NUM_E02
+                           NUM_E01 ,________,ZERO_NAV,    ________,__NONE__,NUM_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
     ),
     [_SYM] = LAYOUT_metheon(
@@ -109,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          KC_BSLS ,KC_QUES ,KC_UNDS ,KC_LBRC ,KC_RBRC ,    KC_COLN ,KC_PERC ,KC_LT   ,KC_GT   ,KC_SLSH ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-                           __NONE__,________,________,    ________,________,__NONE__
+                           __NONE__,________,__NONE__,    __NONE__,________,__NONE__
     //                    '--------+--------+--------'   '--------+--------+--------'
     ),
     [_NEW_SYM] = LAYOUT_metheon(
@@ -131,7 +133,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,    __NONE__,M_LT_3RD,M_MD_3RD,M_RT_3RD,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-                           __NONE__,________,________,    ________,________,__NONE__
+                           __NONE__,__NONE__,________,    ________,__NONE__,__NONE__
     //                    '--------+--------+--------'   '--------+--------+--------'
     )
 };
