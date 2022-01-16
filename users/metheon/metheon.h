@@ -13,7 +13,6 @@ enum layers {
     _NAV,                   // Navigation cluster layer
     _NUM,                   // Numpad layer
     _SYM,                   // Symbols, both hands
-    _NEW_SYM,               // Symbols, both hands
     _SYS,                   // Window navigation and media keys
 };
 
@@ -21,13 +20,13 @@ enum layers {
 #define ________            _______
 
 // Thumb keys for hands down
-#define ENT_SYM             LT(_SYM, KC_ENTER)
+#define ENT_NUM             LT(_NUM, KC_ENTER)
 #define SPC_NAV             LT(_NAV, KC_SPC)
-#define R_NUM               LT(_NUM, KC_R)
+#define R_SYM               LT(_SYM, KC_R)
 #define BSPC_SYM            LT(_SYM, KC_BSPC)
 #define DEL_SYM             LT(_SYM, KC_DEL)
 #define BSPC_NUM            LT(_NUM, KC_BSPC)
-#define ZERO_NAV            LT(_NAV, KC_0)
+#define ZERO_SYM            LT(_SYM, KC_0)
 
 // Other
 #define SHIFT               OSM(MOD_LSFT)
