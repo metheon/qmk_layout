@@ -127,11 +127,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_SYS] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         RESET   ,KC_MUTE ,KC_VOLD ,KC_VOLU ,__NONE__,    __NONE__,M_L2_3RD,M_UP_HF ,M_R2_3RD,__NONE__,
+         RESET   ,KC_MUTE ,KC_VOLD ,KC_VOLU ,__NONE__,    M_UL_QD ,M_L2_3RD,M_UP_HF ,M_R2_3RD,M_UR_QD ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         __NONE__,KC_MPRV ,KC_MPLY ,KC_MNXT ,__NONE__,    M_FSCRN ,M_LT_HF ,M_BT_HF ,M_RT_HF ,__NONE__,
+         __NONE__,KC_MPRV ,KC_MPLY ,KC_MNXT ,__NONE__,    M_FSCRN ,M_LT_HF ,M_BT_HF ,M_RT_HF ,M_FSCRN ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,    __NONE__,M_LT_3RD,M_MD_3RD,M_RT_3RD,__NONE__,
+         __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,    M_BL_QD ,M_LT_3RD,M_MD_3RD,M_RT_3RD,M_BR_QD ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
                            __NONE__,__NONE__,________,    ________,__NONE__,__NONE__
     //                    '--------+--------+--------'   '--------+--------+--------'
