@@ -9,17 +9,19 @@
               ╰────────╯ ╰────────╯            
 */
 
-COMB(COMBO_Q             ,KC_Q       ,KC_G, KC_M)            // Q
-COMB(COMBO_Z             ,KC_Z       ,KC_F, KC_L)            // Z
+COMB(COMBO_Q                ,KC_Q       ,KC_G, KC_M)                // Q
+COMB(COMBO_Z                ,KC_Z       ,KC_F, KC_L)                // Z
 
-COMB(COMBO_AE            ,KC_AE      ,HOME_A, HOME_E)        // Æ
-COMB(COMBO_OE            ,KC_OE      ,HOME_E, HOME_I)        // Ø
-COMB(COMBO_AA            ,KC_AA      ,HOME_A, HOME_I)        // Å
+COMB(COMBO_AE               ,KC_AE      ,HOME_A, HOME_E)            // Æ
+COMB(COMBO_OE               ,KC_OE      ,HOME_E, HOME_I)            // Ø
+COMB(COMBO_AA               ,KC_AA      ,HOME_A, HOME_I)            // Å
 
-COMB(COMBO_QUES          ,KC_QUES    ,HOME_U, KC_Y)          // ?
-COMB(COMBO_EXLM          ,KC_EXLM    ,KC_COMMA, KC_QUOT)     // !
+COMB(COMBO_COPY1            ,COPY       ,HOME_S, HOME_N)            // copy
+COMB(COMBO_PASTE1           ,PASTE      ,HOME_N, HOME_T)            // paste
+COMB(COMBO_CUT1             ,CUT        ,HOME_S, HOME_T)            // cut
+COMB(COMBO_UNDO1            ,UNDO       ,HOME_S, HOME_N, HOME_T)    // undo
 
-//COMB(COMBO_RSFT2         ,SHIFT      ,HOME_A, HOME_E)        // one shot shift
-//COMB(COMBO_LSFT2         ,SHIFT      ,HOME_N, HOME_T)        // one shot shift
-
-COMB(COMBO_PASTE           ,PASTE      ,CUT, COPY)           // undo
+COMB(COMBO_COPY2            ,COPY       ,KC_LALT, KC_LSFT)          // copy
+COMB(COMBO_PASTE2           ,PASTE      ,KC_LSFT, KC_LGUI)          // paste
+COMB(COMBO_CUT2             ,CUT        ,KC_LALT, KC_LGUI)          // cut
+COMB(COMBO_UNDO2            ,UNDO       ,KC_LALT, KC_LSFT, KC_LGUI) // undo
