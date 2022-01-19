@@ -81,11 +81,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_NAV] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         __NONE__,__NONE__,__NONE__,KC_LCTL ,LOCK    ,    SNK_CASE,KC_STAB ,KC_UP   ,KC_TAB  ,__NONE__,
+         __NONE__,__NONE__,__NONE__,KC_LCTL ,LOCK    ,    __NONE__,KC_STAB ,KC_UP   ,KC_TAB  ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         __NONE__,KC_LALT ,KC_LSFT ,KC_LGUI ,KC_ESC  ,    CAPSWORD,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
+         __NONE__,KC_LALT ,KC_LSFT ,KC_LGUI ,KC_ESC  ,    KC_ENTER,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         UNDO    ,CUT     ,COPY    ,PASTE   ,SEARCH  ,    SCRM_SNK,SCRNSHT ,__NONE__,__NONE__,__NONE__,
+         UNDO    ,CUT     ,COPY    ,PASTE   ,SEARCH  ,    SCRNSHT ,CAPSWORD,SCRM_SNK,SNK_CASE,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
                            NAV_E01 ,__NONE__,________,    ________,DEL_SYM ,NAV_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
