@@ -70,11 +70,11 @@ void matrix_scan_user(void) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         KC_J    ,KC_G    ,KC_M    ,HOME_P  ,KC_B    ,    KC_GRV  ,HOME_U  ,KC_O    ,KC_Y    ,KC_AT   ,
+         KC_J    ,KC_W    ,KC_M    ,HOME_P  ,KC_B    ,    KC_GRV  ,HOME_U  ,KC_O    ,KC_Y    ,KC_AT   ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         KC_C    ,HOME_S  ,HOME_N  ,HOME_T  ,KC_W    ,    KC_QUOT ,HOME_A  ,HOME_E  ,HOME_I  ,KC_H    ,
+         KC_C    ,HOME_S  ,HOME_N  ,HOME_T  ,KC_G    ,    KC_SLSH ,HOME_A  ,HOME_E  ,HOME_I  ,KC_H    ,
     //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
-         KC_X    ,KC_F    ,KC_L    ,KC_D    ,KC_V    ,    KC_MINS ,KC_K    ,KC_COMMA,KC_DOT  ,KC_SLSH ,
+         KC_X    ,KC_F    ,KC_L    ,KC_D    ,KC_V    ,    KC_MINS ,KC_QUOT ,KC_COMMA,KC_DOT  ,KC_K    ,
     //  '--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
                            CHD_E01 ,ENT_SYM ,SPC_NAV ,    R_NUM   ,BSPC_SYM,CHD_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
