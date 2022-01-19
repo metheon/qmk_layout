@@ -19,14 +19,19 @@ enum layers {
 #define __NONE__            KC_NO
 #define ________            _______
 
-// Thumb keys for hands down
-#define ENT_NUM             LT(_NUM, KC_ENTER)
+// Main thumb keys
+#define ENT_SYM             LT(_SYM, KC_ENTER)
 #define SPC_NAV             LT(_NAV, KC_SPC)
-#define R_SYM               LT(_SYM, KC_R)
+#define R_NUM               LT(_NUM, KC_R)
 #define BSPC_SYM            LT(_SYM, KC_BSPC)
+
+// Alternative thumb keys
 #define DEL_SYM             LT(_SYM, KC_DEL)
-#define BSPC_NUM            LT(_NUM, KC_BSPC)
-#define ZERO_SYM            LT(_SYM, KC_0)
+#define ZERO_NAV            LT(_NAV, KC_0)
+
+// layer changes
+#define NAV                 MO(_NAV)
+#define NUM                 MO(_NUM)
 
 // Other
 #define SHIFT               OSM(MOD_LSFT)
@@ -76,3 +81,5 @@ enum layers {
 #define ZOOM_AUD            LGUI(LSFT(KC_A))    // Zoom Audio Off/On
 #define ZOOM_VID            LGUI(LSFT(KC_V))    // Zoom Video Off/On
 #define HIDE_WIN            LGUI(KC_H)          // Hide a Window
+
+#define DEGREE              LALT(KC_K)          // ˚

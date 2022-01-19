@@ -4,50 +4,38 @@
 // BASE //
 // //// //
 
-KO(slash_pipe, MOD_MASK_SHIFT, KC_SLSH, KC_PIPE, _BASE)
-KO(slash_backslash, MOD_MASK_ALT, KC_SLSH, KC_BSLS, _BASE)
+KO(slash_backslash, MOD_MASK_SHIFT, KC_SLSH,    KC_BSLS,        _BASE)
+KO(at_hash,         MOD_MASK_SHIFT, KC_AT,      KC_HASH,        _BASE)
+KO(comma_semicolon, MOD_MASK_SHIFT, KC_COMMA,   KC_SCLN,        _BASE)
+KO(dot_colon,       MOD_MASK_SHIFT, KC_DOT,     KC_COLN,        _BASE)
+KO(mins_plus,       MOD_MASK_SHIFT, KC_MINS,    KC_PLUS,        _BASE)
 
-KO(at_hash, MOD_MASK_SHIFT, KC_AT, KC_HASH, _BASE)
-KO(at_tild, MOD_MASK_ALT, KC_AT, KC_TILD, _BASE)
+KO(enter_gstab,     MOD_MASK_GUI,   ENT_SYM,    G(S(KC_TAB)),   _BASE)
+KO(enter_gtab,      MOD_MASK_GUI,   SPC_NAV,    G(KC_TAB),      _BASE)
 
-KO(comma_semicolon, MOD_MASK_SHIFT, KC_COMMA, KC_SCLN, _BASE)
-KO(comma_questionmark, MOD_MASK_ALT, KC_COMMA, KC_QUES, _BASE)
+KO(ent_prv_desk,    MOD_MASK_SHIFT, ENT_SYM,    PRV_DSKT,       _BASE)
+KO(ent_next_desk,   MOD_MASK_SHIFT, SPC_NAV,    NXT_DSKT,       _BASE)
 
-KO(dot_colon, MOD_MASK_SHIFT, KC_DOT, KC_COLN, _BASE)
-KO(dot_exclamationmark, MOD_MASK_ALT, KC_DOT, KC_EXLM, _BASE)
-
-KO(mins_plus, MOD_MASK_SHIFT, KC_MINS, KC_PLUS, _BASE)
-
-KO(space_unds, MOD_MASK_SHIFT, SPC_NAV, KC_UNDS, _BASE)
-
-KO(enter_tab, MOD_MASK_GUI, ENT_NUM, G(KC_TAB), _BASE)
-
-KO(bspc_del, MOD_MASK_SHIFT, KC_BSPC, KC_DEL, _BASE)
+KO(ent_prv_tab,     MOD_MASK_ALT,   ENT_SYM,    PREV_TAB,       _BASE)
+KO(ent_next_tab,    MOD_MASK_ALT,   SPC_NAV,    NEXT_TAB,       _BASE)
 
 // /// //
 // NUM //
 // /// //
 
-KO(N1_eql, MOD_MASK_SHIFT, KC_1, KC_EQL, _NUM)
-KO(N2_comma, MOD_MASK_SHIFT, KC_2, KC_COMMA, _NUM)
-KO(N3_dot, MOD_MASK_SHIFT, KC_3, KC_DOT, _NUM)
-KO(N4_mins, MOD_MASK_SHIFT, KC_4, KC_MINS, _NUM)
-KO(N5_astr, MOD_MASK_SHIFT, KC_5, KC_ASTR, _NUM)
-KO(N6_slsh, MOD_MASK_SHIFT, KC_6, KC_SLSH, _NUM)
-KO(N7_lprn, MOD_MASK_SHIFT, KC_7, KC_LPRN, _NUM)
-KO(N8_rprn, MOD_MASK_SHIFT, KC_8, KC_RPRN, _NUM)
-KO(N9_perc, MOD_MASK_SHIFT, KC_9, KC_PERC, _NUM)
-KO(N0_plus, MOD_MASK_SHIFT, ZERO_SYM, KC_PLUS, _NUM)
+KO(n1_dot,          MOD_MASK_SHIFT, KC_1,       KC_DOT,         _NUM)
+KO(n2_comma,        MOD_MASK_SHIFT, KC_2,       KC_COMMA,       _NUM)
+KO(n3_eql,          MOD_MASK_SHIFT, KC_3,       KC_EQL,         _NUM)
+KO(n4_slsh,         MOD_MASK_SHIFT, KC_4,       KC_SLSH,        _NUM)
+KO(n5_astr,         MOD_MASK_SHIFT, KC_5,       KC_ASTR,        _NUM)
+KO(n6_mins,         MOD_MASK_SHIFT, KC_6,       KC_MINS,        _NUM)
+KO(n7_perc,         MOD_MASK_SHIFT, KC_7,       KC_PERC,        _NUM)
+KO(n8_rprn,         MOD_MASK_SHIFT, KC_8,       KC_RPRN,        _NUM)
+KO(n9_lprn,         MOD_MASK_SHIFT, KC_9,       KC_LPRN,        _NUM)
+KO(n0_plus,         MOD_MASK_SHIFT, ZERO_NAV,   KC_PLUS,        _NUM)
 
 // /// //
 // SYM //
 // /// //
 
-KO(lcbr_rcbr, MOD_MASK_SHIFT, KC_LCBR, KC_RCBR, _SYM)
-KO(lbrc_rbrc, MOD_MASK_SHIFT, KC_LBRC, KC_RBRC, _SYM)
-KO(lprn_rprn, MOD_MASK_SHIFT, KC_LPRN, KC_RPRN, _SYM)
-KO(llt_gt, MOD_MASK_SHIFT, KC_LT, KC_GT, _SYM)
-
-KO(dlr_eur, MOD_MASK_SHIFT, KC_DLR, KC_EUR, _SYM)
-KO(dlr_pnd, MOD_MASK_SHIFT, KC_DLR, KC_PND, _SYM)
-
+KO(dlr_pnd,         MOD_MASK_SHIFT, KC_DLR,     KC_PND,         _SYM)
