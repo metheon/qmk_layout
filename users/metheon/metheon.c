@@ -28,6 +28,7 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
           case R_NUM:
           case BSPC_SYM:
           case DEL_SYM:
+          case BSPC_NUM:
           case ZERO_NAV:
                return true;
           default:
@@ -53,6 +54,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
           case R_NUM:
           case BSPC_SYM:
           case DEL_SYM:
+          case BSPC_NUM:
           case ZERO_NAV:
                return TAPPING_TERM - 100; // 400-100=300
           default:
@@ -87,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          UNDO    ,CUT     ,COPY    ,PASTE   ,SEARCH  ,    SCRNSHT ,CAPSWORD,SCRM_SNK,SNK_CASE,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-                           NAV_E01 ,__NONE__,________,    ________,DEL_SYM ,NAV_E02
+                           NAV_E01 ,__NONE__,________,    BSPC_NUM,DEL_SYM ,NAV_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
     ),
     [_NUM] = LAYOUT_metheon(
