@@ -5,11 +5,13 @@
 // //// //
 
 KO(slash_backslash, MOD_MASK_SHIFT, KC_SLSH,    KC_BSLS,        _BASE)
+KO(at_hash,         MOD_MASK_SHIFT, KC_AT,      KC_HASH,        _BASE)
 KO(comma_semicolon, MOD_MASK_SHIFT, KC_COMMA,   KC_SCLN,        _BASE)
 KO(dot_colon,       MOD_MASK_SHIFT, KC_DOT,     KC_COLN,        _BASE)
+KO(mins_plus,       MOD_MASK_SHIFT, KC_MINS,    KC_PLUS,        _BASE)
 
 KO(enter_gstab,     MOD_MASK_GUI,   ENT_SYM,    G(S(KC_TAB)),   _BASE)
-KO(enter_gtab,      MOD_MASK_GUI,   SPC_NAV,    G(KC_TAB),      _BASE)
+KO(enter_gtab,      MOD_MASK_GUI,   SPC_NAV,    G(KC_TAB),      _BASE) 
 
 KO(ent_prv_desk,    MOD_MASK_SHIFT, ENT_SYM,    PRV_DSKT,       _BASE)
 KO(ent_next_desk,   MOD_MASK_SHIFT, SPC_NAV,    NXT_DSKT,       _BASE)
