@@ -12,6 +12,7 @@ enum layers {
     _BASE,                  // Hands Down Titanium (neu-rx)
     _NAV,                   // Navigation cluster layer
     _NUM,                   // Numpad layer
+    _FUN,                   // Funpad layer
     _SYM,                   // Symbols, both hands
     _SYS,                   // Window navigation and media keys
 };
@@ -33,6 +34,7 @@ enum layers {
 // layer changes
 #define NAV                 MO(_NAV)
 #define NUM                 MO(_NUM)
+#define FUN                 MO(_FUN)
 
 // Other
 #define SHIFT               OSM(MOD_LSFT)
