@@ -24,4 +24,5 @@ COMB(COMBO_THE              ,TXT_THE    ,HOME_T, HOME_E)            // the
 COMB(COMBO_THI              ,TXT_THI    ,HOME_T, HOME_I)            // thi
 
 // One shot shifts
-COMB(COMBO_SPC_R            ,SHIFT      ,SPC_NAV, R_NUM)            // shift
+COMB(COMBO_LSFT             ,SHIFT      ,HOME_S, HOME_N, HOME_T)    // shift
+COMB(COMBO_RSFT             ,SHIFT      ,HOME_A, HOME_E, HOME_I)    // shift
