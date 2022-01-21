@@ -1,3 +1,0 @@
-BIGRAM(BG_AER,SS_LALT("'") "r")
-BIGRAM(BG_TH,"th")
-BIGRAM(BG_HV,"hv")

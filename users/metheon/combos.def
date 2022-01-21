@@ -9,10 +9,19 @@
               ╰────────╯ ╰────────╯            
 */
 
-
+// Danish vowels
 COMB(COMBO_AE               ,KC_AE      ,HOME_A, HOME_E)            // Æ
 COMB(COMBO_OE               ,KC_OE      ,HOME_E, HOME_I)            // Ø
 COMB(COMBO_AA               ,KC_AA      ,HOME_A, HOME_I)            // Å
 
+// Left over letters
 COMB(COMBO_Z                ,KC_Z       ,HOME_S, HOME_N)            // Z
 COMB(COMBO_Q                ,KC_Q       ,HOME_N, HOME_T)            // Q
+
+// Trigram combos
+COMB(COMBO_THA              ,TXT_THA    ,HOME_T, HOME_A)            // tha
+COMB(COMBO_THE              ,TXT_THE    ,HOME_T, HOME_E)            // the
+COMB(COMBO_THI              ,TXT_THI    ,HOME_T, HOME_I)            // thi
+
+// One shot shifts
+COMB(COMBO_SPC_R            ,SHIFT      ,SPC_NAV, R_NUM)            // shift

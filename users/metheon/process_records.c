@@ -2,20 +2,12 @@
 #include "window_tab.h"
 #include "metheon.h"
 
-#undef VIM
-#define VIM(name, command)              \
-    case name:                          \
-        if(pressed) {                   \
-            SEND_STRING(command);       \
-        }                               \
-        break;
-
-#undef BIGRAM
-#define BIGRAM(name, bigram)            \
-    case name:                          \
-        if(pressed) {                   \
-            SEND_STRING(bigram);        \
-        }                               \
+#undef TEXT
+#define TEXT(name, text)            \
+    case name:                      \
+        if(pressed) {               \
+            SEND_STRING(text);      \
+        }                           \
         break;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -47,8 +39,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 toggle_caps_word();
             }
             break;
-#include "vim.def"
-#include "bigram.def"
+#include "text.def"
         default:
             return true;
     }

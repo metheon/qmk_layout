@@ -1,0 +1,13 @@
+// Bigrams
+//TEXT(TXT_AER,SS_LALT("'") "r")
+TEXT(TXT_TH,"th")
+TEXT(TXT_HV,"hv")
+
+// Trigrams
+TEXT(TXT_THA,"tha")
+TEXT(TXT_THE,"the")
+TEXT(TXT_THI,"thi")
+
+// Vim
+TEXT(TXT_NLA,"Gyy''Pj")
+TEXT(TXT_NLB,"Gyy''pk")
