@@ -8,29 +8,6 @@
 static const char * const secrets[] = {
   "no secrets to be found",
   "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
-  "no secrets to be found",
 };
 #endif
 
@@ -44,43 +21,41 @@ void matrix_scan_leader(void) {
         // ////////////////////// //
         // Keyboard Related Stuff //
         // ////////////////////// //
-        SEQ_TWO_KEYS(KC_Q, KC_M) {
-            SEND_STRING("qmk compile -c -kb " QMK_KEYBOARD " -km " QMK_KEYMAP SS_TAP(X_ENTER));
+
+        // [F]lash [S]weep
+        SEQ_TWO_KEYS(KC_F, KC_S) {
+            // send make command to flash the Sweep
+            send_string("make ferris/sweep:metheon:dfu-split-left");
         }
-        SEQ_TWO_KEYS(KC_Q, KC_F) {
-            SEND_STRING("qmk flash -c -kb " QMK_KEYBOARD " -km " QMK_KEYMAP SS_TAP(X_ENTER));
+        // [F]lash [S]weep [R]ight
+        SEQ_THREE_KEYS(KC_F, KC_S, KC_R) {
+            // send make command to flash the Sweep, right side
+            send_string("make ferris/sweep:metheon:dfu-split-right");
         }
-        SEQ_TWO_KEYS(KC_Q, KC_V) {
-            SEND_STRING(QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
+        // [F]lash [K]yria
+        SEQ_TWO_KEYS(KC_F, KC_K) {
+            // send make command to flash the Kyria
+            send_string("make splitkb/kyria:metheon");
+        }
+        // [F]lash [P]lanck
+        SEQ_TWO_KEYS(KC_F, KC_P) {
+            // send make command to flash the Planck
+            send_string("make planck/ez:metheon");
         }
 
         // ////////////////////// //
         // Secrets (no passwords) //
         // ////////////////////// //
 
+        // [N]ame
         SEQ_ONE_KEY(KC_N) {
             // send my name
             send_string(secrets[0]);
         }
-        SEQ_TWO_KEYS(KC_S, KC_E) {
-            // encrypt the secrets file
+        // [E]mail
+        SEQ_ONE_KEY(KC_E) {
+            // send my email
             send_string(secrets[1]);
-        }
-        SEQ_TWO_KEYS(KC_S, KC_R) {
-            // rm the secrets file
-            send_string(secrets[2]);
-        }
-        SEQ_TWO_KEYS(KC_S, KC_D) {
-            // decrypt the secrets file
-            send_string(secrets[3]);
-        }
-        SEQ_TWO_KEYS(KC_P, KC_E) {
-            // send my private email
-            send_string(secrets[4]);
-        }
-        SEQ_TWO_KEYS(KC_W, KC_E) {
-            // send my work email
-            send_string(secrets[5]);
         }
     }
 }
