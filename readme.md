@@ -9,7 +9,7 @@
 
 I mainly use one type of keyboard, the Ferris Sweep! To me this is peak effeciency. It's form factor is simple, effective, intuitive. I use various Sweep-like keyboards and hence my keyboards layouts are created in the users folder and then shared among several other keyboards.
 
-For the actual keymap, I recommend reading through [`metheon.c`](metheon.c). For how that keymap is then mapped to each keyboard I use, read through the config files of each keyboard listed below. Every config file contains a define which basically maps my layout to that particular keyboard. The `keymap.c` file itself is empty.
+For the actual keymap, I recommend reading through [`metheon.c`](users/metheon/metheon.c). For how that keymap is then mapped to each keyboard I use, read through the config files of each keyboard listed below. Every config file contains a define which basically maps my layout to that particular keyboard. The `keymap.c` file itself is empty.
 This approach ensures that it is quite easy to add support for a new keyboard PCB as long as it fits the layout of a Sweep. All you have to do is write the *adapter configuration*.
 
 Right now I have support for the following keyboards, with the Sweep being the primary:
@@ -51,15 +51,15 @@ This array is duplicated as a dummy array within the `leader.c` file, such that 
 
 Files:
 
-* [`leader.c`](leader.c)
-* [`leader.h`](leader.h)
+* [`leader.c`](users/metheon/leader.c)
+* [`leader.h`](users/metheon/leader.h)
 
 ## Encoders
 
-The encoder logic is split in two parts. In the header file, [`encoders.h`](encoders.h), the _on tap_ function can be found while the rotary logic can be found in [`encoders.c`](encoders.c). The encoder functionality is disabled by default, but can be enabled for a keyboard if it has encoders, like I do in the [`rules.mk`](../../keyboards/kyria/keymaps/metheon/rules.mk) file of my Kyria. The only other thing to note for my encoders is that I feel that the alt-tab logic is improved compared to what I have found elsewhere.
+The encoder logic is split in two parts. In the header file, [`encoders.h`](users/metheon/encoders.h), the _on tap_ function can be found while the rotary logic can be found in [`encoders.c`](users/metheon/encoders.c). The encoder functionality is disabled by default, but can be enabled for a keyboard if it has encoders, like I do in the [`rules.mk`](keyboards/splitkb/kyria/keymaps/metheon/rules.mk) file of my Kyria. The only other thing to note for my encoders is that I feel that the alt-tab logic is improved compared to what I have found elsewhere.
 
-* [`encoders.c`](encoders.c)
-* [`encoders.h`](encoders.h)
+* [`encoders.c`](users/metheon/encoders.c)
+* [`encoders.h`](users/metheon/encoders.h)
 
 ## Process Records
 
@@ -67,8 +67,8 @@ My process records files are also pretty basic. The main purpose of splitting th
 
 Files:
 
-* [`process_records.c`](process_records.c)
-* [`process_records.h`](process_records.h)
+* [`process_records.c`](users/metheon/process_records.c)
+* [`process_records.h`](users/metheon/process_records.h)
 
 ## Text
 
@@ -76,9 +76,9 @@ This is one of those things I want to use more but I just haven't had the time y
 
 Files:
 
-* [`text.def`](text.def)
-* [`process_records.h`](process_records.h)
-* [`process_records.c`](process_records.c)
+* [`text.def`](users/metheon/text.def)
+* [`process_records.h`](users/metheon/process_records.h)
+* [`process_records.c`](users/metheon/process_records.c)
 
 ## Key Overrides
 
@@ -86,5 +86,5 @@ Just a list of key+mod overrides which aims to improve mainly the shifted charac
 
 Files:
 
-* [`key_overrides.def`](key_overrides.def)
-* [`key_overrides.c`](key_overrides.c)
+* [`key_overrides.def`](users/metheon/key_overrides.def)
+* [`key_overrides.c`](users/metheon/key_overrides.c)
