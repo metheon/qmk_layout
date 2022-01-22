@@ -39,6 +39,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 toggle_caps_word();
             }
             break;
+        case PREV_WIN:
+            if (pressed) {
+                mod_tab(record, 1);
+            }
+            break;
+        case NEXT_WIN:
+            if (pressed) {
+                mod_tab(record, 0);
+            }
+            break;
 #include "text.def"
         default:
             return true;

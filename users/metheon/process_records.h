@@ -11,6 +11,8 @@ enum keycodes {
     SNK_CASE,               // snake_case
     SCRM_SNK,               // SCREAMING_SNAKE_CASE
     CPS_DSBL,               // Disables any caps word mode
+    PREV_WIN,               // Gui + shift + tab
+    NEXT_WIN,               // Gui + tab
 #include "text.def"
 };
 

@@ -9,10 +9,9 @@
 #include "desk_control.h"
 
 enum layers {
-    _BASE,                  // Hands Down Titanium (neu-rx)
+    _HDT,                   // Hands Down Titanium (neu-rx)
     _NAV,                   // Navigation cluster layer
     _NUM,                   // Numpad layer
-    _FUN,                   // Funpad layer
     _SYM,                   // Symbols, both hands
     _SYS,                   // Window navigation and media keys
 };
@@ -34,21 +33,21 @@ enum layers {
 // layer changes
 #define NAV                 MO(_NAV)
 #define NUM                 MO(_NUM)
-#define FUN                 MO(_FUN)
+#define SYM                 MO(_SYM)
 
 // Other
 #define SHIFT               OSM(MOD_LSFT)
 
 // Home row mods, using Hands Down Titanium ... snt/p <--> u/aei
 // Pinkies not used, instead ctrl is put over cmd
-#define HOME_I              LALT_T(KC_I)
-#define HOME_E              LSFT_T(KC_E)
-#define HOME_A              LGUI_T(KC_A)
-#define HOME_U              LCTL_T(KC_U)
-#define HOME_P              LCTL_T(KC_P)
-#define HOME_T              LGUI_T(KC_T)
-#define HOME_N              LSFT_T(KC_N)
+#define HOME_C              LCTL_T(KC_C)
 #define HOME_S              LALT_T(KC_S)
+#define HOME_N              LSFT_T(KC_N)
+#define HOME_T              LGUI_T(KC_T)
+#define HOME_A              LGUI_T(KC_A)
+#define HOME_E              LSFT_T(KC_E)
+#define HOME_I              LALT_T(KC_I)
+#define HOME_H              LCTL_T(KC_H)
 
 #define COPY_T              LCTL(KC_INSERT)
 #define PASTE_T             LSFT(KC_INSERT)
