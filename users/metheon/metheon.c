@@ -5,7 +5,6 @@
 #include "g/keymap_combo.h" // to make combo def dictionary work
 #endif
 
-
 layer_state_t layer_state_set_user(layer_state_t state) {
     state = update_tri_layer_state(state, _NAV, _NUM, _SYS);
     return state;

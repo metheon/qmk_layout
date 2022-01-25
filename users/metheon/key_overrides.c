@@ -1,6 +1,6 @@
 #undef KO
 #define KO(name, mod, modded_key, new_key, layer) \
-     const key_override_t name = ko_make_with_layers(mod, modded_key, new_key, (1 << layer));
+    const key_override_t name = ko_make_with_layers(mod, modded_key, new_key, (1 << layer));
 
 #include "key_overrides.def"
 
