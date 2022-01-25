@@ -66,11 +66,11 @@ void matrix_scan_user(void) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_HDT] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         KC_J    ,KC_W    ,KC_M    ,KC_P    ,KC_B    ,    KC_GRV  ,KC_U    ,KC_O    ,KC_Y    ,KC_AT   ,
+         KC_J    ,KC_M    ,KC_K    ,KC_P    ,KC_B    ,    KC_GRV  ,KC_U    ,KC_O    ,KC_Y    ,KC_AT   ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         HOME_C  ,HOME_S  ,HOME_N  ,HOME_T  ,KC_G    ,    KC_K    ,HOME_A  ,HOME_E  ,HOME_I  ,HOME_H  ,
+         HOME_C  ,HOME_S  ,HOME_N  ,HOME_T  ,KC_G    ,    KC_MINS ,HOME_A  ,HOME_E  ,HOME_I  ,HOME_H  ,
     //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
-         KC_X    ,KC_F    ,KC_L    ,KC_D    ,KC_V    ,    KC_MINS ,KC_QUOT ,KC_COMMA,KC_DOT  ,KC_SLSH ,
+         KC_W    ,KC_F    ,KC_L    ,KC_D    ,KC_V    ,    KC_QUES ,KC_QUOT ,KC_COMMA,KC_DOT  ,KC_SLSH ,
     //  '--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
                            CHD_E01 ,ENT_SYM ,SPC_NAV ,    R_NUM   ,BSPC_SYM,CHD_E02
     //                    '--------+--------+--------'   '--------+--------+--------'
@@ -99,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_SYM] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         __NONE__,KC_CIRC ,KC_DLR  ,KC_EUR  ,KC_PND  ,    KC_TILD ,KC_QUES ,KC_EXLM ,__NONE__,KC_HASH ,
+         __NONE__,KC_CIRC ,KC_DLR  ,KC_EUR  ,KC_PND  ,    KC_TILD ,__NONE__,__NONE__,__NONE__,KC_HASH ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          KC_LT   ,KC_LCBR ,KC_LBRC ,KC_LPRN ,__NONE__,    __NONE__,KC_EQL  ,KC_AMPR ,KC_PIPE ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|

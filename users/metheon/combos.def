@@ -2,21 +2,22 @@
 
 /*                KEY POSITIONS
   ╭────────────────────╮ ╭────────────────────╮
-  │  j   w   m   p   b │ │  `   u   o   y   @ │
-  │  c   s   n   t   g │ │  k   a   e   i   h │
-  │  x   f   l   d   v │ │  -   '   ,   .   / │
+  │  j   m   k   p   b │ │  `   u   o   y   @ │
+  │  c   s   n   t   g │ │  -   a   e   i   h │
+  │  w   f   l   d   v │ │  ?   '   ,   .   / │
   ╰───────────╮ En  Sp │ │  r  Bs ╭───────────╯
               ╰────────╯ ╰────────╯            
 */
 
-// Danish vowels
+// Danish vowels, right hand side
 COMB(COMBO_AE               ,KC_AE      ,HOME_A, HOME_E)            // Æ
 COMB(COMBO_OE               ,KC_OE      ,HOME_E, HOME_I)            // Ø
 COMB(COMBO_AA               ,KC_AA      ,HOME_A, HOME_I)            // Å
 
-// Left over letters
+// Consonants, left hand side
 COMB(COMBO_Z                ,KC_Z       ,HOME_S, HOME_N)            // Z
 COMB(COMBO_Q                ,KC_Q       ,HOME_N, HOME_T)            // Q
+COMB(COMBO_X                ,KC_X       ,HOME_S, HOME_T)            // X
 
 // Trigram combos
 COMB(COMBO_THA              ,TXT_THA    ,HOME_T, HOME_A)            // tha
