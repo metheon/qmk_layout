@@ -27,9 +27,9 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
           case SPC_NAV:
           case R_NUM:
           case BSPC_SYM:
-               return true;
-          default:
                return false;
+          default:
+               return true;
     }
 }
 
