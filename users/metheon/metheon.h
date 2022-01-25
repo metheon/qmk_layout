@@ -85,3 +85,8 @@ enum layers {
 #define HIDE_WIN            LGUI(KC_H)          // Hide a Window
 
 #define DEGREE              LALT(KC_K)          // ˚
+
+#define MAC_PGUP            LALT(KC_UP)         // Page Up
+#define MAC_PGDN            LALT(KC_DOWN)       // Page Down
+#define MAC_HOME            LGUI(KC_LEFT)       // Home
+#define MAC_END             LGUI(KC_RGHT)       // End

@@ -9,6 +9,8 @@ KO(dot_colon,       MOD_MASK_SHIFT, KC_DOT,     KC_COLN,        _HDT)
 KO(mins_plus,       MOD_MASK_SHIFT, KC_MINS,    KC_PLUS,        _HDT)
 KO(ques_exlm,       MOD_MASK_SHIFT, KC_QUES,    KC_EXLM,        _HDT)
 
+KO(bspc_del,        MOD_MASK_SHIFT, BSPC_SYM,   DEL_SYM,        _HDT)
+
 // /// //
 // NAV //
 // /// //
