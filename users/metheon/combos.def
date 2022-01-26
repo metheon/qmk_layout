@@ -24,6 +24,7 @@ COMB(COMBO_THA              ,TXT_THA    ,HOME_T, HOME_A)            // tha
 COMB(COMBO_THE              ,TXT_THE    ,HOME_T, HOME_E)            // the
 COMB(COMBO_THI              ,TXT_THI    ,HOME_T, HOME_I)            // thi
 
-// One shot shifts
-COMB(COMBO_LSFT             ,SHIFT      ,HOME_S, HOME_N, HOME_T)    // shift
-COMB(COMBO_RSFT             ,SHIFT      ,HOME_A, HOME_E, HOME_I)    // shift
+// Escape and enter
+COMB(COMBO_ENT              ,KC_ENTER   ,HOME_A, HOME_E, HOME_I)    // enter on base
+COMB(COMBO_ENT_ON_NUM       ,KC_ENTER   ,KC_4, KC_5, KC_6)          // enter on numpad
+COMB(COMBO_ESC              ,KC_ESC     ,HOME_S, HOME_N, HOME_T)    // escape on base
