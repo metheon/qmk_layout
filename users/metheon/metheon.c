@@ -12,21 +12,8 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
 bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-          // mod tab keys
-          case HOME_C:
-          case HOME_S:
-          case HOME_N:
-          case HOME_T:
-          case HOME_A:
-          case HOME_E:
-          case HOME_I:
-          case HOME_H:
-               return true;
-          // layer keys
-          case SFT_SYS:
-          case SFT_SYM:
           case SPC_NAV:
-          case R_NUM:
+               // allow key repeat on tap and hold
                return false;
           default:
                return true;
@@ -35,24 +22,14 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-          // mod tab keys
-          case HOME_C:
-          case HOME_S:
-          case HOME_N:
-          case HOME_T:
-          case HOME_A:
-          case HOME_E:
-          case HOME_I:
-          case HOME_H:
-               return 300;
           // layer keys
           case SFT_SYS:
           case SPC_NAV:
           case R_NUM:
           case SFT_SYM:
-               return 300;
+               return 200;
           default:
-               return 400;
+               return 300;
     }
 }
 
