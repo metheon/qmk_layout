@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_NAV] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         PRV_DSKT,NXT_DSKT,PREV_WIN,NEXT_WIN,KC_ENTER,    MAC_PGUP,KC_STAB ,KC_UP   ,KC_TAB  ,LOCK    ,
+         PRV_DSKT,NXT_DSKT,PREV_WIN,NEXT_WIN,LOCK    ,    MAC_PGUP,KC_STAB ,KC_UP   ,KC_TAB  ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          KC_LCTL ,KC_LALT ,KC_LSFT ,KC_LGUI ,KC_ESC  ,    MAC_PGDN,KC_LEFT ,KC_DOWN ,KC_RGHT ,SCRNSHT ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
