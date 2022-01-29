@@ -10,18 +10,6 @@ KO(mins_plus,       MOD_MASK_SHIFT, KC_MINS,    KC_PLUS,        _BSE)
 KO(ques_exlm,       MOD_MASK_SHIFT, KC_QUES,    KC_EXLM,        _BSE)
 
 // /// //
-// SYM //
-// /// //
-
-KO(dlr_eur,         MOD_MASK_SHIFT, KC_DLR,     KC_EUR,         _SYM)
-KO(dlr_pnd,         MOD_MASK_ALT,   KC_DLR,     KC_PND,         _SYM)
-
-KO(lprn_rprn,       MOD_MASK_SHIFT, KC_LPRN,    KC_RPRN,        _SYM)
-KO(lbrc_rbrc,       MOD_MASK_SHIFT, KC_LBRC,    KC_RBRC,        _SYM)
-KO(lcbr_rcbr,       MOD_MASK_SHIFT, KC_LCBR,    KC_RCBR,        _SYM)
-KO(lt_gt,           MOD_MASK_SHIFT, KC_LT,      KC_GT,          _SYM)
-
-// /// //
 // NAV //
 // /// //
 
