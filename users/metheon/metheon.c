@@ -13,10 +13,10 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
           case SPC_NAV:
+               return true;
+          default:
                // allow key repeat on tap and hold
                return false;
-          default:
-               return true;
     }
 }
 
