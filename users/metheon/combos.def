@@ -2,29 +2,27 @@
 
 /*                KEY POSITIONS
   ╭────────────────────╮ ╭────────────────────╮
-  │  j   m   k   p   b │ │  `   u   o   y   @ │
-  │  c   s   n   t   g │ │  -   a   e   i   h │
-  │  w   f   l   d   v │ │  ?   '   ,   .   / │
-  ╰───────────╮ En  Sp │ │  r  Bs ╭───────────╯
+  │  j   w   h   p   b │ │  ?   k   u   a   @ │
+  │  c   s   n   t   g │ │  '   r   e   o   i │
+  │  x   f   l   d   v │ │  `   m   ,   .   y │
+  ╰───────────╮ Sf  Sp │ │ Bs  Sf ╭───────────╯
               ╰────────╯ ╰────────╯            
 */
 
 // Danish vowels, right hand side
-COMB(COMBO_AE               ,KC_AE      ,HOME_A, HOME_E)            // Æ
-COMB(COMBO_OE               ,KC_OE      ,HOME_E, HOME_I)            // Ø
-COMB(COMBO_AA               ,KC_AA      ,HOME_A, HOME_I)            // Å
+COMB(COMBO_AE               ,KC_AE      ,KC_U, KC_A)                // Æ
+COMB(COMBO_AA               ,KC_AA      ,HOME_E, HOME_O)            // Å
+COMB(COMBO_OE               ,KC_OE      ,KC_COMMA, KC_DOT)          // Ø
 
 // Consonants, left hand side
-COMB(COMBO_Z                ,KC_Z       ,HOME_S, HOME_N)            // Z
 COMB(COMBO_Q                ,KC_Q       ,HOME_N, HOME_T)            // Q
-COMB(COMBO_X                ,KC_X       ,HOME_S, HOME_T)            // X
+COMB(COMBO_Z                ,KC_Z       ,HOME_S, HOME_N)            // Z
 
 // Trigram combos
-COMB(COMBO_THA              ,TXT_THA    ,HOME_T, HOME_A)            // tha
+COMB(COMBO_THA              ,TXT_THA    ,HOME_T, HOME_R)            // tha
 COMB(COMBO_THE              ,TXT_THE    ,HOME_T, HOME_E)            // the
-COMB(COMBO_THI              ,TXT_THI    ,HOME_T, HOME_I)            // thi
+COMB(COMBO_THI              ,TXT_THI    ,HOME_T, HOME_O)            // thi
 
-// Escape and enter
-COMB(COMBO_ENT              ,KC_ENTER   ,HOME_A, HOME_E, HOME_I)    // enter on base
+// Enter
+COMB(COMBO_ENT              ,KC_ENTER   ,HOME_S, HOME_N, HOME_T)    // enter on base
 COMB(COMBO_ENT_ON_NUM       ,KC_ENTER   ,KC_4, KC_5, KC_6)          // enter on numpad
-COMB(COMBO_ESC              ,KC_ESC     ,HOME_S, HOME_N, HOME_T)    // escape on base

@@ -2,19 +2,10 @@
 // HDT //
 // /// //
 
-KO(slash_backslash, MOD_MASK_SHIFT, KC_SLSH,    KC_BSLS,        _BSE)
 KO(at_hash,         MOD_MASK_SHIFT, KC_AT,      KC_HASH,        _BSE)
-KO(comma_semicolon, MOD_MASK_SHIFT, KC_COMMA,   KC_SCLN,        _BSE)
 KO(dot_colon,       MOD_MASK_SHIFT, KC_DOT,     KC_COLN,        _BSE)
-KO(mins_plus,       MOD_MASK_SHIFT, KC_MINS,    KC_PLUS,        _BSE)
+KO(comma_semicolon, MOD_MASK_SHIFT, KC_COMMA,   KC_SCLN,        _BSE)
 KO(ques_exlm,       MOD_MASK_SHIFT, KC_QUES,    KC_EXLM,        _BSE)
-
-// /// //
-// NAV //
-// /// //
-
-KO(paste_ntab,      MOD_MASK_CTRL,  PASTE,      NEXT_TAB,       _NAV)
-KO(copy_ptab,       MOD_MASK_CTRL,  COPY,       PREV_TAB,       _NAV)
 
 // /// //
 // NUM //
@@ -29,5 +20,5 @@ KO(n6_mins,         MOD_MASK_SHIFT, KC_6,       KC_MINS,        _NUM)
 KO(n7_perc,         MOD_MASK_SHIFT, KC_7,       KC_PERC,        _NUM)
 KO(n8_lprn,         MOD_MASK_SHIFT, KC_8,       KC_LPRN,        _NUM)
 KO(n9_rprn,         MOD_MASK_SHIFT, KC_9,       KC_RPRN,        _NUM)
-KO(n0_plus,         MOD_MASK_SHIFT, ZERO_NAV,   KC_PLUS,        _NUM)
-KO(n0_degree,       MOD_MASK_ALT,   ZERO_NAV,   DEGREE,         _NUM)
+KO(n0_plus,         MOD_MASK_SHIFT, ZERO_NAV,   KC_PLUS,        _NUM)   // overridden by next KO
+KO(n0_degree,       MOD_MASK_SHIFT, ZERO_NAV,   DEGREE,         _NUM)

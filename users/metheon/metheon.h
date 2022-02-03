@@ -10,29 +10,30 @@
 
 enum layers {
     _BSE,                   // Hands Down Titanium (neu-rx)
-    _SYS,                   // Window navigation and media keys
     _NAV,                   // Navigation cluster layer
     _NUM,                   // Numpad layer
     _SYM,                   // Symbols, both hands
-    _FUN,                   // Funpad layer
+    _SYS,                   // Window navigation and media keys
 };
 
 #define __NONE__            KC_NO               // Alias to make it eight wide
 #define ________            _______             // Alias to make it eight wide
 
 // Main thumb keys
-#define SFT_SYS             LT(_SYS, KC_F22)    // process records magic for one shot shift
+#define SYM                 OSL(_SYM)           // Left and right secondary thumb
 #define SPC_NAV             LT(_NAV, KC_SPC)
-#define R_NUM               LT(_NUM, KC_R)
-#define SFT_SYM             LT(_SYM, KC_F23)    // process records magic for one shot shift
+#define SFT_NUM             LT(_NUM, KC_F23)    // process records magic for one shot shift
 
 // Alternative thumb keys for other layers
+#define ZERO_NAV            LT(_NAV, KC_0)
 #define BSPC_NUM            LT(_NUM, KC_BSPC)
 #define DEL_SYM             LT(_SYM, KC_DEL)
-#define ZERO_NAV            LT(_NAV, KC_0)
 
-// Other
-#define SHIFT               OSM(MOD_LSFT)       // A one shot shift
+// One shot mods
+#define CTRL               OSM(MOD_LCTL)       // Control
+#define ALT                OSM(MOD_LALT)       // Alt
+#define SHFT               OSM(MOD_LSFT)       // Shift
+#define GUI                OSM(MOD_LGUI)       // Gui
 
 // Home row mods, using Hands Down Titanium ... snt/p <--> u/aei
 // Pinkies not used, instead ctrl is put over cmd
@@ -40,10 +41,10 @@ enum layers {
 #define HOME_S              LALT_T(KC_S)
 #define HOME_N              LSFT_T(KC_N)
 #define HOME_T              LGUI_T(KC_T)
-#define HOME_A              LGUI_T(KC_A)
+#define HOME_R              LGUI_T(KC_R)
 #define HOME_E              LSFT_T(KC_E)
-#define HOME_I              LALT_T(KC_I)
-#define HOME_H              LCTL_T(KC_H)
+#define HOME_O              LALT_T(KC_O)
+#define HOME_I              LCTL_T(KC_I)
 
 #define COPY_T              LCTL(KC_INSERT)     // Copy in the terminal
 #define PASTE_T             LSFT(KC_INSERT)     // Paste in the terminal

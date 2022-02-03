@@ -53,15 +53,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             break;
         // one shot shift w/ layer
-        case SFT_SYS:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    set_oneshot_mods(MOD_LSFT);
-                }
-                return false;
-            }
-        // one shot shift w/ layer
-        case SFT_SYM:
+        case SFT_NUM:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     set_oneshot_mods(MOD_LSFT);

@@ -1,8 +1,3 @@
-// Bigrams
-//TEXT(TXT_AER,SS_LALT("'") "r")
-TEXT(TXT_TH,"th")
-TEXT(TXT_HV,"hv")
-
 // Trigrams
 TEXT(TXT_THA,"tha")
 TEXT(TXT_THE,"the")

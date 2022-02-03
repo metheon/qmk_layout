@@ -1,8 +1,8 @@
 #include "metheon.h"
 
 // Encoder tap functions
-#define CHD_E01             KC_NO
-#define CHD_E02             KC_MUTE
+#define BSE_E01             KC_NO
+#define BSE_E02             KC_MUTE
 
 #define NAV_E01             KC_NO
 #define NAV_E02             KC_NO
