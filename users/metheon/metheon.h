@@ -9,46 +9,19 @@
 #include "desk_control.h"
 
 enum layers {
-    _BSE,                   // Hands Down Titanium (neu-rx)
-    _NAV,                   // Navigation cluster layer
-    _NUM,                   // Numpad layer
-    _SYM,                   // Symbols, both hands
-    _SYS,                   // Window navigation and media keys
+    _BSE,                   // My own layout called methane
+    _NAV,                   // Navigation cluster plus media
+    _NUM,                   // Numpad
+    _SYM,                   // Symbols plus magnet shortcuts
 };
 
 #define __NONE__            KC_NO               // Alias to make it eight wide
 #define ________            _______             // Alias to make it eight wide
 
-// Main thumb keys
-#define SYM                 OSL(_SYM)           // Left and right secondary thumb
-#define SPC_NAV             LT(_NAV, KC_SPC)
-#define SFT_NUM             LT(_NUM, KC_F23)    // process records magic for one shot shift
+#define NUM                 MO(_NUM)            // Numpad layer
+#define NAV                 MO(_NAV)            // Navigation layer
 
-// Alternative thumb keys for other layers
-#define ZERO_NAV            LT(_NAV, KC_0)
-#define BSPC_NUM            LT(_NUM, KC_BSPC)
-#define DEL_SYM             LT(_SYM, KC_DEL)
-
-// One shot mods
-#define CTRL               OSM(MOD_LCTL)       // Control
-#define ALT                OSM(MOD_LALT)       // Alt
-#define SHFT               OSM(MOD_LSFT)       // Shift
-#define GUI                OSM(MOD_LGUI)       // Gui
-
-// Home row mods, using Hands Down Titanium ... snt/p <--> u/aei
-// Pinkies not used, instead ctrl is put over cmd
-#define HOME_C              LCTL_T(KC_C)
-#define HOME_S              LALT_T(KC_S)
-#define HOME_N              LSFT_T(KC_N)
-#define HOME_T              LGUI_T(KC_T)
-#define HOME_R              LGUI_T(KC_R)
-#define HOME_E              LSFT_T(KC_E)
-#define HOME_O              LALT_T(KC_O)
-#define HOME_I              LCTL_T(KC_I)
-
-#define COPY_T              LCTL(KC_INSERT)     // Copy in the terminal
-#define PASTE_T             LSFT(KC_INSERT)     // Paste in the terminal
-
+#define OSM_LSFT            OSM(MOD_LSFT)       // Regular one shot shift key
 #define KC_STAB             LSFT(KC_TAB)        // Shift+Tab
 
 #define NEXT_TAB            LCTL(KC_TAB)        // Next tab (in browser etc)
@@ -73,6 +46,7 @@ enum layers {
 // utilities
 #define LOCK                LCTL(LGUI(KC_Q))    // Lock computer      
 #define SEARCH              LGUI(KC_SPACE)      // Search 
+#define MUSIC               LGUI(LSFT(KC_S))    // Music
 #define NXT_DSKT            LCTL(KC_RIGHT)      // Next Desktop
 #define PRV_DSKT            LCTL(KC_LEFT)       // Previous Desktop
 #define BSPC_WRD            LALT(KC_BSPC)       // Backspace a word
@@ -80,6 +54,8 @@ enum layers {
 #define ZOOM_AUD            LGUI(LSFT(KC_A))    // Zoom Audio Off/On
 #define ZOOM_VID            LGUI(LSFT(KC_V))    // Zoom Video Off/On
 #define HIDE_WIN            LGUI(KC_H)          // Hide a Window
+#define SAVE                LGUI(KC_S)          // Save document
+#define SELECT_ALL          LGUI(KC_A)          // Select all
 
 #define DEGREE              LALT(KC_K)          // ˚
 

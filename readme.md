@@ -1,4 +1,4 @@
-# Metheon's layout
+# Configuration for my QMK keyboards
 
 ## Setup
 
@@ -7,28 +7,30 @@
 
 ## Introduction
 
-I mainly use one type of keyboard, the Ferris Sweep! To me this is peak effeciency. It's form factor is simple, effective, intuitive. I use various Sweep-like keyboards and hence my keyboards layouts are created in the users folder and then shared among several other keyboards.
+My layout is based on having just 34 keys. I might use keyboards larger than this, but not smaller. It is a form factor which is simple, effective and intuitive. I use various keyboards and hence my keyboards layouts are created in the users folder and then shared among several other keyboards.
 
-For the actual keymap, I recommend reading through [`metheon.c`](users/metheon/metheon.c). For how that keymap is then mapped to each keyboard I use, read through the config files of each keyboard listed below. Every config file contains a define which basically maps my layout to that particular keyboard. The `keymap.c` file itself is empty.
-This approach ensures that it is quite easy to add support for a new keyboard PCB as long as it fits the layout of a Sweep. All you have to do is write the *adapter configuration*.
+For the actual keymap, I recommend reading through the keymap shown below. For how that keymap is then mapped to each keyboard I use, read through the config files of each keyboard listed below. Every config file contains a define which basically maps my layout to that particular keyboard. The `keymap.c` file itself is empty.
+This approach ensures that it is quite easy to add support for a new keyboard PCB as long as it fits the 34-key layout. All you have to do is write the *adapter configuration*.
 
 Right now I have support for the following keyboards, with the Sweep being the primary:
 
 * [*Ferris Sweep*](https://github.com/davidphilipbarr/Sweep) ([`config.h`](keyboards/ferris/keymaps/metheon/config.h)):
-  * `make ferris/sweep:metheon:dfu-split-left`
-  * `make ferris/sweep:metheon:dfu-split-right`
+  * `make ferris/sweep:metheon:flash` or `:dfu-split-left`
+  * `make ferris/sweep:metheon:flash` or `:dfu-split-right`
 * [*Kyria*](https://splitkb.com) ([`config.h`](keyboards/splitkb/kyria/keymaps/metheon/config.h)):
-  * `make splitkb/kyria:metheon`
+  * `make splitkb/kyria:metheon:flash`
 * [*Planck EZ*](https://ergodox-ez.com/pages/planck) ([`config.h`](keyboards/planck/keymaps/metheon/config.h)):
-  * `make planck/ez:metheon`
+  * `make planck/ez:metheon:flash`
 
 In the following sections I will dive into different aspects of my keymap.
 
 ### Special thanks
 
-A lot of inspiration is drawn from [*Drashna*](https://github.com/qmk/qmk_firmware/tree/master/users/drashna) and [*manna-harbour_miryoku*](https://github.com/qmk/qmk_firmware/tree/master/users/manna-harbour_miryoku). Also a big shoutout to the very active community on the splitkb discord, Colemak discord and QMK discord.
+Just a big shoutout to the communities on the following discords: SplitKB, Colemak, Hands Down, ZMK and QMK.
 
-My layout is [Hands Down Titanium (neu-rx) by Alan Reiser](https://sites.google.com/alanreiser.com/handsdown/home). A huge thanks to Alan who engineered the layout upon request when I wanted to move R to the thumb.
+## Layout
+
+I have mainly been a [Colemak](https://colemak.com/) user, but eventually decided to switch as does not work too well with Danish which is my native language. I tried out [Hands Down Gold](https://sites.google.com/alanreiser.com/handsdown/home) briefly, but did not like the `R` on pinky. Alan (creator of Hands Down) then made a new version called Titanium with `R` on thumb. After using that a bit I decided to make my own layout which took the best parts of Colemak and Hands Down Titanium. Thus my own layout was born called `methane`. The chemical formular for `methane` is `CH₄` which is homage to the one part Colemak and the four part Hands Down that served as inspiration for the layout. It has around `1%` SFBs against a mixed corpus of Danish and English.
 
 ## Leader
 
@@ -82,9 +84,13 @@ Files:
 
 ## Key Overrides
 
-Just a list of key+mod overrides which aims to improve mainly the shifted character of base layer symbols and shifted numpad. I do use it for one other thing which is easy access to gui+tab and friends on base layer, without having tab on base layer. So holding gui while tapping enter or space is exactly like holding gui(+shift)+tab. Same principle apply for shift for moving desktop and alt for changing tabs.
+Just a list of key+mod overrides which aims to improve the shifted character of base layer symbols.
 
 Files:
 
 * [`key_overrides.def`](users/metheon/key_overrides.def)
 * [`key_overrides.c`](users/metheon/key_overrides.c)
+
+## Keymap
+
+![](images/keymap.svg)

@@ -18,6 +18,7 @@ SRC += process_records.c
 SRC += window_tab.c
 SRC += caps_word.c
 SRC += leader.c
+SRC += oneshot.c
 
 VPATH += keyboards/gboards
 

@@ -2,27 +2,52 @@
 
 /*                KEY POSITIONS
   ╭────────────────────╮ ╭────────────────────╮
-  │  j   w   h   p   b │ │  ?   k   u   a   @ │
-  │  c   s   n   t   g │ │  '   r   e   o   i │
-  │  x   f   l   d   v │ │  `   m   ,   .   y │
-  ╰───────────╮ Sf  Sp │ │ Bs  Sf ╭───────────╯
+  │  j   w   h   p   b │ │  /   k   u   a   @ │
+  │  c   s   n   t   g │ │  -   r   e   o   i │
+  │  '   f   l   d   v │ │  `   m   ,   .   y │
+  ╰───────────╮ Nv  Sp │ │ Sf  Nm ╭───────────╯
               ╰────────╯ ╰────────╯            
 */
 
-// Danish vowels, right hand side
-COMB(COMBO_AE               ,KC_AE      ,KC_U, KC_A)                // Æ
-COMB(COMBO_AA               ,KC_AA      ,HOME_E, HOME_O)            // Å
-COMB(COMBO_OE               ,KC_OE      ,KC_COMMA, KC_DOT)          // Ø
+// //////////////// //
+// outer horizontal //
+// //////////////// //
 
-// Consonants, left hand side
-COMB(COMBO_Q                ,KC_Q       ,HOME_N, HOME_T)            // Q
-COMB(COMBO_Z                ,KC_Z       ,HOME_S, HOME_N)            // Z
+// left hand side
+COMB(COMBO_ESC              ,KC_ESC     ,KC_J, KC_W)                  // esc
+COMB(COMBO_LCBR             ,KC_LCBR    ,KC_H, KC_P)                  // {
+COMB(COMBO_LT               ,KC_LT      ,KC_C, KC_S)                  // <
+COMB(COMBO_LPRN             ,KC_LPRN    ,KC_N, KC_T)                  // (
+COMB(COMBO_LBRC             ,KC_LBRC    ,KC_L, KC_D)                  // [
 
-// Trigram combos
-COMB(COMBO_THA              ,TXT_THA    ,HOME_T, HOME_R)            // tha
-COMB(COMBO_THE              ,TXT_THE    ,HOME_T, HOME_E)            // the
-COMB(COMBO_THI              ,TXT_THI    ,HOME_T, HOME_O)            // thi
+// right hand side
+COMB(COMBO_RCBR             ,KC_RCBR    ,KC_M, KC_U)                  // }
+COMB(COMBO_RPRN             ,KC_RPRN    ,KC_R, KC_E)                  // )
+COMB(COMBO_GT               ,KC_GT      ,KC_O, KC_I)                  // >
+COMB(COMBO_RBRC             ,KC_RBRC    ,KC_K, KC_COMMA)              // ]
 
-// Enter
-COMB(COMBO_ENT              ,KC_ENTER   ,HOME_S, HOME_N, HOME_T)    // enter on base
-COMB(COMBO_ENT_ON_NUM       ,KC_ENTER   ,KC_4, KC_5, KC_6)          // enter on numpad
+// //////////////// //
+// inner horizontal //
+// //////////////// //
+
+// left hand side
+COMB(COMBO_Q                ,KC_Q       ,KC_W, KC_H)                  // Q
+COMB(COMBO_SCRNSHT          ,SCRNSHT    ,KC_P, KC_B)                  // screenshot
+COMB(COMBO_X                ,KC_X       ,KC_S, KC_N)                  // X
+COMB(COMBO_SEARCH           ,SEARCH     ,KC_T, KC_G)                  // search
+COMB(COMBO_Z                ,KC_Z       ,KC_F, KC_L)                  // Z
+COMB(COMBO_LOCK_LEFT        ,LOCK       ,KC_D, KC_V)                  // lock the computer
+
+// right hand side
+COMB(COMBO_SELECT_ALL       ,SELECT_ALL ,KC_SLSH, KC_M)               // select all
+COMB(COMBO_AE               ,KC_AE      ,KC_U, KC_A)                  // Æ
+COMB(COMBO_SAVE             ,SAVE       ,KC_GRV, KC_R)                // save
+COMB(COMBO_AA               ,KC_AA      ,KC_E, KC_O)                  // Å
+COMB(COMBO_LOCK_RGHT        ,LOCK       ,KC_GRV, KC_K)                // lock the computer
+COMB(COMBO_OE               ,KC_OE      ,KC_COMMA, KC_DOT)            // Ø
+
+// ///////////////// //
+// cross hand combos //
+// ///////////////// //
+
+COMB(COMBO_RESET            ,RESET      ,KC_W, KC_H, KC_P, KC_SLSH)   // reset the keyboard

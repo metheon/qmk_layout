@@ -8,6 +8,8 @@
 static const char * const secrets[] = {
   "no secrets to be found",
   "no secrets to be found",
+  "no secrets to be found",
+  "no secrets to be found",
 };
 #endif
 
@@ -56,6 +58,16 @@ void matrix_scan_leader(void) {
         SEQ_ONE_KEY(KC_E) {
             // send my email
             send_string(secrets[1]);
+        }
+        // Secret [L]
+        SEQ_ONE_KEY(KC_L) {
+            // send secret L
+            send_string(secrets[2]);
+        }
+        // Secret [P]
+        SEQ_ONE_KEY(KC_P) {
+            // send secret P
+            send_string(secrets[3]);
         }
     }
 }

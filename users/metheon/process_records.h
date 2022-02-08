@@ -13,6 +13,10 @@ enum keycodes {
     CPS_DSBL,               // Disables any caps word mode
     PREV_WIN,               // Gui + shift + tab
     NEXT_WIN,               // Gui + tab
+    CTRL,                   // One Shot Control
+    ALT,                    // One Shot Alt
+    SHIFT,                  // One Shot Shift
+    GUI,                    // One Shot Command
 #include "text.def"
 };
 
