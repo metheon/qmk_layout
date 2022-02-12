@@ -3,16 +3,6 @@
 #include "metheon.h"
 #include "oneshot.h"
 
-#undef TEXT
-#define TEXT(name, text)            \
-    case name:                      \
-        if(pressed) {               \
-            SEND_STRING(text);      \
-        }                           \
-        break;
-
-// one shot stuff
-
 bool is_oneshot_cancel_key(uint16_t keycode) {
     switch (keycode) {
     case NUM:
@@ -67,7 +57,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     const bool pressed = record->event.pressed;
     switch (keycode) {
-        #include "text.def"
         // caps word related cases (start and stop modes)
         case CPS_DSBL:
             if(pressed) {

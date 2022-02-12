@@ -72,16 +72,6 @@ Files:
 * [`process_records.c`](users/metheon/process_records.c)
 * [`process_records.h`](users/metheon/process_records.h)
 
-## Text
-
-This is one of those things I want to use more but I just haven't had the time yet. In any case, this feature allows you to easily create a text string and a key for that text string. Then using any method you want your keyboard will type it. I am mainly thinking about using it for bigrams and trigrams together with combos. Right now I have this where I tap `ta` for `tha`, `te` for `the` and `ti` for `thi` as a test.
-
-Files:
-
-* [`text.def`](users/metheon/text.def)
-* [`process_records.h`](users/metheon/process_records.h)
-* [`process_records.c`](users/metheon/process_records.c)
-
 ## Key Overrides
 
 Just a list of key+mod overrides which aims to improve the shifted character of base layer symbols.

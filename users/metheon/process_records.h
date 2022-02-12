@@ -3,9 +3,6 @@
 #include QMK_KEYBOARD_H
 #include "caps_word.h"
 
-#undef TEXT
-#define TEXT(name, text) name,
-
 enum keycodes {
     CAPSWORD = SAFE_RANGE,  // CAPITALIZES next word
     SNK_CASE,               // snake_case
@@ -17,6 +14,5 @@ enum keycodes {
     ALT,                    // One Shot Alt
     SHIFT,                  // One Shot Shift
     GUI,                    // One Shot Command
-#include "text.def"
 };
 
