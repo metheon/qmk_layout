@@ -1,7 +1,6 @@
 #pragma once
 
 #include QMK_KEYBOARD_H
-#include "encoders.h"
 #include "process_records.h"
 #include "window_tab.h"
 #include "magnet.h"

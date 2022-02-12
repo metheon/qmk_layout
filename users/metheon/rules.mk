@@ -1,9 +1,5 @@
 # Set any rules.mk overrides for your specific keymap here.
 # See rules at https://docs.qmk.fm/#/config_options?id=the-rulesmk-file
-ifndef ENCODER_ENABLE
-	ENCODER_ENABLE				=	no  	# Ensure encoders are disabled unless set to true in a specific keymap
-endif
-
 EXTRAKEY_ENABLE					=	yes 	# Enables audio control and System control
 COMBO_ENABLE					=	yes		# Enables the usage of combos
 KEY_OVERRIDE_ENABLE				=	yes		# Enables key overrides
@@ -12,7 +8,6 @@ ifndef LTO_ENABLE
 endif
 
 SRC += metheon.c
-SRC += encoders.c
 SRC += process_records.c
 SRC += window_tab.c
 SRC += caps_word.c
@@ -21,6 +16,7 @@ SRC += oneshot.c
 VPATH += keyboards/gboards
 
 # Disable as many features as possible
+ENCODER_ENABLE					=	no
 LEADER_ENABLE					=	no
 TAP_DANCE_ENABLE				=	no
 MOUSEKEY_ENABLE					=	no
