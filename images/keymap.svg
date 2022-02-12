@@ -177,8 +177,7 @@
 <rect rx="6" ry="6" x="411.0" y="341.0" width="55" height="45" class="" />
 <text text-anchor="middle" dominant-baseline="middle" x="438.5" y="363.5">bspc</text>
 <rect rx="6" ry="6" x="470.0" y="341.0" width="55" height="45" class="" />
-<text text-anchor="middle" dominant-baseline="middle" x="497.5" y="354.5">caps</text>
-<text text-anchor="middle" dominant-baseline="middle" x="497.5" y="372.5">word</text>
+<text text-anchor="middle" dominant-baseline="middle" x="497.5" y="363.5">caps</text>
 <rect rx="6" ry="6" x="529.0" y="341.0" width="55" height="45" class="" />
 <text text-anchor="middle" dominant-baseline="middle" x="556.5" y="363.5">del</text>
 <rect rx="6" ry="6" x="588.0" y="341.0" width="55" height="45" class="" />
