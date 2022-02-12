@@ -74,6 +74,7 @@ bool is_oneshot_ignored_key(uint16_t keycode) {
     switch (keycode) {
     case NUM:
     case NAV:
+    case OSM_LSFT:
     case CTRL:
     case ALT:
     case SHIFT:
