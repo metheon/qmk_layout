@@ -1,14 +1,25 @@
 #pragma once
 
 #include QMK_KEYBOARD_H
-#include "process_records.h"
-#include "magnet.h"
+#include "features/magnet.h"
+#include "features/caps_word.h"
 
 enum layers {
     _BSE,                   // My own layout called methane
     _NAV,                   // Navigation cluster plus media
     _NUM,                   // Numpad
     _SYM,                   // Symbols plus magnet shortcuts
+};
+
+enum keycodes {
+    CAPSWORD = SAFE_RANGE,  // CAPITALIZES next word
+    SNK_CASE,               // snake_case
+    SCRM_SNK,               // SCREAMING_SNAKE_CASE
+    CPS_DSBL,               // Disables any caps word mode
+    CTRL,                   // One Shot Control
+    ALT,                    // One Shot Alt
+    SHIFT,                  // One Shot Shift
+    GUI,                    // One Shot Command
 };
 
 #define __NONE__            KC_NO               // Alias to make it eight wide

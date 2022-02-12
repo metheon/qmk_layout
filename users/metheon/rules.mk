@@ -8,9 +8,8 @@ ifndef LTO_ENABLE
 endif
 
 SRC += metheon.c
-SRC += process_records.c
-SRC += caps_word.c
-SRC += oneshot.c
+SRC += features/caps_word.c
+SRC += features/oneshot.c
 
 VPATH += keyboards/gboards
 
