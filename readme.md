@@ -32,13 +32,6 @@ Just a big shoutout to the communities on the following discords: SplitKB, Colem
 
 I have mainly been a [Colemak](https://colemak.com/) user, but eventually decided to switch as does not work too well with Danish which is my native language. I tried out [Hands Down Gold](https://sites.google.com/alanreiser.com/handsdown/home) briefly, but did not like the `R` on pinky. Alan (creator of Hands Down) then made a new version called Titanium with `R` on thumb. After using that a bit I decided to make my own layout which took the best parts of Colemak and Hands Down Titanium. Thus my own layout was born called `methane`. The chemical formular for `methane` is `CH₄` which is homage to the one part Colemak and the four part Hands Down that served as inspiration for the layout. It has around `1%` SFBs against a mixed corpus of Danish and English.
 
-## Encoders
-
-The encoder logic is split in two parts. In the header file, [`encoders.h`](users/metheon/encoders.h), the _on tap_ function can be found while the rotary logic can be found in [`encoders.c`](users/metheon/encoders.c). The encoder functionality is disabled by default, but can be enabled for a keyboard if it has encoders, like I do in the [`rules.mk`](keyboards/splitkb/kyria/keymaps/metheon/rules.mk) file of my Kyria. The only other thing to note for my encoders is that I feel that the alt-tab logic is improved compared to what I have found elsewhere.
-
-* [`encoders.c`](users/metheon/encoders.c)
-* [`encoders.h`](users/metheon/encoders.h)
-
 ## Process Records
 
 My process records files are also pretty basic. The main purpose of splitting this into their own files is simply readability.
