@@ -34,7 +34,7 @@ COMB(COMBO_RBRC             ,KC_RBRC    ,KC_K, KC_COMMA)              // ]
 COMB(COMBO_Q                ,KC_Q       ,KC_W, KC_H)                  // Q
 COMB(COMBO_SCRNSHT          ,SCRNSHT    ,KC_P, KC_B)                  // screenshot
 COMB(COMBO_X                ,KC_X       ,KC_S, KC_N)                  // X
-COMB(COMBO_SEARCH           ,SEARCH     ,KC_T, KC_G)                  // search
+COMB(COMBO_SWAP_WIN         ,SW_WIN     ,KC_T, KC_G)                  // swap win
 COMB(COMBO_Z                ,KC_Z       ,KC_F, KC_L)                  // Z
 COMB(COMBO_LOCK_LEFT        ,LOCK       ,KC_D, KC_V)                  // lock the computer
 

@@ -377,9 +377,11 @@
 <rect rx="6" ry="6" x="147.5" y="1166.0" width="55" height="45" class="purple" />
 <text text-anchor="middle" dominant-baseline="middle" x="175.0" y="1188.5">X</text>
 <rect rx="6" ry="6" x="206.5" y="1166.0" width="55" height="45" class="pink" />
-<text text-anchor="middle" dominant-baseline="middle" x="234.0" y="1188.5">search</text>
+<text text-anchor="middle" dominant-baseline="middle" x="234.0" y="1179.5">swap</text>
+<text text-anchor="middle" dominant-baseline="middle" x="234.0" y="1197.5">win</text>
 <rect rx="6" ry="6" x="265.5" y="1166.0" width="55" height="45" class="pink" />
-<text text-anchor="middle" dominant-baseline="middle" x="293.0" y="1188.5">search</text>
+<text text-anchor="middle" dominant-baseline="middle" x="293.0" y="1179.5">swap</text>
+<text text-anchor="middle" dominant-baseline="middle" x="293.0" y="1197.5">win</text>
 <rect rx="6" ry="6" x="29.5" y="1215.0" width="55" height="45" class="" />
 <rect rx="6" ry="6" x="88.5" y="1215.0" width="55" height="45" class="yellow" />
 <text text-anchor="middle" dominant-baseline="middle" x="116.0" y="1237.5">Z</text>
