@@ -1,5 +1,4 @@
 #include "process_records.h"
-#include "window_tab.h"
 #include "metheon.h"
 #include "oneshot.h"
 
@@ -76,18 +75,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case CAPSWORD:
             if (pressed) {
                 toggle_caps_word();
-            }
-            break;
-        // cmd+shift+tab
-        case PREV_WIN:
-            if (pressed) {
-                mod_tab(record, 1);
-            }
-            break;
-        // cmd+tab
-        case NEXT_WIN:
-            if (pressed) {
-                mod_tab(record, 0);
             }
             break;
         default:
