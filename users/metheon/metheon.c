@@ -21,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          CTRL    ,ALT     ,SHIFT   ,GUI     ,KC_VOLD ,    __NONE__,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         UNDO    ,CUT     ,COPY    ,PASTE   ,KC_MUTE ,    __NONE__,KC_BSPC ,CAPSWORD,KC_DEL  ,__NONE__,
+         UNDO    ,CUT     ,COPY    ,PASTE   ,KC_MUTE ,    __NONE__,KC_BSPC ,KC_CAPS ,KC_DEL  ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
                                     ________,__NONE__,    KC_ENTER,________
     //                             '--------+--------'   '--------+--------'
@@ -107,38 +107,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         keycode, record
     );
 
-    // caps word related processing
-    if (!process_caps_word(keycode, record)) {
-        return false;
-    }
-
-    const bool pressed = record->event.pressed;
-    switch (keycode) {
-        // caps word related cases (start and stop modes)
-        case CPS_DSBL:
-            if(pressed) {
-                disable_all();
-            }
-            break;
-        case SCRM_SNK:
-            if(pressed) {
-                toggle_screaming_snake_case();
-            }
-            break;
-        case SNK_CASE:
-            if (pressed) {
-                toggle_snake_case();
-            }
-            break;
-        case CAPSWORD:
-            if (pressed) {
-                toggle_caps_word();
-            }
-            break;
-        default:
-            // return true to keep processing the key
-            return true;
-    }
-    // return false to ignore further processing of the key
-    return false;
+    return true;
 };
