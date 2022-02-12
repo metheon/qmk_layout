@@ -19,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
          KC_ESC  ,KC_MPRV ,KC_MPLY ,KC_MNXT ,KC_VOLU ,    __NONE__,KC_STAB ,KC_UP   ,KC_TAB  ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         CTRL    ,ALT     ,SHIFT   ,GUI     ,KC_VOLD ,    __NONE__,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
+         OS_CTRL ,OS_ALT  ,OS_SHFT ,OS_CMD  ,KC_VOLD ,    __NONE__,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          UNDO    ,CUT     ,COPY    ,PASTE   ,KC_MUTE ,    __NONE__,KC_BSPC ,KC_CAPS ,KC_DEL  ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
@@ -30,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
          __NONE__,KC_7    ,KC_8    ,KC_9    ,__NONE__,    __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         __NONE__,KC_4    ,KC_5    ,KC_6    ,__NONE__,    __NONE__,GUI     ,SHIFT   ,ALT     ,CTRL    ,
+         __NONE__,KC_4    ,KC_5    ,KC_6    ,__NONE__,    __NONE__,OS_CMD  ,OS_SHFT ,OS_ALT  ,OS_CTRL ,
     //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
          __NONE__,KC_1    ,KC_2    ,KC_3    ,__NONE__,    __NONE__,__NONE__,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
@@ -56,34 +56,36 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #endif
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    state = update_tri_layer_state(state, _NAV, _NUM, _SYM);
-    return state;
+    return update_tri_layer_state(state, _NAV, _NUM, _SYM);
 };
 
 bool is_oneshot_cancel_key(uint16_t keycode) {
-    switch (keycode) {
-    case NUM:
-    case NAV:
-        return true;
-    default:
-        return false;
-    }
+     switch (keycode) {
+          case NUM:
+          case NAV:
+               return true;
+          default:
+               return false;
+     }
 }
 
 bool is_oneshot_ignored_key(uint16_t keycode) {
-    switch (keycode) {
-    case NUM:
-    case NAV:
-    case OSM_LSFT:
-    case CTRL:
-    case ALT:
-    case SHIFT:
-    case GUI:
-        return true;
-    default:
-        return false;
-    }
+     switch (keycode) {
+          case NUM:
+          case NAV:
+          case OSM_LSFT:
+          case OS_SHFT:
+          case OS_CTRL:
+          case OS_ALT:
+          case OS_CMD:
+               return true;
+          default:
+               return false;
+     }
 }
+
+bool sw_win_active = false;
+bool sw_lang_active = false;
 
 oneshot_state os_shft_state = os_up_unqueued;
 oneshot_state os_ctrl_state = os_up_unqueued;
@@ -91,22 +93,31 @@ oneshot_state os_alt_state = os_up_unqueued;
 oneshot_state os_cmd_state = os_up_unqueued;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    update_swapper(
+        &sw_win_active, KC_LGUI, KC_TAB, SW_WIN,
+        keycode, record
+    );
+    update_swapper(
+        &sw_lang_active, KC_LCTL, KC_SPC, SW_LANG,
+        keycode, record
+    );
+
     update_oneshot(
-        &os_shft_state, KC_LSFT, SHIFT,
+        &os_shft_state, KC_LSFT, OS_SHFT,
         keycode, record
     );
     update_oneshot(
-        &os_ctrl_state, KC_LCTL, CTRL,
+        &os_ctrl_state, KC_LCTL, OS_CTRL,
         keycode, record
     );
     update_oneshot(
-        &os_alt_state, KC_LALT, ALT,
+        &os_alt_state, KC_LALT, OS_ALT,
         keycode, record
     );
     update_oneshot(
-        &os_cmd_state, KC_LGUI, GUI,
+        &os_cmd_state, KC_LCMD, OS_CMD,
         keycode, record
     );
 
     return true;
-};
+}

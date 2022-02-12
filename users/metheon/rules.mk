@@ -3,12 +3,10 @@
 EXTRAKEY_ENABLE					=	yes 	# Enables audio control and System control
 COMBO_ENABLE					=	yes		# Enables the usage of combos
 KEY_OVERRIDE_ENABLE				=	yes		# Enables key overrides
-ifndef LTO_ENABLE
-	LTO_ENABLE					=	yes		# Reduces compiled size of firmware
-endif
 
 SRC += metheon.c
 SRC += features/oneshot.c
+SRC += features/swapper.c
 
 VPATH += keyboards/gboards
 

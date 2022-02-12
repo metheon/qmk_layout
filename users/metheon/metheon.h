@@ -1,7 +1,9 @@
 #pragma once
 
 #include QMK_KEYBOARD_H
+
 #include "features/magnet.h"
+#include "features/swapper.h"
 
 enum layers {
     _BSE,                   // My own layout called methane
@@ -11,10 +13,14 @@ enum layers {
 };
 
 enum keycodes {
-    CTRL,                   // One Shot Control
-    ALT,                    // One Shot Alt
-    SHIFT,                  // One Shot Shift
-    GUI,                    // One Shot Command
+    // Custom oneshot mod implementation with no timers.
+    OS_SHFT = SAFE_RANGE,
+    OS_CTRL,
+    OS_ALT,
+    OS_CMD,
+
+    SW_WIN,  // Switch to next window         (cmd-tab)
+    SW_LANG, // Switch to next input language (ctl-spc)
 };
 
 #define __NONE__            KC_NO               // Alias to make it eight wide
