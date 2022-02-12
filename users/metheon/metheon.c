@@ -21,9 +21,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          OS_CTRL ,OS_ALT  ,OS_SHFT ,OS_CMD  ,KC_VOLD ,    __NONE__,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         UNDO    ,CUT     ,COPY    ,PASTE   ,KC_MUTE ,    __NONE__,KC_BSPC ,KC_CAPS ,KC_DEL  ,__NONE__,
+         UNDO    ,CUT     ,COPY    ,PASTE   ,KC_MUTE ,    __NONE__,KC_ENTER,__NONE__,__NONE__,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-                                    ________,__NONE__,    KC_ENTER,________
+                                    ________,__NONE__,    KC_BSPC ,________
     //                             '--------+--------'   '--------+--------'
     ),
     [_NUM] = LAYOUT_metheon(
@@ -39,11 +39,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_SYM] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         KC_PERC ,KC_CIRC ,KC_DLR  ,KC_EUR  ,KC_PND  ,    __NONE__,M_L2_3RD,HIDE_WIN,M_R2_3RD,__NONE__,
+         KC_PERC ,KC_CIRC ,KC_DLR  ,KC_EUR  ,KC_PND  ,    __NONE__,M_L2_3RD,M_LT_HF ,M_RT_HF ,M_R2_3RD,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         KC_SLSH ,KC_ASTR ,KC_MINS ,KC_PLUS ,KC_BSLS ,    __NONE__,M_LT_HF ,M_FSCRN ,M_RT_HF ,__NONE__,
+         KC_SLSH ,KC_ASTR ,KC_MINS ,KC_PLUS ,KC_BSLS ,    __NONE__,OS_CMD  ,OS_SHFT ,OS_ALT  ,OS_CTRL ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         KC_PIPE ,KC_AMPR ,KC_EXLM ,KC_EQL  ,DEGREE  ,    __NONE__,M_LT_3RD,M_MD_3RD,M_RT_3RD,__NONE__,
+         KC_PIPE ,KC_AMPR ,KC_EXLM ,KC_EQL  ,DEGREE  ,    __NONE__,M_LT_3RD,M_MD_3RD,M_RT_3RD,M_FSCRN ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
                                     ________,__NONE__,    __NONE__,________
     //                             '--------+--------'   '--------+--------'
