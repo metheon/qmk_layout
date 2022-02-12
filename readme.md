@@ -32,30 +32,6 @@ Just a big shoutout to the communities on the following discords: SplitKB, Colem
 
 I have mainly been a [Colemak](https://colemak.com/) user, but eventually decided to switch as does not work too well with Danish which is my native language. I tried out [Hands Down Gold](https://sites.google.com/alanreiser.com/handsdown/home) briefly, but did not like the `R` on pinky. Alan (creator of Hands Down) then made a new version called Titanium with `R` on thumb. After using that a bit I decided to make my own layout which took the best parts of Colemak and Hands Down Titanium. Thus my own layout was born called `methane`. The chemical formular for `methane` is `CH₄` which is homage to the one part Colemak and the four part Hands Down that served as inspiration for the layout. It has around `1%` SFBs against a mixed corpus of Danish and English.
 
-## Leader
-
-I use my leader key mainly to input relevant data that I otherwise find too cumbersome to input, this is stuff such as usernames and emails. To avoid having those details pushed to [GitHub](https://github.com/) I have a file called `secrets.h` which is never pushed to GitHub. To avoid having that file being pushed by accident I do two things:
-
-* Add the file to `.gitignore`
-* Add the file to `.git/info/exclude`
-
-The `secrets.h` file simply contains the following content:
-
-```c
-static const char * const secrets[] = {
-  "no secrets to be found",
-  "no secrets to be found",
-  // Add all your secrets here
-};
-```
-
-This array is duplicated as a dummy array within the `leader.c` file, such that the keymap would still compile on another machine even without `secrets.h` present. The feature can also be turned off by appending the make command with: `make ... NO_SECRETS=yes`, which can be handy if I take my keyboard outside of my home.
-
-Files:
-
-* [`leader.c`](users/metheon/leader.c)
-* [`leader.h`](users/metheon/leader.h)
-
 ## Encoders
 
 The encoder logic is split in two parts. In the header file, [`encoders.h`](users/metheon/encoders.h), the _on tap_ function can be found while the rotary logic can be found in [`encoders.c`](users/metheon/encoders.c). The encoder functionality is disabled by default, but can be enabled for a keyboard if it has encoders, like I do in the [`rules.mk`](keyboards/splitkb/kyria/keymaps/metheon/rules.mk) file of my Kyria. The only other thing to note for my encoders is that I feel that the alt-tab logic is improved compared to what I have found elsewhere.
