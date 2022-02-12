@@ -32,15 +32,6 @@ Just a big shoutout to the communities on the following discords: SplitKB, Colem
 
 I have mainly been a [Colemak](https://colemak.com/) user, but eventually decided to switch as does not work too well with Danish which is my native language. I tried out [Hands Down Gold](https://sites.google.com/alanreiser.com/handsdown/home) briefly, but did not like the `R` on pinky. Alan (creator of Hands Down) then made a new version called Titanium with `R` on thumb. After using that a bit I decided to make my own layout which took the best parts of Colemak and Hands Down Titanium. Thus my own layout was born called `methane`. The chemical formular for `methane` is `CH₄` which is homage to the one part Colemak and the four part Hands Down that served as inspiration for the layout. It has around `1%` SFBs against a mixed corpus of Danish and English.
 
-## Process Records
-
-My process records files are also pretty basic. The main purpose of splitting this into their own files is simply readability.
-
-Files:
-
-* [`process_records.c`](users/metheon/process_records.c)
-* [`process_records.h`](users/metheon/process_records.h)
-
 ## Key Overrides
 
 Just a list of key+mod overrides which aims to improve the shifted character of base layer symbols.
