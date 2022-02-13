@@ -64,6 +64,8 @@ enum keycodes {
 #define HIDE_WIN            LGUI(KC_H)          // Hide a Window
 #define SAVE                LGUI(KC_S)          // Save document
 #define SELECT_ALL          LGUI(KC_A)          // Select all
+#define FWD                 LGUI(KC_RBRC)       // Forward in the browser
+#define BACK                LGUI(KC_LBRC)       // Backward in the browser
 
 #define DEGREE              LALT(KC_K)          // ˚
 

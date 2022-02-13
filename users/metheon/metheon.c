@@ -17,11 +17,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_NAV] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         KC_ESC  ,KC_MPRV ,KC_MPLY ,KC_MNXT ,KC_VOLU ,    __NONE__,KC_STAB ,KC_UP   ,KC_TAB  ,__NONE__,
+         KC_ESC  ,BACK    ,FWD     ,SW_WIN  ,SCRNSHT ,    MAC_PGUP,KC_STAB ,KC_UP   ,KC_TAB  ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         OS_CTRL ,OS_ALT  ,OS_SHFT ,OS_CMD  ,KC_VOLD ,    __NONE__,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
+         OS_CTRL ,OS_ALT  ,OS_SHFT ,OS_CMD  ,SEARCH  ,    MAC_PGDN,KC_LEFT ,KC_DOWN ,KC_RGHT ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         UNDO    ,CUT     ,COPY    ,PASTE   ,KC_MUTE ,    __NONE__,KC_ENTER,__NONE__,__NONE__,__NONE__,
+         UNDO    ,CUT     ,COPY    ,PASTE   ,LOCK    ,    SW_LANG ,MAC_HOME,KC_ENTER,MAC_END ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
                                     ________,__NONE__,    KC_BSPC ,________
     //                             '--------+--------'   '--------+--------'
