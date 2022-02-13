@@ -10,30 +10,11 @@ SRC += features/swapper.c
 
 VPATH += keyboards/gboards
 
-# Disable as many features as possible
-ENCODER_ENABLE					=	no
-LEADER_ENABLE					=	no
-TAP_DANCE_ENABLE				=	no
+# Disable as many byte-costing features as possible
 MOUSEKEY_ENABLE					=	no
 BOOTMAGIC_ENABLE				=	no
-DYNAMIC_MACRO_ENABLE			=	no
-COMMAND_ENABLE					=	no
-AUDIO_ENABLE					=	no
-KEY_LOCK_ENABLE					=	no
-CONSOLE_ENABLE					=	no
-VELOCIKEY_ENABLE				=	no
-STENO_ENABLE					=	no
-TERMINAL_ENABLE					=	no
 GRAVE_ESC_ENABLE				=	no
-SPACE_CADET_ENABLE				=	no
-AUTO_SHIFT_ENABLE				=	no
 POINTING_DEVICE_ENABLE			=	no
 RAW_ENABLE						=	no
-SEQUENCER_ENABLE				=	no
-SWAP_HANDS_ENABLE				=	no
+SPACE_CADET_ENABLE				=	no
 UNICODE_ENABLE					=	no
-WPM_ENABLE						=	no
-BACKLIGHT_ENABLE				=	no
-LED_MATRIX_ENABLE				=	no
-RGBLIGHT_ENABLE					=	no
-RGB_MATRIX_ENABLE				=	no
