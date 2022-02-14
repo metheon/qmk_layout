@@ -93,7 +93,7 @@
 <text text-anchor="middle" dominant-baseline="middle" x="615.5" y="38.0">#</text>
 <text text-anchor="middle" dominant-baseline="middle" x="615.5" y="56.0">@</text>
 <rect rx="6" ry="6" x="352.0" y="73.5" width="55" height="45" class="" />
-<text text-anchor="middle" dominant-baseline="middle" x="379.5" y="87.0">_</text>
+<text text-anchor="middle" dominant-baseline="middle" x="379.5" y="87.0">!</text>
 <text text-anchor="middle" dominant-baseline="middle" x="379.5" y="105.0">-</text>
 <rect rx="6" ry="6" x="411.0" y="73.5" width="55" height="45" class="" />
 <text text-anchor="middle" dominant-baseline="middle" x="438.5" y="96.0">r</text>
@@ -119,7 +119,8 @@
 <rect rx="6" ry="6" x="206.5" y="171.5" width="55" height="45" class="" />
 <text text-anchor="middle" dominant-baseline="middle" x="234.0" y="194.0">nav</text>
 <rect rx="6" ry="6" x="265.5" y="171.5" width="55" height="45" class="" />
-<text text-anchor="middle" dominant-baseline="middle" x="293.0" y="194.0">space</text>
+<text text-anchor="middle" dominant-baseline="middle" x="293.0" y="185.0">_</text>
+<text text-anchor="middle" dominant-baseline="middle" x="293.0" y="203.0">space</text>
 <rect rx="6" ry="6" x="352.0" y="171.5" width="55" height="45" class="" />
 <text text-anchor="middle" dominant-baseline="middle" x="379.5" y="194.0">shift</text>
 <rect rx="6" ry="6" x="411.0" y="171.5" width="55" height="45" class="" />
