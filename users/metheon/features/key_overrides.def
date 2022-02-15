@@ -1,4 +1,4 @@
-KO(at_hash,         MOD_MASK_SHIFT, KC_AT,      KC_HASH,        _BSE)
+KO(hash_at,         MOD_MASK_SHIFT, KC_HASH,    KC_AT,          _BSE)
 KO(dot_colon,       MOD_MASK_SHIFT, KC_DOT,     KC_COLN,        _BSE)
 KO(comma_semicolon, MOD_MASK_SHIFT, KC_COMMA,   KC_SCLN,        _BSE)
 KO(space_unds,      MOD_MASK_SHIFT, KC_SPACE,   KC_UNDS,        _BSE)

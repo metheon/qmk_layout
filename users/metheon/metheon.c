@@ -6,7 +6,7 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BSE] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         KC_J    ,KC_W    ,KC_H    ,KC_P    ,KC_B    ,    KC_SLSH ,KC_M    ,KC_U    ,KC_A    ,KC_AT   ,
+         KC_J    ,KC_W    ,KC_H    ,KC_P    ,KC_B    ,    KC_SLSH ,KC_M    ,KC_U    ,KC_A    ,KC_HASH ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          KC_C    ,KC_S    ,KC_N    ,KC_T    ,KC_G    ,    KC_MINS ,KC_R    ,KC_E    ,KC_O    ,KC_I    ,
     //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
