@@ -5,3 +5,7 @@ KO(space_unds,      MOD_MASK_SHIFT, KC_SPACE,   KC_UNDS,        _BSE)
 KO(mins_exlm,       MOD_MASK_SHIFT, KC_MINS,    KC_EXLM,        _BSE)
 
 KO(bspc_del,        MOD_MASK_SHIFT, KC_BSPC,    KC_DEL,         _NAV)
+
+KO(zero_degree,     MOD_MASK_SHIFT, KC_0,       DEGREE,         _NUM)
+
+KO(eur_pnd,         MOD_MASK_SHIFT, KC_EUR,     KC_PND,         _SYM)

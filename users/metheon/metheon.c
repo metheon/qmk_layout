@@ -39,11 +39,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_SYM] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         KC_PERC ,KC_CIRC ,KC_DLR  ,KC_EUR  ,KC_PND  ,    __NONE__,M_L2_3RD,M_LT_HF ,M_RT_HF ,M_R2_3RD,
+         KC_PERC ,KC_CIRC ,KC_DLR  ,KC_EUR  ,__NONE__,    __NONE__,M_L2_3RD,M_LT_HF ,M_RT_HF ,M_R2_3RD,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          KC_SLSH ,KC_ASTR ,KC_MINS ,KC_PLUS ,KC_BSLS ,    __NONE__,OS_CMD  ,OS_SHFT ,OS_ALT  ,OS_CTRL ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         KC_PIPE ,KC_AMPR ,KC_EXLM ,KC_EQL  ,DEGREE  ,    __NONE__,M_LT_3RD,M_MD_3RD,M_RT_3RD,M_FSCRN ,
+         KC_PIPE ,KC_AMPR ,KC_EXLM ,KC_EQL  ,__NONE__,    __NONE__,M_LT_3RD,M_MD_3RD,M_RT_3RD,M_FSCRN ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
                                     ________,__NONE__,    __NONE__,________
     //                             '--------+--------'   '--------+--------'
