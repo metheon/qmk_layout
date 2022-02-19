@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          KC_SLSH ,KC_ASTR ,KC_MINS ,KC_PLUS ,KC_BSLS ,    __NONE__,OS_CMD  ,OS_SHFT ,OS_ALT  ,OS_CTRL ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         KC_PIPE ,KC_AMPR ,KC_EXLM ,KC_EQL  ,__NONE__,    __NONE__,M_LT_3RD,M_MD_3RD,M_RT_3RD,M_FSCRN ,
+         KC_PIPE ,KC_AMPR ,KC_EXLM ,KC_EQL  ,__NONE__,    CDE_BLCK,M_LT_3RD,M_MD_3RD,M_RT_3RD,M_FSCRN ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
                                     ________,__NONE__,    __NONE__,________
     //                             '--------+--------'   '--------+--------'
@@ -118,6 +118,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         &os_cmd_state, KC_LCMD, OS_CMD,
         keycode, record
     );
+
+    if(keycode == CDE_BLCK && record->event.pressed) {
+         tap_code(KC_GRV);
+         tap_code(KC_GRV);
+         tap_code(KC_GRV);
+         register_code(KC_LSFT);
+         tap_code(KC_ENTER);
+         tap_code(KC_ENTER);
+         unregister_code(KC_LSFT);
+         tap_code(KC_GRV);
+         tap_code(KC_GRV);
+         tap_code(KC_GRV);
+         tap_code(KC_UP);
+    }
 
     return true;
 }

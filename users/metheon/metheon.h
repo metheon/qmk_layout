@@ -21,6 +21,8 @@ enum keycodes {
 
     SW_WIN,  // Switch to next window         (cmd-tab)
     SW_LANG, // Switch to next input language (ctl-spc)
+
+    CDE_BLCK, // markdown code block
 };
 
 #define __NONE__            KC_NO               // Alias to make it eight wide
