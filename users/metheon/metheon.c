@@ -4,13 +4,13 @@
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [_BSE] = LAYOUT_metheon(
+    [_CDH] = LAYOUT_metheon(
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
-         KC_J    ,KC_W    ,KC_H    ,KC_P    ,KC_B    ,    KC_SLSH ,KC_M    ,KC_U    ,KC_A    ,KC_HASH ,
+         KC_GRV  ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,    KC_K    ,KC_L    ,KC_U    ,KC_Y    ,KC_HASH ,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         KC_C    ,KC_S    ,KC_N    ,KC_T    ,KC_G    ,    KC_MINS ,KC_R    ,KC_E    ,KC_O    ,KC_I    ,
+         KC_A    ,KC_R    ,KC_S    ,KC_T    ,KC_G    ,    KC_M    ,KC_N    ,KC_E    ,KC_I    ,KC_O    ,
     //  |--------+--------+--------+--------+--------|   |--------+--------|--------+--------+--------|
-         KC_QUOT ,KC_F    ,KC_L    ,KC_D    ,KC_V    ,    KC_GRV  ,KC_K    ,KC_COMMA,KC_DOT  ,KC_Y    ,
+         KC_QUOT ,KC_MINS ,KC_C    ,KC_D    ,KC_V    ,    KC_J    ,KC_H    ,KC_COMMA,KC_DOT  ,KC_SLSH ,
     //  '--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------'
                                     NAV     ,KC_SPACE,    OSM_LSFT,NUM
     //                             '--------+--------'   '--------+--------'

@@ -1,8 +1,8 @@
-KO(hash_at,         MOD_MASK_SHIFT, KC_HASH,    KC_AT,          _BSE)
-KO(dot_colon,       MOD_MASK_SHIFT, KC_DOT,     KC_COLN,        _BSE)
-KO(comma_semicolon, MOD_MASK_SHIFT, KC_COMMA,   KC_SCLN,        _BSE)
-KO(space_unds,      MOD_MASK_SHIFT, KC_SPACE,   KC_UNDS,        _BSE)
-KO(mins_exlm,       MOD_MASK_SHIFT, KC_MINS,    KC_EXLM,        _BSE)
+KO(hash_at,         MOD_MASK_SHIFT, KC_HASH,    KC_AT,          _CDH)
+KO(dot_colon,       MOD_MASK_SHIFT, KC_DOT,     KC_COLN,        _CDH)
+KO(comma_semicolon, MOD_MASK_SHIFT, KC_COMMA,   KC_SCLN,        _CDH)
+KO(space_unds,      MOD_MASK_SHIFT, KC_SPACE,   KC_UNDS,        _CDH)
+KO(mins_exlm,       MOD_MASK_SHIFT, KC_MINS,    KC_EXLM,        _CDH)
 
 KO(bspc_del,        MOD_MASK_SHIFT, KC_BSPC,    KC_DEL,         _NAV)
 

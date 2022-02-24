@@ -6,7 +6,7 @@
 #include "features/swapper.h"
 
 enum layers {
-    _BSE,                   // My own layout called methane
+    _CDH,                   // Modified Colemak DH
     _NAV,                   // Navigation cluster plus media
     _NUM,                   // Numpad
     _SYM,                   // Symbols plus magnet shortcuts

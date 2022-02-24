@@ -1,10 +1,14 @@
 #include "metheon.h"
 
+// ////////// //
+// COLEMAK DH //
+// ////////// //
+
 /*                KEY POSITIONS
   ╭────────────────────╮ ╭────────────────────╮
-  │  j   w   h   p   b │ │  /   k   u   a   @ │
-  │  c   s   n   t   g │ │  -   r   e   o   i │
-  │  '   f   l   d   v │ │  `   m   ,   .   y │
+  │  `   w   f   p   b │ │  k   l   u   y   # │
+  │  a   r   s   t   g │ │  m   n   e   i   o │
+  │  '   -   c   d   v │ │  j   h   ,   .   / │
   ╰───────────╮ Nv  Sp │ │ Sf  Nm ╭───────────╯
               ╰────────╯ ╰────────╯            
 */
@@ -14,40 +18,40 @@
 // //////////////// //
 
 // left hand side
-COMB(COMBO_ESC              ,KC_ESC     ,KC_J, KC_W)                  // esc
-COMB(COMBO_LCBR             ,KC_LCBR    ,KC_H, KC_P)                  // {
-COMB(COMBO_LT               ,KC_LT      ,KC_C, KC_S)                  // <
-COMB(COMBO_LPRN             ,KC_LPRN    ,KC_N, KC_T)                  // (
-COMB(COMBO_LBRC             ,KC_LBRC    ,KC_L, KC_D)                  // [
+COMB(COMBO_ESC              ,KC_ESC     ,KC_GRV, KC_W)                // esc
+COMB(COMBO_LCBR             ,KC_LCBR    ,KC_F, KC_P)                  // {
+COMB(COMBO_LT               ,KC_LT      ,KC_A, KC_R)                  // <
+COMB(COMBO_LPRN             ,KC_LPRN    ,KC_S, KC_T)                  // (
+COMB(COMBO_LBRC             ,KC_LBRC    ,KC_C, KC_D)                  // [
 
 // right hand side
-COMB(COMBO_RCBR             ,KC_RCBR    ,KC_M, KC_U)                  // }
-COMB(COMBO_RPRN             ,KC_RPRN    ,KC_R, KC_E)                  // )
-COMB(COMBO_GT               ,KC_GT      ,KC_O, KC_I)                  // >
-COMB(COMBO_RBRC             ,KC_RBRC    ,KC_K, KC_COMMA)              // ]
+COMB(COMBO_RCBR             ,KC_RCBR    ,KC_L, KC_U)                  // }
+COMB(COMBO_RPRN             ,KC_RPRN    ,KC_N, KC_E)                  // )
+COMB(COMBO_GT               ,KC_GT      ,KC_I, KC_O)                  // >
+COMB(COMBO_RBRC             ,KC_RBRC    ,KC_H, KC_COMMA)              // ]
 
 // //////////////// //
 // inner horizontal //
 // //////////////// //
 
 // left hand side
-COMB(COMBO_Q                ,KC_Q       ,KC_W, KC_H)                  // Q
+COMB(COMBO_Q                ,KC_Q       ,KC_W, KC_F)                  // Q
 COMB(COMBO_VOL_UP           ,KC_VOLU    ,KC_P, KC_B)                  // volume up
-COMB(COMBO_X                ,KC_X       ,KC_S, KC_N)                  // X
+COMB(COMBO_X                ,KC_X       ,KC_R, KC_S)                  // X
 COMB(COMBO_VOL_DOWN         ,KC_VOLD    ,KC_T, KC_G)                  // volume down
-COMB(COMBO_Z                ,KC_Z       ,KC_F, KC_L)                  // Z
+COMB(COMBO_Z                ,KC_Z       ,KC_MINS, KC_C)               // Z
 COMB(COMBO_MUTE             ,KC_MUTE    ,KC_D, KC_V)                  // mute
 
 // right hand side
-COMB(COMBO_NEXT             ,KC_MNXT    ,KC_SLSH, KC_M)               // next
-COMB(COMBO_AE               ,KC_AE      ,KC_U, KC_A)                  // Æ
-COMB(COMBO_PLAY             ,KC_MPLY    ,KC_MINS, KC_R)               // play
-COMB(COMBO_AA               ,KC_AA      ,KC_E, KC_O)                  // Å
-COMB(COMBO_PREV             ,KC_MPRV    ,KC_GRV, KC_K)                // prev
+COMB(COMBO_NEXT             ,KC_MNXT    ,KC_K, KC_L)                  // next
+COMB(COMBO_AE               ,KC_AE      ,KC_U, KC_Y)                  // Æ
+COMB(COMBO_PLAY             ,KC_MPLY    ,KC_M, KC_N)                  // play
+COMB(COMBO_AA               ,KC_AA      ,KC_E, KC_I)                  // Å
+COMB(COMBO_PREV             ,KC_MPRV    ,KC_J, KC_H)                  // prev
 COMB(COMBO_OE               ,KC_OE      ,KC_COMMA, KC_DOT)            // Ø
 
 // ///////////////// //
 // cross hand combos //
 // ///////////////// //
 
-COMB(COMBO_RESET            ,RESET      ,KC_W, KC_H, KC_P, KC_SLSH)   // reset the keyboard
+COMB(COMBO_RESET            ,RESET      ,KC_W, KC_F, KC_P, KC_K)      // reset the keyboard
