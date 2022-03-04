@@ -54,4 +54,4 @@ COMB(COMBO_OE               ,KC_OE      ,KC_COMMA, KC_DOT)            // Ø
 // cross hand combos //
 // ///////////////// //
 
-COMB(COMBO_RESET            ,RESET      ,KC_W, KC_F, KC_P, KC_K)      // reset the keyboard
+COMB(COMBO_RESET            ,RESET      ,KC_W, KC_F, KC_P, KC_J)      // reset the keyboard
