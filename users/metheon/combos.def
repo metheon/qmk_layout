@@ -36,19 +36,27 @@ COMB(COMBO_RBRC             ,KC_RBRC    ,KC_H, KC_COMMA)              // ]
 
 // left hand side
 COMB(COMBO_Q                ,KC_Q       ,KC_W, KC_F)                  // Q
-COMB(COMBO_VOL_UP           ,KC_VOLU    ,KC_P, KC_B)                  // volume up
 COMB(COMBO_X                ,KC_X       ,KC_R, KC_S)                  // X
-COMB(COMBO_VOL_DOWN         ,KC_VOLD    ,KC_T, KC_G)                  // volume down
 COMB(COMBO_Z                ,KC_Z       ,KC_MINS, KC_C)               // Z
-COMB(COMBO_MUTE             ,KC_MUTE    ,KC_D, KC_V)                  // mute
 
 // right hand side
-COMB(COMBO_NEXT             ,KC_MNXT    ,KC_K, KC_L)                  // next
 COMB(COMBO_AE               ,KC_AE      ,KC_U, KC_Y)                  // Æ
-COMB(COMBO_PLAY             ,KC_MPLY    ,KC_M, KC_N)                  // play
 COMB(COMBO_AA               ,KC_AA      ,KC_E, KC_I)                  // Å
-COMB(COMBO_PREV             ,KC_MPRV    ,KC_J, KC_H)                  // prev
 COMB(COMBO_OE               ,KC_OE      ,KC_COMMA, KC_DOT)            // Ø
+
+// /////////////////// //
+// three letter combos //
+// /////////////////// //
+
+// left hand side
+COMB(COMBO_VOL_UP           ,KC_VOLU    ,KC_W, KC_F, KC_P)            // volume up
+COMB(COMBO_VOL_DOWN         ,KC_VOLD    ,KC_R, KC_S, KC_T)            // volume down
+COMB(COMBO_MUTE             ,KC_MUTE    ,KC_MINS, KC_C, KC_D)         // mute
+
+// right hand side
+COMB(COMBO_NEXT             ,KC_MNXT    ,KC_L, KC_U, KC_Y)            // next
+COMB(COMBO_PLAY             ,KC_MPLY    ,KC_N, KC_E, KC_I)            // play
+COMB(COMBO_PREV             ,KC_MPRV    ,KC_H, KC_COMMA, KC_DOT)      // prev
 
 // ///////////////// //
 // cross hand combos //
