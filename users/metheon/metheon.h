@@ -8,8 +8,11 @@
 enum layers {
     _CDH,                   // Modified Colemak DH
     _NAV,                   // Navigation cluster plus media
-    _NUM,                   // Numpad
-    _SYM,                   // Symbols plus magnet shortcuts
+    _NUM,                   // Numpad, magnet shortcuts
+    _SYM,                   // Symbols
+    _GAME_0,                // Game layer 0
+    _GAME_1,                // Game layer 1
+    _GAME_2,                // Game layer 2
 };
 
 enum keycodes {
@@ -24,6 +27,11 @@ enum keycodes {
 
     CDE_BLCK, // markdown code block
 };
+
+#define BASE                TO(_CDH)
+#define GAME                TO(_GAME_0)
+#define SPC_G1              LT(_GAME_1, KC_SPACE)
+#define ESC_G2              LT(_GAME_2, KC_ESC)
 
 #define __NONE__            KC_NO               // Alias to make it eight wide
 #define ________            _______             // Alias to make it eight wide

@@ -6,60 +6,11 @@
 
 /*                KEY POSITIONS
   ╭────────────────────╮ ╭────────────────────╮
-  │  `   w   f   p   b │ │  k   l   u   y   # │
+  │  q   w   f   p   b │ │  k   l   u   y   ' │
   │  a   r   s   t   g │ │  m   n   e   i   o │
-  │  '   -   c   d   v │ │  j   h   ,   .   / │
+  │  z   x   c   d   v │ │  j   h   ,   .   / │
   ╰───────────╮ Nv  Sp │ │ Sf  Nm ╭───────────╯
               ╰────────╯ ╰────────╯            
 */
 
-// //////////////// //
-// outer horizontal //
-// //////////////// //
-
-// left hand side
-COMB(COMBO_ESC              ,KC_ESC     ,KC_GRV, KC_W)                // esc
-COMB(COMBO_LCBR             ,KC_LCBR    ,KC_F, KC_P)                  // {
-COMB(COMBO_LT               ,KC_LT      ,KC_A, KC_R)                  // <
-COMB(COMBO_LPRN             ,KC_LPRN    ,KC_S, KC_T)                  // (
-COMB(COMBO_LBRC             ,KC_LBRC    ,KC_C, KC_D)                  // [
-
-// right hand side
-COMB(COMBO_RCBR             ,KC_RCBR    ,KC_L, KC_U)                  // }
-COMB(COMBO_RPRN             ,KC_RPRN    ,KC_N, KC_E)                  // )
-COMB(COMBO_GT               ,KC_GT      ,KC_I, KC_O)                  // >
-COMB(COMBO_RBRC             ,KC_RBRC    ,KC_H, KC_COMMA)              // ]
-
-// //////////////// //
-// inner horizontal //
-// //////////////// //
-
-// left hand side
-COMB(COMBO_Q                ,KC_Q       ,KC_W, KC_F)                  // Q
-COMB(COMBO_X                ,KC_X       ,KC_R, KC_S)                  // X
-COMB(COMBO_Z                ,KC_Z       ,KC_MINS, KC_C)               // Z
-
-// right hand side
-COMB(COMBO_AE               ,KC_AE      ,KC_U, KC_Y)                  // Æ
-COMB(COMBO_AA               ,KC_AA      ,KC_E, KC_I)                  // Å
-COMB(COMBO_OE               ,KC_OE      ,KC_COMMA, KC_DOT)            // Ø
-
-// /////////////////// //
-// three letter combos //
-// /////////////////// //
-
-// left hand side
-COMB(COMBO_VOL_UP           ,KC_VOLU    ,KC_W, KC_F, KC_P)            // volume up
-COMB(COMBO_VOL_DOWN         ,KC_VOLD    ,KC_R, KC_S, KC_T)            // volume down
-COMB(COMBO_MUTE             ,KC_MUTE    ,KC_MINS, KC_C, KC_D)         // mute
-
-// right hand side
-COMB(COMBO_NEXT             ,KC_MNXT    ,KC_L, KC_U, KC_Y)            // next
-COMB(COMBO_PLAY             ,KC_MPLY    ,KC_N, KC_E, KC_I)            // play
-COMB(COMBO_PREV             ,KC_MPRV    ,KC_H, KC_COMMA, KC_DOT)      // prev
-
-// ///////////////// //
-// cross hand combos //
-// ///////////////// //
-
-COMB(COMBO_RESET            ,RESET      ,KC_W, KC_F, KC_P, KC_J)      // reset the keyboard
+COMB(COMBO_RESET            ,RESET      ,KC_R, KC_S, KC_T, KC_N, KC_E, KC_I)      // reset the keyboard
