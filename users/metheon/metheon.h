@@ -28,8 +28,6 @@ enum keycodes {
     CDE_BLCK, // markdown code block
 };
 
-#define BASE                TO(_CDH)
-#define GAME                TO(_GAME_0)
 #define SPC_G1              LT(_GAME_1, KC_SPACE)
 #define ESC_G2              LT(_GAME_2, KC_ESC)
 

@@ -4,7 +4,9 @@ EXTRAKEY_ENABLE					=	yes 	# Enables audio control and System control
 COMBO_ENABLE					=	yes		# Enables the usage of combos
 KEY_OVERRIDE_ENABLE				=	yes		# Enables key overrides
 
-SRC += metheon.c
+//SRC += metheon.c
+
+INTROSPECTION_KEYMAP_C = metheon.c # keymaps
 SRC += features/oneshot.c
 SRC += features/swapper.c
 
