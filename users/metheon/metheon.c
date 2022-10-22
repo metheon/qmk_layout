@@ -20,7 +20,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //  .--------+--------+--------+--------+--------.   .--------+--------+--------+--------+--------.
          KC_ESC  ,BACK    ,FWD     ,SW_WIN  ,SCRNSHT ,    __NONE__,KC_STAB ,KC_UP   ,KC_TAB  ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
-         OS_CTRL ,OS_ALT  ,OS_SHFT ,OS_CMD  ,SEARCH  ,    __NONE__,KC_LEFT ,KC_DOWN ,KC_RGHT ,KC_ENTER,
+         OS_CTRL ,OS_ALT  ,OS_SHFT ,OS_CMD  ,SEARCH  ,    EMOJI   ,KC_LEFT ,KC_DOWN ,KC_RGHT ,KC_ENTER,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|
          UNDO    ,CUT     ,COPY    ,PASTE   ,LOCK    ,    SW_LANG ,KC_AE   ,KC_OE   ,KC_AA   ,__NONE__,
     //  |--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------|

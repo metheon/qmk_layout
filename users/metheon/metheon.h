@@ -58,6 +58,7 @@ enum keycodes {
 #define CUT                 LGUI(KC_X)          // Cut
 #define COPY                LGUI(KC_C)          // Copy
 #define PASTE               LGUI(KC_V)          // Paste
+#define EMOJI               LGUI(LCTL(KC_SPC))  // Emoji keyboard shortcut
 
 // utilities
 #define LOCK                LCTL(LGUI(KC_Q))    // Lock computer      
